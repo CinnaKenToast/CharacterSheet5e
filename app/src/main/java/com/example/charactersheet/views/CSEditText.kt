@@ -6,7 +6,7 @@ import android.view.KeyEvent
 import android.view.inputmethod.EditorInfo
 import androidx.appcompat.widget.AppCompatEditText
 
-class CharacterSheetEditText: AppCompatEditText {
+class CSEditText: AppCompatEditText {
     constructor(context: Context) : super(context) { init(context) }
     constructor(context: Context, attrs: AttributeSet) : super(context, attrs) { init(context) }
     constructor(context: Context, attrs: AttributeSet, defStyle: Int) : super(context, attrs, defStyle) { init(context) }
