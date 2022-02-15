@@ -1791,12 +1791,28 @@
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="0dp"
-                    android:src="@drawable/attacks_spells"
+                    android:src="@drawable/attacks_spells_no_grid"
                     app:layout_constraintDimensionRatio="H, 1486:1599"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
+
+                <GridView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:horizontalSpacing="2dp"
+                    android:verticalSpacing="2dp"
+                    android:numColumns="3"
+                    android:background="@color/black"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintVertical_bias="0.5"
+                    app:layout_constraintHeight_percent="0.9"
+                    app:layout_constraintWidth_percent="0.925"/>
             </androidx.constraintlayout.widget.ConstraintLayout>
             <!-- Equipment -->
             <androidx.constraintlayout.widget.ConstraintLayout

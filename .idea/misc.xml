@@ -7,9 +7,11 @@
         <entry key="..\:/Users/rockm/Desktop/CharacterSheet5e/app/src/main/res/layout/fragment_details.xml" value="0.4" />
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1895" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.5234375" />
+        <entry key="app/src/main/res/layout/cs_action_buttons.xml" value="0.42967079948696024" />
         <entry key="app/src/main/res/layout/cs_checkbox_radio_button.xml" value="0.30012825994014536" />
         <entry key="app/src/main/res/layout/cs_radio_check_box.xml" value="0.42967079948696024" />
         <entry key="app/src/main/res/layout/fragment_details.xml" value="0.67" />
+        <entry key="app/src/main/res/menu/character_sheet_menu.xml" value="0.42967079948696024" />
       </map>
     </option>
   </component>
