@@ -1,9 +1,12 @@
 package com.example.charactersheet
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Context
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuInflater
+import android.view.MenuItem
+import android.view.inputmethod.InputMethodManager
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 
 class MainActivity : AppCompatActivity() {
@@ -24,6 +27,12 @@ class MainActivity : AppCompatActivity() {
             val inflater = MenuInflater(applicationContext)
             inflater.inflate(R.menu.character_sheet_menu, menu)
         }
+
         return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        println("AHHHHHHHHHH")
+        return super.onOptionsItemSelected(item)
     }
 }

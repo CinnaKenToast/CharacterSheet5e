@@ -5,6 +5,7 @@ import android.util.AttributeSet
 import android.view.KeyEvent
 import android.view.inputmethod.EditorInfo
 import androidx.appcompat.widget.AppCompatEditText
+import com.example.charactersheet.R
 
 class CSEditText: AppCompatEditText {
     constructor(context: Context) : super(context) { init(context) }
@@ -28,6 +29,10 @@ class CSEditText: AppCompatEditText {
 
     private fun init(context: Context) {
         imeOptions = EditorInfo.IME_ACTION_DONE
+        isSingleLine = true
+        if (this.resources.getResourceName(id).contains("spellAttack"))
+            background = context.getDrawable(R.drawable.edit_text_border)
+        else
         setBackgroundColor(context.getColor(android.R.color.transparent))
     }
 }

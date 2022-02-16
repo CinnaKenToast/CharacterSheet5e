@@ -5,6 +5,7 @@ import android.util.AttributeSet
 import android.view.KeyEvent
 import android.view.MotionEvent
 import androidx.appcompat.widget.AppCompatEditText
+import com.example.charactersheet.R
 
 class CSEditTextLong: AppCompatEditText {
     constructor(context: Context) : super(context) { init(context) }

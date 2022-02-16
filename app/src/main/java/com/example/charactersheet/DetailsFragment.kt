@@ -98,6 +98,8 @@ class DetailsFragment : Fragment() {
         binding.constitutionSave.setText(currentCharacter.constitutionSave)
         binding.intelligenceSaveButton.setChecked(currentCharacter.intelligenceSaveChecked)
         binding.intelligenceSave.setText(currentCharacter.intelligenceSave)
+        binding.wisdomSaveButton.setChecked(currentCharacter.wisdomSaveChecked)
+        binding.wisdomSave.setText(currentCharacter.wisdomSave)
         binding.charismaSaveButton.setChecked(currentCharacter.charismaSaveChecked)
         binding.charismaSave.setText(currentCharacter.charismaSave)
         binding.acrobaticsButton.setChecked(currentCharacter.acrobaticsChecked)

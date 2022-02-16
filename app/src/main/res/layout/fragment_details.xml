@@ -1798,23 +1798,585 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <GridView
+                <androidx.core.widget.NestedScrollView
                     android:layout_width="0dp"
                     android:layout_height="0dp"
-                    android:horizontalSpacing="2dp"
-                    android:verticalSpacing="2dp"
-                    android:numColumns="3"
-                    android:background="@color/black"
-                    app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintRight_toRightOf="parent"
-                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintVertical_bias="0.5"
-                    app:layout_constraintHeight_percent="0.9"
-                    app:layout_constraintWidth_percent="0.925"/>
-            </androidx.constraintlayout.widget.ConstraintLayout>
-            <!-- Equipment -->
+                    app:layout_constraintHeight_percent="0.88"
+                    app:layout_constraintWidth_percent="0.92">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal"
+                                    android:weightSum="1">
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical"
+                                        android:layout_weight="0.4">
+                                        <com.example.charactersheet.views.CSEditText
+                                            android:id="@+id/spellAttackName1"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="alskdjalkdj"
+                                            android:textSize="16dp"
+                                            android:padding="2dp"
+                                            android:background="@drawable/edit_text_border"/>
+
+                                        <com.example.charactersheet.views.CSEditText
+                                            android:id="@+id/spellAttackName2"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="alskdjalkdj"
+                                            android:textSize="16dp"
+                                            android:padding="2dp"
+                                            android:background="@drawable/edit_text_border"/>
+
+                                        <com.example.charactersheet.views.CSEditText
+                                            android:id="@+id/spellAttackName3"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="alskdjalkdj"
+                                            android:textSize="16dp"
+                                            android:padding="2dp"
+                                            android:background="@drawable/edit_text_border"/>
+
+                                        <com.example.charactersheet.views.CSEditText
+                                            android:id="@+id/spellAttackName4"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="alskdjalkdj"
+                                            android:textSize="16dp"
+                                            android:padding="2dp"
+                                            android:background="@drawable/edit_text_border"/>
+
+                                        <com.example.charactersheet.views.CSEditText
+                                            android:id="@+id/spellAttackName5"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="alskdjalkdj"
+                                            android:textSize="16dp"
+                                            android:padding="2dp"
+                                            android:background="@drawable/edit_text_border"/>
+
+                                        <com.example.charactersheet.views.CSEditText
+                                            android:id="@+id/spellAttackName6"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="alskdjalkdj"
+                                            android:textSize="16dp"
+                                            android:padding="2dp"
+                                            android:background="@drawable/edit_text_border"/>
+
+                                        <com.example.charactersheet.views.CSEditText
+                                            android:id="@+id/spellAttackName7"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="alskdjalkdj"
+                                            android:textSize="16dp"
+                                            android:padding="2dp"
+                                            android:background="@drawable/edit_text_border"/>
+
+                                        <com.example.charactersheet.views.CSEditText
+                                            android:id="@+id/spellAttackName8"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="alskdjalkdj"
+                                            android:textSize="16dp"
+                                            android:padding="2dp"
+                                            android:background="@drawable/edit_text_border"/>
+
+                                        <com.example.charactersheet.views.CSEditText
+                                            android:id="@+id/spellAttackName9"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="alskdjalkdj"
+                                            android:textSize="16dp"
+                                            android:padding="2dp"
+                                            android:background="@drawable/edit_text_border"/>
+
+                                        <com.example.charactersheet.views.CSEditText
+                                            android:id="@+id/spellAttackName10"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="alskdjalkdj"
+                                            android:textSize="16dp"
+                                            android:padding="2dp"
+                                            android:background="@drawable/edit_text_border"/>
+
+                                        <com.example.charactersheet.views.CSEditText
+                                            android:id="@+id/spellAttackName11"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="alskdjalkdj"
+                                            android:textSize="16dp"
+                                            android:padding="2dp"
+                                            android:background="@drawable/edit_text_border"/>
+
+                                        <com.example.charactersheet.views.CSEditText
+                                            android:id="@+id/spellAttackName12"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="alskdjalkdj"
+                                            android:textSize="16dp"
+                                            android:padding="2dp"
+                                            android:background="@drawable/edit_text_border"/>
+
+                                        <com.example.charactersheet.views.CSEditText
+                                            android:id="@+id/spellAttackName13"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="alskdjalkdj"
+                                            android:textSize="16dp"
+                                            android:padding="2dp"
+                                            android:background="@drawable/edit_text_border"/>
+
+                                        <com.example.charactersheet.views.CSEditText
+                                            android:id="@+id/spellAttackName14"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="alskdjalkdj"
+                                            android:textSize="16dp"
+                                            android:padding="2dp"
+                                            android:background="@drawable/edit_text_border"/>
+
+                                        <com.example.charactersheet.views.CSEditText
+                                            android:id="@+id/spellAttackName15"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="alskdjalkdj"
+                                            android:textSize="16dp"
+                                            android:padding="2dp"
+                                            android:background="@drawable/edit_text_border"/>
+
+                                        <com.example.charactersheet.views.CSEditText
+                                            android:id="@+id/spellAttackName16"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="alskdjalkdj"
+                                            android:textSize="16dp"
+                                            android:padding="2dp"
+                                            android:background="@drawable/edit_text_border"/>
+
+                                        <com.example.charactersheet.views.CSEditText
+                                            android:id="@+id/spellAttackName17"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="alskdjalkdj"
+                                            android:textSize="16dp"
+                                            android:padding="2dp"
+                                            android:background="@drawable/edit_text_border"/>
+
+                                        <com.example.charactersheet.views.CSEditText
+                                            android:id="@+id/spellAttackName18"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="alskdjalkdj"
+                                            android:textSize="16dp"
+                                            android:padding="2dp"
+                                            android:background="@drawable/edit_text_border"/>
+
+                                        <com.example.charactersheet.views.CSEditText
+                                            android:id="@+id/spellAttackName19"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="alskdjalkdj"
+                                            android:textSize="16dp"
+                                            android:padding="2dp"
+                                            android:maxLines="1"
+                                            android:background="@drawable/edit_text_border"/>
+
+                                        <com.example.charactersheet.views.CSEditText
+                                            android:id="@+id/spellAttackName20"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="alskdjalkdj"
+                                            android:textSize="16dp"
+                                            android:padding="2dp"
+                                            android:background="@drawable/edit_text_border"/>
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical"
+                                        android:layout_weight="0.22">
+                                        <com.example.charactersheet.views.CSEditText
+                                            android:id="@+id/spellAttackBonus1"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="alskdjalkdj"
+                                            android:textSize="16dp"
+                                            android:padding="2dp"
+                                            android:background="@drawable/edit_text_border"/>
+
+                                        <com.example.charactersheet.views.CSEditText
+                                            android:id="@+id/spellAttackBonus2"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="alskdjalkdj"
+                                            android:textSize="16dp"
+                                            android:padding="2dp"
+                                            android:background="@drawable/edit_text_border"/>
+
+                                        <com.example.charactersheet.views.CSEditText
+                                            android:id="@+id/spellAttackBonus3"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="alskdjalkdj"
+                                            android:textSize="16dp"
+                                            android:padding="2dp"
+                                            android:background="@drawable/edit_text_border"/>
+
+                                        <com.example.charactersheet.views.CSEditText
+                                            android:id="@+id/spellAttackBonus4"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="alskdjalkdj"
+                                            android:textSize="16dp"
+                                            android:padding="2dp"
+                                            android:background="@drawable/edit_text_border"/>
+
+                                        <com.example.charactersheet.views.CSEditText
+                                            android:id="@+id/spellAttackBonus5"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="alskdjalkdj"
+                                            android:textSize="16dp"
+                                            android:padding="2dp"
+                                            android:background="@drawable/edit_text_border"/>
+
+                                        <com.example.charactersheet.views.CSEditText
+                                            android:id="@+id/spellAttackBonus6"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="alskdjalkdj"
+                                            android:textSize="16dp"
+                                            android:padding="2dp"
+                                            android:background="@drawable/edit_text_border"/>
+
+                                        <com.example.charactersheet.views.CSEditText
+                                            android:id="@+id/spellAttackBonus7"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="alskdjalkdj"
+                                            android:textSize="16dp"
+                                            android:padding="2dp"
+                                            android:background="@drawable/edit_text_border"/>
+
+                                        <com.example.charactersheet.views.CSEditText
+                                            android:id="@+id/spellAttackBonus8"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="alskdjalkdj"
+                                            android:textSize="16dp"
+                                            android:padding="2dp"
+                                            android:background="@drawable/edit_text_border"/>
+
+                                        <com.example.charactersheet.views.CSEditText
+                                            android:id="@+id/spellAttackBonus9"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="alskdjalkdj"
+                                            android:textSize="16dp"
+                                            android:padding="2dp"
+                                            android:background="@drawable/edit_text_border"/>
+
+                                        <com.example.charactersheet.views.CSEditText
+                                            android:id="@+id/spellAttackBonus10"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="alskdjalkdj"
+                                            android:textSize="16dp"
+                                            android:padding="2dp"
+                                            android:background="@drawable/edit_text_border"/>
+
+                                        <com.example.charactersheet.views.CSEditText
+                                            android:id="@+id/spellAttackBonus11"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="alskdjalkdj"
+                                            android:textSize="16dp"
+                                            android:padding="2dp"
+                                            android:background="@drawable/edit_text_border"/>
+
+                                        <com.example.charactersheet.views.CSEditText
+                                            android:id="@+id/spellAttackBonus12"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="alskdjalkdj"
+                                            android:textSize="16dp"
+                                            android:padding="2dp"
+                                            android:background="@drawable/edit_text_border"/>
+
+                                        <com.example.charactersheet.views.CSEditText
+                                            android:id="@+id/spellAttackBonus13"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="alskdjalkdj"
+                                            android:textSize="16dp"
+                                            android:padding="2dp"
+                                            android:background="@drawable/edit_text_border"/>
+
+                                        <com.example.charactersheet.views.CSEditText
+                                            android:id="@+id/spellAttackBonus14"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="alskdjalkdj"
+                                            android:textSize="16dp"
+                                            android:padding="2dp"
+                                            android:background="@drawable/edit_text_border"/>
+
+                                        <com.example.charactersheet.views.CSEditText
+                                            android:id="@+id/spellAttackBonus15"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="alskdjalkdj"
+                                            android:textSize="16dp"
+                                            android:padding="2dp"
+                                            android:background="@drawable/edit_text_border"/>
+
+                                        <com.example.charactersheet.views.CSEditText
+                                            android:id="@+id/spellAttackBonus16"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="alskdjalkdj"
+                                            android:textSize="16dp"
+                                            android:padding="2dp"
+                                            android:background="@drawable/edit_text_border"/>
+
+                                        <com.example.charactersheet.views.CSEditText
+                                            android:id="@+id/spellAttackBonus17"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="alskdjalkdj"
+                                            android:textSize="16dp"
+                                            android:padding="2dp"
+                                            android:background="@drawable/edit_text_border"/>
+
+                                        <com.example.charactersheet.views.CSEditText
+                                            android:id="@+id/spellAttackBonus18"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="alskdjalkdj"
+                                            android:textSize="16dp"
+                                            android:padding="2dp"
+                                            android:background="@drawable/edit_text_border"/>
+
+                                        <com.example.charactersheet.views.CSEditText
+                                            android:id="@+id/spellAttackBonus19"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="alskdjalkdj"
+                                            android:textSize="16dp"
+                                            android:padding="2dp"
+                                            android:background="@drawable/edit_text_border"/>
+
+                                        <com.example.charactersheet.views.CSEditText
+                                            android:id="@+id/spellAttackBonus20"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="alskdjalkdj"
+                                            android:textSize="16dp"
+                                            android:padding="2dp"
+                                            android:background="@drawable/edit_text_border"/>
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical"
+                                        android:layout_weight="0.38">
+                                        <com.example.charactersheet.views.CSEditText
+                                            android:id="@+id/spellAttackType1"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="alskdjalkdj"
+                                            android:textSize="16dp"
+                                            android:padding="2dp"
+                                            android:background="@drawable/edit_text_border"/>
+
+                                        <com.example.charactersheet.views.CSEditText
+                                            android:id="@+id/spellAttackType2"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="alskdjalkdj"
+                                            android:textSize="16dp"
+                                            android:padding="2dp"
+                                            android:background="@drawable/edit_text_border"/>
+
+                                        <com.example.charactersheet.views.CSEditText
+                                            android:id="@+id/spellAttackType3"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="alskdjalkdj"
+                                            android:textSize="16dp"
+                                            android:padding="2dp"
+                                            android:background="@drawable/edit_text_border"/>
+
+                                        <com.example.charactersheet.views.CSEditText
+                                            android:id="@+id/spellAttackType4"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="alskdjalkdj"
+                                            android:textSize="16dp"
+                                            android:padding="2dp"
+                                            android:background="@drawable/edit_text_border"/>
+
+                                        <com.example.charactersheet.views.CSEditText
+                                            android:id="@+id/spellAttackType5"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="alskdjalkdj"
+                                            android:textSize="16dp"
+                                            android:padding="2dp"
+                                            android:background="@drawable/edit_text_border"/>
+
+                                        <com.example.charactersheet.views.CSEditText
+                                            android:id="@+id/spellAttackType6"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="alskdjalkdj"
+                                            android:textSize="16dp"
+                                            android:padding="2dp"
+                                            android:background="@drawable/edit_text_border"/>
+
+                                        <com.example.charactersheet.views.CSEditText
+                                            android:id="@+id/spellAttackType7"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="alskdjalkdj"
+                                            android:textSize="16dp"
+                                            android:padding="2dp"
+                                            android:background="@drawable/edit_text_border"/>
+
+                                        <com.example.charactersheet.views.CSEditText
+                                            android:id="@+id/spellAttackType8"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="alskdjalkdj"
+                                            android:textSize="16dp"
+                                            android:padding="2dp"
+                                            android:background="@drawable/edit_text_border"/>
+
+                                        <com.example.charactersheet.views.CSEditText
+                                            android:id="@+id/spellAttackType9"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="alskdjalkdj"
+                                            android:textSize="16dp"
+                                            android:padding="2dp"
+                                            android:background="@drawable/edit_text_border"/>
+
+                                        <com.example.charactersheet.views.CSEditText
+                                            android:id="@+id/spellAttackType10"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="alskdjalkdj"
+                                            android:textSize="16dp"
+                                            android:padding="2dp"
+                                            android:background="@drawable/edit_text_border"/>
+
+                                        <com.example.charactersheet.views.CSEditText
+                                            android:id="@+id/spellAttackType11"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="alskdjalkdj"
+                                            android:textSize="16dp"
+                                            android:padding="2dp"
+                                            android:background="@drawable/edit_text_border"/>
+
+                                        <com.example.charactersheet.views.CSEditText
+                                            android:id="@+id/spellAttackType12"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="alskdjalkdj"
+                                            android:textSize="16dp"
+                                            android:padding="2dp"
+                                            android:background="@drawable/edit_text_border"/>
+
+                                        <com.example.charactersheet.views.CSEditText
+                                            android:id="@+id/spellAttackType13"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="alskdjalkdj"
+                                            android:textSize="16dp"
+                                            android:padding="2dp"
+                                            android:background="@drawable/edit_text_border"/>
+
+                                        <com.example.charactersheet.views.CSEditText
+                                            android:id="@+id/spellAttackType14"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="alskdjalkdj"
+                                            android:textSize="16dp"
+                                            android:padding="2dp"
+                                            android:background="@drawable/edit_text_border"/>
+
+                                        <com.example.charactersheet.views.CSEditText
+                                            android:id="@+id/spellAttackType15"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="alskdjalkdj"
+                                            android:textSize="16dp"
+                                            android:padding="2dp"
+                                            android:background="@drawable/edit_text_border"/>
+
+                                        <com.example.charactersheet.views.CSEditText
+                                            android:id="@+id/spellAttackType16"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="alskdjalkdj"
+                                            android:textSize="16dp"
+                                            android:padding="2dp"
+                                            android:background="@drawable/edit_text_border"/>
+
+                                        <com.example.charactersheet.views.CSEditText
+                                            android:id="@+id/spellAttackType17"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="alskdjalkdj"
+                                            android:textSize="16dp"
+                                            android:padding="2dp"
+                                            android:background="@drawable/edit_text_border"/>
+
+                                        <com.example.charactersheet.views.CSEditText
+                                            android:id="@+id/spellAttackType18"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="alskdjalkdj"
+                                            android:textSize="16dp"
+                                            android:padding="2dp"
+                                            android:background="@drawable/edit_text_border"/>
+
+                                        <com.example.charactersheet.views.CSEditText
+                                            android:id="@+id/spellAttackType19"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="alskdjalkdj"
+                                            android:textSize="16dp"
+                                            android:padding="2dp"
+                                            android:background="@drawable/edit_text_border"/>
+
+                                        <com.example.charactersheet.views.CSEditText
+                                            android:id="@+id/spellAttackType20"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="alskdjalkdj"
+                                            android:textSize="16dp"
+                                            android:padding="2dp"
+                                            android:background="@drawable/edit_text_border"/>
+                                    </LinearLayout>
+
+                                </LinearLayout>
+                            </androidx.core.widget.NestedScrollView>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                        <!-- Equipment -->
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -1939,11 +2501,13 @@
                     app:layout_constraintHorizontal_bias="0.9"
                     app:layout_constraintVertical_bias="0.2"
                     app:layout_constraintHeight_percent="0.9"
-                    app:layout_constraintWidth_percent="0.65">
+                    app:layout_constraintWidth_percent="0.65"
+                    android:fillViewport="true">
                     <com.example.charactersheet.views.CSEditTextLong
                         android:id="@+id/equipment"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:scrollbars="vertical"
                         android:ems="10"
                         android:inputType="textMultiLine"
                         android:textSize="18sp"
@@ -1980,7 +2544,8 @@
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintVertical_bias="0.2"
                     app:layout_constraintHeight_percent="0.9"
-                    app:layout_constraintWidth_percent="0.9">
+                    app:layout_constraintWidth_percent="0.9"
+                    android:fillViewport="true">
                     <com.example.charactersheet.views.CSEditTextLong
                         android:id="@+id/proficienciesLanguages"
                         android:layout_width="match_parent"
@@ -2021,7 +2586,8 @@
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintVertical_bias="0.2"
                     app:layout_constraintHeight_percent="0.7"
-                    app:layout_constraintWidth_percent="0.9">
+                    app:layout_constraintWidth_percent="0.9"
+                    android:fillViewport="true">
                     <com.example.charactersheet.views.CSEditTextLong
                         android:id="@+id/personalityTraits"
                         android:layout_width="match_parent"
@@ -2062,7 +2628,8 @@
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintVertical_bias="0.2"
                     app:layout_constraintHeight_percent="0.7"
-                    app:layout_constraintWidth_percent="0.9">
+                    app:layout_constraintWidth_percent="0.9"
+                    android:fillViewport="true">
                     <com.example.charactersheet.views.CSEditTextLong
                         android:id="@+id/ideals"
                         android:layout_width="match_parent"
@@ -2103,7 +2670,8 @@
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintVertical_bias="0.2"
                     app:layout_constraintHeight_percent="0.7"
-                    app:layout_constraintWidth_percent="0.9">
+                    app:layout_constraintWidth_percent="0.9"
+                    android:fillViewport="true">
                     <com.example.charactersheet.views.CSEditTextLong
                         android:id="@+id/bonds"
                         android:layout_width="match_parent"
@@ -2144,7 +2712,8 @@
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintVertical_bias="0.2"
                     app:layout_constraintHeight_percent="0.7"
-                    app:layout_constraintWidth_percent="0.9">
+                    app:layout_constraintWidth_percent="0.9"
+                    android:fillViewport="true">
                     <com.example.charactersheet.views.CSEditTextLong
                         android:id="@+id/flaws"
                         android:layout_width="match_parent"
