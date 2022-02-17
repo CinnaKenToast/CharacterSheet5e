@@ -21,5 +21,6 @@ class CSEditTextLong: AppCompatEditText {
 
     private fun init(context: Context) {
         setBackgroundColor(context.getColor(android.R.color.transparent))
+        setTextColor(context.getColor(R.color.black))
     }
 }

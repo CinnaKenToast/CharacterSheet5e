@@ -29,9 +29,10 @@ class CSEditText: AppCompatEditText {
     private fun init(context: Context) {
         imeOptions = EditorInfo.IME_ACTION_DONE
         isSingleLine = true
+        setTextColor(context.getColor(R.color.black))
         if (this.resources.getResourceName(id).contains("spellAttack"))
             background = context.getDrawable(R.drawable.edit_text_border)
         else
-        setBackgroundColor(context.getColor(android.R.color.transparent))
+            setBackgroundColor(context.getColor(android.R.color.transparent))
     }
 }

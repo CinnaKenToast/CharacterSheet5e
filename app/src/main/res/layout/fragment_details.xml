@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
     tools:context=".DetailsFragment"
-    android:theme="@style/Theme.MaterialComponents.Light.DarkActionBar">
-
+    android:theme="@style/Theme.MaterialComponents.NoActionBar">
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:background="@color/purple_500"
+        app:titleTextColor="@color/white"
+        app:title="@string/app_name"
+        app:titleTextAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+        app:menu="@menu/character_sheet_menu"/>
     <!-- External Scroll -->
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -2167,8 +2176,6 @@
 
                 </androidx.core.widget.NestedScrollView>
             </androidx.constraintlayout.widget.ConstraintLayout>
-
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
-
-</FrameLayout>
+</LinearLayout>

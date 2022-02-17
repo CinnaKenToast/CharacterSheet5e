@@ -6,6 +6,11 @@
         android:id="@+id/saveButton"
         android:icon="@android:drawable/ic_menu_save"
         android:title="Save"
-        app:showAsAction="always"/>
+        app:showAsAction="never"/>
 
+    <item
+        android:id="@+id/exportButton"
+        android:icon="@android:drawable/ic_menu_share"
+        android:title="Export"
+        app:showAsAction="never"/>
 </menu>

@@ -12,13 +12,11 @@ class AttackSpellsAdapter(private val attackSpells: MutableList<AttackSpell>):
     RecyclerView.Adapter<AttackSpellsAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        Log.d("---DEBUG---", "ENTERED ONCREATE")
         val view = LayoutInflater.from(parent.context).inflate(R.layout.layout_attack_spell_recycler_view, parent, false)
         return ViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        Log.d("---DEBUG---", "$position ${attackSpells[position].name}")
         holder.nameEditText.setText(attackSpells[position].name)
         holder.bonusEditText.setText(attackSpells[position].attackBonus)
         holder.damageTypeEditText.setText(attackSpells[position].damageType)

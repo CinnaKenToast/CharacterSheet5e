@@ -3,6 +3,7 @@ package com.example.charactersheet
 import android.os.Bundle
 import android.util.Log
 import android.view.*
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.charactersheet.data.Character
@@ -50,10 +51,26 @@ class DetailsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        initMenuOptions()
         currentCharacter = blankCharacter
-        initRecyclerView()
         if (this::currentCharacter.isInitialized) {
             initializeFields()
+        }
+    }
+
+    private fun initMenuOptions() {
+        binding.toolbar.setOnMenuItemClickListener { item ->
+            when (item.itemId) {
+                R.id.saveButton -> {
+                    Toast.makeText(context, item.title, Toast.LENGTH_SHORT).show()
+                    true
+                }
+                R.id.exportButton -> {
+                    Toast.makeText(context, item.title, Toast.LENGTH_SHORT).show()
+                    true
+                }
+                else -> {true}
+            }
         }
     }
 
@@ -147,7 +164,7 @@ class DetailsFragment : Fragment() {
         binding.stealth.setText(currentCharacter.stealth)
         binding.survivalButton.setChecked(currentCharacter.survivalChecked)
         binding.survival.setText(currentCharacter.survival)
-
+        initRecyclerView()
         binding.copperPieces.setText(currentCharacter.copper)
         binding.silverPieces.setText(currentCharacter.silver)
         binding.electrumPieces.setText(currentCharacter.electrum)

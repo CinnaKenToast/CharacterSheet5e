@@ -4,10 +4,20 @@ import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
+import com.example.charactersheet.data.Character
 import com.example.charactersheet.data.CharacterDatabase
+import kotlinx.coroutines.runBlocking
 
 class CharacterViewModel(application: Application): AndroidViewModel(application) {
     val characterDao = CharacterDatabase.getInstance(getApplication<Application>().applicationContext).characterDao()
+
+    fun getCharacters(): List<Character> {
+        var characters: List<Character>
+        runBlocking {
+            characters = characterDao.getListOCharacters()
+        }
+        return characters
+    }
 }
 
 class CharacterViewModelFactory(private val application: Application): ViewModelProvider.Factory {

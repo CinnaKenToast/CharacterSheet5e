@@ -17,7 +17,7 @@ interface CharacterDao {
     suspend fun getCharacter(characterName: String): Character
 
     @Query("SELECT * FROM character")
-    suspend fun getListOCharacters(): List<Character>?
+    suspend fun getListOCharacters(): List<Character>
 
     @Query("SELECT COUNT(*) == 0 FROM character")
     suspend fun tableIsEmpty(): Boolean

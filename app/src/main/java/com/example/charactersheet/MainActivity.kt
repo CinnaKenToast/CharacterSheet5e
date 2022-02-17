@@ -32,7 +32,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        println("AHHHHHHHHHH")
         return super.onOptionsItemSelected(item)
     }
 }
