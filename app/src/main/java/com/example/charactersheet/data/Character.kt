@@ -91,7 +91,7 @@ data class Character(
     var stealth: String = "",
     var survivalChecked: Boolean = false,
     var survival: String = "",
-
+    var attackSpells: MutableList<AttackSpell> = mutableListOf(),
     var copper: String = "",
     var silver: String = "",
     var electrum: String = "",
@@ -189,6 +189,7 @@ val blankCharacter = Character(
     stealth = "",
     survivalChecked = false,
     survival = "",
+    attackSpells = blankAttackSpell,
     copper = "",
     silver = "",
     electrum = "",

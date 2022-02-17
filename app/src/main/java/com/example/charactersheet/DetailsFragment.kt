@@ -1,12 +1,14 @@
 package com.example.charactersheet
 
 import android.os.Bundle
+import android.util.Log
 import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.charactersheet.data.Character
 import com.example.charactersheet.data.blankCharacter
 import com.example.charactersheet.databinding.FragmentDetailsBinding
+import com.example.charactersheet.views.AttackSpellsAdapter
 import kotlinx.coroutines.runBlocking
 
 class DetailsFragment : Fragment() {
@@ -49,9 +51,17 @@ class DetailsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         currentCharacter = blankCharacter
+        Log.d("---DEBUG---", "${currentCharacter.attackSpells.size}")
+        initRecyclerView()
         if (this::currentCharacter.isInitialized) {
             initializeFields()
         }
+    }
+
+    private fun initRecyclerView() {
+        val recyclerView = binding.attackSpellsRecyclerView
+        val adapter = AttackSpellsAdapter(currentCharacter.attackSpells)
+        recyclerView.adapter = adapter
     }
 
     private fun initializeFields() {
