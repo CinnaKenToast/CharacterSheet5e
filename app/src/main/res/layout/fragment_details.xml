@@ -1806,9 +1806,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/attackSpellsRecyclerView"
+                <androidx.core.widget.NestedScrollView
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -1818,10 +1816,19 @@
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintVertical_bias="0.5"
                     app:layout_constraintHeight_percent="0.88"
-                    app:layout_constraintWidth_percent="0.92"
-                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                    android:nestedScrollingEnabled="true">
-                </androidx.recyclerview.widget.RecyclerView>
+                    app:layout_constraintWidth_percent="0.92">
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/attackSpellsRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        android:nestedScrollingEnabled="false">
+                    </androidx.recyclerview.widget.RecyclerView>
+                </androidx.core.widget.NestedScrollView>
             </androidx.constraintlayout.widget.ConstraintLayout>
             <!-- Equipment -->
             <androidx.constraintlayout.widget.ConstraintLayout
