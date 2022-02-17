@@ -21,6 +21,10 @@ class CSCheckboxRadioButton: ConstraintLayout {
         }
     }
 
+    fun isChecked(): Boolean {
+        return binding.radioButton.isChecked
+    }
+
     fun setChecked(checked: Boolean) {
         binding.radioButton.isChecked = checked
     }

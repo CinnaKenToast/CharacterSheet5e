@@ -20,18 +20,4 @@ class MainActivity : AppCompatActivity() {
         val factory = CharacterViewModelFactory(application)
         characterViewModel = ViewModelProvider(this, factory).get(CharacterViewModel::class.java)
     }
-
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        val currentFragment = supportFragmentManager.fragments.last().childFragmentManager.fragments.last()
-        if (currentFragment is DetailsFragment) {
-            val inflater = MenuInflater(applicationContext)
-            inflater.inflate(R.menu.character_sheet_menu, menu)
-        }
-
-        return super.onCreateOptionsMenu(menu)
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return super.onOptionsItemSelected(item)
-    }
 }

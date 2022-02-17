@@ -18,6 +18,16 @@ class CharacterViewModel(application: Application): AndroidViewModel(application
         }
         return characters
     }
+
+    fun saveCharacter(character: Character) {
+        runBlocking {
+            if (characterDao.characterExists(character.characterName)) {
+                characterDao.update(character)
+            } else {
+                characterDao.insert(character)
+            }
+        }
+    }
 }
 
 class CharacterViewModelFactory(private val application: Application): ViewModelProvider.Factory {

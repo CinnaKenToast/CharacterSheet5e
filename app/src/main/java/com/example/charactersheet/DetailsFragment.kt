@@ -4,12 +4,16 @@ import android.os.Bundle
 import android.util.Log
 import android.view.*
 import android.widget.Toast
+import androidx.core.view.children
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.RecyclerView
+import com.example.charactersheet.data.AttackSpell
 import com.example.charactersheet.data.Character
 import com.example.charactersheet.data.blankCharacter
 import com.example.charactersheet.databinding.FragmentDetailsBinding
 import com.example.charactersheet.views.AttackSpellsAdapter
+import com.example.charactersheet.views.CSEditText
 import kotlinx.coroutines.runBlocking
 
 class DetailsFragment : Fragment() {
@@ -63,6 +67,8 @@ class DetailsFragment : Fragment() {
             when (item.itemId) {
                 R.id.saveButton -> {
                     Toast.makeText(context, item.title, Toast.LENGTH_SHORT).show()
+                    updateCharacter()
+                    characterViewModel.saveCharacter(currentCharacter)
                     true
                 }
                 R.id.exportButton -> {
@@ -176,5 +182,112 @@ class DetailsFragment : Fragment() {
         binding.ideals.setText(currentCharacter.ideals)
         binding.bonds.setText(currentCharacter.bonds)
         binding.flaws.setText(currentCharacter.flaws)
+    }
+
+    private fun getAttackSpells(): List<AttackSpell> {
+        val list = mutableListOf<AttackSpell>()
+
+        val recyclerView = binding.attackSpellsRecyclerView
+        for (i in 0 until recyclerView.childCount) {
+            val viewHolder = recyclerView.findViewHolderForAdapterPosition(i)!! as AttackSpellsAdapter.ViewHolder
+            list.add(
+                viewHolder.getAttackSpell()
+            )
+        }
+        return list
+    }
+
+    private fun updateCharacter() {
+        currentCharacter.characterName = binding.characterName.text.toString()
+        currentCharacter.classLevel = binding.classLevel.text.toString()
+        currentCharacter.background = binding.characterBackground.text.toString()
+        currentCharacter.playerName = binding.playerName.text.toString()
+        currentCharacter.race = binding.characterRace.text.toString()
+        currentCharacter.alignmentType = binding.characterAlignment.text.toString()
+        currentCharacter.experiencePoints = binding.experiencePoints.text.toString()
+        currentCharacter.armorClass = binding.armorClass.text.toString()
+        currentCharacter.initiative = binding.initiative.text.toString()
+        currentCharacter.speed = binding.speed.text.toString()
+        currentCharacter.hitPointMax = binding.hitPointMax.text.toString()
+        currentCharacter.currentHitPoints = binding.currentHitPoints.text.toString()
+        currentCharacter.temporaryHitPoints = binding.tempHitPoints.text.toString()
+        currentCharacter.totalHitDice = binding.totalHitDice.text.toString()
+        currentCharacter.successDeathSave1 = binding.successSaveButton1.isChecked()
+        currentCharacter.successDeathSave2 = binding.successSaveButton2.isChecked()
+        currentCharacter.successDeathSave3 = binding.successSaveButton3.isChecked()
+        currentCharacter.failDeathSave1 = binding.failSaveButton1.isChecked()
+        currentCharacter.failDeathSave2 = binding.failSaveButton2.isChecked()
+        currentCharacter.failDeathSave3 = binding.failSaveButton3.isChecked()
+        currentCharacter.inspiration = binding.inspiration.text.toString()
+        currentCharacter.proficiencyBonus = binding.proficiencyBonus.text.toString()
+        currentCharacter.strength = binding.strength.text.toString()
+        currentCharacter.strengthBonus = binding.strengthBonus.text.toString()
+        currentCharacter.dexterityBonus = binding.dexterityBonus.text.toString()
+        currentCharacter.constitution = binding.constitution.text.toString()
+        currentCharacter.constitutionBonus = binding.constitutionBonus.text.toString()
+        currentCharacter.intelligence = binding.intelligence.text.toString()
+        currentCharacter.intelligenceBonus = binding.intelligenceBonus.text.toString()
+        currentCharacter.wisdom = binding.wisdom.text.toString()
+        currentCharacter.wisdomBonus = binding.wisdomBonus.text.toString()
+        currentCharacter.charisma = binding.charisma.text.toString()
+        currentCharacter.strengthSaveChecked = binding.strengthSaveButton.isChecked()
+        currentCharacter.strengthSave = binding.strengthSave.text.toString()
+        currentCharacter.dexteritySaveChecked = binding.dexteritySaveButton.isChecked()
+        currentCharacter.dexteritySave = binding.dexteritySave.text.toString()
+        currentCharacter.constitutionSaveChecked = binding.constitutionSaveButton.isChecked()
+        currentCharacter.constitutionSave = binding.constitutionSave.text.toString()
+        currentCharacter.intelligenceSaveChecked = binding.intelligenceSaveButton.isChecked()
+        currentCharacter.intelligenceSave = binding.intelligenceSave.text.toString()
+        currentCharacter.wisdomSaveChecked = binding.wisdomSaveButton.isChecked()
+        currentCharacter.wisdomSave = binding.wisdomSave.text.toString()
+        currentCharacter.charismaSaveChecked = binding.charismaSaveButton.isChecked()
+        currentCharacter.charismaSave = binding.charismaSave.text.toString()
+        currentCharacter.acrobaticsChecked = binding.acrobaticsButton.isChecked()
+        currentCharacter.acrobatics = binding.acrobatics.text.toString()
+        currentCharacter.animalHandlingChecked = binding.animalHandlingButton.isChecked()
+        currentCharacter.animalHandling = binding.animalHandling.text.toString()
+        currentCharacter.arcanaChecked = binding.arcanaButton.isChecked()
+        currentCharacter.arcana = binding.arcana.text.toString()
+        currentCharacter.athleticsChecked = binding.athleticsButton.isChecked()
+        currentCharacter.athletics = binding.athletics.text.toString()
+        currentCharacter.deceptionChecked = binding.deceptionButton.isChecked()
+        currentCharacter.deception = binding.deception.text.toString()
+        currentCharacter.historyChecked = binding.historyButton.isChecked()
+        currentCharacter.history = binding.history.text.toString()
+        currentCharacter.insightChecked = binding.insightButton.isChecked()
+        currentCharacter.insight = binding.insight.text.toString()
+        currentCharacter.intimidationChecked = binding.intimidationButton.isChecked()
+        currentCharacter.intimidation = binding.intimidation.text.toString()
+        currentCharacter.investigationChecked = binding.investigationButton.isChecked()
+        currentCharacter.investigation = binding.investigation.text.toString()
+        currentCharacter.medicineChecked = binding.medicineButton.isChecked()
+        currentCharacter.medicine = binding.medicine.text.toString()
+        currentCharacter.natureChecked = binding.natureButton.isChecked()
+        currentCharacter.nature = binding.nature.text.toString()
+        currentCharacter.perceptionChecked = binding.perceptionButton.isChecked()
+        currentCharacter.perception = binding.perception.text.toString()
+        currentCharacter.performanceChecked = binding.performanceButton.isChecked()
+        currentCharacter.performance = binding.performance.text.toString()
+        currentCharacter.persuasionChecked = binding.persuasionButton.isChecked()
+        currentCharacter.persuasion = binding.persuasion.text.toString()
+        currentCharacter.religionChecked = binding.religionButton.isChecked()
+        currentCharacter.religion = binding.religion.text.toString()
+        currentCharacter.sleightOfHandChecked = binding.sleightOfHandButton.isChecked()
+        currentCharacter.sleightOfHand = binding.sleightOfHand.text.toString()
+        currentCharacter.stealthChecked = binding.stealthButton.isChecked()
+        currentCharacter.stealth = binding.stealth.text.toString()
+        currentCharacter.survivalChecked = binding.survivalButton.isChecked()
+        currentCharacter.attackSpells = getAttackSpells().toMutableList()
+        currentCharacter.copper = binding.copperPieces.text.toString()
+        currentCharacter.silver = binding.silverPieces.text.toString()
+        currentCharacter.electrum = binding.electrumPieces.text.toString()
+        currentCharacter.gold = binding.goldPieces.text.toString()
+        currentCharacter.platinum = binding.platinumPieces.text.toString()
+        currentCharacter.equipment = binding.equipment.text.toString()
+        currentCharacter.proficiencyLanguages = binding.proficienciesLanguages.text.toString()
+        currentCharacter.personalityTraits = binding.personalityTraits.text.toString()
+        currentCharacter.ideals = binding.ideals.text.toString()
+        currentCharacter.bonds = binding.bonds.text.toString()
+        currentCharacter.flaws = binding.flaws.text.toString()
     }
 }

@@ -1,6 +1,5 @@
 package com.example.charactersheet.views
 
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -30,5 +29,11 @@ class AttackSpellsAdapter(private val attackSpells: MutableList<AttackSpell>):
         val nameEditText: CSEditText = view.findViewById(R.id.spellAttackName)
         val bonusEditText: CSEditText = view.findViewById(R.id.spellAttackBonus)
         val damageTypeEditText: CSEditText = view.findViewById(R.id.spellAttackType)
+
+        fun getAttackSpell(): AttackSpell {
+            return AttackSpell(
+                nameEditText.text.toString(), bonusEditText.text.toString(), damageTypeEditText.text.toString()
+            )
+        }
     }
 }
