@@ -28,7 +28,7 @@ class DetailsFragment : Fragment() {
 
         runBlocking {
             arguments?.let {
-                val isNewCharacter = true//it.getBoolean("creatingCharacter")
+                val isNewCharacter = it.getBoolean("creatingCharacter")
                 if (!isNewCharacter) {
                     characterName = it.getString("characterName")!!
                     currentCharacter = characterViewModel.characterDao.getCharacter(characterName)
@@ -51,7 +51,6 @@ class DetailsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         currentCharacter = blankCharacter
-        Log.d("---DEBUG---", "${currentCharacter.attackSpells.size}")
         initRecyclerView()
         if (this::currentCharacter.isInitialized) {
             initializeFields()

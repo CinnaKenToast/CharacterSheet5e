@@ -23,7 +23,6 @@ class CSEditText: AppCompatEditText {
         if (actionCode == EditorInfo.IME_ACTION_DONE) {
             clearFocus()
         }
-
         super.onEditorAction(actionCode)
     }
 
