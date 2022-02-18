@@ -1,4 +1,4 @@
-package com.example.charactersheet.data
+package com.example.charactersheet.data.character
 
 import kotlinx.serialization.Serializable
 

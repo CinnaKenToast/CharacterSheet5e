@@ -1,19 +1,19 @@
 package com.example.charactersheet
 
+import android.app.Service
+import android.content.ClipData
+import android.content.ClipboardManager
 import android.os.Bundle
-import android.util.Log
 import android.view.*
 import android.widget.Toast
-import androidx.core.view.children
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import androidx.recyclerview.widget.RecyclerView
-import com.example.charactersheet.data.AttackSpell
-import com.example.charactersheet.data.Character
-import com.example.charactersheet.data.blankCharacter
+import com.example.charactersheet.data.character.AttackSpell
+import com.example.charactersheet.data.character.Character
+import com.example.charactersheet.data.character.blankCharacter
 import com.example.charactersheet.databinding.FragmentDetailsBinding
+import com.example.charactersheet.utils.toJsonString
 import com.example.charactersheet.views.AttackSpellsAdapter
-import com.example.charactersheet.views.CSEditText
 import kotlinx.coroutines.runBlocking
 
 class DetailsFragment : Fragment() {
@@ -38,7 +38,7 @@ class DetailsFragment : Fragment() {
                     characterName = it.getString("characterName")!!
                     currentCharacter = characterViewModel.characterDao.getCharacter(characterName)!!
                 } else {
-                    currentCharacter = blankCharacter
+                    currentCharacter = blankCharacter.copy()
                 }
 
             }
@@ -74,7 +74,12 @@ class DetailsFragment : Fragment() {
                     true
                 }
                 R.id.exportButton -> {
-                    Toast.makeText(context, item.title, Toast.LENGTH_SHORT).show()
+                    updateCharacter()
+                    val json = currentCharacter.toJsonString()
+                    val clipboard = requireContext().getSystemService(Service.CLIPBOARD_SERVICE) as ClipboardManager
+                    val clip = ClipData.newPlainText("characterData", json)
+                    clipboard.setPrimaryClip(clip)
+                    Toast.makeText(context, "${currentCharacter.characterName}'s data has been copied to your clipboard", Toast.LENGTH_SHORT).show()
                     true
                 }
                 else -> {true}

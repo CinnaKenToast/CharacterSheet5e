@@ -14,9 +14,11 @@
         <entry key="app/src/main/res/layout/fragment_character_select.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_character_select_list.xml" value="0.1345591307981613" />
         <entry key="app/src/main/res/layout/fragment_details.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_import_dialog.xml" value="0.67" />
         <entry key="app/src/main/res/layout/layout_attack_spell_recycler_view.xml" value="0.33" />
         <entry key="app/src/main/res/layout/layout_character_select_recycler_view.xml" value="0.1" />
         <entry key="app/src/main/res/layout/test.xml" value="0.1" />
+        <entry key="app/src/main/res/menu/character_long_press_menu.xml" value="0.2997007268063275" />
         <entry key="app/src/main/res/menu/character_selection_menu.xml" value="0.28544949026876737" />
         <entry key="app/src/main/res/menu/character_sheet_menu.xml" value="0.42967079948696024" />
       </map>

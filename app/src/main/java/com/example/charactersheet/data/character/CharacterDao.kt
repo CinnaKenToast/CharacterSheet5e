@@ -1,10 +1,10 @@
-package com.example.charactersheet.data
+package com.example.charactersheet.data.character
 
 import androidx.room.*
 
 @Dao
 interface CharacterDao {
-    @Insert(onConflict = OnConflictStrategy.IGNORE)
+    @Insert(onConflict = OnConflictStrategy.FAIL)
     suspend fun insert(character: Character)
 
     @Update
@@ -17,8 +17,5 @@ interface CharacterDao {
     suspend fun getCharacter(characterName: String): Character?
 
     @Query("SELECT * FROM character")
-    suspend fun getListOCharacters(): List<Character>
-
-    @Query("SELECT COUNT(*) == 0 FROM character")
-    suspend fun tableIsEmpty(): Boolean
+    suspend fun getListOfCharacters(): List<Character>
 }

@@ -3,6 +3,7 @@
     package="com.example.charactersheet">
 
     <application
+        android:name=".CharacterSheetApplication"
         android:allowBackup="true"
         android:icon="@mipmap/d20"
         android:label="@string/app_name"

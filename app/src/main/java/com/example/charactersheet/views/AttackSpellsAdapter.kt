@@ -5,7 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.charactersheet.R
-import com.example.charactersheet.data.AttackSpell
+import com.example.charactersheet.data.character.AttackSpell
 
 class AttackSpellsAdapter(private val attackSpells: MutableList<AttackSpell>):
     RecyclerView.Adapter<AttackSpellsAdapter.ViewHolder>() {

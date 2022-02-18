@@ -1,6 +1,7 @@
 package com.example.charactersheet.data
 
 import androidx.room.TypeConverter
+import com.example.charactersheet.data.character.AttackSpell
 import com.example.charactersheet.utils.fromJsonString
 import com.example.charactersheet.utils.toJsonString
 

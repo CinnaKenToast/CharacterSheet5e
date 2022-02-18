@@ -17,5 +17,13 @@
         <action
             android:id="@+id/action_characterSelectFragment_to_detailsFragment"
             app:destination="@id/detailsFragment" />
+        <action
+            android:id="@+id/action_characterSelectFragment_to_importDialogFragment"
+            app:destination="@id/importDialogFragment" />
     </fragment>
+    <dialog
+        android:id="@+id/importDialogFragment"
+        android:name="com.example.charactersheet.ImportDialogFragment"
+        android:label="fragment_import_dialog"
+        tools:layout="@layout/fragment_import_dialog" />
 </navigation>

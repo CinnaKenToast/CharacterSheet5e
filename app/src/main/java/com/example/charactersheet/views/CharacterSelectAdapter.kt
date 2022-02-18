@@ -1,5 +1,6 @@
 package com.example.charactersheet.views
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,20 +9,24 @@ import androidx.core.os.bundleOf
 import androidx.navigation.NavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.charactersheet.R
-import com.example.charactersheet.data.Character
+import com.example.charactersheet.data.character.Character
 
-class CharacterSelectAdapter(private val characters: List<Character>, private val navController: NavController):
+class CharacterSelectAdapter(var characters: List<Character>, private val navController: NavController):
     RecyclerView.Adapter<CharacterSelectAdapter.ViewHolder>() {
 
+    private lateinit var context: Context
+    private var currentPosition: Int = -1
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.layout_character_select_recycler_view, parent, false)
+        context = parent.context
+        val view = LayoutInflater.from(context).inflate(R.layout.layout_character_select_recycler_view, parent, false)
         return ViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.nameEditText.setText(characters[position].characterName)
-        holder.classEditText.setText(characters[position].classLevel)
-        holder.raceEditText.setText(characters[position].race)
+        holder.nameEditText.text = characters[position].characterName
+        holder.classEditText.text = characters[position].classLevel
+        holder.raceEditText.text = characters[position].race
         holder.itemView.setOnClickListener {
             val bundle = bundleOf(
                 Pair("creatingCharacter", false),
@@ -29,10 +34,21 @@ class CharacterSelectAdapter(private val characters: List<Character>, private va
             )
             navController.navigate(R.id.action_characterSelectFragment_to_detailsFragment, bundle)
         }
+        holder.itemView.setOnLongClickListener {
+            currentPosition = holder.adapterPosition
+            false
+        }
     }
 
     override fun getItemCount(): Int {
         return characters.size
+    }
+
+    fun getSelectedCharacter(): Character? {
+        if (currentPosition >= 0 && !characters.isNullOrEmpty() && currentPosition <= itemCount) {
+            return characters[currentPosition]
+        }
+        return null
     }
 
     class ViewHolder(view: View): RecyclerView.ViewHolder(view) {

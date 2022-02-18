@@ -1,4 +1,4 @@
-package com.example.charactersheet.data
+package com.example.charactersheet.data.character
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
@@ -91,7 +91,7 @@ data class Character(
     var stealth: String = "",
     var survivalChecked: Boolean = false,
     var survival: String = "",
-    var attackSpells: MutableList<AttackSpell> = mutableListOf(),
+    var attackSpells: MutableList<AttackSpell> = blankAttackSpell,
     var copper: String = "",
     var silver: String = "",
     var electrum: String = "",
