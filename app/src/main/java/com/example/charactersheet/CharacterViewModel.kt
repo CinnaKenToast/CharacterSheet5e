@@ -21,11 +21,10 @@ class CharacterViewModel(application: Application): AndroidViewModel(application
 
     fun saveCharacter(character: Character) {
         runBlocking {
-            if (characterDao.characterExists(character.characterName)) {
+            val databaseCharacter = characterDao.getCharacter(character.characterName)
+            databaseCharacter?.let {
                 characterDao.update(character)
-            } else {
-                characterDao.insert(character)
-            }
+            } ?: characterDao.insert(character)
         }
     }
 }

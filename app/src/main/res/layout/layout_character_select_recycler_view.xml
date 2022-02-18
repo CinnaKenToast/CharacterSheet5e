@@ -4,7 +4,8 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardCornerRadius="5dp"
-    app:cardUseCompatPadding="true">
+    app:cardUseCompatPadding="true"
+    android:theme="@style/Theme.MaterialComponents.Light">
     <LinearLayout
         android:id="@+id/linearLayout"
         android:orientation="horizontal"

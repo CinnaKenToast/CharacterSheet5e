@@ -3,6 +3,7 @@ package com.example.charactersheet.views
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.core.os.bundleOf
 import androidx.navigation.NavController
 import androidx.recyclerview.widget.RecyclerView
@@ -35,8 +36,8 @@ class CharacterSelectAdapter(private val characters: List<Character>, private va
     }
 
     class ViewHolder(view: View): RecyclerView.ViewHolder(view) {
-        val nameEditText: CSEditText = view.findViewById(R.id.characterName)
-        val classEditText: CSEditText = view.findViewById(R.id.characterClass)
-        val raceEditText: CSEditText = view.findViewById(R.id.characterRace)
+        val nameEditText: TextView = view.findViewById(R.id.characterName)
+        val classEditText: TextView = view.findViewById(R.id.characterClass)
+        val raceEditText: TextView = view.findViewById(R.id.characterRace)
     }
 }

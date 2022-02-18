@@ -36,7 +36,7 @@ class DetailsFragment : Fragment() {
                 val isNewCharacter = it.getBoolean("creatingCharacter")
                 if (!isNewCharacter) {
                     characterName = it.getString("characterName")!!
-                    currentCharacter = characterViewModel.characterDao.getCharacter(characterName)
+                    currentCharacter = characterViewModel.characterDao.getCharacter(characterName)!!
                 } else {
                     currentCharacter = blankCharacter
                 }
@@ -56,7 +56,6 @@ class DetailsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initMenuOptions()
-        currentCharacter = blankCharacter
         if (this::currentCharacter.isInitialized) {
             initializeFields()
         }
@@ -66,9 +65,12 @@ class DetailsFragment : Fragment() {
         binding.toolbar.setOnMenuItemClickListener { item ->
             when (item.itemId) {
                 R.id.saveButton -> {
-                    Toast.makeText(context, item.title, Toast.LENGTH_SHORT).show()
                     updateCharacter()
-                    characterViewModel.saveCharacter(currentCharacter)
+                    if (currentCharacter.characterName.isBlank()) {
+                        Toast.makeText(context, "Your character must have a name", Toast.LENGTH_SHORT).show()
+                    } else {
+                        characterViewModel.saveCharacter(currentCharacter)
+                    }
                     true
                 }
                 R.id.exportButton -> {
