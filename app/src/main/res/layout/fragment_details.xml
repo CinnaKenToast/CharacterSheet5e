@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:background="@color/purple_500"
         app:titleTextColor="@color/white"
-        app:title="@string/app_name"
+        app:title="Character Details"
         app:titleTextAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
         app:menu="@menu/character_sheet_menu"/>
     <!-- External Scroll -->

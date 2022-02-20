@@ -118,7 +118,7 @@ class CharacterSelectFragment : Fragment() {
                 }
                 R.id.previewSpells -> {
                     val navController = findNavController()
-                    navController.navigate(R.id.action_characterSelectFragment_to_spellsFragment)
+                    navController.navigate(R.id.action_characterSelectFragment_to_viewPagerFragment)
                     true
                 }
                 else -> {true}

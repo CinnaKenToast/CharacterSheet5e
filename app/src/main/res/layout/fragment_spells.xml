@@ -14,7 +14,7 @@
         android:layout_width="match_parent"
         android:background="@color/purple_500"
         app:titleTextColor="@color/white"
-        app:title="@string/app_name"
+        app:title="Spells"
         app:titleTextAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
         app:menu="@menu/character_sheet_menu"/>
     <!-- External Scroll -->
@@ -127,6 +127,11 @@
                     app:layout_constraintHeight_percent="0.4 "
                     app:layout_constraintWidth_percent="0.2"/>
             </androidx.constraintlayout.widget.ConstraintLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="8dp">
             <!-- Cantrips -->
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -344,7 +349,7 @@
                     app:layout_constraintHorizontal_bias="0"
                     app:layout_constraintVertical_bias="0.243"
                     app:layout_constraintHeight_percent="0.04"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelOne1"
                     android:layout_width="0dp"
@@ -376,7 +381,7 @@
                     app:layout_constraintHorizontal_bias="0"
                     app:layout_constraintVertical_bias="0.305"
                     app:layout_constraintHeight_percent="0.04"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelOne2"
                     android:layout_width="0dp"
@@ -408,7 +413,7 @@
                     app:layout_constraintHorizontal_bias="0"
                     app:layout_constraintVertical_bias="0.366"
                     app:layout_constraintHeight_percent="0.04"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelOne3"
                     android:layout_width="0dp"
@@ -440,7 +445,7 @@
                     app:layout_constraintHorizontal_bias="0"
                     app:layout_constraintVertical_bias="0.425"
                     app:layout_constraintHeight_percent="0.04"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelOne4"
                     android:layout_width="0dp"
@@ -472,7 +477,7 @@
                     app:layout_constraintHorizontal_bias="0"
                     app:layout_constraintVertical_bias="0.486"
                     app:layout_constraintHeight_percent="0.04"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelOne5"
                     android:layout_width="0dp"
@@ -504,7 +509,7 @@
                     app:layout_constraintHorizontal_bias="0"
                     app:layout_constraintVertical_bias="0.545"
                     app:layout_constraintHeight_percent="0.04"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelOne6"
                     android:layout_width="0dp"
@@ -536,7 +541,7 @@
                     app:layout_constraintHorizontal_bias="0"
                     app:layout_constraintVertical_bias="0.605"
                     app:layout_constraintHeight_percent="0.04"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelOne7"
                     android:layout_width="0dp"
@@ -568,7 +573,7 @@
                     app:layout_constraintHorizontal_bias="0"
                     app:layout_constraintVertical_bias="0.667"
                     app:layout_constraintHeight_percent="0.04"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelOne8"
                     android:layout_width="0dp"
@@ -600,7 +605,7 @@
                     app:layout_constraintHorizontal_bias="0"
                     app:layout_constraintVertical_bias="0.727"
                     app:layout_constraintHeight_percent="0.04"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelOne9"
                     android:layout_width="0dp"
@@ -632,7 +637,7 @@
                     app:layout_constraintHorizontal_bias="0"
                     app:layout_constraintVertical_bias="0.787"
                     app:layout_constraintHeight_percent="0.04"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelOne10"
                     android:layout_width="0dp"
@@ -664,7 +669,7 @@
                     app:layout_constraintHorizontal_bias="0"
                     app:layout_constraintVertical_bias="0.848"
                     app:layout_constraintHeight_percent="0.04"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelOne11"
                     android:layout_width="0dp"
@@ -696,7 +701,7 @@
                     app:layout_constraintHorizontal_bias="0"
                     app:layout_constraintVertical_bias="0.909"
                     app:layout_constraintHeight_percent="0.04"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelOne12"
                     android:layout_width="0dp"
@@ -728,7 +733,7 @@
                     app:layout_constraintHorizontal_bias="0"
                     app:layout_constraintVertical_bias="0.97"
                     app:layout_constraintHeight_percent="0.04"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelOne13"
                     android:layout_width="0dp"
@@ -812,7 +817,7 @@
                     app:layout_constraintHorizontal_bias="0"
                     app:layout_constraintVertical_bias="0.196"
                     app:layout_constraintHeight_percent="0.04"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelTwo1"
                     android:layout_width="0dp"
@@ -844,7 +849,7 @@
                     app:layout_constraintHorizontal_bias="0"
                     app:layout_constraintVertical_bias="0.261"
                     app:layout_constraintHeight_percent="0.04"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelTwo2"
                     android:layout_width="0dp"
@@ -876,7 +881,7 @@
                     app:layout_constraintHorizontal_bias="0"
                     app:layout_constraintVertical_bias="0.327"
                     app:layout_constraintHeight_percent="0.04"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelTwo3"
                     android:layout_width="0dp"
@@ -908,7 +913,7 @@
                     app:layout_constraintHorizontal_bias="0"
                     app:layout_constraintVertical_bias="0.39"
                     app:layout_constraintHeight_percent="0.04"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelTwo4"
                     android:layout_width="0dp"
@@ -940,7 +945,7 @@
                     app:layout_constraintHorizontal_bias="0"
                     app:layout_constraintVertical_bias="0.456"
                     app:layout_constraintHeight_percent="0.04"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelTwo5"
                     android:layout_width="0dp"
@@ -972,7 +977,7 @@
                     app:layout_constraintHorizontal_bias="0"
                     app:layout_constraintVertical_bias="0.52"
                     app:layout_constraintHeight_percent="0.04"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelTwo6"
                     android:layout_width="0dp"
@@ -1004,7 +1009,7 @@
                     app:layout_constraintHorizontal_bias="0"
                     app:layout_constraintVertical_bias="0.586"
                     app:layout_constraintHeight_percent="0.04"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelTwo7"
                     android:layout_width="0dp"
@@ -1036,7 +1041,7 @@
                     app:layout_constraintHorizontal_bias="0"
                     app:layout_constraintVertical_bias="0.65"
                     app:layout_constraintHeight_percent="0.04"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelTwo8"
                     android:layout_width="0dp"
@@ -1068,7 +1073,7 @@
                     app:layout_constraintHorizontal_bias="0"
                     app:layout_constraintVertical_bias="0.716"
                     app:layout_constraintHeight_percent="0.04"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelTwo9"
                     android:layout_width="0dp"
@@ -1100,7 +1105,7 @@
                     app:layout_constraintHorizontal_bias="0"
                     app:layout_constraintVertical_bias="0.781"
                     app:layout_constraintHeight_percent="0.04"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelTwo10"
                     android:layout_width="0dp"
@@ -1132,7 +1137,7 @@
                     app:layout_constraintHorizontal_bias="0"
                     app:layout_constraintVertical_bias="0.846"
                     app:layout_constraintHeight_percent="0.04"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelTwo11"
                     android:layout_width="0dp"
@@ -1164,7 +1169,7 @@
                     app:layout_constraintHorizontal_bias="0"
                     app:layout_constraintVertical_bias="0.91"
                     app:layout_constraintHeight_percent="0.04"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelTwo12"
                     android:layout_width="0dp"
@@ -1196,7 +1201,7 @@
                     app:layout_constraintHorizontal_bias="0"
                     app:layout_constraintVertical_bias="0.974"
                     app:layout_constraintHeight_percent="0.04"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelTwo13"
                     android:layout_width="0dp"
@@ -1280,7 +1285,7 @@
                     app:layout_constraintHorizontal_bias="0"
                     app:layout_constraintVertical_bias="0.196"
                     app:layout_constraintHeight_percent="0.04"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelThree1"
                     android:layout_width="0dp"
@@ -1312,7 +1317,7 @@
                     app:layout_constraintHorizontal_bias="0"
                     app:layout_constraintVertical_bias="0.261"
                     app:layout_constraintHeight_percent="0.04"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelThree2"
                     android:layout_width="0dp"
@@ -1344,7 +1349,7 @@
                     app:layout_constraintHorizontal_bias="0"
                     app:layout_constraintVertical_bias="0.327"
                     app:layout_constraintHeight_percent="0.04"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelThree3"
                     android:layout_width="0dp"
@@ -1376,7 +1381,7 @@
                     app:layout_constraintHorizontal_bias="0"
                     app:layout_constraintVertical_bias="0.39"
                     app:layout_constraintHeight_percent="0.04"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelThree4"
                     android:layout_width="0dp"
@@ -1408,7 +1413,7 @@
                     app:layout_constraintHorizontal_bias="0"
                     app:layout_constraintVertical_bias="0.456"
                     app:layout_constraintHeight_percent="0.04"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelThree5"
                     android:layout_width="0dp"
@@ -1440,7 +1445,7 @@
                     app:layout_constraintHorizontal_bias="0"
                     app:layout_constraintVertical_bias="0.52"
                     app:layout_constraintHeight_percent="0.04"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelThree6"
                     android:layout_width="0dp"
@@ -1472,7 +1477,7 @@
                     app:layout_constraintHorizontal_bias="0"
                     app:layout_constraintVertical_bias="0.586"
                     app:layout_constraintHeight_percent="0.04"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelThree7"
                     android:layout_width="0dp"
@@ -1504,7 +1509,7 @@
                     app:layout_constraintHorizontal_bias="0"
                     app:layout_constraintVertical_bias="0.65"
                     app:layout_constraintHeight_percent="0.04"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelThree8"
                     android:layout_width="0dp"
@@ -1536,7 +1541,7 @@
                     app:layout_constraintHorizontal_bias="0"
                     app:layout_constraintVertical_bias="0.716"
                     app:layout_constraintHeight_percent="0.04"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelThree9"
                     android:layout_width="0dp"
@@ -1568,7 +1573,7 @@
                     app:layout_constraintHorizontal_bias="0"
                     app:layout_constraintVertical_bias="0.781"
                     app:layout_constraintHeight_percent="0.04"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelThree10"
                     android:layout_width="0dp"
@@ -1600,7 +1605,7 @@
                     app:layout_constraintHorizontal_bias="0"
                     app:layout_constraintVertical_bias="0.846"
                     app:layout_constraintHeight_percent="0.04"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelThree11"
                     android:layout_width="0dp"
@@ -1632,7 +1637,7 @@
                     app:layout_constraintHorizontal_bias="0"
                     app:layout_constraintVertical_bias="0.91"
                     app:layout_constraintHeight_percent="0.04"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelThree12"
                     android:layout_width="0dp"
@@ -1664,7 +1669,7 @@
                     app:layout_constraintHorizontal_bias="0"
                     app:layout_constraintVertical_bias="0.974"
                     app:layout_constraintHeight_percent="0.04"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelThree13"
                     android:layout_width="0dp"
@@ -1748,7 +1753,7 @@
                     app:layout_constraintHorizontal_bias="0"
                     app:layout_constraintVertical_bias="0.196"
                     app:layout_constraintHeight_percent="0.045"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelFour1"
                     android:layout_width="0dp"
@@ -1780,7 +1785,7 @@
                     app:layout_constraintHorizontal_bias="0"
                     app:layout_constraintVertical_bias="0.261"
                     app:layout_constraintHeight_percent="0.045"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelFour2"
                     android:layout_width="0dp"
@@ -1812,7 +1817,7 @@
                     app:layout_constraintHorizontal_bias="0"
                     app:layout_constraintVertical_bias="0.327"
                     app:layout_constraintHeight_percent="0.045"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelFour3"
                     android:layout_width="0dp"
@@ -1844,7 +1849,7 @@
                     app:layout_constraintHorizontal_bias="0"
                     app:layout_constraintVertical_bias="0.39"
                     app:layout_constraintHeight_percent="0.045"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelFour4"
                     android:layout_width="0dp"
@@ -1876,7 +1881,7 @@
                     app:layout_constraintHorizontal_bias="0"
                     app:layout_constraintVertical_bias="0.456"
                     app:layout_constraintHeight_percent="0.045"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelFour5"
                     android:layout_width="0dp"
@@ -1908,7 +1913,7 @@
                     app:layout_constraintHorizontal_bias="0"
                     app:layout_constraintVertical_bias="0.52"
                     app:layout_constraintHeight_percent="0.045"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelFour6"
                     android:layout_width="0dp"
@@ -1940,7 +1945,7 @@
                     app:layout_constraintHorizontal_bias="0"
                     app:layout_constraintVertical_bias="0.586"
                     app:layout_constraintHeight_percent="0.045"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelFour7"
                     android:layout_width="0dp"
@@ -1972,7 +1977,7 @@
                     app:layout_constraintHorizontal_bias="0"
                     app:layout_constraintVertical_bias="0.65"
                     app:layout_constraintHeight_percent="0.045"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelFour8"
                     android:layout_width="0dp"
@@ -2004,7 +2009,7 @@
                     app:layout_constraintHorizontal_bias="0"
                     app:layout_constraintVertical_bias="0.716"
                     app:layout_constraintHeight_percent="0.045"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelFour9"
                     android:layout_width="0dp"
@@ -2036,7 +2041,7 @@
                     app:layout_constraintHorizontal_bias="0"
                     app:layout_constraintVertical_bias="0.781"
                     app:layout_constraintHeight_percent="0.045"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelFour10"
                     android:layout_width="0dp"
@@ -2068,7 +2073,7 @@
                     app:layout_constraintHorizontal_bias="0"
                     app:layout_constraintVertical_bias="0.846"
                     app:layout_constraintHeight_percent="0.045"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelFour11"
                     android:layout_width="0dp"
@@ -2100,7 +2105,7 @@
                     app:layout_constraintHorizontal_bias="0"
                     app:layout_constraintVertical_bias="0.91"
                     app:layout_constraintHeight_percent="0.045"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelFour12"
                     android:layout_width="0dp"
@@ -2132,7 +2137,7 @@
                     app:layout_constraintHorizontal_bias="0"
                     app:layout_constraintVertical_bias="0.974"
                     app:layout_constraintHeight_percent="0.045"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelFour13"
                     android:layout_width="0dp"
@@ -2216,7 +2221,7 @@
                     app:layout_constraintHorizontal_bias="0.002"
                     app:layout_constraintVertical_bias="0.228"
                     app:layout_constraintHeight_percent="0.045"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelFive1"
                     android:layout_width="0dp"
@@ -2248,7 +2253,7 @@
                     app:layout_constraintHorizontal_bias="0.002"
                     app:layout_constraintVertical_bias="0.301"
                     app:layout_constraintHeight_percent="0.045"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelFive2"
                     android:layout_width="0dp"
@@ -2280,7 +2285,7 @@
                     app:layout_constraintHorizontal_bias="0.002"
                     app:layout_constraintVertical_bias="0.377"
                     app:layout_constraintHeight_percent="0.045"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelFive3"
                     android:layout_width="0dp"
@@ -2312,7 +2317,7 @@
                     app:layout_constraintHorizontal_bias="0.002"
                     app:layout_constraintVertical_bias="0.45"
                     app:layout_constraintHeight_percent="0.045"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelFive4"
                     android:layout_width="0dp"
@@ -2344,7 +2349,7 @@
                     app:layout_constraintHorizontal_bias="0.002"
                     app:layout_constraintVertical_bias="0.523"
                     app:layout_constraintHeight_percent="0.045"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelFive5"
                     android:layout_width="0dp"
@@ -2376,7 +2381,7 @@
                     app:layout_constraintHorizontal_bias="0.002"
                     app:layout_constraintVertical_bias="0.597"
                     app:layout_constraintHeight_percent="0.045"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelFive6"
                     android:layout_width="0dp"
@@ -2408,7 +2413,7 @@
                     app:layout_constraintHorizontal_bias="0.002"
                     app:layout_constraintVertical_bias="0.673"
                     app:layout_constraintHeight_percent="0.045"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelFive7"
                     android:layout_width="0dp"
@@ -2440,7 +2445,7 @@
                     app:layout_constraintHorizontal_bias="0.002"
                     app:layout_constraintVertical_bias="0.747"
                     app:layout_constraintHeight_percent="0.045"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelFive8"
                     android:layout_width="0dp"
@@ -2472,7 +2477,7 @@
                     app:layout_constraintHorizontal_bias="0.002"
                     app:layout_constraintVertical_bias="0.82"
                     app:layout_constraintHeight_percent="0.045"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelFive9"
                     android:layout_width="0dp"
@@ -2504,7 +2509,7 @@
                     app:layout_constraintHorizontal_bias="0.002"
                     app:layout_constraintVertical_bias="0.894"
                     app:layout_constraintHeight_percent="0.045"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelFive10"
                     android:layout_width="0dp"
@@ -2536,7 +2541,7 @@
                     app:layout_constraintHorizontal_bias="0.002"
                     app:layout_constraintVertical_bias="0.968"
                     app:layout_constraintHeight_percent="0.045"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelFive11"
                     android:layout_width="0dp"
@@ -2606,6 +2611,21 @@
                     app:layout_constraintVertical_bias="0.02"
                     app:layout_constraintHeight_percent="0.14"
                     app:layout_constraintWidth_percent="0.6"/>
+                <com.example.charactersheet.views.CSCheckboxRadioButton
+                    android:id="@+id/levelSix1Button"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:scaleX="0.8"
+                    android:scaleY="0.8"
+                    android:rotation="180"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintHorizontal_bias="0.002"
+                    app:layout_constraintVertical_bias="0.228"
+                    app:layout_constraintHeight_percent="0.045"
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelSix1"
                     android:layout_width="0dp"
@@ -2637,7 +2657,7 @@
                     app:layout_constraintHorizontal_bias="0.002"
                     app:layout_constraintVertical_bias="0.301"
                     app:layout_constraintHeight_percent="0.045"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelSix2"
                     android:layout_width="0dp"
@@ -2669,7 +2689,7 @@
                     app:layout_constraintHorizontal_bias="0.002"
                     app:layout_constraintVertical_bias="0.377"
                     app:layout_constraintHeight_percent="0.045"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelSix3"
                     android:layout_width="0dp"
@@ -2701,7 +2721,7 @@
                     app:layout_constraintHorizontal_bias="0.002"
                     app:layout_constraintVertical_bias="0.45"
                     app:layout_constraintHeight_percent="0.045"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelSix4"
                     android:layout_width="0dp"
@@ -2733,7 +2753,7 @@
                     app:layout_constraintHorizontal_bias="0.002"
                     app:layout_constraintVertical_bias="0.523"
                     app:layout_constraintHeight_percent="0.045"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelSix5"
                     android:layout_width="0dp"
@@ -2765,7 +2785,7 @@
                     app:layout_constraintHorizontal_bias="0.002"
                     app:layout_constraintVertical_bias="0.597"
                     app:layout_constraintHeight_percent="0.045"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelSix6"
                     android:layout_width="0dp"
@@ -2797,7 +2817,7 @@
                     app:layout_constraintHorizontal_bias="0.002"
                     app:layout_constraintVertical_bias="0.673"
                     app:layout_constraintHeight_percent="0.045"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelSix7"
                     android:layout_width="0dp"
@@ -2829,7 +2849,7 @@
                     app:layout_constraintHorizontal_bias="0.002"
                     app:layout_constraintVertical_bias="0.747"
                     app:layout_constraintHeight_percent="0.045"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelSix8"
                     android:layout_width="0dp"
@@ -2861,7 +2881,7 @@
                     app:layout_constraintHorizontal_bias="0.002"
                     app:layout_constraintVertical_bias="0.82"
                     app:layout_constraintHeight_percent="0.045"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelSix9"
                     android:layout_width="0dp"
@@ -2893,7 +2913,7 @@
                     app:layout_constraintHorizontal_bias="0.002"
                     app:layout_constraintVertical_bias="0.894"
                     app:layout_constraintHeight_percent="0.045"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelSix10"
                     android:layout_width="0dp"
@@ -2925,7 +2945,7 @@
                     app:layout_constraintHorizontal_bias="0.002"
                     app:layout_constraintVertical_bias="0.968"
                     app:layout_constraintHeight_percent="0.045"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelSix11"
                     android:layout_width="0dp"
@@ -3009,7 +3029,7 @@
                     app:layout_constraintHorizontal_bias="0.002"
                     app:layout_constraintVertical_bias="0.228"
                     app:layout_constraintHeight_percent="0.045"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelSeven1"
                     android:layout_width="0dp"
@@ -3041,7 +3061,7 @@
                     app:layout_constraintHorizontal_bias="0.002"
                     app:layout_constraintVertical_bias="0.301"
                     app:layout_constraintHeight_percent="0.045"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelSeven2"
                     android:layout_width="0dp"
@@ -3073,7 +3093,7 @@
                     app:layout_constraintHorizontal_bias="0.002"
                     app:layout_constraintVertical_bias="0.377"
                     app:layout_constraintHeight_percent="0.045"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelSeven3"
                     android:layout_width="0dp"
@@ -3105,7 +3125,7 @@
                     app:layout_constraintHorizontal_bias="0.002"
                     app:layout_constraintVertical_bias="0.45"
                     app:layout_constraintHeight_percent="0.045"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelSeven4"
                     android:layout_width="0dp"
@@ -3137,7 +3157,7 @@
                     app:layout_constraintHorizontal_bias="0.002"
                     app:layout_constraintVertical_bias="0.523"
                     app:layout_constraintHeight_percent="0.045"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelSeven5"
                     android:layout_width="0dp"
@@ -3169,7 +3189,7 @@
                     app:layout_constraintHorizontal_bias="0.002"
                     app:layout_constraintVertical_bias="0.597"
                     app:layout_constraintHeight_percent="0.04"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelSeven6"
                     android:layout_width="0dp"
@@ -3201,7 +3221,7 @@
                     app:layout_constraintHorizontal_bias="0.002"
                     app:layout_constraintVertical_bias="0.673"
                     app:layout_constraintHeight_percent="0.04"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelSeven7"
                     android:layout_width="0dp"
@@ -3233,7 +3253,7 @@
                     app:layout_constraintHorizontal_bias="0.002"
                     app:layout_constraintVertical_bias="0.747"
                     app:layout_constraintHeight_percent="0.04"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelSeven8"
                     android:layout_width="0dp"
@@ -3265,7 +3285,7 @@
                     app:layout_constraintHorizontal_bias="0.002"
                     app:layout_constraintVertical_bias="0.82"
                     app:layout_constraintHeight_percent="0.04"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelSeven9"
                     android:layout_width="0dp"
@@ -3297,7 +3317,7 @@
                     app:layout_constraintHorizontal_bias="0.002"
                     app:layout_constraintVertical_bias="0.894"
                     app:layout_constraintHeight_percent="0.04"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelSeven10"
                     android:layout_width="0dp"
@@ -3329,7 +3349,7 @@
                     app:layout_constraintHorizontal_bias="0.002"
                     app:layout_constraintVertical_bias="0.968"
                     app:layout_constraintHeight_percent="0.04"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelSeven11"
                     android:layout_width="0dp"
@@ -3413,7 +3433,7 @@
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintVertical_bias="0.266"
                     app:layout_constraintHeight_percent="0.05"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelEight1"
                     android:layout_width="0dp"
@@ -3445,7 +3465,7 @@
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintVertical_bias="0.353"
                     app:layout_constraintHeight_percent="0.05"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelEight2"
                     android:layout_width="0dp"
@@ -3477,7 +3497,7 @@
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintVertical_bias="0.44"
                     app:layout_constraintHeight_percent="0.05"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelEight3"
                     android:layout_width="0dp"
@@ -3509,7 +3529,7 @@
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintVertical_bias="0.53"
                     app:layout_constraintHeight_percent="0.05"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelEight4"
                     android:layout_width="0dp"
@@ -3541,7 +3561,7 @@
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintVertical_bias="0.613"
                     app:layout_constraintHeight_percent="0.05"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelEight5"
                     android:layout_width="0dp"
@@ -3573,7 +3593,7 @@
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintVertical_bias="0.704"
                     app:layout_constraintHeight_percent="0.05"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelEight6"
                     android:layout_width="0dp"
@@ -3605,7 +3625,7 @@
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintVertical_bias="0.79"
                     app:layout_constraintHeight_percent="0.05"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelEight7"
                     android:layout_width="0dp"
@@ -3635,9 +3655,9 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintVertical_bias="0.79"
+                    app:layout_constraintVertical_bias="0.877"
                     app:layout_constraintHeight_percent="0.05"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelEight8"
                     android:layout_width="0dp"
@@ -3669,7 +3689,7 @@
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintVertical_bias="0.964"
                     app:layout_constraintHeight_percent="0.05"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelEight9"
                     android:layout_width="0dp"
@@ -3753,7 +3773,7 @@
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintVertical_bias="0.266"
                     app:layout_constraintHeight_percent="0.05"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelNine1"
                     android:layout_width="0dp"
@@ -3785,7 +3805,7 @@
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintVertical_bias="0.353"
                     app:layout_constraintHeight_percent="0.05"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelNine2"
                     android:layout_width="0dp"
@@ -3817,7 +3837,7 @@
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintVertical_bias="0.44"
                     app:layout_constraintHeight_percent="0.05"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelNine3"
                     android:layout_width="0dp"
@@ -3849,7 +3869,7 @@
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintVertical_bias="0.53"
                     app:layout_constraintHeight_percent="0.05"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelNine4"
                     android:layout_width="0dp"
@@ -3881,7 +3901,7 @@
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintVertical_bias="0.613"
                     app:layout_constraintHeight_percent="0.05"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelNine5"
                     android:layout_width="0dp"
@@ -3913,7 +3933,7 @@
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintVertical_bias="0.704"
                     app:layout_constraintHeight_percent="0.05"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelNine6"
                     android:layout_width="0dp"
@@ -3945,7 +3965,7 @@
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintVertical_bias="0.79"
                     app:layout_constraintHeight_percent="0.05"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelNine7"
                     android:layout_width="0dp"
@@ -3975,9 +3995,9 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintVertical_bias="0.79"
+                    app:layout_constraintVertical_bias="0.877"
                     app:layout_constraintHeight_percent="0.05"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelNine8"
                     android:layout_width="0dp"
@@ -4009,7 +4029,7 @@
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintVertical_bias="0.964"
                     app:layout_constraintHeight_percent="0.05"
-                    app:layout_constraintWidth_percent="0.0626" />
+                    app:layout_constraintWidth_percent="0.066" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelNine9"
                     android:layout_width="0dp"
@@ -4028,6 +4048,7 @@
                     app:layout_constraintHeight_percent="0.105"
                     app:layout_constraintWidth_percent="0.9"/>
             </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 </LinearLayout>

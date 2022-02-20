@@ -18,20 +18,20 @@
             android:id="@+id/action_characterSelectFragment_to_detailsFragment"
             app:destination="@id/detailsFragment" />
         <action
-            android:id="@+id/action_characterSelectFragment_to_importDialogFragment"
-            app:destination="@id/importDialogFragment" />
-        <action
             android:id="@+id/action_characterSelectFragment_to_spellsFragment"
             app:destination="@id/spellsFragment" />
+        <action
+            android:id="@+id/action_characterSelectFragment_to_viewPagerFragment"
+            app:destination="@id/viewPagerFragment" />
     </fragment>
-    <dialog
-        android:id="@+id/importDialogFragment"
-        android:name="com.example.charactersheet.ImportDialogFragment"
-        android:label="fragment_import_dialog"
-        tools:layout="@layout/fragment_import_dialog" />
     <fragment
         android:id="@+id/spellsFragment"
         android:name="com.example.charactersheet.SpellsFragment"
         android:label="fragment_spells"
         tools:layout="@layout/fragment_spells" />
+    <fragment
+        android:id="@+id/viewPagerFragment"
+        android:name="com.example.charactersheet.ViewPagerFragment"
+        android:label="fragment_view_pager"
+        tools:layout="@layout/fragment_view_pager" />
 </navigation>
