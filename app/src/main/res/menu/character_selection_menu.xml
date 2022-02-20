@@ -6,4 +6,9 @@
         android:icon="@android:drawable/stat_sys_download"
         android:title="Import"
         app:showAsAction="never"/>
+    <item
+        android:id="@+id/previewSpells"
+        android:icon="@android:drawable/ic_menu_upload"
+        android:title="Preview Spells"
+        app:showAsAction="never"/>
 </menu>

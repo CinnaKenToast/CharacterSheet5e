@@ -20,10 +20,18 @@
         <action
             android:id="@+id/action_characterSelectFragment_to_importDialogFragment"
             app:destination="@id/importDialogFragment" />
+        <action
+            android:id="@+id/action_characterSelectFragment_to_spellsFragment"
+            app:destination="@id/spellsFragment" />
     </fragment>
     <dialog
         android:id="@+id/importDialogFragment"
         android:name="com.example.charactersheet.ImportDialogFragment"
         android:label="fragment_import_dialog"
         tools:layout="@layout/fragment_import_dialog" />
+    <fragment
+        android:id="@+id/spellsFragment"
+        android:name="com.example.charactersheet.SpellsFragment"
+        android:label="fragment_spells"
+        tools:layout="@layout/fragment_spells" />
 </navigation>

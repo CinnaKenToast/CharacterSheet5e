@@ -116,6 +116,11 @@ class CharacterSelectFragment : Fragment() {
                     createImportDialog()
                     true
                 }
+                R.id.previewSpells -> {
+                    val navController = findNavController()
+                    navController.navigate(R.id.action_characterSelectFragment_to_spellsFragment)
+                    true
+                }
                 else -> {true}
             }
         }

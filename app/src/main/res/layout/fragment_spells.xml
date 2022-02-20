@@ -108,7 +108,7 @@
                     app:layout_constraintHeight_percent="0.4 "
                     app:layout_constraintWidth_percent="0.2"/>
                 <com.example.charactersheet.views.CSEditText
-                    android:id="@+id/spellAttackBonus"
+                    android:id="@+id/spellBonus"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:ems="10"
@@ -1734,6 +1734,21 @@
                     app:layout_constraintVertical_bias="0.02"
                     app:layout_constraintHeight_percent="0.12"
                     app:layout_constraintWidth_percent="0.6"/>
+                <com.example.charactersheet.views.CSCheckboxRadioButton
+                    android:id="@+id/levelFour1Button"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:scaleX="0.8"
+                    android:scaleY="0.8"
+                    android:rotation="180"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintVertical_bias="0.196"
+                    app:layout_constraintHeight_percent="0.045"
+                    app:layout_constraintWidth_percent="0.0626" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelFour1"
                     android:layout_width="0dp"
@@ -1751,6 +1766,21 @@
                     app:layout_constraintVertical_bias="0.176"
                     app:layout_constraintHeight_percent="0.08"
                     app:layout_constraintWidth_percent="0.9"/>
+                <com.example.charactersheet.views.CSCheckboxRadioButton
+                    android:id="@+id/levelFour2Button"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:scaleX="0.8"
+                    android:scaleY="0.8"
+                    android:rotation="180"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintVertical_bias="0.261"
+                    app:layout_constraintHeight_percent="0.045"
+                    app:layout_constraintWidth_percent="0.0626" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelFour2"
                     android:layout_width="0dp"
@@ -1768,6 +1798,21 @@
                     app:layout_constraintVertical_bias="0.245"
                     app:layout_constraintHeight_percent="0.08"
                     app:layout_constraintWidth_percent="0.9"/>
+                <com.example.charactersheet.views.CSCheckboxRadioButton
+                    android:id="@+id/levelFour3Button"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:scaleX="0.8"
+                    android:scaleY="0.8"
+                    android:rotation="180"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintVertical_bias="0.327"
+                    app:layout_constraintHeight_percent="0.045"
+                    app:layout_constraintWidth_percent="0.0626" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelFour3"
                     android:layout_width="0dp"
@@ -1785,6 +1830,21 @@
                     app:layout_constraintVertical_bias="0.313"
                     app:layout_constraintHeight_percent="0.08"
                     app:layout_constraintWidth_percent="0.9"/>
+                <com.example.charactersheet.views.CSCheckboxRadioButton
+                    android:id="@+id/levelFour4Button"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:scaleX="0.8"
+                    android:scaleY="0.8"
+                    android:rotation="180"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintVertical_bias="0.39"
+                    app:layout_constraintHeight_percent="0.045"
+                    app:layout_constraintWidth_percent="0.0626" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelFour4"
                     android:layout_width="0dp"
@@ -1802,6 +1862,21 @@
                     app:layout_constraintVertical_bias="0.38"
                     app:layout_constraintHeight_percent="0.08"
                     app:layout_constraintWidth_percent="0.9"/>
+                <com.example.charactersheet.views.CSCheckboxRadioButton
+                    android:id="@+id/levelFour5Button"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:scaleX="0.8"
+                    android:scaleY="0.8"
+                    android:rotation="180"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintVertical_bias="0.456"
+                    app:layout_constraintHeight_percent="0.045"
+                    app:layout_constraintWidth_percent="0.0626" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelFour5"
                     android:layout_width="0dp"
@@ -1819,6 +1894,21 @@
                     app:layout_constraintVertical_bias="0.446"
                     app:layout_constraintHeight_percent="0.08"
                     app:layout_constraintWidth_percent="0.9"/>
+                <com.example.charactersheet.views.CSCheckboxRadioButton
+                    android:id="@+id/levelFour6Button"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:scaleX="0.8"
+                    android:scaleY="0.8"
+                    android:rotation="180"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintVertical_bias="0.52"
+                    app:layout_constraintHeight_percent="0.045"
+                    app:layout_constraintWidth_percent="0.0626" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelFour6"
                     android:layout_width="0dp"
@@ -1836,6 +1926,21 @@
                     app:layout_constraintVertical_bias="0.516"
                     app:layout_constraintHeight_percent="0.08"
                     app:layout_constraintWidth_percent="0.9"/>
+                <com.example.charactersheet.views.CSCheckboxRadioButton
+                    android:id="@+id/levelFour7Button"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:scaleX="0.8"
+                    android:scaleY="0.8"
+                    android:rotation="180"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintVertical_bias="0.586"
+                    app:layout_constraintHeight_percent="0.045"
+                    app:layout_constraintWidth_percent="0.0626" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelFour7"
                     android:layout_width="0dp"
@@ -1853,6 +1958,21 @@
                     app:layout_constraintVertical_bias="0.584"
                     app:layout_constraintHeight_percent="0.08"
                     app:layout_constraintWidth_percent="0.9"/>
+                <com.example.charactersheet.views.CSCheckboxRadioButton
+                    android:id="@+id/levelFour8Button"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:scaleX="0.8"
+                    android:scaleY="0.8"
+                    android:rotation="180"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintVertical_bias="0.65"
+                    app:layout_constraintHeight_percent="0.045"
+                    app:layout_constraintWidth_percent="0.0626" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelFour8"
                     android:layout_width="0dp"
@@ -1870,6 +1990,21 @@
                     app:layout_constraintVertical_bias="0.65"
                     app:layout_constraintHeight_percent="0.08"
                     app:layout_constraintWidth_percent="0.9"/>
+                <com.example.charactersheet.views.CSCheckboxRadioButton
+                    android:id="@+id/levelFour9Button"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:scaleX="0.8"
+                    android:scaleY="0.8"
+                    android:rotation="180"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintVertical_bias="0.716"
+                    app:layout_constraintHeight_percent="0.045"
+                    app:layout_constraintWidth_percent="0.0626" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelFour9"
                     android:layout_width="0dp"
@@ -1887,6 +2022,21 @@
                     app:layout_constraintVertical_bias="0.718"
                     app:layout_constraintHeight_percent="0.08"
                     app:layout_constraintWidth_percent="0.9"/>
+                <com.example.charactersheet.views.CSCheckboxRadioButton
+                    android:id="@+id/levelFour10Button"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:scaleX="0.8"
+                    android:scaleY="0.8"
+                    android:rotation="180"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintVertical_bias="0.781"
+                    app:layout_constraintHeight_percent="0.045"
+                    app:layout_constraintWidth_percent="0.0626" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelFour10"
                     android:layout_width="0dp"
@@ -1904,6 +2054,21 @@
                     app:layout_constraintVertical_bias="0.785"
                     app:layout_constraintHeight_percent="0.08"
                     app:layout_constraintWidth_percent="0.9"/>
+                <com.example.charactersheet.views.CSCheckboxRadioButton
+                    android:id="@+id/levelFour11Button"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:scaleX="0.8"
+                    android:scaleY="0.8"
+                    android:rotation="180"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintVertical_bias="0.846"
+                    app:layout_constraintHeight_percent="0.045"
+                    app:layout_constraintWidth_percent="0.0626" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelFour11"
                     android:layout_width="0dp"
@@ -1921,6 +2086,21 @@
                     app:layout_constraintVertical_bias="0.852"
                     app:layout_constraintHeight_percent="0.08"
                     app:layout_constraintWidth_percent="0.9"/>
+                <com.example.charactersheet.views.CSCheckboxRadioButton
+                    android:id="@+id/levelFour12Button"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:scaleX="0.8"
+                    android:scaleY="0.8"
+                    android:rotation="180"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintVertical_bias="0.91"
+                    app:layout_constraintHeight_percent="0.045"
+                    app:layout_constraintWidth_percent="0.0626" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelFour12"
                     android:layout_width="0dp"
@@ -1938,6 +2118,21 @@
                     app:layout_constraintVertical_bias="0.918"
                     app:layout_constraintHeight_percent="0.08"
                     app:layout_constraintWidth_percent="0.9"/>
+                <com.example.charactersheet.views.CSCheckboxRadioButton
+                    android:id="@+id/levelFour13Button"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:scaleX="0.8"
+                    android:scaleY="0.8"
+                    android:rotation="180"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintVertical_bias="0.974"
+                    app:layout_constraintHeight_percent="0.045"
+                    app:layout_constraintWidth_percent="0.0626" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelFour13"
                     android:layout_width="0dp"
@@ -2020,7 +2215,7 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintHorizontal_bias="0.002"
                     app:layout_constraintVertical_bias="0.228"
-                    app:layout_constraintHeight_percent="0.04"
+                    app:layout_constraintHeight_percent="0.045"
                     app:layout_constraintWidth_percent="0.0626" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelFive1"
@@ -2052,7 +2247,7 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintHorizontal_bias="0.002"
                     app:layout_constraintVertical_bias="0.301"
-                    app:layout_constraintHeight_percent="0.04"
+                    app:layout_constraintHeight_percent="0.045"
                     app:layout_constraintWidth_percent="0.0626" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelFive2"
@@ -2084,7 +2279,7 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintHorizontal_bias="0.002"
                     app:layout_constraintVertical_bias="0.377"
-                    app:layout_constraintHeight_percent="0.04"
+                    app:layout_constraintHeight_percent="0.045"
                     app:layout_constraintWidth_percent="0.0626" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelFive3"
@@ -2116,7 +2311,7 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintHorizontal_bias="0.002"
                     app:layout_constraintVertical_bias="0.45"
-                    app:layout_constraintHeight_percent="0.04"
+                    app:layout_constraintHeight_percent="0.045"
                     app:layout_constraintWidth_percent="0.0626" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelFive4"
@@ -2148,7 +2343,7 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintHorizontal_bias="0.002"
                     app:layout_constraintVertical_bias="0.523"
-                    app:layout_constraintHeight_percent="0.04"
+                    app:layout_constraintHeight_percent="0.045"
                     app:layout_constraintWidth_percent="0.0626" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelFive5"
@@ -2180,7 +2375,7 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintHorizontal_bias="0.002"
                     app:layout_constraintVertical_bias="0.597"
-                    app:layout_constraintHeight_percent="0.04"
+                    app:layout_constraintHeight_percent="0.045"
                     app:layout_constraintWidth_percent="0.0626" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelFive6"
@@ -2212,7 +2407,7 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintHorizontal_bias="0.002"
                     app:layout_constraintVertical_bias="0.673"
-                    app:layout_constraintHeight_percent="0.04"
+                    app:layout_constraintHeight_percent="0.045"
                     app:layout_constraintWidth_percent="0.0626" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelFive7"
@@ -2244,7 +2439,7 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintHorizontal_bias="0.002"
                     app:layout_constraintVertical_bias="0.747"
-                    app:layout_constraintHeight_percent="0.04"
+                    app:layout_constraintHeight_percent="0.045"
                     app:layout_constraintWidth_percent="0.0626" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelFive8"
@@ -2276,7 +2471,7 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintHorizontal_bias="0.002"
                     app:layout_constraintVertical_bias="0.82"
-                    app:layout_constraintHeight_percent="0.04"
+                    app:layout_constraintHeight_percent="0.045"
                     app:layout_constraintWidth_percent="0.0626" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelFive9"
@@ -2308,7 +2503,7 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintHorizontal_bias="0.002"
                     app:layout_constraintVertical_bias="0.894"
-                    app:layout_constraintHeight_percent="0.04"
+                    app:layout_constraintHeight_percent="0.045"
                     app:layout_constraintWidth_percent="0.0626" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelFive10"
@@ -2340,7 +2535,7 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintHorizontal_bias="0.002"
                     app:layout_constraintVertical_bias="0.968"
-                    app:layout_constraintHeight_percent="0.04"
+                    app:layout_constraintHeight_percent="0.045"
                     app:layout_constraintWidth_percent="0.0626" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelFive11"
@@ -2441,7 +2636,7 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintHorizontal_bias="0.002"
                     app:layout_constraintVertical_bias="0.301"
-                    app:layout_constraintHeight_percent="0.04"
+                    app:layout_constraintHeight_percent="0.045"
                     app:layout_constraintWidth_percent="0.0626" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelSix2"
@@ -2473,7 +2668,7 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintHorizontal_bias="0.002"
                     app:layout_constraintVertical_bias="0.377"
-                    app:layout_constraintHeight_percent="0.04"
+                    app:layout_constraintHeight_percent="0.045"
                     app:layout_constraintWidth_percent="0.0626" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelSix3"
@@ -2505,7 +2700,7 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintHorizontal_bias="0.002"
                     app:layout_constraintVertical_bias="0.45"
-                    app:layout_constraintHeight_percent="0.04"
+                    app:layout_constraintHeight_percent="0.045"
                     app:layout_constraintWidth_percent="0.0626" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelSix4"
@@ -2537,7 +2732,7 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintHorizontal_bias="0.002"
                     app:layout_constraintVertical_bias="0.523"
-                    app:layout_constraintHeight_percent="0.04"
+                    app:layout_constraintHeight_percent="0.045"
                     app:layout_constraintWidth_percent="0.0626" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelSix5"
@@ -2569,7 +2764,7 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintHorizontal_bias="0.002"
                     app:layout_constraintVertical_bias="0.597"
-                    app:layout_constraintHeight_percent="0.04"
+                    app:layout_constraintHeight_percent="0.045"
                     app:layout_constraintWidth_percent="0.0626" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelSix6"
@@ -2601,7 +2796,7 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintHorizontal_bias="0.002"
                     app:layout_constraintVertical_bias="0.673"
-                    app:layout_constraintHeight_percent="0.04"
+                    app:layout_constraintHeight_percent="0.045"
                     app:layout_constraintWidth_percent="0.0626" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelSix7"
@@ -2633,7 +2828,7 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintHorizontal_bias="0.002"
                     app:layout_constraintVertical_bias="0.747"
-                    app:layout_constraintHeight_percent="0.04"
+                    app:layout_constraintHeight_percent="0.045"
                     app:layout_constraintWidth_percent="0.0626" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelSix8"
@@ -2665,7 +2860,7 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintHorizontal_bias="0.002"
                     app:layout_constraintVertical_bias="0.82"
-                    app:layout_constraintHeight_percent="0.04"
+                    app:layout_constraintHeight_percent="0.045"
                     app:layout_constraintWidth_percent="0.0626" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelSix9"
@@ -2697,7 +2892,7 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintHorizontal_bias="0.002"
                     app:layout_constraintVertical_bias="0.894"
-                    app:layout_constraintHeight_percent="0.04"
+                    app:layout_constraintHeight_percent="0.045"
                     app:layout_constraintWidth_percent="0.0626" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelSix10"
@@ -2729,7 +2924,7 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintHorizontal_bias="0.002"
                     app:layout_constraintVertical_bias="0.968"
-                    app:layout_constraintHeight_percent="0.04"
+                    app:layout_constraintHeight_percent="0.045"
                     app:layout_constraintWidth_percent="0.0626" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelSix11"
@@ -2800,6 +2995,21 @@
                     app:layout_constraintVertical_bias="0.02"
                     app:layout_constraintHeight_percent="0.14"
                     app:layout_constraintWidth_percent="0.6"/>
+                <com.example.charactersheet.views.CSCheckboxRadioButton
+                    android:id="@+id/levelSeven1Button"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:scaleX="0.8"
+                    android:scaleY="0.8"
+                    android:rotation="180"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintHorizontal_bias="0.002"
+                    app:layout_constraintVertical_bias="0.228"
+                    app:layout_constraintHeight_percent="0.045"
+                    app:layout_constraintWidth_percent="0.0626" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelSeven1"
                     android:layout_width="0dp"
@@ -2830,7 +3040,7 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintHorizontal_bias="0.002"
                     app:layout_constraintVertical_bias="0.301"
-                    app:layout_constraintHeight_percent="0.04"
+                    app:layout_constraintHeight_percent="0.045"
                     app:layout_constraintWidth_percent="0.0626" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelSeven2"
@@ -2862,7 +3072,7 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintHorizontal_bias="0.002"
                     app:layout_constraintVertical_bias="0.377"
-                    app:layout_constraintHeight_percent="0.04"
+                    app:layout_constraintHeight_percent="0.045"
                     app:layout_constraintWidth_percent="0.0626" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelSeven3"
@@ -2894,7 +3104,7 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintHorizontal_bias="0.002"
                     app:layout_constraintVertical_bias="0.45"
-                    app:layout_constraintHeight_percent="0.04"
+                    app:layout_constraintHeight_percent="0.045"
                     app:layout_constraintWidth_percent="0.0626" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelSeven4"
@@ -2926,7 +3136,7 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintHorizontal_bias="0.002"
                     app:layout_constraintVertical_bias="0.523"
-                    app:layout_constraintHeight_percent="0.04"
+                    app:layout_constraintHeight_percent="0.045"
                     app:layout_constraintWidth_percent="0.0626" />
                 <com.example.charactersheet.views.CSEditText
                     android:id="@+id/levelSeven5"
