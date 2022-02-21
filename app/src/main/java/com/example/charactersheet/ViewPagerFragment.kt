@@ -10,6 +10,17 @@ import com.example.charactersheet.databinding.FragmentViewPagerBinding
 class ViewPagerFragment : Fragment() {
 
     private lateinit var binding: FragmentViewPagerBinding
+    private var creatingCharacter = false
+    private var characterName = ""
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        arguments?.let {
+            creatingCharacter = it.getBoolean("creatingCharacter")
+            characterName = it.getString("characterName")!!
+        }
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -17,7 +28,7 @@ class ViewPagerFragment : Fragment() {
     ): View {
         binding = FragmentViewPagerBinding.inflate(layoutInflater)
 
-        val fragmentList = listOf(DetailsFragment(), SpellsFragment())
+        val fragmentList = listOf(DetailsFragment.createInstance(creatingCharacter, characterName), SpellsFragment())
         binding.viewPager.adapter = ViewPagerAdapter(fragmentList, requireActivity().supportFragmentManager, lifecycle)
 
         return binding.root

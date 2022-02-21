@@ -49,9 +49,10 @@ class CharacterSelectFragment : Fragment() {
 
         binding.fab.setOnClickListener {
             val bundle = bundleOf(
-                Pair("creatingCharacter", true)
+                Pair("creatingCharacter", true),
+                Pair("characterName", "")
             )
-            findNavController().navigate(R.id.action_characterSelectFragment_to_detailsFragment, bundle)
+            findNavController().navigate(R.id.action_characterSelectFragment_to_viewPagerFragment, bundle)
         }
 
         subscribeToViewModel()
@@ -114,11 +115,6 @@ class CharacterSelectFragment : Fragment() {
             when (item.itemId) {
                 R.id.importButton -> {
                     createImportDialog()
-                    true
-                }
-                R.id.previewSpells -> {
-                    val navController = findNavController()
-                    navController.navigate(R.id.action_characterSelectFragment_to_viewPagerFragment)
                     true
                 }
                 else -> {true}

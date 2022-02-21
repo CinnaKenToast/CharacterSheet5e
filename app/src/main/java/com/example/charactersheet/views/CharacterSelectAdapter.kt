@@ -32,7 +32,7 @@ class CharacterSelectAdapter(var characters: List<Character>, private val navCon
                 Pair("creatingCharacter", false),
                 Pair("characterName", characters[position].characterName)
             )
-            navController.navigate(R.id.action_characterSelectFragment_to_detailsFragment, bundle)
+            navController.navigate(R.id.action_characterSelectFragment_to_viewPagerFragment, bundle)
         }
         holder.itemView.setOnLongClickListener {
             currentPosition = holder.adapterPosition

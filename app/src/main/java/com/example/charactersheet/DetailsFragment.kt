@@ -6,6 +6,7 @@ import android.content.ClipboardManager
 import android.os.Bundle
 import android.view.*
 import android.widget.Toast
+import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.charactersheet.data.character.AttackSpell
@@ -296,5 +297,18 @@ class DetailsFragment : Fragment() {
         currentCharacter.ideals = binding.ideals.text.toString()
         currentCharacter.bonds = binding.bonds.text.toString()
         currentCharacter.flaws = binding.flaws.text.toString()
+    }
+
+    companion object {
+        fun createInstance(creatingCharacter: Boolean, characterName: String): DetailsFragment {
+            val fragment = DetailsFragment()
+            val bundle = bundleOf(
+                Pair("creatingCharacter", creatingCharacter),
+                Pair("characterName", characterName)
+            )
+            fragment.arguments = bundle
+
+            return fragment
+        }
     }
 }
