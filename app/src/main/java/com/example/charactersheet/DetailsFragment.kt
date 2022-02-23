@@ -28,9 +28,8 @@ class DetailsFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        characterViewModel = activity?.let {
-            ViewModelProvider(it)[CharacterViewModel::class.java]
-        } ?: throw Exception("Activity is null")
+        val factory = CharacterViewModelFactory(requireActivity().application)
+        characterViewModel = ViewModelProvider(this, factory)[CharacterViewModel::class.java]
 
         runBlocking {
             arguments?.let {
@@ -300,15 +299,11 @@ class DetailsFragment : Fragment() {
     }
 
     companion object {
-        fun createInstance(creatingCharacter: Boolean, characterName: String): DetailsFragment {
-            val fragment = DetailsFragment()
-            val bundle = bundleOf(
+        fun createInstance(creatingCharacter: Boolean, characterName: String) = DetailsFragment().apply {
+            arguments = bundleOf(
                 Pair("creatingCharacter", creatingCharacter),
                 Pair("characterName", characterName)
             )
-            fragment.arguments = bundle
-
-            return fragment
         }
     }
 }

@@ -4,6 +4,8 @@ import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.content.res.ResourcesCompat
+import com.example.charactersheet.R
 import com.example.charactersheet.databinding.CsCheckboxRadioButtonBinding
 
 class CSCheckboxRadioButton: ConstraintLayout {

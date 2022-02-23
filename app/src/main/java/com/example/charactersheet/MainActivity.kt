@@ -18,6 +18,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val factory = CharacterViewModelFactory(application)
-        characterViewModel = ViewModelProvider(this, factory).get(CharacterViewModel::class.java)
+        characterViewModel = ViewModelProvider(this, factory)[CharacterViewModel::class.java]
     }
 }
