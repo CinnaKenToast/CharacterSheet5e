@@ -18,7 +18,6 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:orientation="vertical">
-
         <com.example.charactersheet.views.CSTextView
             android:id="@+id/spellName"
             android:layout_width="match_parent"
@@ -26,17 +25,12 @@
             android:textColor="@color/black"
             android:layout_weight="1000"
             android:text="Bilbary" />
-
         <View
             android:layout_width="match_parent"
             android:layout_height="2dp"
             android:layout_weight="1"
             android:minHeight="2dp"
-            android:background = "@color/black" />
-
+            android:background="@color/black" />
     </LinearLayout>
-
-
-
 
 </LinearLayout>

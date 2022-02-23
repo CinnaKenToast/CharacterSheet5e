@@ -20,6 +20,10 @@ class CSTextView: AppCompatTextView {
     private fun init(context: Context) {
         TextViewCompat.setAutoSizeTextTypeWithDefaults(this, AUTO_SIZE_TEXT_TYPE_UNIFORM)
         setTextColor(context.getColor(R.color.black))
+        maxLines = 1
+        isScrollContainer = true
+        isNestedScrollingEnabled = true
+        overScrollMode = OVER_SCROLL_ALWAYS
     }
 
 }
