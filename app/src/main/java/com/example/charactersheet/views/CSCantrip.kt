@@ -37,7 +37,7 @@ class CSCantrip: LinearLayout {
         editText.hint = "Insert Cantrip Name/Details"
         editText.setText(binding.cantripName.text)
         MaterialAlertDialogBuilder(context)
-            .setTitle("Add Cantrip")
+            .setTitle("${if (editText.text!!.isEmpty()) "Add" else "Edit"} ${this.contentDescription}")
             .setNegativeButton("Cancel") { dialog, which ->
                 dialog.dismiss()
             }

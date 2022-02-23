@@ -42,17 +42,14 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"/>
-                <TextView
+                <com.example.charactersheet.views.CSTextView
                     android:id="@+id/spellcastingClass"
+                    android:contentDescription="Spellcasting Class"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:text="Bilbary"
-                    android:textColor="@color/black"
-                    app:autoSizeTextType="uniform"
-                    app:autoSizeMinTextSize="6sp"
-                    app:autoSizeMaxTextSize="30sp"
-                    app:autoSizeStepGranularity="2sp"
                     android:gravity="center_vertical"
+                    app:isText="true"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -75,17 +72,14 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"/>
-                <TextView
+                <com.example.charactersheet.views.CSTextView
                     android:id="@+id/spellcastingAbility"
+                    android:contentDescription="Spellcasting Ability"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:text="Intelligence"
-                    android:textColor="@color/black"
-                    app:autoSizeTextType="uniform"
-                    app:autoSizeMinTextSize="6sp"
-                    app:autoSizeMaxTextSize="100sp"
-                    app:autoSizeStepGranularity="2sp"
                     android:gravity="center"
+                    app:isText="true"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -94,17 +88,14 @@
                     app:layout_constraintVertical_bias="0.35"
                     app:layout_constraintHeight_percent="0.4 "
                     app:layout_constraintWidth_percent="0.2"/>
-                <TextView
+                <com.example.charactersheet.views.CSTextView
                     android:id="@+id/spellSaveDC"
+                    android:contentDescription="Spell Save DC"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:text="15"
-                    android:textColor="@color/black"
-                    app:autoSizeTextType="uniform"
-                    app:autoSizeMinTextSize="6sp"
-                    app:autoSizeMaxTextSize="100sp"
-                    app:autoSizeStepGranularity="2sp"
                     android:gravity="center"
+                    app:isNumber="true"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -113,17 +104,14 @@
                     app:layout_constraintVertical_bias="0.35"
                     app:layout_constraintHeight_percent="0.4 "
                     app:layout_constraintWidth_percent="0.2"/>
-                <TextView
+                <com.example.charactersheet.views.CSTextView
                     android:id="@+id/spellBonus"
+                    android:contentDescription="Spell Attack Bonus"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:text="+15"
-                    android:textColor="@color/black"
-                    app:autoSizeTextType="uniform"
-                    app:autoSizeMinTextSize="6sp"
-                    app:autoSizeMaxTextSize="100sp"
-                    app:autoSizeStepGranularity="2sp"
                     android:gravity="center"
+                    app:isBonus="true"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -163,34 +151,42 @@
                         app:layout_constraintEnd_toEndOf="parent">
                         <com.example.charactersheet.views.CSCantrip
                             android:id="@+id/cantrip1"
+                            android:contentDescription="Cantrip 1"
                             android:layout_width="match_parent"
                             android:layout_height="36dp" />
                         <com.example.charactersheet.views.CSCantrip
                             android:id="@+id/cantrip2"
+                            android:contentDescription="Cantrip 2"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                         <com.example.charactersheet.views.CSCantrip
                             android:id="@+id/cantrip3"
+                            android:contentDescription="Cantrip 3"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                         <com.example.charactersheet.views.CSCantrip
                             android:id="@+id/cantrip4"
+                            android:contentDescription="Cantrip 4"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                         <com.example.charactersheet.views.CSCantrip
                             android:id="@+id/cantrip5"
+                            android:contentDescription="Cantrip 5"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                         <com.example.charactersheet.views.CSCantrip
                             android:id="@+id/cantrip6"
+                            android:contentDescription="Cantrip 6"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                         <com.example.charactersheet.views.CSCantrip
                             android:id="@+id/cantrip7"
+                            android:contentDescription="Cantrip 7"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                         <com.example.charactersheet.views.CSCantrip
                             android:id="@+id/cantrip8"
+                            android:contentDescription="Cantrip 8"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                     </LinearLayout>
@@ -211,6 +207,7 @@
                         app:layout_constraintEnd_toEndOf="parent"/>
                     <com.example.charactersheet.views.CSTextView
                         android:id="@+id/level1SlotsTotal"
+                        android:contentDescription="Total Level 1 Spell Slots"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
                         android:text="10"
@@ -226,6 +223,7 @@
                         app:layout_constraintWidth_percent="0.3"/>
                     <com.example.charactersheet.views.CSTextView
                         android:id="@+id/level1SlotsExpended"
+                        android:contentDescription="Level 1 Spells Expended"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
                         android:text="10"
@@ -250,54 +248,67 @@
                         app:layout_constraintEnd_toEndOf="parent">
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level1Spell1"
+                            android:contentDescription="Level 1 Spell 1"
                             android:layout_width="match_parent"
                             android:layout_height="36dp" />
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level1Spell2"
+                            android:contentDescription="Level 1 Spell 2"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level1Spell3"
+                            android:contentDescription="Level 1 Spell 3"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level1Spell4"
+                            android:contentDescription="Level 1 Spell 4"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level1Spell5"
+                            android:contentDescription="Level 1 Spell 5"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level1Spell6"
+                            android:contentDescription="Level 1 Spell 6"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level1Spell7"
+                            android:contentDescription="Level 1 Spell 7"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level1Spell8"
+                            android:contentDescription="Level 1 Spell 8"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level1Spell9"
+                            android:contentDescription="Level 1 Spell 9"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level1Spell10"
+                            android:contentDescription="Level 1 Spell 10"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level1Spell11"
+                            android:contentDescription="Level 1 Spell 11"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level1Spell12"
+                            android:contentDescription="Level 1 Spell 12"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level1Spell13"
+                            android:contentDescription="Level 1 Spell 13"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                     </LinearLayout>
@@ -318,6 +329,7 @@
                         app:layout_constraintEnd_toEndOf="parent"/>
                     <com.example.charactersheet.views.CSTextView
                         android:id="@+id/level2SlotsTotal"
+                        android:contentDescription="Level 2 Spell Slots"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
                         android:text="10"
@@ -333,6 +345,7 @@
                         app:layout_constraintWidth_percent="0.3"/>
                     <com.example.charactersheet.views.CSTextView
                         android:id="@+id/level2SlotsExpended"
+                        android:contentDescription="Level 2 Spells Expended"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
                         android:text="10"
@@ -357,54 +370,67 @@
                         app:layout_constraintEnd_toEndOf="parent">
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level2Spell1"
+                            android:contentDescription="Level 2 Spell 1"
                             android:layout_width="match_parent"
                             android:layout_height="36dp" />
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level2Spell2"
+                            android:contentDescription="Level 2 Spell 2"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level2Spell3"
+                            android:contentDescription="Level 2 Spell 3"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level2Spell4"
+                            android:contentDescription="Level 2 Spell 4"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level2Spell5"
+                            android:contentDescription="Level 2 Spell 5"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level2Spell6"
+                            android:contentDescription="Level 2 Spell 6"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level2Spell7"
+                            android:contentDescription="Level 2 Spell 7"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level2Spell8"
+                            android:contentDescription="Level 2 Spell 8"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level2Spell9"
+                            android:contentDescription="Level 2 Spell 9"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level2Spell10"
+                            android:contentDescription="Level 2 Spell 10"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level2Spell11"
+                            android:contentDescription="Level 2 Spell 11"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level2Spell12"
+                            android:contentDescription="Level 2 Spell 12"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level2Spell13"
+                            android:contentDescription="Level 2 Spell 13"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                     </LinearLayout>
@@ -464,54 +490,67 @@
                         app:layout_constraintEnd_toEndOf="parent">
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level3Spell1"
+                            android:contentDescription="Level 3 Spell 1"
                             android:layout_width="match_parent"
                             android:layout_height="36dp" />
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level3Spell2"
+                            android:contentDescription="Level 3 Spell 2"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level3Spell3"
+                            android:contentDescription="Level 3 Spell 3"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level3Spell4"
+                            android:contentDescription="Level 3 Spell 4"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level3Spell5"
+                            android:contentDescription="Level 3 Spell 5"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level3Spell6"
+                            android:contentDescription="Level 3 Spell 6"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level3Spell7"
+                            android:contentDescription="Level 3 Spell 7"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level3Spell8"
+                            android:contentDescription="Level 3 Spell 8"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level3Spell9"
+                            android:contentDescription="Level 3 Spell 9"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level3Spell10"
+                            android:contentDescription="Level 3 Spell 10"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level3Spell11"
+                            android:contentDescription="Level 3 Spell 11"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level3Spell12"
+                            android:contentDescription="Level 3 Spell 12"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level3Spell13"
+                            android:contentDescription="Level 3 Spell 13"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                     </LinearLayout>
@@ -571,54 +610,67 @@
                         app:layout_constraintEnd_toEndOf="parent">
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level4Spell1"
+                            android:contentDescription="Level 4 Spell 1"
                             android:layout_width="match_parent"
                             android:layout_height="36dp" />
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level4Spell2"
+                            android:contentDescription="Level 4 Spell 2"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level4Spell3"
+                            android:contentDescription="Level 4 Spell 3"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level4Spell4"
+                            android:contentDescription="Level 4 Spell 4"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level4Spell5"
+                            android:contentDescription="Level 4 Spell 5"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level4Spell6"
+                            android:contentDescription="Level 4 Spell 6"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level4Spell7"
+                            android:contentDescription="Level 4 Spell 7"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level4Spell8"
+                            android:contentDescription="Level 4 Spell 8"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level4Spell9"
+                            android:contentDescription="Level 4 Spell 9"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level4Spell10"
+                            android:contentDescription="Level 4 Spell 10"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level4Spell11"
+                            android:contentDescription="Level 4 Spell 11"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level4Spell12"
+                            android:contentDescription="Level 4 Spell 12"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level4Spell13"
+                            android:contentDescription="Level 4 Spell 13"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                     </LinearLayout>
@@ -678,46 +730,57 @@
                         app:layout_constraintEnd_toEndOf="parent">
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level5Spell1"
+                            android:contentDescription="Level 5 Spell 1"
                             android:layout_width="match_parent"
                             android:layout_height="36dp" />
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level5Spell2"
+                            android:contentDescription="Level 5 Spell 2"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level5Spell3"
+                            android:contentDescription="Level 5 Spell 3"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level5Spell4"
+                            android:contentDescription="Level 5 Spell 4"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level5Spell5"
+                            android:contentDescription="Level 5 Spell 5"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level5Spell6"
+                            android:contentDescription="Level 5 Spell 6"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level5Spell7"
+                            android:contentDescription="Level 5 Spell 7"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level5Spell8"
+                            android:contentDescription="Level 5 Spell 8"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level5Spell9"
+                            android:contentDescription="Level 5 Spell 9"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level5Spell10"
+                            android:contentDescription="Level 5 Spell 10"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level5Spell11"
+                            android:contentDescription="Level 5 Spell 11"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                     </LinearLayout>
@@ -777,46 +840,57 @@
                         app:layout_constraintEnd_toEndOf="parent">
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level6Spell1"
+                            android:contentDescription="Level 6 Spell 1"
                             android:layout_width="match_parent"
                             android:layout_height="36dp" />
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level6Spell2"
+                            android:contentDescription="Level 6 Spell 2"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level6Spell3"
+                            android:contentDescription="Level 6 Spell 3"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level6Spell4"
+                            android:contentDescription="Level 6 Spell 4"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level6Spell5"
+                            android:contentDescription="Level 6 Spell 5"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level6Spell6"
+                            android:contentDescription="Level 6 Spell 6"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level6Spell7"
+                            android:contentDescription="Level 6 Spell 7"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level6Spell8"
+                            android:contentDescription="Level 6 Spell 8"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level6Spell9"
+                            android:contentDescription="Level 6 Spell 9"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level6Spell10"
+                            android:contentDescription="Level 6 Spell 10"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level6Spell11"
+                            android:contentDescription="Level 6 Spell 11"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                     </LinearLayout>
@@ -876,46 +950,57 @@
                         app:layout_constraintEnd_toEndOf="parent">
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level7Spell1"
+                            android:contentDescription="Level 7 Spell 1"
                             android:layout_width="match_parent"
                             android:layout_height="36dp" />
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level7Spell2"
+                            android:contentDescription="Level 7 Spell 2"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level7Spell3"
+                            android:contentDescription="Level 7 Spell 3"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level7Spell4"
+                            android:contentDescription="Level 7 Spell 4"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level7Spell5"
+                            android:contentDescription="Level 7 Spell 5"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level7Spell6"
+                            android:contentDescription="Level 7 Spell 6"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level7Spell7"
+                            android:contentDescription="Level 7 Spell 7"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level7Spell8"
+                            android:contentDescription="Level 7 Spell 8"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level7Spell9"
+                            android:contentDescription="Level 7 Spell 9"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level7Spell10"
+                            android:contentDescription="Level 7 Spell 10"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level7Spell11"
+                            android:contentDescription="Level 7 Spell 11"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                     </LinearLayout>
@@ -975,38 +1060,47 @@
                         app:layout_constraintEnd_toEndOf="parent">
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level8Spell1"
+                            android:contentDescription="Level 8 Spell 1"
                             android:layout_width="match_parent"
                             android:layout_height="36dp" />
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level8Spell2"
+                            android:contentDescription="Level 8 Spell 2"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level8Spell3"
+                            android:contentDescription="Level 8 Spell 3"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level8Spell4"
+                            android:contentDescription="Level 8 Spell 4"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level8Spell5"
+                            android:contentDescription="Level 8 Spell 5"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level8Spell6"
+                            android:contentDescription="Level 8 Spell 6"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level8Spell7"
+                            android:contentDescription="Level 8 Spell 7"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level8Spell8"
+                            android:contentDescription="Level 8 Spell 8"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level8Spell9"
+                            android:contentDescription="Level 8 Spell 9"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                     </LinearLayout>
@@ -1066,38 +1160,47 @@
                         app:layout_constraintEnd_toEndOf="parent">
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level9Spell1"
+                            android:contentDescription="Level 9 Spell 1"
                             android:layout_width="match_parent"
                             android:layout_height="36dp" />
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level9Spell2"
+                            android:contentDescription="Level 9 Spell 2"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level9Spell3"
+                            android:contentDescription="Level 9 Spell 3"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level9Spell4"
+                            android:contentDescription="Level 9 Spell 4"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level9Spell5"
+                            android:contentDescription="Level 9 Spell 5"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level9Spell6"
+                            android:contentDescription="Level 9 Spell 6"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level9Spell7"
+                            android:contentDescription="Level 9 Spell 7"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level9Spell8"
+                            android:contentDescription="Level 9 Spell 8"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                         <com.example.charactersheet.views.CSSelectableSpell
                             android:id="@+id/level9Spell9"
+                            android:contentDescription="Level 9 Spell 9"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
                     </LinearLayout>

@@ -47,7 +47,7 @@ class CSSelectableSpell: LinearLayout {
         editText.hint = "Insert Spell Name/Details"
         editText.setText(binding.spellName.text)
         MaterialAlertDialogBuilder(context)
-            .setTitle("Add Spell")
+            .setTitle("${if (editText.text!!.isEmpty()) "Add" else "Edit"} ${this.contentDescription}")
             .setNegativeButton("Cancel") { dialog, which ->
                 dialog.dismiss()
             }
