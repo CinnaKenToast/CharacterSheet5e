@@ -16,4 +16,12 @@ class CSCantrip: LinearLayout {
     private fun init(context: Context) {
         binding = LayoutCantripBinding.inflate(LayoutInflater.from(context), this, true)
     }
+
+    fun getText(): String {
+        return binding.cantripName.toString()
+    }
+
+    fun setText(string: String) {
+        binding.cantripName.text = string
+    }
 }

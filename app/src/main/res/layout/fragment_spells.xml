@@ -161,35 +161,35 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintEnd_toEndOf="parent">
-                        <com.example.charactersheet.views.CSSelectableSpell
+                        <com.example.charactersheet.views.CSCantrip
                             android:id="@+id/cantrip1"
                             android:layout_width="match_parent"
                             android:layout_height="36dp" />
-                        <com.example.charactersheet.views.CSSelectableSpell
+                        <com.example.charactersheet.views.CSCantrip
                             android:id="@+id/cantrip2"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
-                        <com.example.charactersheet.views.CSSelectableSpell
+                        <com.example.charactersheet.views.CSCantrip
                             android:id="@+id/cantrip3"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
-                        <com.example.charactersheet.views.CSSelectableSpell
+                        <com.example.charactersheet.views.CSCantrip
                             android:id="@+id/cantrip4"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
-                        <com.example.charactersheet.views.CSSelectableSpell
+                        <com.example.charactersheet.views.CSCantrip
                             android:id="@+id/cantrip5"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
-                        <com.example.charactersheet.views.CSSelectableSpell
+                        <com.example.charactersheet.views.CSCantrip
                             android:id="@+id/cantrip6"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
-                        <com.example.charactersheet.views.CSSelectableSpell
+                        <com.example.charactersheet.views.CSCantrip
                             android:id="@+id/cantrip7"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>
-                        <com.example.charactersheet.views.CSSelectableSpell
+                        <com.example.charactersheet.views.CSCantrip
                             android:id="@+id/cantrip8"
                             android:layout_width="match_parent"
                             android:layout_height="36dp"/>

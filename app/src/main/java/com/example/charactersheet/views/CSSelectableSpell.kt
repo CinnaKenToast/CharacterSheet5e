@@ -18,12 +18,20 @@ class CSSelectableSpell: LinearLayout {
         binding = LayoutSelectableSpellBinding.inflate(LayoutInflater.from(context), this, true)
     }
 
-    private fun isChecked(): Boolean {
+    fun isChecked(): Boolean {
         return binding.spellButton.isChecked()
     }
 
     fun setChecked(checked: Boolean) {
         binding.spellButton.setChecked(checked)
+    }
+
+    fun getText(): String {
+        return binding.spellName.toString()
+    }
+
+    fun setText(string: String) {
+        binding.spellName.text = string
     }
 
 }
