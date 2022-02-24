@@ -2,9 +2,6 @@ package com.example.charactersheet.views
 
 import android.content.Context
 import android.util.AttributeSet
-import android.view.KeyEvent
-import android.view.MotionEvent
-import androidx.appcompat.widget.AppCompatEditText
 import androidx.appcompat.widget.AppCompatTextView
 import com.example.charactersheet.R
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
@@ -25,6 +22,7 @@ class CSTextViewLong: AppCompatTextView {
         val editText = TextInputEditText(context)
         editText.id = R.id.importDialog
         editText.hint = "Insert ${this.contentDescription}"
+        editText.maxLines = 20
         editText.setText(this.text)
         MaterialAlertDialogBuilder(context)
             .setTitle("${if (editText.text!!.isEmpty()) "Add" else "Edit"} ${this.contentDescription}")
