@@ -4,14 +4,12 @@ import android.app.Service
 import android.content.ClipData
 import android.content.ClipboardManager
 import android.os.Bundle
-import android.util.AttributeSet
 import android.view.*
 import android.widget.Toast
-import androidx.fragment.app.Fragment
 import androidx.core.os.bundleOf
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
-import com.example.charactersheet.CharacterSheetApplication
 import com.example.charactersheet.CharacterViewModel
 import com.example.charactersheet.CharacterViewModelFactory
 import com.example.charactersheet.R
