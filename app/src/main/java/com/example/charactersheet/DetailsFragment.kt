@@ -77,11 +77,15 @@ class DetailsFragment : Fragment() {
                 }
                 R.id.exportButton -> {
                     updateCharacter()
-                    val json = currentCharacter.toJsonString()
-                    val clipboard = requireContext().getSystemService(Service.CLIPBOARD_SERVICE) as ClipboardManager
-                    val clip = ClipData.newPlainText("characterData", json)
-                    clipboard.setPrimaryClip(clip)
-                    Toast.makeText(context, "${currentCharacter.characterName}'s data has been copied to your clipboard", Toast.LENGTH_SHORT).show()
+                    if (currentCharacter.characterName.isBlank()) {
+                        Toast.makeText(context, "Your character must have a name", Toast.LENGTH_SHORT).show()
+                    } else {
+                        val json = currentCharacter.toJsonString()
+                        val clipboard = requireContext().getSystemService(Service.CLIPBOARD_SERVICE) as ClipboardManager
+                        val clip = ClipData.newPlainText("characterData", json)
+                        clipboard.setPrimaryClip(clip)
+                        Toast.makeText(context, "${currentCharacter.characterName}'s data has been copied to your clipboard", Toast.LENGTH_SHORT).show()
+                    }
                     true
                 }
                 else -> {true}

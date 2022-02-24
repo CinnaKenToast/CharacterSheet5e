@@ -27,6 +27,9 @@ class CharacterSelectAdapter(var characters: List<Character>, private val navCon
         holder.nameEditText.text = characters[position].characterName
         holder.classEditText.text = characters[position].classLevel
         holder.raceEditText.text = characters[position].race
+        holder.nameEditText.isClickable = false
+        holder.classEditText.isClickable = false
+        holder.raceEditText.isClickable = false
         holder.itemView.setOnClickListener {
             val bundle = bundleOf(
                 Pair("creatingCharacter", false),
