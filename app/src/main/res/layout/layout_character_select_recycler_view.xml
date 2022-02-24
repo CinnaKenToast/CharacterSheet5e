@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="72dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardCornerRadius="5dp"
     app:cardUseCompatPadding="true"
@@ -10,38 +10,32 @@
         android:id="@+id/linearLayout"
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:padding="3dp">
 
-        <TextView
+        <com.example.charactersheet.views.CSTextView
             android:id="@+id/characterName"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:overScrollMode="always"
+            android:layout_height="match_parent"
             android:padding="3dp"
-            android:autoSizeTextType="uniform"
-            android:textSize="24dp"
+            android:gravity="center_vertical"
             android:layout_weight="1"
             android:text="Bilbary"/>
 
-        <TextView
+        <com.example.charactersheet.views.CSTextView
             android:id="@+id/characterClass"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:overScrollMode="always"
+            android:layout_height="match_parent"
             android:padding="3dp"
-            android:autoSizeTextType="uniform"
-            android:textSize="16dp"
+            android:gravity="center"
             android:layout_weight="1"
             android:text="Barbarian 7"/>
 
-        <TextView
+        <com.example.charactersheet.views.CSTextView
             android:id="@+id/characterRace"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:overScrollMode="always"
+            android:layout_height="match_parent"
             android:padding="3dp"
-            android:autoSizeTextType="uniform"
-            android:textSize="16dp"
             android:gravity="right"
             android:layout_weight="1"
             android:text="Aaracokra"/>

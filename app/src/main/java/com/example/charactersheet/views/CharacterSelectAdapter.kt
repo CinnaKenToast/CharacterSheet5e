@@ -52,8 +52,8 @@ class CharacterSelectAdapter(var characters: List<Character>, private val navCon
     }
 
     class ViewHolder(view: View): RecyclerView.ViewHolder(view) {
-        val nameEditText: TextView = view.findViewById(R.id.characterName)
-        val classEditText: TextView = view.findViewById(R.id.characterClass)
-        val raceEditText: TextView = view.findViewById(R.id.characterRace)
+        val nameEditText: CSTextView = view.findViewById(R.id.characterName)
+        val classEditText: CSTextView = view.findViewById(R.id.characterClass)
+        val raceEditText: CSTextView = view.findViewById(R.id.characterRace)
     }
 }
