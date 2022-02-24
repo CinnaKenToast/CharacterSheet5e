@@ -124,7 +124,8 @@ class CharacterSelectFragment : Fragment() {
     private fun createImportDialog() {
         val editText = TextInputEditText(requireContext())
         editText.id = R.id.importDialog
-        editText.hint = "Insert character data"
+        editText.hint = "Insert Character Data"
+        editText.maxLines = 15
         MaterialAlertDialogBuilder(requireContext())
             .setTitle("Import Character")
             .setNegativeButton("Cancel") { dialog, which ->

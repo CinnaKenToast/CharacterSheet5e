@@ -22,7 +22,7 @@ class CSTextViewLong: AppCompatTextView {
         val editText = TextInputEditText(context)
         editText.id = R.id.importDialog
         editText.hint = "Insert ${this.contentDescription}"
-        editText.maxLines = 20
+        editText.maxLines = 15
         editText.setText(this.text)
         MaterialAlertDialogBuilder(context)
             .setTitle("${if (editText.text!!.isEmpty()) "Add" else "Edit"} ${this.contentDescription}")
