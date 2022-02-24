@@ -23,14 +23,6 @@ class CSCantrip: LinearLayout {
         }
     }
 
-    fun getText(): String {
-        return binding.cantripName.text.toString()
-    }
-
-    fun setText(string: String) {
-        binding.cantripName.text = string
-    }
-
     private fun createCantripDialog(context: Context) {
         val editText = TextInputEditText(context)
         editText.id = R.id.importDialog

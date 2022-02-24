@@ -16,9 +16,9 @@ class AttackSpellsAdapter(private val attackSpells: MutableList<AttackSpell>):
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.nameEditText.setText(attackSpells[position].name)
-        holder.bonusEditText.setText(attackSpells[position].attackBonus)
-        holder.damageTypeEditText.setText(attackSpells[position].damageType)
+        holder.nameEditText.text = attackSpells[position].name
+        holder.bonusEditText.text = attackSpells[position].attackBonus
+        holder.damageTypeEditText.text = attackSpells[position].damageType
     }
 
     override fun getItemCount(): Int {
@@ -26,9 +26,9 @@ class AttackSpellsAdapter(private val attackSpells: MutableList<AttackSpell>):
     }
 
     class ViewHolder(view: View): RecyclerView.ViewHolder(view) {
-        val nameEditText: CSEditText = view.findViewById(R.id.spellAttackName)
-        val bonusEditText: CSEditText = view.findViewById(R.id.spellAttackBonus)
-        val damageTypeEditText: CSEditText = view.findViewById(R.id.spellAttackType)
+        val nameEditText: CSTextView = view.findViewById(R.id.spellAttackName)
+        val bonusEditText: CSTextView = view.findViewById(R.id.spellAttackBonus)
+        val damageTypeEditText: CSTextView = view.findViewById(R.id.spellAttackType)
 
         fun getAttackSpell(): AttackSpell {
             return AttackSpell(

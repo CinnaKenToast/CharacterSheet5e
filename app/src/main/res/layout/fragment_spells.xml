@@ -213,6 +213,7 @@
                         android:text="10"
                         android:textColor="@color/black"
                         android:gravity="center"
+                        app:isNumber="true"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -229,6 +230,7 @@
                         android:text="10"
                         android:textColor="@color/black"
                         android:gravity="center"
+                        app:isNumber="true"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -335,6 +337,7 @@
                         android:text="10"
                         android:textColor="@color/black"
                         android:gravity="center"
+                        app:isNumber="true"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -351,6 +354,7 @@
                         android:text="10"
                         android:textColor="@color/black"
                         android:gravity="center"
+                        app:isNumber="true"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -451,11 +455,13 @@
                         app:layout_constraintEnd_toEndOf="parent"/>
                     <com.example.charactersheet.views.CSTextView
                         android:id="@+id/level3SlotsTotal"
+                        android:contentDescription="Level 3 Spell Slots"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
                         android:text="10"
                         android:textColor="@color/black"
                         android:gravity="center"
+                        app:isNumber="true"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -466,11 +472,13 @@
                         app:layout_constraintWidth_percent="0.3"/>
                     <com.example.charactersheet.views.CSTextView
                         android:id="@+id/level3SlotsExpended"
+                        android:contentDescription="Level 3 Spells Expended"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
                         android:text="10"
                         android:textColor="@color/black"
                         android:gravity="center"
+                        app:isNumber="true"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -571,11 +579,13 @@
                         app:layout_constraintEnd_toEndOf="parent"/>
                     <com.example.charactersheet.views.CSTextView
                         android:id="@+id/level4SlotsTotal"
+                        android:contentDescription="Level 4 Spell Slots"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
                         android:text="10"
                         android:textColor="@color/black"
                         android:gravity="center"
+                        app:isNumber="true"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -586,11 +596,13 @@
                         app:layout_constraintWidth_percent="0.3"/>
                     <com.example.charactersheet.views.CSTextView
                         android:id="@+id/level4SlotsExpended"
+                        android:contentDescription="Level 4 Spells Expended"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
                         android:text="10"
                         android:textColor="@color/black"
                         android:gravity="center"
+                        app:isNumber="true"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -691,11 +703,13 @@
                         app:layout_constraintEnd_toEndOf="parent"/>
                     <com.example.charactersheet.views.CSTextView
                         android:id="@+id/level5SlotsTotal"
+                        android:contentDescription="Level 5 Spell Slots"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
                         android:text="10"
                         android:textColor="@color/black"
                         android:gravity="center"
+                        app:isNumber="true"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -706,11 +720,13 @@
                         app:layout_constraintWidth_percent="0.3"/>
                     <com.example.charactersheet.views.CSTextView
                         android:id="@+id/level5SlotsExpended"
+                        android:contentDescription="Level 5 Spells Expended"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
                         android:text="10"
                         android:textColor="@color/black"
                         android:gravity="center"
+                        app:isNumber="true"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -801,11 +817,13 @@
                         app:layout_constraintEnd_toEndOf="parent"/>
                     <com.example.charactersheet.views.CSTextView
                         android:id="@+id/level6SlotsTotal"
+                        android:contentDescription="Level 6 Spell Slots"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
                         android:text="10"
                         android:textColor="@color/black"
                         android:gravity="center"
+                        app:isNumber="true"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -816,11 +834,13 @@
                         app:layout_constraintWidth_percent="0.3"/>
                     <com.example.charactersheet.views.CSTextView
                         android:id="@+id/level6SlotsExpended"
+                        android:contentDescription="Level 6 Spells Expended"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
                         android:text="10"
                         android:textColor="@color/black"
                         android:gravity="center"
+                        app:isNumber="true"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -911,11 +931,13 @@
                         app:layout_constraintEnd_toEndOf="parent"/>
                     <com.example.charactersheet.views.CSTextView
                         android:id="@+id/level7SlotsTotal"
+                        android:contentDescription="Level 7 Spell Slots"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
                         android:text="10"
                         android:textColor="@color/black"
                         android:gravity="center"
+                        app:isNumber="true"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -926,11 +948,13 @@
                         app:layout_constraintWidth_percent="0.3"/>
                     <com.example.charactersheet.views.CSTextView
                         android:id="@+id/level7SlotsExpended"
+                        android:contentDescription="Level 7 Spells Expended"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
                         android:text="10"
                         android:textColor="@color/black"
                         android:gravity="center"
+                        app:isNumber="true"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -1021,11 +1045,13 @@
                         app:layout_constraintEnd_toEndOf="parent"/>
                     <com.example.charactersheet.views.CSTextView
                         android:id="@+id/level8SlotsTotal"
+                        android:contentDescription="Level 8 Spell Slots"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
                         android:text="10"
                         android:textColor="@color/black"
                         android:gravity="center"
+                        app:isNumber="true"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -1036,11 +1062,13 @@
                         app:layout_constraintWidth_percent="0.3"/>
                     <com.example.charactersheet.views.CSTextView
                         android:id="@+id/level8SlotsExpended"
+                        android:contentDescription="Level 8 Spells Expended"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
                         android:text="10"
                         android:textColor="@color/black"
                         android:gravity="center"
+                        app:isNumber="true"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -1121,11 +1149,13 @@
                         app:layout_constraintEnd_toEndOf="parent"/>
                     <com.example.charactersheet.views.CSTextView
                         android:id="@+id/level9SlotsTotal"
+                        android:contentDescription="Level 9 Spell Slots"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
                         android:text="10"
                         android:textColor="@color/black"
                         android:gravity="center"
+                        app:isNumber="true"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -1136,11 +1166,13 @@
                         app:layout_constraintWidth_percent="0.3"/>
                     <com.example.charactersheet.views.CSTextView
                         android:id="@+id/level9SlotsExpended"
+                        android:contentDescription="Level 9 Spells Expended"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
                         android:text="10"
                         android:textColor="@color/black"
                         android:gravity="center"
+                        app:isNumber="true"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"

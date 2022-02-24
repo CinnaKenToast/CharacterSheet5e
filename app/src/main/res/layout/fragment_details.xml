@@ -44,23 +44,21 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <com.example.charactersheet.views.CSEditText
+                <com.example.charactersheet.views.CSTextView
                     android:id="@+id/characterName"
+                    android:contentDescription="Character Name"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
-                    android:ems="10"
-                    android:inputType="textPersonName"
-                    android:minHeight="48dp"
                     android:text="Bilbary"
-                    android:textSize="24sp"
+                    app:isText="true"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHeight_percent=".35 "
-                    app:layout_constraintHorizontal_bias="0.3"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.65"
-                    app:layout_constraintWidth_percent=".7" />
+                    app:layout_constraintVertical_bias="0.55"
+                    app:layout_constraintHorizontal_bias="0.3"
+                    app:layout_constraintHeight_percent="0.35"
+                    app:layout_constraintWidth_percent="0.7" />
             </androidx.constraintlayout.widget.ConstraintLayout>
             <!-- Character Details -->
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -79,112 +77,101 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <com.example.charactersheet.views.CSEditText
+                <com.example.charactersheet.views.CSTextView
                     android:id="@+id/classLevel"
+                    android:contentDescription="Class and Level"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
-                    android:autoSizeTextType="uniform"
-                    android:ems="10"
-                    android:inputType="textPersonName"
                     android:text="Barbarian 7"
-                    android:textSize="12sp"
+                    app:isText="true"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHeight_percent="0.35"
-                    app:layout_constraintHorizontal_bias="0.05"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.21"
+                    app:layout_constraintHorizontal_bias="0.05"
+                    app:layout_constraintHeight_percent="0.25"
                     app:layout_constraintWidth_percent="0.35" />
 
-                <com.example.charactersheet.views.CSEditText
+                <com.example.charactersheet.views.CSTextView
                     android:id="@+id/characterBackground"
+                    android:contentDescription="Background"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
-                    android:autoSizeTextType="uniform"
-                    android:ems="10"
-                    android:inputType="textPersonName"
                     android:text="Soldier"
-                    android:textSize="12sp"
+                    app:isText="true"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHeight_percent="0.35"
-                    app:layout_constraintHorizontal_bias="0.55"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.21"
+                    app:layout_constraintHorizontal_bias="0.55"
+                    app:layout_constraintHeight_percent="0.25"
                     app:layout_constraintWidth_percent="0.3" />
 
-                <com.example.charactersheet.views.CSEditText
+                <com.example.charactersheet.views.CSTextView
                     android:id="@+id/playerName"
+                    android:contentDescription="Player Name"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
-                    android:ems="10"
-                    android:inputType="textPersonName"
                     android:text="Ken Shipley"
-                    android:textSize="12sp"
+                    app:isText="true"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHeight_percent="0.35"
-                    app:layout_constraintHorizontal_bias="1"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.21"
-                    app:layout_constraintWidth_percent="0.31" />
+                    app:layout_constraintHorizontal_bias="0.96"
+                    app:layout_constraintHeight_percent="0.25"
+                    app:layout_constraintWidth_percent="0.28" />
 
-                <com.example.charactersheet.views.CSEditText
+                <com.example.charactersheet.views.CSTextView
                     android:id="@+id/characterRace"
+                    android:contentDescription="Race"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
-                    android:autoSizeTextType="uniform"
-                    android:ems="10"
-                    android:inputType="textPersonName"
                     android:text="Aaracokra"
-                    android:textSize="12sp"
+                    app:isText="true"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHeight_percent="0.35"
-                    app:layout_constraintHorizontal_bias="0.05"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.73"
+                    app:layout_constraintVertical_bias="0.65"
+                    app:layout_constraintHorizontal_bias="0.05"
+                    app:layout_constraintHeight_percent="0.25"
                     app:layout_constraintWidth_percent="0.35" />
 
-                <com.example.charactersheet.views.CSEditText
+                <com.example.charactersheet.views.CSTextView
                     android:id="@+id/characterAlignment"
+                    android:contentDescription="Alignment"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
-                    android:autoSizeTextType="uniform"
-                    android:ems="10"
-                    android:inputType="textPersonName"
                     android:text="Chaotic Neutral"
-                    android:textSize="12sp"
+                    app:isText="true"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHeight_percent="0.35"
-                    app:layout_constraintHorizontal_bias="0.55"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.73"
+                    app:layout_constraintVertical_bias="0.65"
+                    app:layout_constraintHorizontal_bias="0.55"
+                    app:layout_constraintHeight_percent="0.25"
                     app:layout_constraintWidth_percent="0.3" />
 
-                <com.example.charactersheet.views.CSEditText
+                <com.example.charactersheet.views.CSTextView
                     android:id="@+id/experiencePoints"
+                    android:contentDescription="Experience Points"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
-                    android:autoSizeTextType="uniform"
-                    android:ems="10"
-                    android:inputType="textPersonName"
                     android:text="100"
-                    android:textSize="12sp"
+                    app:isNumber="true"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHeight_percent="0.35"
-                    app:layout_constraintHorizontal_bias="1"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.73"
-                    app:layout_constraintWidth_percent="0.31" />
+                    app:layout_constraintVertical_bias="0.65"
+                    app:layout_constraintHorizontal_bias="0.96"
+                    app:layout_constraintHeight_percent="0.25"
+                    app:layout_constraintWidth_percent="0.28" />
             </androidx.constraintlayout.widget.ConstraintLayout>
             <Space
                 android:layout_width="wrap_content"
@@ -218,24 +205,21 @@
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
 
-                        <com.example.charactersheet.views.CSEditText
+                        <com.example.charactersheet.views.CSTextView
                             android:id="@+id/armorClass"
+                            android:contentDescription="Armor Class"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
-                            android:autoSizeTextType="uniform"
-                            android:digits="0123456789+-"
-                            android:ems="10"
                             android:gravity="center"
-                            android:inputType="phone"
                             android:text="100"
-                            android:textSize="40sp"
+                            app:isNumber="true"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHeight_percent="0.6"
-                            app:layout_constraintHorizontal_bias="0.5"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintVertical_bias="0.3"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintHeight_percent="0.45"
                             app:layout_constraintWidth_percent="0.6" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
                     <Space
@@ -256,24 +240,21 @@
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
 
-                        <com.example.charactersheet.views.CSEditText
+                        <com.example.charactersheet.views.CSTextView
                             android:id="@+id/initiative"
+                            android:contentDescription="Initiative"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
-                            android:autoSizeTextType="uniform"
-                            android:digits="0123456789+-"
-                            android:ems="10"
                             android:gravity="center"
-                            android:inputType="phone"
                             android:text="100"
-                            android:textSize="40sp"
+                            app:isNumber="true"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHeight_percent="0.7"
-                            app:layout_constraintHorizontal_bias="0.5"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintVertical_bias="0.3"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintHeight_percent="0.5"
                             app:layout_constraintWidth_percent="0.7" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
                     <Space
@@ -294,24 +275,21 @@
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
 
-                        <com.example.charactersheet.views.CSEditText
+                        <com.example.charactersheet.views.CSTextView
                             android:id="@+id/speed"
+                            android:contentDescription="Speed"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
-                            android:autoSizeTextType="uniform"
-                            android:digits="0123456789+-"
-                            android:ems="10"
                             android:gravity="center"
-                            android:inputType="phone"
                             android:text="30"
-                            android:textSize="40sp"
+                            app:isNumber="true"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHeight_percent="0.7"
-                            app:layout_constraintHorizontal_bias="0.5"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintVertical_bias="0.3"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintHeight_percent="0.55"
                             app:layout_constraintWidth_percent="0.7" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
                 </LinearLayout>
@@ -333,44 +311,38 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
-                    <com.example.charactersheet.views.CSEditText
+                    <com.example.charactersheet.views.CSTextView
                         android:id="@+id/hitPointMax"
+                        android:contentDescription="Hit Point Maximum"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
-                        android:autoSizeTextType="uniform"
-                        android:digits="0123456789+-"
-                        android:ems="10"
                         android:gravity="center"
-                        android:inputType="phone"
                         android:text="30"
-                        android:textSize="20sp"
+                        app:isNumber="true"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHeight_percent="0.3"
-                        app:layout_constraintHorizontal_bias="0.9"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.04"
+                        app:layout_constraintHorizontal_bias="0.9"
+                        app:layout_constraintHeight_percent="0.2"
                         app:layout_constraintWidth_percent="0.55" />
 
-                    <com.example.charactersheet.views.CSEditText
+                    <com.example.charactersheet.views.CSTextView
                         android:id="@+id/currentHitPoints"
+                        android:contentDescription="Current Hit Poitns"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
-                        android:autoSizeTextType="uniform"
-                        android:digits="0123456789+-"
-                        android:ems="10"
                         android:gravity="center"
-                        android:inputType="phone"
                         android:text="30"
-                        android:textSize="60sp"
+                        app:isNumber="true"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHeight_percent="0.7"
-                        app:layout_constraintHorizontal_bias="0.5"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.8"
+                        app:layout_constraintVertical_bias="0.6"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintHeight_percent="0.6"
                         app:layout_constraintWidth_percent="0.95" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
@@ -392,24 +364,21 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
-                    <com.example.charactersheet.views.CSEditText
+                    <com.example.charactersheet.views.CSTextView
                         android:id="@+id/tempHitPoints"
+                        android:contentDescription="Temporary Hit Points"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
-                        android:autoSizeTextType="uniform"
-                        android:digits="0123456789+-"
-                        android:ems="10"
                         android:gravity="center"
-                        android:inputType="phone"
                         android:text="30"
-                        android:textSize="60sp"
+                        app:isNumber="true"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHeight_percent="0.9"
-                        app:layout_constraintHorizontal_bias="0.5"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.6"
+                        app:layout_constraintVertical_bias="0.2"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintHeight_percent="0.8"
                         app:layout_constraintWidth_percent="0.95" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
@@ -437,42 +406,38 @@
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
 
-                        <com.example.charactersheet.views.CSEditText
+                        <com.example.charactersheet.views.CSTextView
                             android:id="@+id/totalHitDice"
+                            android:contentDescription="Total Hit Dice"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
-                            android:autoSizeTextType="uniform"
-                            android:ems="10"
                             android:gravity="center"
-                            android:inputType="text"
                             android:text="30"
-                            android:textSize="18sp"
+                            app:isText="true"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHeight_percent="0.3"
-                            app:layout_constraintHorizontal_bias="0.7"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintVertical_bias="0.08"
+                            app:layout_constraintVertical_bias="0.03"
+                            app:layout_constraintHorizontal_bias="0.7"
+                            app:layout_constraintHeight_percent="0.25"
                             app:layout_constraintWidth_percent="0.6" />
 
-                        <com.example.charactersheet.views.CSEditText
+                        <com.example.charactersheet.views.CSTextView
                             android:id="@+id/hitDice"
+                            android:contentDescription="Hit Dice"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
-                            android:autoSizeTextType="uniform"
-                            android:ems="10"
                             android:gravity="center"
-                            android:inputType="text"
                             android:text="30"
-                            android:textSize="48sp"
+                            app:isText="true"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHeight_percent="0.7"
-                            app:layout_constraintHorizontal_bias="0.5"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintVertical_bias="0.8"
+                            app:layout_constraintVertical_bias="0.6"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintHeight_percent="0.55"
                             app:layout_constraintWidth_percent="0.95" />
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -604,24 +569,21 @@
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
 
-                        <com.example.charactersheet.views.CSEditText
+                        <com.example.charactersheet.views.CSTextView
                             android:id="@+id/inspiration"
+                            android:contentDescription="Inspiration"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
-                            android:autoSizeTextType="uniform"
-                            android:digits="0123456789+-"
-                            android:ems="10"
                             android:gravity="center"
-                            android:inputType="phone"
-                            android:text="+3"
-                            android:textSize="14sp"
+                            android:text="3"
+                            app:isNumber="true"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHeight_percent="0.72"
-                            app:layout_constraintHorizontal_bias="0.025"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintVertical_bias="0.6"
+                            app:layout_constraintHorizontal_bias="0.025"
+                            app:layout_constraintHeight_percent="0.72"
                             app:layout_constraintWidth_percent="0.2" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
                     <Space
@@ -643,24 +605,21 @@
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
 
-                        <com.example.charactersheet.views.CSEditText
+                        <com.example.charactersheet.views.CSTextView
                             android:id="@+id/proficiencyBonus"
+                            android:contentDescription="Proficiency Bonus"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
-                            android:autoSizeTextType="uniform"
-                            android:digits="0123456789+-"
-                            android:ems="10"
                             android:gravity="center"
-                            android:inputType="phone"
                             android:text="+3"
-                            android:textSize="14sp"
+                            app:isBonus="true"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHeight_percent="0.7"
-                            app:layout_constraintHorizontal_bias="0.03"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintVertical_bias="0.6"
+                            app:layout_constraintVertical_bias="0.4"
+                            app:layout_constraintHorizontal_bias="0.03"
+                            app:layout_constraintHeight_percent="0.7"
                             app:layout_constraintWidth_percent="0.2" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
                 </LinearLayout>
@@ -688,44 +647,38 @@
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
 
-                        <com.example.charactersheet.views.CSEditText
+                        <com.example.charactersheet.views.CSTextView
                             android:id="@+id/strength"
+                            android:contentDescription="Strength Score"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
-                            android:autoSizeTextType="uniform"
-                            android:digits="0123456789+-"
-                            android:ems="10"
                             android:gravity="center"
-                            android:inputType="number"
                             android:text="20"
-                            android:textSize="45sp"
+                            app:isNumber="true"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHeight_percent="0.65"
-                            app:layout_constraintHorizontal_bias="0.5"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintVertical_bias="0.2"
+                            app:layout_constraintVertical_bias="0.3"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintHeight_percent="0.5"
                             app:layout_constraintWidth_percent="0.8" />
 
-                        <com.example.charactersheet.views.CSEditText
+                        <com.example.charactersheet.views.CSTextView
                             android:id="@+id/strengthBonus"
+                            android:contentDescription="Strength Bonus"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
-                            android:autoSizeTextType="uniform"
-                            android:digits="0123456789+-"
-                            android:ems="10"
                             android:gravity="center"
-                            android:inputType="phone"
                             android:text="+3"
-                            android:textSize="20sp"
+                            app:isBonus="true"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHeight_percent="0.3"
-                            app:layout_constraintHorizontal_bias="0.5"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintVertical_bias="0.99"
+                            app:layout_constraintVertical_bias="0.93"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintHeight_percent="0.25"
                             app:layout_constraintWidth_percent="0.4" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
                     <Space
@@ -747,44 +700,38 @@
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
 
-                        <com.example.charactersheet.views.CSEditText
+                        <com.example.charactersheet.views.CSTextView
                             android:id="@+id/dexterity"
+                            android:contentDescription="Dexterity Score"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
-                            android:autoSizeTextType="uniform"
-                            android:digits="0123456789+-"
-                            android:ems="10"
                             android:gravity="center"
-                            android:inputType="number"
                             android:text="20"
-                            android:textSize="45sp"
+                            app:isNumber="true"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHeight_percent="0.65"
-                            app:layout_constraintHorizontal_bias="0.5"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintVertical_bias="0.2"
+                            app:layout_constraintVertical_bias="0.3"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintHeight_percent="0.5"
                             app:layout_constraintWidth_percent="0.8" />
 
-                        <com.example.charactersheet.views.CSEditText
+                        <com.example.charactersheet.views.CSTextView
                             android:id="@+id/dexterityBonus"
+                            android:contentDescription="Dexterity Bonus"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
-                            android:autoSizeTextType="uniform"
-                            android:digits="0123456789+-"
-                            android:ems="10"
                             android:gravity="center"
-                            android:inputType="phone"
                             android:text="+3"
-                            android:textSize="20sp"
+                            app:isBonus="true"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHeight_percent="0.3"
-                            app:layout_constraintHorizontal_bias="0.5"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintVertical_bias="0.99"
+                            app:layout_constraintVertical_bias="0.93"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintHeight_percent="0.25"
                             app:layout_constraintWidth_percent="0.4" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
                     <Space
@@ -806,44 +753,38 @@
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
 
-                        <com.example.charactersheet.views.CSEditText
+                        <com.example.charactersheet.views.CSTextView
                             android:id="@+id/constitution"
+                            android:contentDescription="Constitution Score"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
-                            android:autoSizeTextType="uniform"
-                            android:digits="0123456789+-"
-                            android:ems="10"
                             android:gravity="center"
-                            android:inputType="number"
                             android:text="20"
-                            android:textSize="45sp"
+                            app:isNumber="true"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHeight_percent="0.65"
-                            app:layout_constraintHorizontal_bias="0.5"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintVertical_bias="0.2"
+                            app:layout_constraintVertical_bias="0.3"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintHeight_percent="0.5"
                             app:layout_constraintWidth_percent="0.8" />
 
-                        <com.example.charactersheet.views.CSEditText
+                        <com.example.charactersheet.views.CSTextView
                             android:id="@+id/constitutionBonus"
+                            android:contentDescription="Constitution Bonus"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
-                            android:autoSizeTextType="uniform"
-                            android:digits="0123456789+-"
-                            android:ems="10"
                             android:gravity="center"
-                            android:inputType="phone"
                             android:text="+3"
-                            android:textSize="20sp"
+                            app:isBonus="true"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHeight_percent="0.3"
-                            app:layout_constraintHorizontal_bias="0.5"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintVertical_bias="0.99"
+                            app:layout_constraintVertical_bias="0.93"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintHeight_percent="0.25"
                             app:layout_constraintWidth_percent="0.4" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
                 </LinearLayout>
@@ -870,44 +811,38 @@
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
 
-                        <com.example.charactersheet.views.CSEditText
+                        <com.example.charactersheet.views.CSTextView
                             android:id="@+id/intelligence"
+                            android:contentDescription="Intelligence Score"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
-                            android:autoSizeTextType="uniform"
-                            android:digits="0123456789+-"
-                            android:ems="10"
                             android:gravity="center"
-                            android:inputType="number"
                             android:text="20"
-                            android:textSize="45sp"
+                            app:isNumber="true"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHeight_percent="0.65"
-                            app:layout_constraintHorizontal_bias="0.5"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintVertical_bias="0.2"
+                            app:layout_constraintVertical_bias="0.3"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintHeight_percent="0.5"
                             app:layout_constraintWidth_percent="0.8" />
 
-                        <com.example.charactersheet.views.CSEditText
+                        <com.example.charactersheet.views.CSTextView
                             android:id="@+id/intelligenceBonus"
+                            android:contentDescription="Intelligence Bonus"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
-                            android:autoSizeTextType="uniform"
-                            android:digits="0123456789+-"
-                            android:ems="10"
                             android:gravity="center"
-                            android:inputType="phone"
                             android:text="+3"
-                            android:textSize="20sp"
+                            app:isBonus="true"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHeight_percent="0.3"
-                            app:layout_constraintHorizontal_bias="0.5"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintVertical_bias="0.99"
+                            app:layout_constraintVertical_bias="0.93"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintHeight_percent="0.25"
                             app:layout_constraintWidth_percent="0.4" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
                     <Space
@@ -929,44 +864,38 @@
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
 
-                        <com.example.charactersheet.views.CSEditText
+                        <com.example.charactersheet.views.CSTextView
                             android:id="@+id/wisdom"
+                            android:contentDescription="Wisdom Score"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
-                            android:autoSizeTextType="uniform"
-                            android:digits="0123456789+-"
-                            android:ems="10"
                             android:gravity="center"
-                            android:inputType="number"
                             android:text="20"
-                            android:textSize="45sp"
+                            app:isNumber="true"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHeight_percent="0.65"
-                            app:layout_constraintHorizontal_bias="0.5"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintVertical_bias="0.2"
+                            app:layout_constraintVertical_bias="0.3"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintHeight_percent="0.5"
                             app:layout_constraintWidth_percent="0.8" />
 
-                        <com.example.charactersheet.views.CSEditText
+                        <com.example.charactersheet.views.CSTextView
                             android:id="@+id/wisdomBonus"
+                            android:contentDescription="Wisdom Bonus"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
-                            android:autoSizeTextType="uniform"
-                            android:digits="0123456789+-"
-                            android:ems="10"
                             android:gravity="center"
-                            android:inputType="phone"
                             android:text="+3"
-                            android:textSize="20sp"
+                            app:isBonus="true"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHeight_percent="0.3"
-                            app:layout_constraintHorizontal_bias="0.5"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintVertical_bias="0.99"
+                            app:layout_constraintVertical_bias="0.93"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintHeight_percent="0.25"
                             app:layout_constraintWidth_percent="0.4" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
                     <Space
@@ -988,44 +917,38 @@
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
 
-                        <com.example.charactersheet.views.CSEditText
+                        <com.example.charactersheet.views.CSTextView
                             android:id="@+id/charisma"
+                            android:contentDescription="Charisma Score"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
-                            android:autoSizeTextType="uniform"
-                            android:digits="0123456789+-"
-                            android:ems="10"
                             android:gravity="center"
-                            android:inputType="number"
                             android:text="20"
-                            android:textSize="45sp"
+                            app:isNumber="true"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHeight_percent="0.65"
-                            app:layout_constraintHorizontal_bias="0.5"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintVertical_bias="0.2"
+                            app:layout_constraintVertical_bias="0.3"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintHeight_percent="0.5"
                             app:layout_constraintWidth_percent="0.8" />
 
-                        <com.example.charactersheet.views.CSEditText
+                        <com.example.charactersheet.views.CSTextView
                             android:id="@+id/charismaBonus"
+                            android:contentDescription="Charisma Bonus"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
-                            android:autoSizeTextType="uniform"
-                            android:digits="0123456789+-"
-                            android:ems="10"
                             android:gravity="center"
-                            android:inputType="phone"
                             android:text="+3"
-                            android:textSize="20sp"
+                            app:isBonus="true"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHeight_percent="0.3"
-                            app:layout_constraintHorizontal_bias="0.5"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintVertical_bias="0.99"
+                            app:layout_constraintVertical_bias="0.93"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintHeight_percent="0.25"
                             app:layout_constraintWidth_percent="0.4" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
                 </LinearLayout>
@@ -1053,31 +976,29 @@
                         android:layout_height="0dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHeight_percent="0.07"
-                        app:layout_constraintHorizontal_bias="0.072"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.083"
+                        app:layout_constraintHorizontal_bias="0.072"
+                        app:layout_constraintHeight_percent="0.07"
                         app:layout_constraintWidth_percent="0.08" />
 
-                    <com.example.charactersheet.views.CSEditText
+                    <com.example.charactersheet.views.CSTextView
                         android:id="@+id/strengthSave"
+                        android:contentDescription="Strength Save"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
-                        android:autoSizeTextType="uniform"
-                        android:digits="0123456789+-"
-                        android:ems="10"
                         android:gravity="center"
                         android:inputType="phone"
                         android:text="+3"
-                        android:textSize="18sp"
+                        app:isBonus="true"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHeight_percent="0.15"
-                        app:layout_constraintHorizontal_bias="0.2"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.05"
+                        app:layout_constraintHorizontal_bias="0.2"
+                        app:layout_constraintHeight_percent="0.1"
                         app:layout_constraintWidth_percent="0.13" />
 
                     <com.example.charactersheet.views.CSCheckboxRadioButton
@@ -1086,31 +1007,28 @@
                         android:layout_height="0dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHeight_percent="0.07"
-                        app:layout_constraintHorizontal_bias="0.072"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.225"
+                        app:layout_constraintHorizontal_bias="0.072"
+                        app:layout_constraintHeight_percent="0.07"
                         app:layout_constraintWidth_percent="0.08" />
 
-                    <com.example.charactersheet.views.CSEditText
+                    <com.example.charactersheet.views.CSTextView
                         android:id="@+id/dexteritySave"
+                        android:contentDescription="Dexterity Save"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
-                        android:autoSizeTextType="uniform"
-                        android:digits="0123456789+-"
-                        android:ems="10"
                         android:gravity="center"
-                        android:inputType="phone"
                         android:text="+3"
-                        android:textSize="18sp"
+                        app:isBonus="true"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHeight_percent="0.15"
-                        app:layout_constraintHorizontal_bias="0.2"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.2"
+                        app:layout_constraintHorizontal_bias="0.2"
+                        app:layout_constraintHeight_percent="0.1"
                         app:layout_constraintWidth_percent="0.13" />
 
                     <com.example.charactersheet.views.CSCheckboxRadioButton
@@ -1119,31 +1037,28 @@
                         android:layout_height="0dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHeight_percent="0.07"
-                        app:layout_constraintHorizontal_bias="0.072"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.366"
+                        app:layout_constraintHorizontal_bias="0.072"
+                        app:layout_constraintHeight_percent="0.07"
                         app:layout_constraintWidth_percent="0.08" />
 
-                    <com.example.charactersheet.views.CSEditText
+                    <com.example.charactersheet.views.CSTextView
                         android:id="@+id/constitutionSave"
+                        android:contentDescription="Constitution Save"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
-                        android:autoSizeTextType="uniform"
-                        android:digits="0123456789+-"
-                        android:ems="10"
                         android:gravity="center"
-                        android:inputType="phone"
                         android:text="+3"
-                        android:textSize="18sp"
+                        app:isBonus="true"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHeight_percent="0.15"
-                        app:layout_constraintHorizontal_bias="0.2"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.36"
+                        app:layout_constraintVertical_bias="0.35"
+                        app:layout_constraintHorizontal_bias="0.2"
+                        app:layout_constraintHeight_percent="0.1"
                         app:layout_constraintWidth_percent="0.13" />
 
                     <com.example.charactersheet.views.CSCheckboxRadioButton
@@ -1152,31 +1067,28 @@
                         android:layout_height="0dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHeight_percent="0.07"
-                        app:layout_constraintHorizontal_bias="0.072"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.509"
+                        app:layout_constraintHorizontal_bias="0.072"
+                        app:layout_constraintHeight_percent="0.07"
                         app:layout_constraintWidth_percent="0.08" />
 
-                    <com.example.charactersheet.views.CSEditText
+                    <com.example.charactersheet.views.CSTextView
                         android:id="@+id/intelligenceSave"
+                        android:contentDescription="Intelligence Save"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
-                        android:autoSizeTextType="uniform"
-                        android:digits="0123456789+-"
-                        android:ems="10"
                         android:gravity="center"
-                        android:inputType="phone"
                         android:text="+3"
-                        android:textSize="18sp"
+                        app:isBonus="true"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHeight_percent="0.15"
-                        app:layout_constraintHorizontal_bias="0.2"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.52"
+                        app:layout_constraintVertical_bias="0.5"
+                        app:layout_constraintHorizontal_bias="0.2"
+                        app:layout_constraintHeight_percent="0.1"
                         app:layout_constraintWidth_percent="0.13" />
 
                     <com.example.charactersheet.views.CSCheckboxRadioButton
@@ -1185,31 +1097,28 @@
                         android:layout_height="0dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHeight_percent="0.07"
-                        app:layout_constraintHorizontal_bias="0.072"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.651"
+                        app:layout_constraintHorizontal_bias="0.072"
+                        app:layout_constraintHeight_percent="0.07"
                         app:layout_constraintWidth_percent="0.08" />
 
-                    <com.example.charactersheet.views.CSEditText
+                    <com.example.charactersheet.views.CSTextView
                         android:id="@+id/wisdomSave"
+                        android:contentDescription="Wisdom Save"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
-                        android:autoSizeTextType="uniform"
-                        android:digits="0123456789+-"
-                        android:ems="10"
                         android:gravity="center"
-                        android:inputType="phone"
                         android:text="+3"
-                        android:textSize="18sp"
+                        app:isBonus="true"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHeight_percent="0.15"
-                        app:layout_constraintHorizontal_bias="0.2"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.67"
+                        app:layout_constraintVertical_bias="0.64"
+                        app:layout_constraintHorizontal_bias="0.2"
+                        app:layout_constraintHeight_percent="0.1"
                         app:layout_constraintWidth_percent="0.13" />
 
                     <com.example.charactersheet.views.CSCheckboxRadioButton
@@ -1218,31 +1127,28 @@
                         android:layout_height="0dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHeight_percent="0.07"
-                        app:layout_constraintHorizontal_bias="0.072"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.792"
+                        app:layout_constraintHorizontal_bias="0.072"
+                        app:layout_constraintHeight_percent="0.07"
                         app:layout_constraintWidth_percent="0.08" />
 
-                    <com.example.charactersheet.views.CSEditText
+                    <com.example.charactersheet.views.CSTextView
                         android:id="@+id/charismaSave"
+                        android:contentDescription="Charisma Save"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
-                        android:autoSizeTextType="uniform"
-                        android:digits="0123456789+-"
-                        android:ems="10"
                         android:gravity="center"
-                        android:inputType="phone"
                         android:text="+3"
-                        android:textSize="18sp"
+                        app:isBonus="true"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHeight_percent="0.15"
-                        app:layout_constraintHorizontal_bias="0.2"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.83"
+                        app:layout_constraintVertical_bias="0.79"
+                        app:layout_constraintHorizontal_bias="0.2"
+                        app:layout_constraintHeight_percent="0.1"
                         app:layout_constraintWidth_percent="0.13" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
                 <Space
@@ -1269,31 +1175,29 @@
                         android:layout_height="0dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHeight_percent="0.03"
-                        app:layout_constraintHorizontal_bias="0.072"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.044"
+                        app:layout_constraintHorizontal_bias="0.072"
+                        app:layout_constraintHeight_percent="0.03"
                         app:layout_constraintWidth_percent="0.08" />
 
-                    <com.example.charactersheet.views.CSEditText
+                    <com.example.charactersheet.views.CSTextView
                         android:id="@+id/acrobatics"
+                        android:contentDescription="Acrobatics Bonus"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
                         android:autoSizeTextType="uniform"
-                        android:digits="0123456789+-"
-                        android:ems="10"
                         android:gravity="center"
-                        android:inputType="phone"
                         android:text="+3"
-                        android:textSize="18sp"
+                        app:isBonus="true"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHeight_percent="0.05"
-                        app:layout_constraintHorizontal_bias="0.2"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.035"
+                        app:layout_constraintHorizontal_bias="0.2"
+                        app:layout_constraintHeight_percent="0.04"
                         app:layout_constraintWidth_percent="0.12" />
 
                     <com.example.charactersheet.views.CSCheckboxRadioButton
@@ -1302,31 +1206,28 @@
                         android:layout_height="0dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHeight_percent="0.03"
-                        app:layout_constraintHorizontal_bias="0.072"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.096"
+                        app:layout_constraintHorizontal_bias="0.072"
+                        app:layout_constraintHeight_percent="0.03"
                         app:layout_constraintWidth_percent="0.08" />
 
-                    <com.example.charactersheet.views.CSEditText
+                    <com.example.charactersheet.views.CSTextView
                         android:id="@+id/animalHandling"
+                        android:contentDescription="Animal Handling Bonus"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
-                        android:autoSizeTextType="uniform"
-                        android:digits="0123456789+-"
-                        android:ems="10"
                         android:gravity="center"
-                        android:inputType="phone"
                         android:text="+3"
-                        android:textSize="18sp"
+                        app:isBonus="true"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHeight_percent="0.05"
-                        app:layout_constraintHorizontal_bias="0.2"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.09"
+                        app:layout_constraintVertical_bias="0.085"
+                        app:layout_constraintHorizontal_bias="0.2"
+                        app:layout_constraintHeight_percent="0.04"
                         app:layout_constraintWidth_percent="0.12" />
 
                     <com.example.charactersheet.views.CSCheckboxRadioButton
@@ -1335,31 +1236,28 @@
                         android:layout_height="0dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHeight_percent="0.03"
-                        app:layout_constraintHorizontal_bias="0.072"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.148"
+                        app:layout_constraintHorizontal_bias="0.072"
+                        app:layout_constraintHeight_percent="0.03"
                         app:layout_constraintWidth_percent="0.08" />
 
-                    <com.example.charactersheet.views.CSEditText
+                    <com.example.charactersheet.views.CSTextView
                         android:id="@+id/arcana"
+                        android:contentDescription="Arcana Bonus"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
-                        android:autoSizeTextType="uniform"
-                        android:digits="0123456789+-"
-                        android:ems="10"
                         android:gravity="center"
-                        android:inputType="phone"
                         android:text="+3"
-                        android:textSize="18sp"
+                        app:isBonus="true"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHeight_percent="0.05"
-                        app:layout_constraintHorizontal_bias="0.2"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.143"
+                        app:layout_constraintVertical_bias="0.14"
+                        app:layout_constraintHorizontal_bias="0.2"
+                        app:layout_constraintHeight_percent="0.04"
                         app:layout_constraintWidth_percent="0.12" />
 
                     <com.example.charactersheet.views.CSCheckboxRadioButton
@@ -1368,31 +1266,28 @@
                         android:layout_height="0dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHeight_percent="0.03"
-                        app:layout_constraintHorizontal_bias="0.072"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.2"
+                        app:layout_constraintHorizontal_bias="0.072"
+                        app:layout_constraintHeight_percent="0.03"
                         app:layout_constraintWidth_percent="0.08" />
 
-                    <com.example.charactersheet.views.CSEditText
+                    <com.example.charactersheet.views.CSTextView
                         android:id="@+id/athletics"
+                        android:contentDescription="Athletics Bonus"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
-                        android:autoSizeTextType="uniform"
-                        android:digits="0123456789+-"
-                        android:ems="10"
                         android:gravity="center"
-                        android:inputType="phone"
                         android:text="+3"
-                        android:textSize="18sp"
+                        app:isBonus="true"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHeight_percent="0.05"
-                        app:layout_constraintHorizontal_bias="0.2"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.195"
+                        app:layout_constraintVertical_bias="0.19"
+                        app:layout_constraintHorizontal_bias="0.2"
+                        app:layout_constraintHeight_percent="0.04"
                         app:layout_constraintWidth_percent="0.12" />
 
                     <com.example.charactersheet.views.CSCheckboxRadioButton
@@ -1401,31 +1296,28 @@
                         android:layout_height="0dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHeight_percent="0.03"
-                        app:layout_constraintHorizontal_bias="0.072"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.252"
+                        app:layout_constraintHorizontal_bias="0.072"
+                        app:layout_constraintHeight_percent="0.03"
                         app:layout_constraintWidth_percent="0.08" />
 
-                    <com.example.charactersheet.views.CSEditText
+                    <com.example.charactersheet.views.CSTextView
                         android:id="@+id/deception"
+                        android:contentDescription="Deception Bonus"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
-                        android:autoSizeTextType="uniform"
-                        android:digits="0123456789+-"
-                        android:ems="10"
                         android:gravity="center"
-                        android:inputType="phone"
                         android:text="+3"
-                        android:textSize="18sp"
+                        app:isBonus="true"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHeight_percent="0.05"
-                        app:layout_constraintHorizontal_bias="0.2"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.247"
+                        app:layout_constraintVertical_bias="0.243"
+                        app:layout_constraintHorizontal_bias="0.2"
+                        app:layout_constraintHeight_percent="0.04"
                         app:layout_constraintWidth_percent="0.12" />
 
                     <com.example.charactersheet.views.CSCheckboxRadioButton
@@ -1434,31 +1326,28 @@
                         android:layout_height="0dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHeight_percent="0.03"
-                        app:layout_constraintHorizontal_bias="0.072"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.303"
+                        app:layout_constraintHorizontal_bias="0.072"
+                        app:layout_constraintHeight_percent="0.03"
                         app:layout_constraintWidth_percent="0.08" />
 
-                    <com.example.charactersheet.views.CSEditText
+                    <com.example.charactersheet.views.CSTextView
                         android:id="@+id/history"
+                        android:contentDescription="History Bonus"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
-                        android:autoSizeTextType="uniform"
-                        android:digits="0123456789+-"
-                        android:ems="10"
                         android:gravity="center"
-                        android:inputType="phone"
                         android:text="+3"
-                        android:textSize="18sp"
+                        app:isBonus="true"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHeight_percent="0.05"
-                        app:layout_constraintHorizontal_bias="0.2"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.302"
+                        app:layout_constraintVertical_bias="0.294"
+                        app:layout_constraintHorizontal_bias="0.2"
+                        app:layout_constraintHeight_percent="0.04"
                         app:layout_constraintWidth_percent="0.12" />
 
                     <com.example.charactersheet.views.CSCheckboxRadioButton
@@ -1467,31 +1356,28 @@
                         android:layout_height="0dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHeight_percent="0.03"
-                        app:layout_constraintHorizontal_bias="0.072"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.355"
+                        app:layout_constraintHorizontal_bias="0.072"
+                        app:layout_constraintHeight_percent="0.03"
                         app:layout_constraintWidth_percent="0.08" />
 
-                    <com.example.charactersheet.views.CSEditText
+                    <com.example.charactersheet.views.CSTextView
                         android:id="@+id/insight"
+                        android:contentDescription="Insight Bonus"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
-                        android:autoSizeTextType="uniform"
-                        android:digits="0123456789+-"
-                        android:ems="10"
                         android:gravity="center"
-                        android:inputType="phone"
                         android:text="+3"
-                        android:textSize="18sp"
+                        app:isBonus="true"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHeight_percent="0.05"
-                        app:layout_constraintHorizontal_bias="0.2"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.355"
+                        app:layout_constraintVertical_bias="0.346"
+                        app:layout_constraintHorizontal_bias="0.2"
+                        app:layout_constraintHeight_percent="0.04"
                         app:layout_constraintWidth_percent="0.12" />
 
                     <com.example.charactersheet.views.CSCheckboxRadioButton
@@ -1500,31 +1386,28 @@
                         android:layout_height="0dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHeight_percent="0.03"
-                        app:layout_constraintHorizontal_bias="0.072"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.407"
+                        app:layout_constraintHorizontal_bias="0.072"
+                        app:layout_constraintHeight_percent="0.03"
                         app:layout_constraintWidth_percent="0.08" />
 
-                    <com.example.charactersheet.views.CSEditText
+                    <com.example.charactersheet.views.CSTextView
                         android:id="@+id/intimidation"
+                        android:contentDescription="Intimidation Bonus"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
-                        android:autoSizeTextType="uniform"
-                        android:digits="0123456789+-"
-                        android:ems="10"
                         android:gravity="center"
-                        android:inputType="phone"
                         android:text="+3"
-                        android:textSize="18sp"
+                        app:isBonus="true"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHeight_percent="0.05"
-                        app:layout_constraintHorizontal_bias="0.2"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.407"
+                        app:layout_constraintVertical_bias="0.4"
+                        app:layout_constraintHorizontal_bias="0.2"
+                        app:layout_constraintHeight_percent="0.04"
                         app:layout_constraintWidth_percent="0.12" />
 
                     <com.example.charactersheet.views.CSCheckboxRadioButton
@@ -1533,32 +1416,29 @@
                         android:layout_height="0dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHeight_percent="0.03"
-                        app:layout_constraintHorizontal_bias="0.072"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.4585"
+                        app:layout_constraintHorizontal_bias="0.072"
+                        app:layout_constraintHeight_percent="0.03"
                         app:layout_constraintWidth_percent="0.08" />
 
 
-                    <com.example.charactersheet.views.CSEditText
+                    <com.example.charactersheet.views.CSTextView
                         android:id="@+id/investigation"
+                        android:contentDescription="Investigation Bonus"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
-                        android:autoSizeTextType="uniform"
-                        android:digits="0123456789+-"
-                        android:ems="10"
                         android:gravity="center"
-                        android:inputType="phone"
                         android:text="+3"
-                        android:textSize="18sp"
+                        app:isBonus="true"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHeight_percent="0.05"
-                        app:layout_constraintHorizontal_bias="0.2"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.46"
+                        app:layout_constraintVertical_bias="0.452"
+                        app:layout_constraintHorizontal_bias="0.2"
+                        app:layout_constraintHeight_percent="0.04"
                         app:layout_constraintWidth_percent="0.12" />
 
                     <com.example.charactersheet.views.CSCheckboxRadioButton
@@ -1567,31 +1447,29 @@
                         android:layout_height="0dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHeight_percent="0.03"
-                        app:layout_constraintHorizontal_bias="0.072"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.511"
+                        app:layout_constraintHorizontal_bias="0.072"
+                        app:layout_constraintHeight_percent="0.03"
                         app:layout_constraintWidth_percent="0.08" />
 
-                    <com.example.charactersheet.views.CSEditText
+                    <com.example.charactersheet.views.CSTextView
                         android:id="@+id/medicine"
+                        android:contentDescription="Medicine Bonus"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
                         android:autoSizeTextType="uniform"
-                        android:digits="0123456789+-"
-                        android:ems="10"
                         android:gravity="center"
-                        android:inputType="phone"
                         android:text="+3"
-                        android:textSize="18sp"
+                        app:isBonus="true"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHeight_percent="0.05"
-                        app:layout_constraintHorizontal_bias="0.2"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.515"
+                        app:layout_constraintVertical_bias="0.505"
+                        app:layout_constraintHorizontal_bias="0.2"
+                        app:layout_constraintHeight_percent="0.04"
                         app:layout_constraintWidth_percent="0.12" />
 
                     <com.example.charactersheet.views.CSCheckboxRadioButton
@@ -1600,31 +1478,29 @@
                         android:layout_height="0dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHeight_percent="0.03"
-                        app:layout_constraintHorizontal_bias="0.072"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.562"
+                        app:layout_constraintHorizontal_bias="0.072"
+                        app:layout_constraintHeight_percent="0.03"
                         app:layout_constraintWidth_percent="0.08" />
 
-                    <com.example.charactersheet.views.CSEditText
+                    <com.example.charactersheet.views.CSTextView
                         android:id="@+id/nature"
+                        android:contentDescription="Nature Bonus"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
                         android:autoSizeTextType="uniform"
-                        android:digits="0123456789+-"
-                        android:ems="10"
                         android:gravity="center"
-                        android:inputType="phone"
                         android:text="+3"
-                        android:textSize="18sp"
+                        app:isBonus="true"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHeight_percent="0.05"
-                        app:layout_constraintHorizontal_bias="0.2"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.569"
+                        app:layout_constraintVertical_bias="0.557"
+                        app:layout_constraintHorizontal_bias="0.2"
+                        app:layout_constraintHeight_percent="0.04"
                         app:layout_constraintWidth_percent="0.12" />
 
                     <com.example.charactersheet.views.CSCheckboxRadioButton
@@ -1633,31 +1509,28 @@
                         android:layout_height="0dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHeight_percent="0.03"
-                        app:layout_constraintHorizontal_bias="0.072"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.614"
+                        app:layout_constraintHorizontal_bias="0.072"
+                        app:layout_constraintHeight_percent="0.03"
                         app:layout_constraintWidth_percent="0.08" />
 
-                    <com.example.charactersheet.views.CSEditText
+                    <com.example.charactersheet.views.CSTextView
                         android:id="@+id/perception"
+                        android:contentDescription="Perception Bonus"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
-                        android:autoSizeTextType="uniform"
-                        android:digits="0123456789+-"
-                        android:ems="10"
                         android:gravity="center"
-                        android:inputType="phone"
                         android:text="+3"
-                        android:textSize="18sp"
+                        app:isBonus="true"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHeight_percent="0.05"
-                        app:layout_constraintHorizontal_bias="0.2"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.62"
+                        app:layout_constraintVertical_bias="0.61"
+                        app:layout_constraintHorizontal_bias="0.2"
+                        app:layout_constraintHeight_percent="0.04"
                         app:layout_constraintWidth_percent="0.12" />
 
                     <com.example.charactersheet.views.CSCheckboxRadioButton
@@ -1666,31 +1539,28 @@
                         android:layout_height="0dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHeight_percent="0.03"
-                        app:layout_constraintHorizontal_bias="0.072"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.666"
+                        app:layout_constraintHorizontal_bias="0.072"
+                        app:layout_constraintHeight_percent="0.03"
                         app:layout_constraintWidth_percent="0.08" />
 
-                    <com.example.charactersheet.views.CSEditText
+                    <com.example.charactersheet.views.CSTextView
                         android:id="@+id/performance"
+                        android:contentDescription="Performance Bonus"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
-                        android:autoSizeTextType="uniform"
-                        android:digits="0123456789+-"
-                        android:ems="10"
                         android:gravity="center"
-                        android:inputType="phone"
                         android:text="+3"
-                        android:textSize="18sp"
+                        app:isBonus="true"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHeight_percent="0.05"
-                        app:layout_constraintHorizontal_bias="0.2"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.673"
+                        app:layout_constraintVertical_bias="0.66"
+                        app:layout_constraintHorizontal_bias="0.2"
+                        app:layout_constraintHeight_percent="0.04"
                         app:layout_constraintWidth_percent="0.12" />
 
                     <com.example.charactersheet.views.CSCheckboxRadioButton
@@ -1699,31 +1569,28 @@
                         android:layout_height="0dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHeight_percent="0.03"
-                        app:layout_constraintHorizontal_bias="0.072"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.718"
+                        app:layout_constraintHorizontal_bias="0.072"
+                        app:layout_constraintHeight_percent="0.03"
                         app:layout_constraintWidth_percent="0.08" />
 
-                    <com.example.charactersheet.views.CSEditText
+                    <com.example.charactersheet.views.CSTextView
                         android:id="@+id/persuasion"
+                        android:contentDescription="Persuasion Bonus"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
-                        android:autoSizeTextType="uniform"
-                        android:digits="0123456789+-"
-                        android:ems="10"
                         android:gravity="center"
-                        android:inputType="phone"
                         android:text="+3"
-                        android:textSize="18sp"
+                        app:isBonus="true"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHeight_percent="0.05"
-                        app:layout_constraintHorizontal_bias="0.2"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.726"
+                        app:layout_constraintVertical_bias="0.714"
+                        app:layout_constraintHorizontal_bias="0.2"
+                        app:layout_constraintHeight_percent="0.04"
                         app:layout_constraintWidth_percent="0.12" />
 
                     <com.example.charactersheet.views.CSCheckboxRadioButton
@@ -1732,31 +1599,28 @@
                         android:layout_height="0dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHeight_percent="0.03"
-                        app:layout_constraintHorizontal_bias="0.072"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.77"
+                        app:layout_constraintHorizontal_bias="0.072"
+                        app:layout_constraintHeight_percent="0.03"
                         app:layout_constraintWidth_percent="0.08" />
 
-                    <com.example.charactersheet.views.CSEditText
+                    <com.example.charactersheet.views.CSTextView
                         android:id="@+id/religion"
+                        android:contentDescription="Religion Bonus"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
-                        android:autoSizeTextType="uniform"
-                        android:digits="0123456789+-"
-                        android:ems="10"
                         android:gravity="center"
-                        android:inputType="phone"
                         android:text="+3"
-                        android:textSize="18sp"
+                        app:isBonus="true"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHeight_percent="0.05"
-                        app:layout_constraintHorizontal_bias="0.2"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.779"
+                        app:layout_constraintVertical_bias="0.767"
+                        app:layout_constraintHorizontal_bias="0.2"
+                        app:layout_constraintHeight_percent="0.04"
                         app:layout_constraintWidth_percent="0.12" />
 
                     <com.example.charactersheet.views.CSCheckboxRadioButton
@@ -1765,31 +1629,28 @@
                         android:layout_height="0dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHeight_percent="0.03"
-                        app:layout_constraintHorizontal_bias="0.072"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.822"
+                        app:layout_constraintHorizontal_bias="0.072"
+                        app:layout_constraintHeight_percent="0.03"
                         app:layout_constraintWidth_percent="0.08" />
 
-                    <com.example.charactersheet.views.CSEditText
+                    <com.example.charactersheet.views.CSTextView
                         android:id="@+id/sleightOfHand"
+                        android:contentDescription="Sleight of Hand Bonus"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
-                        android:autoSizeTextType="uniform"
-                        android:digits="0123456789+-"
-                        android:ems="10"
                         android:gravity="center"
-                        android:inputType="phone"
                         android:text="+3"
-                        android:textSize="18sp"
+                        app:isBonus="true"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHeight_percent="0.05"
-                        app:layout_constraintHorizontal_bias="0.2"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.832"
+                        app:layout_constraintVertical_bias="0.82"
+                        app:layout_constraintHorizontal_bias="0.2"
+                        app:layout_constraintHeight_percent="0.04"
                         app:layout_constraintWidth_percent="0.12" />
 
                     <com.example.charactersheet.views.CSCheckboxRadioButton
@@ -1798,31 +1659,28 @@
                         android:layout_height="0dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHeight_percent="0.03"
-                        app:layout_constraintHorizontal_bias="0.072"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.874"
+                        app:layout_constraintHorizontal_bias="0.072"
+                        app:layout_constraintHeight_percent="0.03"
                         app:layout_constraintWidth_percent="0.08" />
 
-                    <com.example.charactersheet.views.CSEditText
+                    <com.example.charactersheet.views.CSTextView
                         android:id="@+id/stealth"
+                        android:contentDescription="Stealth Bonus"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
-                        android:autoSizeTextType="uniform"
-                        android:digits="0123456789+-"
-                        android:ems="10"
                         android:gravity="center"
-                        android:inputType="phone"
                         android:text="+3"
-                        android:textSize="18sp"
+                        app:isBonus="true"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHeight_percent="0.05"
-                        app:layout_constraintHorizontal_bias="0.2"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.885"
+                        app:layout_constraintVertical_bias="0.87"
+                        app:layout_constraintHorizontal_bias="0.2"
+                        app:layout_constraintHeight_percent="0.04"
                         app:layout_constraintWidth_percent="0.12" />
 
                     <com.example.charactersheet.views.CSCheckboxRadioButton
@@ -1831,31 +1689,26 @@
                         android:layout_height="0dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHeight_percent="0.03"
-                        app:layout_constraintHorizontal_bias="0.072"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.925"
+                        app:layout_constraintHorizontal_bias="0.072"
+                        app:layout_constraintHeight_percent="0.03"
                         app:layout_constraintWidth_percent="0.08" />
 
-                    <com.example.charactersheet.views.CSEditText
+                    <com.example.charactersheet.views.CSTextView
                         android:id="@+id/survival"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
-                        android:autoSizeTextType="uniform"
-                        android:digits="0123456789+-"
-                        android:ems="10"
                         android:gravity="center"
-                        android:inputType="phone"
                         android:text="+3"
-                        android:textSize="18sp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHeight_percent="0.05"
-                        app:layout_constraintHorizontal_bias="0.2"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.938"
+                        app:layout_constraintVertical_bias="0.925"
+                        app:layout_constraintHorizontal_bias="0.2"
+                        app:layout_constraintHeight_percent="0.04"
                         app:layout_constraintWidth_percent="0.12" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
                 <Space
@@ -1881,11 +1734,11 @@
                         android:layout_height="0dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHeight_percent="0.88"
-                        app:layout_constraintHorizontal_bias="0.5"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.5"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintHeight_percent="0.88"
                         app:layout_constraintWidth_percent="0.92">
 
                         <androidx.recyclerview.widget.RecyclerView
@@ -1897,7 +1750,7 @@
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"></androidx.recyclerview.widget.RecyclerView>
+                            app:layout_constraintTop_toTopOf="parent"/>
                     </androidx.core.widget.NestedScrollView>
                 </androidx.constraintlayout.widget.ConstraintLayout>
                 <Space
@@ -1918,105 +1771,91 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
-                    <com.example.charactersheet.views.CSEditText
+                    <com.example.charactersheet.views.CSTextView
                         android:id="@+id/copperPieces"
+                        android:contentDescription="Copper Pieces"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
-                        android:autoSizeTextType="uniform"
-                        android:digits="0123456789+-"
-                        android:ems="10"
                         android:gravity="center"
                         android:inputType="number"
                         android:text="100"
-                        android:textSize="24sp"
+                        app:isNumber="true"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHeight_percent="0.12"
-                        app:layout_constraintHorizontal_bias="0.08"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.06"
-                        app:layout_constraintWidth_percent="0.22" />
+                        app:layout_constraintHorizontal_bias="0.1"
+                        app:layout_constraintHeight_percent="0.11"
+                        app:layout_constraintWidth_percent="0.19" />
 
-                    <com.example.charactersheet.views.CSEditText
+                    <com.example.charactersheet.views.CSTextView
                         android:id="@+id/silverPieces"
+                        android:contentDescription="Silver Pieces"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
-                        android:autoSizeTextType="uniform"
-                        android:digits="0123456789+-"
-                        android:ems="10"
                         android:gravity="center"
-                        android:inputType="number"
                         android:text="100"
-                        android:textSize="24sp"
+                        app:isNumber="true"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHeight_percent="0.12"
-                        app:layout_constraintHorizontal_bias="0.08"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.225"
-                        app:layout_constraintWidth_percent="0.22" />
+                        app:layout_constraintVertical_bias="0.22"
+                        app:layout_constraintHorizontal_bias="0.1"
+                        app:layout_constraintHeight_percent="0.11"
+                        app:layout_constraintWidth_percent="0.19" />
 
-                    <com.example.charactersheet.views.CSEditText
+                    <com.example.charactersheet.views.CSTextView
                         android:id="@+id/electrumPieces"
+                        android:contentDescription="Electrum Pieces"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
-                        android:autoSizeTextType="uniform"
-                        android:digits="0123456789+-"
-                        android:ems="10"
                         android:gravity="center"
-                        android:inputType="number"
                         android:text="100"
-                        android:textSize="24sp"
+                        app:isNumber="true"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHeight_percent="0.12"
-                        app:layout_constraintHorizontal_bias="0.08"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.39"
-                        app:layout_constraintWidth_percent="0.22" />
+                        app:layout_constraintVertical_bias="0.385"
+                        app:layout_constraintHorizontal_bias="0.1"
+                        app:layout_constraintHeight_percent="0.11"
+                        app:layout_constraintWidth_percent="0.19" />
 
-                    <com.example.charactersheet.views.CSEditText
+                    <com.example.charactersheet.views.CSTextView
                         android:id="@+id/goldPieces"
+                        android:contentDescription="Gold Pieces"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
-                        android:autoSizeTextType="uniform"
-                        android:digits="0123456789+-"
-                        android:ems="10"
                         android:gravity="center"
-                        android:inputType="number"
                         android:text="100"
-                        android:textSize="24sp"
+                        app:isNumber="true"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHeight_percent="0.12"
-                        app:layout_constraintHorizontal_bias="0.08"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.555"
-                        app:layout_constraintWidth_percent="0.22" />
+                        app:layout_constraintVertical_bias="0.55"
+                        app:layout_constraintHorizontal_bias="0.1"
+                        app:layout_constraintHeight_percent="0.11"
+                        app:layout_constraintWidth_percent="0.19" />
 
-                    <com.example.charactersheet.views.CSEditText
+                    <com.example.charactersheet.views.CSTextView
                         android:id="@+id/platinumPieces"
+                        android:contentDescription="Platinum Pieces"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
-                        android:autoSizeTextType="uniform"
-                        android:digits="0123456789+-"
-                        android:ems="10"
                         android:gravity="center"
-                        android:inputType="number"
                         android:text="100"
-                        android:textSize="24sp"
+                        app:isNumber="true"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHeight_percent="0.12"
-                        app:layout_constraintHorizontal_bias="0.08"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.724"
-                        app:layout_constraintWidth_percent="0.22" />
+                        app:layout_constraintVertical_bias="0.71"
+                        app:layout_constraintHorizontal_bias="0.1"
+                        app:layout_constraintHeight_percent="0.11"
+                        app:layout_constraintWidth_percent="0.19" />
 
                     <androidx.core.widget.NestedScrollView
                         android:layout_width="0dp"
@@ -2024,24 +1863,19 @@
                         android:fillViewport="true"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHeight_percent="0.9"
-                        app:layout_constraintHorizontal_bias="0.9"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.2"
+                        app:layout_constraintHorizontal_bias="0.9"
+                        app:layout_constraintHeight_percent="0.9"
                         app:layout_constraintWidth_percent="0.65">
 
-                        <com.example.charactersheet.views.CSEditTextLong
+                        <com.example.charactersheet.views.CSTextViewLong
                             android:id="@+id/equipment"
+                            android:contentDescription="Equipment"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:autoSizeTextType="uniform"
-                            android:ems="10"
                             android:gravity="top"
-                            android:inputType="textMultiLine"
-                            android:isScrollContainer="true"
-                            android:overScrollMode="always"
-                            android:scrollbars="vertical"
                             android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sapien dolor, tempus nec sagittis id, posuere ut diam. Vestibulum egestas, eros non tempus porttitor, leo magna efficitur nunc, at scelerisque orci felis malesuada metus. Nam mollis, metus ut efficitur gravida, sem enim semper sem, quis faucibus lacus nunc ut libero. In sollicitudin urna sit amet turpis aliquet placerat. Nulla sed enim gravida, volutpat libero vitae, pellentesque lorem. Curabitur non bibendum turpis, quis molestie nibh. Integer laoreet sodales justo, eget bibendum purus venenatis ac."
                             android:textSize="18sp" />
 
@@ -2078,16 +1912,12 @@
                         app:layout_constraintVertical_bias="0.2"
                         app:layout_constraintWidth_percent="0.9">
 
-                        <com.example.charactersheet.views.CSEditTextLong
+                        <com.example.charactersheet.views.CSTextViewLong
                             android:id="@+id/proficienciesLanguages"
+                            android:contentDescription="Proficiencies and Languages"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:autoSizeTextType="uniform"
-                            android:ems="10"
                             android:gravity="top"
-                            android:inputType="textMultiLine"
-                            android:isScrollContainer="true"
-                            android:overScrollMode="always"
                             android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sapien dolor, tempus nec sagittis id, posuere ut diam. Vestibulum egestas, eros non tempus porttitor, leo magna efficitur nunc, at scelerisque orci felis malesuada metus. Nam mollis, metus ut efficitur gravida, sem enim semper sem, quis faucibus lacus nunc ut libero. In sollicitudin urna sit amet turpis aliquet placerat. Nulla sed enim gravida, volutpat libero vitae, pellentesque lorem. Curabitur non bibendum turpis, quis molestie nibh. Integer laoreet sodales justo, eget bibendum purus venenatis ac."
                             android:textSize="18sp" />
 
@@ -2117,23 +1947,20 @@
                         android:fillViewport="true"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHeight_percent="0.7"
-                        app:layout_constraintHorizontal_bias="0.5"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.2"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintHeight_percent="0.7"
                         app:layout_constraintWidth_percent="0.9">
 
-                        <com.example.charactersheet.views.CSEditTextLong
+                        <com.example.charactersheet.views.CSTextViewLong
                             android:id="@+id/personalityTraits"
+                            android:contentDescription="Personality Traits"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:autoSizeTextType="uniform"
-                            android:ems="10"
                             android:gravity="top"
-                            android:inputType="textMultiLine"
-                            android:isScrollContainer="true"
-                            android:overScrollMode="always"
                             android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sapien dolor, tempus nec sagittis id, posuere ut diam. Vestibulum egestas, eros non tempus porttitor, leo magna efficitur nunc, at scelerisque orci felis malesuada metus. Nam mollis, metus ut efficitur gravida, sem enim semper sem, quis faucibus lacus nunc ut libero. In sollicitudin urna sit amet turpis aliquet placerat. Nulla sed enim gravida, volutpat libero vitae, pellentesque lorem. Curabitur non bibendum turpis, quis molestie nibh. Integer laoreet sodales justo, eget bibendum purus venenatis ac."
                             android:textSize="18sp" />
 
@@ -2163,23 +1990,20 @@
                         android:fillViewport="true"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHeight_percent="0.7"
-                        app:layout_constraintHorizontal_bias="0.5"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.2"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintHeight_percent="0.7"
                         app:layout_constraintWidth_percent="0.9">
 
-                        <com.example.charactersheet.views.CSEditTextLong
+                        <com.example.charactersheet.views.CSTextViewLong
                             android:id="@+id/ideals"
+                            android:contentDescription="Ideals"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:autoSizeTextType="uniform"
-                            android:ems="10"
                             android:gravity="top"
-                            android:inputType="textMultiLine"
-                            android:isScrollContainer="true"
-                            android:overScrollMode="always"
                             android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sapien dolor, tempus nec sagittis id, posuere ut diam. Vestibulum egestas, eros non tempus porttitor, leo magna efficitur nunc, at scelerisque orci felis malesuada metus. Nam mollis, metus ut efficitur gravida, sem enim semper sem, quis faucibus lacus nunc ut libero. In sollicitudin urna sit amet turpis aliquet placerat. Nulla sed enim gravida, volutpat libero vitae, pellentesque lorem. Curabitur non bibendum turpis, quis molestie nibh. Integer laoreet sodales justo, eget bibendum purus venenatis ac."
                             android:textSize="18sp" />
 
@@ -2209,23 +2033,20 @@
                         android:fillViewport="true"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHeight_percent="0.7"
-                        app:layout_constraintHorizontal_bias="0.5"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.2"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintHeight_percent="0.7"
                         app:layout_constraintWidth_percent="0.9">
 
-                        <com.example.charactersheet.views.CSEditTextLong
+                        <com.example.charactersheet.views.CSTextViewLong
                             android:id="@+id/bonds"
+                            android:contentDescription="Bonds"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:autoSizeTextType="uniform"
-                            android:ems="10"
                             android:gravity="top"
-                            android:inputType="textMultiLine"
-                            android:isScrollContainer="true"
-                            android:overScrollMode="always"
                             android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sapien dolor, tempus nec sagittis id, posuere ut diam. Vestibulum egestas, eros non tempus porttitor, leo magna efficitur nunc, at scelerisque orci felis malesuada metus. Nam mollis, metus ut efficitur gravida, sem enim semper sem, quis faucibus lacus nunc ut libero. In sollicitudin urna sit amet turpis aliquet placerat. Nulla sed enim gravida, volutpat libero vitae, pellentesque lorem. Curabitur non bibendum turpis, quis molestie nibh. Integer laoreet sodales justo, eget bibendum purus venenatis ac."
                             android:textSize="18sp" />
 
@@ -2255,23 +2076,20 @@
                         android:fillViewport="true"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHeight_percent="0.7"
-                        app:layout_constraintHorizontal_bias="0.5"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.2"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintHeight_percent="0.7"
                         app:layout_constraintWidth_percent="0.9">
 
-                        <com.example.charactersheet.views.CSEditTextLong
+                        <com.example.charactersheet.views.CSTextViewLong
                             android:id="@+id/flaws"
+                            android:contentDescription="Flaws"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:autoSizeTextType="uniform"
-                            android:ems="10"
                             android:gravity="top"
-                            android:inputType="textMultiLine"
-                            android:isScrollContainer="true"
-                            android:overScrollMode="always"
                             android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sapien dolor, tempus nec sagittis id, posuere ut diam. Vestibulum egestas, eros non tempus porttitor, leo magna efficitur nunc, at scelerisque orci felis malesuada metus. Nam mollis, metus ut efficitur gravida, sem enim semper sem, quis faucibus lacus nunc ut libero. In sollicitudin urna sit amet turpis aliquet placerat. Nulla sed enim gravida, volutpat libero vitae, pellentesque lorem. Curabitur non bibendum turpis, quis molestie nibh. Integer laoreet sodales justo, eget bibendum purus venenatis ac."
                             android:textSize="18sp" />
 

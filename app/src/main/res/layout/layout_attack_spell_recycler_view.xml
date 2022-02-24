@@ -1,40 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="horizontal">
 
-    <com.example.charactersheet.views.CSEditText
+    <com.example.charactersheet.views.CSTextView
         android:id="@+id/spellAttackName"
+        android:contentDescription="Attack/Spell Name"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="40"
+        android:text="alskdjalkdj"
+        app:isText="true"
         android:background="@drawable/edit_text_border"
-        android:overScrollMode="always"
-        android:padding="2dp"
-        android:text="alskdjalkdj"
-        android:textSize="16dp" />
+        android:padding="2dp"/>
 
-    <com.example.charactersheet.views.CSEditText
+    <com.example.charactersheet.views.CSTextView
         android:id="@+id/spellAttackBonus"
+        android:contentDescription="Attack/Spell Attack Bonus"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="alskdjalkdj"
-        android:textSize="16dp"
-        android:padding="2dp"
         android:layout_weight="22"
-        android:overScrollMode="always"
-        android:background="@drawable/edit_text_border"/>
+        android:text="alskdjalkdj"
+        app:isText="true"
+        android:background="@drawable/edit_text_border"
+        android:padding="2dp"/>
 
-    <com.example.charactersheet.views.CSEditText
+    <com.example.charactersheet.views.CSTextView
         android:id="@+id/spellAttackType"
+        android:contentDescription="Attack/Spell Attack Type"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="alskdjalkdj"
-        android:textSize="16dp"
-        android:padding="2dp"
         android:layout_weight="38"
-        android:overScrollMode="always"
-        android:background="@drawable/edit_text_border"/>
+        android:text="alskdjalkdj"
+        app:isText="true"
+        android:background="@drawable/edit_text_border"
+        android:padding="2dp"/>
 </LinearLayout>

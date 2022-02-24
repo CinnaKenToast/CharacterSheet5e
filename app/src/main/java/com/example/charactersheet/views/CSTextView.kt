@@ -1,15 +1,11 @@
 package com.example.charactersheet.views
 
 import android.content.Context
-import android.graphics.Paint
+import android.text.InputType
 import android.util.AttributeSet
 import androidx.appcompat.widget.AppCompatTextView
 import androidx.core.widget.TextViewCompat
-import androidx.fragment.app.findFragment
-import androidx.navigation.Navigation
-import androidx.navigation.fragment.findNavController
 import com.example.charactersheet.R
-import com.example.charactersheet.SpellsFragment
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.textfield.TextInputEditText
 
@@ -23,11 +19,14 @@ class CSTextView: AppCompatTextView {
     private var isBonus: Boolean = false
 
     private fun init(context: Context, attrs: AttributeSet? = null) {
-
-        attrs?.let {
-            isText = attrs.getAttributeBooleanValue("app", "isText", false)
-            isNumber = attrs.getAttributeBooleanValue("app", "isNumber", false)
-            isBonus = attrs.getAttributeBooleanValue("app", "isBonus", false)
+        context.obtainStyledAttributes(attrs, R.styleable.CSTextView).apply {
+            try {
+                isText = getBoolean(R.styleable.CSTextView_isText, false)
+                isNumber = getBoolean(R.styleable.CSTextView_isNumber, false)
+                isBonus = getBoolean(R.styleable.CSTextView_isBonus, false)
+            } finally {
+                recycle()
+            }
         }
 
         TextViewCompat.setAutoSizeTextTypeWithDefaults(this, AUTO_SIZE_TEXT_TYPE_UNIFORM)
@@ -35,8 +34,8 @@ class CSTextView: AppCompatTextView {
         setOnClickListener {
             when {
                 isText -> {createTextDialog(context)}
-                isNumber -> {}
-                isBonus -> {}
+                isNumber -> {createNumberDialog(context)}
+                isBonus -> {createBonusDialog(context)}
             }
         }
     }
@@ -63,6 +62,7 @@ class CSTextView: AppCompatTextView {
         val editText = TextInputEditText(context)
         editText.id = R.id.importDialog
         editText.hint = "Insert ${this.contentDescription}"
+        editText.inputType = InputType.TYPE_CLASS_NUMBER
         editText.setText(this.text)
         MaterialAlertDialogBuilder(context)
             .setTitle("${if (editText.text!!.isEmpty()) "Add" else "Edit"} ${this.contentDescription}")
@@ -81,14 +81,18 @@ class CSTextView: AppCompatTextView {
         val editText = TextInputEditText(context)
         editText.id = R.id.importDialog
         editText.hint = "Insert ${this.contentDescription}"
-        editText.setText(this.text)
+        editText.inputType = InputType.TYPE_CLASS_NUMBER.or(InputType.TYPE_NUMBER_FLAG_SIGNED)
+        editText.setText(this.text.toString().replace("+", ""))
         MaterialAlertDialogBuilder(context)
             .setTitle("${if (editText.text!!.isEmpty()) "Add" else "Edit"} ${this.contentDescription}")
+            .setMessage("A + will automatically be added to positive bonuses")
             .setNegativeButton("Cancel") { dialog, which ->
                 dialog.dismiss()
             }
             .setPositiveButton("Add") { dialog, which ->
-                this.text = editText.text.toString()
+                var newBonus = editText.text.toString()
+                if (!newBonus.contains("-")) { newBonus = "+$newBonus" }
+                this.text = newBonus
                 dialog.dismiss()
             }
             .setView(editText)

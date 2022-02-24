@@ -94,95 +94,95 @@ class DetailsFragment : Fragment() {
     }
 
     private fun initializeFields() {
-        binding.characterName.setText(currentCharacter.characterName)
-        binding.classLevel.setText(currentCharacter.classLevel)
-        binding.characterBackground.setText(currentCharacter.background)
-        binding.playerName.setText(currentCharacter.playerName)
-        binding.characterRace.setText(currentCharacter.race)
-        binding.characterAlignment.setText(currentCharacter.alignmentType)
-        binding.experiencePoints.setText(currentCharacter.experiencePoints)
-        binding.armorClass.setText(currentCharacter.armorClass)
-        binding.initiative.setText(currentCharacter.initiative)
-        binding.speed.setText(currentCharacter.speed)
-        binding.hitPointMax.setText(currentCharacter.hitPointMax)
-        binding.currentHitPoints.setText(currentCharacter.currentHitPoints)
-        binding.tempHitPoints.setText(currentCharacter.temporaryHitPoints)
-        binding.totalHitDice.setText(currentCharacter.totalHitDice)
-        binding.hitDice.setText(currentCharacter.hitDice)
+        binding.characterName.text = currentCharacter.characterName
+        binding.classLevel.text = currentCharacter.classLevel
+        binding.characterBackground.text = currentCharacter.background
+        binding.playerName.text = currentCharacter.playerName
+        binding.characterRace.text = currentCharacter.race
+        binding.characterAlignment.text = currentCharacter.alignmentType
+        binding.experiencePoints.text = currentCharacter.experiencePoints
+        binding.armorClass.text = currentCharacter.armorClass
+        binding.initiative.text = currentCharacter.initiative
+        binding.speed.text = currentCharacter.speed
+        binding.hitPointMax.text = currentCharacter.hitPointMax
+        binding.currentHitPoints.text = currentCharacter.currentHitPoints
+        binding.tempHitPoints.text = currentCharacter.temporaryHitPoints
+        binding.totalHitDice.text = currentCharacter.totalHitDice
+        binding.hitDice.text = currentCharacter.hitDice
         binding.successSaveButton1.setChecked(currentCharacter.successDeathSave1)
         binding.successSaveButton2.setChecked(currentCharacter.successDeathSave2)
         binding.successSaveButton3.setChecked(currentCharacter.successDeathSave3)
         binding.failSaveButton1.setChecked(currentCharacter.failDeathSave1)
         binding.failSaveButton2.setChecked(currentCharacter.failDeathSave2)
         binding.failSaveButton3.setChecked(currentCharacter.failDeathSave3)
-        binding.inspiration.setText(currentCharacter.inspiration)
-        binding.proficiencyBonus.setText(currentCharacter.proficiencyBonus)
-        binding.strength.setText(currentCharacter.strength)
-        binding.strengthBonus.setText(currentCharacter.strengthBonus)
-        binding.dexterity.setText(currentCharacter.dexterity)
-        binding.dexterityBonus.setText(currentCharacter.dexterityBonus)
-        binding.constitution.setText(currentCharacter.constitution)
-        binding.constitutionBonus.setText(currentCharacter.constitutionBonus)
-        binding.intelligence.setText(currentCharacter.intelligence)
-        binding.intelligenceBonus.setText(currentCharacter.intelligenceBonus)
-        binding.wisdom.setText(currentCharacter.wisdom)
-        binding.wisdomBonus.setText(currentCharacter.wisdomBonus)
-        binding.charisma.setText(currentCharacter.charisma)
-        binding.charismaBonus.setText(currentCharacter.charismaBonus)
+        binding.inspiration.text = currentCharacter.inspiration
+        binding.proficiencyBonus.text = currentCharacter.proficiencyBonus
+        binding.strength.text = currentCharacter.strength
+        binding.strengthBonus.text = currentCharacter.strengthBonus
+        binding.dexterity.text = currentCharacter.dexterity
+        binding.dexterityBonus.text = currentCharacter.dexterityBonus
+        binding.constitution.text = currentCharacter.constitution
+        binding.constitutionBonus.text = currentCharacter.constitutionBonus
+        binding.intelligence.text = currentCharacter.intelligence
+        binding.intelligenceBonus.text = currentCharacter.intelligenceBonus
+        binding.wisdom.text = currentCharacter.wisdom
+        binding.wisdomBonus.text = currentCharacter.wisdomBonus
+        binding.charisma.text = currentCharacter.charisma
+        binding.charismaBonus.text = currentCharacter.charismaBonus
         binding.strengthSaveButton.setChecked(currentCharacter.strengthSaveChecked)
-        binding.strengthSave.setText(currentCharacter.strengthSave)
+        binding.strengthSave.text = currentCharacter.strengthSave
         binding.dexteritySaveButton.setChecked(currentCharacter.strengthSaveChecked)
-        binding.dexteritySave.setText(currentCharacter.dexteritySave)
+        binding.dexteritySave.text = currentCharacter.dexteritySave
         binding.constitutionSaveButton.setChecked(currentCharacter.constitutionSaveChecked)
-        binding.constitutionSave.setText(currentCharacter.constitutionSave)
+        binding.constitutionSave.text = currentCharacter.constitutionSave
         binding.intelligenceSaveButton.setChecked(currentCharacter.intelligenceSaveChecked)
-        binding.intelligenceSave.setText(currentCharacter.intelligenceSave)
+        binding.intelligenceSave.text = currentCharacter.intelligenceSave
         binding.wisdomSaveButton.setChecked(currentCharacter.wisdomSaveChecked)
-        binding.wisdomSave.setText(currentCharacter.wisdomSave)
+        binding.wisdomSave.text = currentCharacter.wisdomSave
         binding.charismaSaveButton.setChecked(currentCharacter.charismaSaveChecked)
-        binding.charismaSave.setText(currentCharacter.charismaSave)
+        binding.charismaSave.text = currentCharacter.charismaSave
         binding.acrobaticsButton.setChecked(currentCharacter.acrobaticsChecked)
-        binding.acrobatics.setText(currentCharacter.acrobatics)
+        binding.acrobatics.text = currentCharacter.acrobatics
         binding.animalHandlingButton.setChecked(currentCharacter.animalHandlingChecked)
-        binding.animalHandling.setText(currentCharacter.animalHandling)
+        binding.animalHandling.text = currentCharacter.animalHandling
         binding.arcanaButton.setChecked(currentCharacter.arcanaChecked)
-        binding.arcana.setText(currentCharacter.arcana)
+        binding.arcana.text = currentCharacter.arcana
         binding.athleticsButton.setChecked(currentCharacter.athleticsChecked)
-        binding.athletics.setText(currentCharacter.athletics)
+        binding.athletics.text = currentCharacter.athletics
         binding.deceptionButton.setChecked(currentCharacter.deceptionChecked)
-        binding.deception.setText(currentCharacter.deception)
+        binding.deception.text = currentCharacter.deception
         binding.historyButton.setChecked(currentCharacter.historyChecked)
-        binding.history.setText(currentCharacter.history)
+        binding.history.text = currentCharacter.history
         binding.insightButton.setChecked(currentCharacter.insightChecked)
-        binding.insight.setText(currentCharacter.insight)
+        binding.insight.text = currentCharacter.insight
         binding.intimidationButton.setChecked(currentCharacter.intimidationChecked)
-        binding.intimidation.setText(currentCharacter.intimidation)
+        binding.intimidation.text = currentCharacter.intimidation
         binding.investigationButton.setChecked(currentCharacter.investigationChecked)
-        binding.investigation.setText(currentCharacter.investigation)
+        binding.investigation.text = currentCharacter.investigation
         binding.medicineButton.setChecked(currentCharacter.medicineChecked)
-        binding.medicine.setText(currentCharacter.medicine)
+        binding.medicine.text = currentCharacter.medicine
         binding.natureButton.setChecked(currentCharacter.natureChecked)
-        binding.nature.setText(currentCharacter.nature)
+        binding.nature.text = currentCharacter.nature
         binding.perceptionButton.setChecked(currentCharacter.perceptionChecked)
-        binding.perception.setText(currentCharacter.perception)
+        binding.perception.text = currentCharacter.perception
         binding.performanceButton.setChecked(currentCharacter.performanceChecked)
-        binding.performance.setText(currentCharacter.performance)
+        binding.performance.text = currentCharacter.performance
         binding.persuasionButton.setChecked(currentCharacter.persuasionChecked)
-        binding.persuasion.setText(currentCharacter.persuasion)
+        binding.persuasion.text = currentCharacter.persuasion
         binding.religionButton.setChecked(currentCharacter.religionChecked)
-        binding.religion.setText(currentCharacter.religion)
+        binding.religion.text = currentCharacter.religion
         binding.sleightOfHandButton.setChecked(currentCharacter.sleightOfHandChecked)
-        binding.sleightOfHand.setText(currentCharacter.sleightOfHand)
+        binding.sleightOfHand.text = currentCharacter.sleightOfHand
         binding.stealthButton.setChecked(currentCharacter.stealthChecked)
-        binding.stealth.setText(currentCharacter.stealth)
+        binding.stealth.text = currentCharacter.stealth
         binding.survivalButton.setChecked(currentCharacter.survivalChecked)
         binding.survival.setText(currentCharacter.survival)
         initRecyclerView()
-        binding.copperPieces.setText(currentCharacter.copper)
-        binding.silverPieces.setText(currentCharacter.silver)
-        binding.electrumPieces.setText(currentCharacter.electrum)
-        binding.goldPieces.setText(currentCharacter.gold)
-        binding.platinumPieces.setText(currentCharacter.platinum)
+        binding.copperPieces.text = currentCharacter.copper
+        binding.silverPieces.text = currentCharacter.silver
+        binding.electrumPieces.text = currentCharacter.electrum
+        binding.goldPieces.text = currentCharacter.gold
+        binding.platinumPieces.text = currentCharacter.platinum
         binding.equipment.setText(currentCharacter.equipment)
         binding.proficienciesLanguages.setText(currentCharacter.proficiencyLanguages)
         binding.personalityTraits.setText(currentCharacter.personalityTraits)
