@@ -182,19 +182,19 @@ class DetailsFragment : Fragment() {
         binding.stealthButton.setChecked(currentCharacter.stealthChecked)
         binding.stealth.text = currentCharacter.stealth
         binding.survivalButton.setChecked(currentCharacter.survivalChecked)
-        binding.survival.setText(currentCharacter.survival)
+        binding.survival.text = currentCharacter.survival
         initRecyclerView()
         binding.copperPieces.text = currentCharacter.copper
         binding.silverPieces.text = currentCharacter.silver
         binding.electrumPieces.text = currentCharacter.electrum
         binding.goldPieces.text = currentCharacter.gold
         binding.platinumPieces.text = currentCharacter.platinum
-        binding.equipment.setText(currentCharacter.equipment)
-        binding.proficienciesLanguages.setText(currentCharacter.proficiencyLanguages)
-        binding.personalityTraits.setText(currentCharacter.personalityTraits)
-        binding.ideals.setText(currentCharacter.ideals)
-        binding.bonds.setText(currentCharacter.bonds)
-        binding.flaws.setText(currentCharacter.flaws)
+        binding.equipment.text = currentCharacter.equipment
+        binding.proficienciesLanguages.text = currentCharacter.proficiencyLanguages
+        binding.personalityTraits.text = currentCharacter.personalityTraits
+        binding.ideals.text = currentCharacter.ideals
+        binding.bonds.text = currentCharacter.bonds
+        binding.flaws.text = currentCharacter.flaws
     }
 
     private fun getAttackSpells(): List<AttackSpell> {
