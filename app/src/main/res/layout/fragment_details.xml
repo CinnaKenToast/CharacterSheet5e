@@ -330,7 +330,7 @@
 
                     <com.example.charactersheet.views.CSTextView
                         android:id="@+id/currentHitPoints"
-                        android:contentDescription="Current Hit Poitns"
+                        android:contentDescription="Current Hit Points"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
                         android:gravity="center"
@@ -1959,7 +1959,6 @@
                             android:contentDescription="Personality Traits"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:autoSizeTextType="uniform"
                             android:gravity="top"
                             android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sapien dolor, tempus nec sagittis id, posuere ut diam. Vestibulum egestas, eros non tempus porttitor, leo magna efficitur nunc, at scelerisque orci felis malesuada metus. Nam mollis, metus ut efficitur gravida, sem enim semper sem, quis faucibus lacus nunc ut libero. In sollicitudin urna sit amet turpis aliquet placerat. Nulla sed enim gravida, volutpat libero vitae, pellentesque lorem. Curabitur non bibendum turpis, quis molestie nibh. Integer laoreet sodales justo, eget bibendum purus venenatis ac."
                             android:textSize="18sp" />
@@ -2002,7 +2001,6 @@
                             android:contentDescription="Ideals"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:autoSizeTextType="uniform"
                             android:gravity="top"
                             android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sapien dolor, tempus nec sagittis id, posuere ut diam. Vestibulum egestas, eros non tempus porttitor, leo magna efficitur nunc, at scelerisque orci felis malesuada metus. Nam mollis, metus ut efficitur gravida, sem enim semper sem, quis faucibus lacus nunc ut libero. In sollicitudin urna sit amet turpis aliquet placerat. Nulla sed enim gravida, volutpat libero vitae, pellentesque lorem. Curabitur non bibendum turpis, quis molestie nibh. Integer laoreet sodales justo, eget bibendum purus venenatis ac."
                             android:textSize="18sp" />
@@ -2045,7 +2043,6 @@
                             android:contentDescription="Bonds"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:autoSizeTextType="uniform"
                             android:gravity="top"
                             android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sapien dolor, tempus nec sagittis id, posuere ut diam. Vestibulum egestas, eros non tempus porttitor, leo magna efficitur nunc, at scelerisque orci felis malesuada metus. Nam mollis, metus ut efficitur gravida, sem enim semper sem, quis faucibus lacus nunc ut libero. In sollicitudin urna sit amet turpis aliquet placerat. Nulla sed enim gravida, volutpat libero vitae, pellentesque lorem. Curabitur non bibendum turpis, quis molestie nibh. Integer laoreet sodales justo, eget bibendum purus venenatis ac."
                             android:textSize="18sp" />
@@ -2088,7 +2085,6 @@
                             android:contentDescription="Flaws"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:autoSizeTextType="uniform"
                             android:gravity="top"
                             android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sapien dolor, tempus nec sagittis id, posuere ut diam. Vestibulum egestas, eros non tempus porttitor, leo magna efficitur nunc, at scelerisque orci felis malesuada metus. Nam mollis, metus ut efficitur gravida, sem enim semper sem, quis faucibus lacus nunc ut libero. In sollicitudin urna sit amet turpis aliquet placerat. Nulla sed enim gravida, volutpat libero vitae, pellentesque lorem. Curabitur non bibendum turpis, quis molestie nibh. Integer laoreet sodales justo, eget bibendum purus venenatis ac."
                             android:textSize="18sp" />
