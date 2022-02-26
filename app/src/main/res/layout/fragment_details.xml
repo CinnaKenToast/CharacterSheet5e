@@ -471,7 +471,7 @@
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintVertical_bias="0.175"
-                            app:layout_constraintWidth_percent="0.15" />
+                            app:layout_constraintWidth_percent="0.17" />
 
                         <com.example.charactersheet.views.CSCheckboxRadioButton
                             android:id="@+id/successSaveButton2"
@@ -485,7 +485,7 @@
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintVertical_bias="0.175"
-                            app:layout_constraintWidth_percent="0.15" />
+                            app:layout_constraintWidth_percent="0.17" />
 
                         <com.example.charactersheet.views.CSCheckboxRadioButton
                             android:id="@+id/successSaveButton3"
@@ -499,7 +499,7 @@
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintVertical_bias="0.175"
-                            app:layout_constraintWidth_percent="0.15" />
+                            app:layout_constraintWidth_percent="0.17" />
 
                         <com.example.charactersheet.views.CSCheckboxRadioButton
                             android:id="@+id/failSaveButton1"
@@ -513,7 +513,7 @@
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintVertical_bias="0.555"
-                            app:layout_constraintWidth_percent="0.15" />
+                            app:layout_constraintWidth_percent="0.17" />
 
                         <com.example.charactersheet.views.CSCheckboxRadioButton
                             android:id="@+id/failSaveButton2"
@@ -527,7 +527,7 @@
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintVertical_bias="0.555"
-                            app:layout_constraintWidth_percent="0.15" />
+                            app:layout_constraintWidth_percent="0.17" />
 
                         <com.example.charactersheet.views.CSCheckboxRadioButton
                             android:id="@+id/failSaveButton3"
@@ -541,7 +541,7 @@
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintVertical_bias="0.555"
-                            app:layout_constraintWidth_percent="0.15" />
+                            app:layout_constraintWidth_percent="0.17" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
                 </LinearLayout>
                 <Space
