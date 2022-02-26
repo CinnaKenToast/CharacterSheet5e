@@ -1,4 +1,4 @@
-package com.example.charactersheet.data.spells
+package com.example.charactersheet.data.character
 
 import kotlinx.serialization.Serializable
 

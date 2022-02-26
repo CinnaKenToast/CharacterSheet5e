@@ -3,15 +3,14 @@ package com.example.charactersheet
 import android.app.Application
 import androidx.lifecycle.*
 import com.example.charactersheet.data.character.Character
-import com.example.charactersheet.data.CharacterDatabase
 import com.example.charactersheet.domain.CharacterUseCase
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
 
 class CharacterViewModel(
     application: Application,
     private val characterUseCase: CharacterUseCase
 ): AndroidViewModel(application) {
-    val characterDao = CharacterDatabase.getInstance(getApplication<Application>().applicationContext).characterDao()
     private val _allCharacters = MutableLiveData<List<Character>>()
     val allCharacters: LiveData<List<Character>> = _allCharacters
 
@@ -19,6 +18,18 @@ class CharacterViewModel(
         viewModelScope.launch {
             _allCharacters.postValue(characterUseCase.getCharacters())
         }
+    }
+
+    fun getCharacter(characterName: String): Character {
+        var character = Character()
+        runBlocking {
+            characterUseCase.getCharacter(characterName)
+                .onSuccess {
+                    character = it
+                }
+                .onFailure {  }
+        }
+        return character
     }
 
     fun saveCharacter(newCharacter: Character) {

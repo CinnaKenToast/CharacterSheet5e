@@ -1,4 +1,4 @@
-package com.example.charactersheet.data
+package com.example.charactersheet
 
 import android.app.Service
 import android.content.ClipData
@@ -10,9 +10,6 @@ import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
-import com.example.charactersheet.CharacterViewModel
-import com.example.charactersheet.CharacterViewModelFactory
-import com.example.charactersheet.R
 import com.example.charactersheet.data.character.Character
 import com.example.charactersheet.databinding.FragmentCharacterSelectBinding
 import com.example.charactersheet.utils.fromJsonString

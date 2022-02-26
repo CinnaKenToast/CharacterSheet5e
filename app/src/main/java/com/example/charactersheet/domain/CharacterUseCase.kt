@@ -2,7 +2,7 @@ package com.example.charactersheet.domain
 
 import android.content.Context
 import com.example.charactersheet.data.character.Character
-import com.example.charactersheet.data.CharacterDatabase
+import com.example.charactersheet.data.character.CharacterDatabase
 import com.example.charactersheet.data.character.CharacterRepository
 import com.example.charactersheet.data.character.RoomCharacterRepository
 

@@ -38,7 +38,7 @@ class DetailsFragment : Fragment() {
                 val isNewCharacter = it.getBoolean("creatingCharacter")
                 if (!isNewCharacter) {
                     characterName = it.getString("characterName")!!
-                    currentCharacter = characterViewModel.characterDao.getCharacter(characterName)!!
+                    currentCharacter = characterViewModel.getCharacter(characterName)!!
                 } else {
                     currentCharacter = blankCharacter.copy()
                 }

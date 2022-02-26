@@ -28,7 +28,7 @@ class ViewPagerFragment : Fragment() {
     ): View {
         binding = FragmentViewPagerBinding.inflate(layoutInflater)
 
-        val fragmentList = listOf(DetailsFragment.createInstance(creatingCharacter, characterName), SpellsFragment())
+        val fragmentList = listOf(DetailsFragment.createInstance(creatingCharacter, characterName), SpellsFragment.createInstance(creatingCharacter, characterName))
         binding.viewPager.adapter = ViewPagerAdapter(fragmentList, requireActivity().supportFragmentManager, lifecycle)
 
         return binding.root
