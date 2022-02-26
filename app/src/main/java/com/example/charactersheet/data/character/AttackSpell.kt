@@ -9,28 +9,7 @@ data class AttackSpell(
     var damageType: String = ""
 )
 
-val blankAttackSpell = mutableListOf(
-    AttackSpell(name = "", attackBonus = "", damageType = ""),
-    AttackSpell(name = "", attackBonus = "", damageType = ""),
-    AttackSpell(name = "", attackBonus = "", damageType = ""),
-    AttackSpell(name = "", attackBonus = "", damageType = ""),
-    AttackSpell(name = "", attackBonus = "", damageType = ""),
-    AttackSpell(name = "", attackBonus = "", damageType = ""),
-    AttackSpell(name = "", attackBonus = "", damageType = ""),
-    AttackSpell(name = "", attackBonus = "", damageType = ""),
-    AttackSpell(name = "", attackBonus = "", damageType = ""),
-    AttackSpell(name = "", attackBonus = "", damageType = ""),
-    AttackSpell(name = "", attackBonus = "", damageType = ""),
-    AttackSpell(name = "", attackBonus = "", damageType = ""),
-    AttackSpell(name = "", attackBonus = "", damageType = ""),
-    AttackSpell(name = "", attackBonus = "", damageType = ""),
-    AttackSpell(name = "", attackBonus = "", damageType = ""),
-    AttackSpell(name = "", attackBonus = "", damageType = ""),
-    AttackSpell(name = "", attackBonus = "", damageType = ""),
-    AttackSpell(name = "", attackBonus = "", damageType = ""),
-    AttackSpell(name = "", attackBonus = "", damageType = ""),
-    AttackSpell(name = "", attackBonus = "", damageType = "")
-)
+val blankAttackSpell = MutableList(20) { AttackSpell(name = "", attackBonus = "", damageType = "") }
 
 val testAttackSpells = mutableListOf(
     AttackSpell("Rapier","+3","Sever"),

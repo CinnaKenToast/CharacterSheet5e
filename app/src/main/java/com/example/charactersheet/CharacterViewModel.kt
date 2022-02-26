@@ -3,7 +3,7 @@ package com.example.charactersheet
 import android.app.Application
 import androidx.lifecycle.*
 import com.example.charactersheet.data.character.Character
-import com.example.charactersheet.data.character.CharacterDatabase
+import com.example.charactersheet.data.CharacterDatabase
 import com.example.charactersheet.domain.CharacterUseCase
 import kotlinx.coroutines.launch
 

@@ -4,7 +4,7 @@ import androidx.room.*
 
 @Dao
 interface CharacterDao {
-    @Insert(onConflict = OnConflictStrategy.FAIL)
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun insert(character: Character)
 
     @Update
