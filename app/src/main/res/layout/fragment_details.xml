@@ -453,7 +453,7 @@
                         <ImageView
                             android:layout_width="0dp"
                             android:layout_height="0dp"
-                            android:src="@drawable/death_saves"
+                            android:src="@drawable/death_saves_no_bubbles"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintDimensionRatio="H, 1608:985"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -963,7 +963,7 @@
                     <ImageView
                         android:layout_width="0dp"
                         android:layout_height="0dp"
-                        android:src="@drawable/saving_throws"
+                        android:src="@drawable/saving_throws_no_bubbles"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintDimensionRatio="H, 1148:1021"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -1162,7 +1162,7 @@
                     <ImageView
                         android:layout_width="0dp"
                         android:layout_height="0dp"
-                        android:src="@drawable/skills"
+                        android:src="@drawable/skills_no_bubbles"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintDimensionRatio="H, 2297:5369"
                         app:layout_constraintEnd_toEndOf="parent"
