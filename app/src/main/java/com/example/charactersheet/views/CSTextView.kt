@@ -40,6 +40,10 @@ class CSTextView: AppCompatTextView {
         }
     }
 
+    fun setText(text: String) {
+        this.text = text
+    }
+
     private fun createTextDialog(context: Context) {
         val editText = TextInputEditText(context)
         editText.id = R.id.importDialog

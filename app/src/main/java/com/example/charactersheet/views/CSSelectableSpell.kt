@@ -32,6 +32,14 @@ class CSSelectableSpell: LinearLayout {
         binding.spellButton.setChecked(checked)
     }
 
+    fun getText(): String {
+        return binding.spellName.text.toString()
+    }
+
+    fun setText(text: String) {
+        binding.spellName.setText(text)
+    }
+
     private fun createSpellDialog(context: Context) {
         val editText = TextInputEditText(context)
         editText.id = R.id.importDialog

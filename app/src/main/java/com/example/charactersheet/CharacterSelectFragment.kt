@@ -68,7 +68,7 @@ class CharacterSelectFragment : Fragment() {
             R.id.deleteButton -> {
                 val selectedCharacter = adapter.getSelectedCharacter()
                 selectedCharacter?.let {
-                    createDeleteDialog(selectedCharacter, adapter)
+                    createDeleteDialog(selectedCharacter)
                 }
                 true
             }
@@ -142,7 +142,7 @@ class CharacterSelectFragment : Fragment() {
             .show()
     }
 
-    private fun createDeleteDialog(selectedCharacter: Character, adapter: CharacterSelectAdapter) {
+    private fun createDeleteDialog(selectedCharacter: Character) {
         MaterialAlertDialogBuilder(requireContext())
             .setTitle("Are you sure?")
             .setMessage("Your character will be gone forever!")

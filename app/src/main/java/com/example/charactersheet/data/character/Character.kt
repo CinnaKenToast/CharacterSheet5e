@@ -112,55 +112,55 @@ data class Character(
         totalSpellSlots = "",
         spellSlotsExpended = "",
         spellChecked = List(13) {false},
-        spellName = List(13) {"false"}
+        spellName = List(13) {""}
     ),
     var level2Spells: Spell = Spell(
         totalSpellSlots = "",
         spellSlotsExpended = "",
         spellChecked = List(13) {false},
-        spellName = List(13) {"false"}
+        spellName = List(13) {""}
     ),
     var level3Spells: Spell = Spell(
         totalSpellSlots = "",
         spellSlotsExpended = "",
         spellChecked = List(13) {false},
-        spellName = List(13) {"false"}
+        spellName = List(13) {""}
     ),
     var level4Spells: Spell = Spell(
         totalSpellSlots = "",
         spellSlotsExpended = "",
         spellChecked = List(13) {false},
-        spellName = List(13) {"false"}
+        spellName = List(13) {""}
     ),
     var level5Spells: Spell = Spell(
         totalSpellSlots = "",
         spellSlotsExpended = "",
         spellChecked = List(11) {false},
-        spellName = List(11) {"false"}
+        spellName = List(11) {""}
     ),
     var level6Spells: Spell = Spell(
         totalSpellSlots = "",
         spellSlotsExpended = "",
         spellChecked = List(11) {false},
-        spellName = List(11) {"false"}
+        spellName = List(11) {""}
     ),
     var level7Spells: Spell = Spell(
         totalSpellSlots = "",
         spellSlotsExpended = "",
         spellChecked = List(11) {false},
-        spellName = List(11) {"false"}
+        spellName = List(11) {""}
     ),
     var level8Spells: Spell = Spell(
         totalSpellSlots = "",
         spellSlotsExpended = "",
         spellChecked = List(9) {false},
-        spellName = List(9) {"false"}
+        spellName = List(9) {""}
     ),
     var level9Spells: Spell = Spell(
         totalSpellSlots = "",
         spellSlotsExpended = "",
         spellChecked = List(9) {false},
-        spellName = List(9) {"false"}
+        spellName = List(9) {""}
     )
 )
 
