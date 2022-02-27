@@ -63,10 +63,8 @@ class DetailsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initMenuOptions()
+        initRecyclerView()
         println("----------------------- IN DETAILS")
-        if (this::currentCharacter.isInitialized) {
-//            initializeFields()
-        }
     }
 
     private fun initMenuOptions() {
@@ -103,104 +101,6 @@ class DetailsFragment : Fragment() {
         val recyclerView = binding.attackSpellsRecyclerView
         val adapter = AttackSpellsAdapter(currentCharacter.attackSpells, characterViewModel)
         recyclerView.adapter = adapter
-    }
-
-    private fun initializeFields() {
-        binding.characterName.text = currentCharacter.characterName
-        binding.classLevel.text = currentCharacter.classLevel
-        binding.characterBackground.text = currentCharacter.background
-        binding.playerName.text = currentCharacter.playerName
-        binding.characterRace.text = currentCharacter.race
-        binding.characterAlignment.text = currentCharacter.alignmentType
-        binding.experiencePoints.text = currentCharacter.experiencePoints
-        binding.armorClass.text = currentCharacter.armorClass
-        binding.initiative.text = currentCharacter.initiative
-        binding.speed.text = currentCharacter.speed
-        binding.hitPointMax.text = currentCharacter.hitPointMax
-        binding.currentHitPoints.text = currentCharacter.currentHitPoints
-        binding.tempHitPoints.text = currentCharacter.temporaryHitPoints
-        binding.totalHitDice.text = currentCharacter.totalHitDice
-        binding.hitDice.text = currentCharacter.hitDice
-        binding.successSaveButton1.isChecked = currentCharacter.successDeathSave1
-        binding.successSaveButton2.isChecked = currentCharacter.successDeathSave2
-        binding.successSaveButton3.isChecked = currentCharacter.successDeathSave3
-        binding.failSaveButton1.isChecked = currentCharacter.failDeathSave1
-        binding.failSaveButton2.isChecked = currentCharacter.failDeathSave2
-        binding.failSaveButton3.isChecked = currentCharacter.failDeathSave3
-        binding.inspiration.text = currentCharacter.inspiration
-        binding.proficiencyBonus.text = currentCharacter.proficiencyBonus
-        binding.strength.text = currentCharacter.strength
-        binding.strengthBonus.text = currentCharacter.strengthBonus
-        binding.dexterity.text = currentCharacter.dexterity
-        binding.dexterityBonus.text = currentCharacter.dexterityBonus
-        binding.constitution.text = currentCharacter.constitution
-        binding.constitutionBonus.text = currentCharacter.constitutionBonus
-        binding.intelligence.text = currentCharacter.intelligence
-        binding.intelligenceBonus.text = currentCharacter.intelligenceBonus
-        binding.wisdom.text = currentCharacter.wisdom
-        binding.wisdomBonus.text = currentCharacter.wisdomBonus
-        binding.charisma.text = currentCharacter.charisma
-        binding.charismaBonus.text = currentCharacter.charismaBonus
-        binding.strengthSaveButton.isChecked = currentCharacter.strengthSaveChecked
-        binding.strengthSave.text = currentCharacter.strengthSave
-        binding.dexteritySaveButton.isChecked = currentCharacter.strengthSaveChecked
-        binding.dexteritySave.text = currentCharacter.dexteritySave
-        binding.constitutionSaveButton.isChecked = currentCharacter.constitutionSaveChecked
-        binding.constitutionSave.text = currentCharacter.constitutionSave
-        binding.intelligenceSaveButton.isChecked = currentCharacter.intelligenceSaveChecked
-        binding.intelligenceSave.text = currentCharacter.intelligenceSave
-        binding.wisdomSaveButton.isChecked = currentCharacter.wisdomSaveChecked
-        binding.wisdomSave.text = currentCharacter.wisdomSave
-        binding.charismaSaveButton.isChecked = currentCharacter.charismaSaveChecked
-        binding.charismaSave.text = currentCharacter.charismaSave
-        binding.acrobaticsButton.isChecked = currentCharacter.acrobaticsChecked
-        binding.acrobatics.text = currentCharacter.acrobatics
-        binding.animalHandlingButton.isChecked = currentCharacter.animalHandlingChecked
-        binding.animalHandling.text = currentCharacter.animalHandling
-        binding.arcanaButton.isChecked = currentCharacter.arcanaChecked
-        binding.arcana.text = currentCharacter.arcana
-        binding.athleticsButton.isChecked = currentCharacter.athleticsChecked
-        binding.athletics.text = currentCharacter.athletics
-        binding.deceptionButton.isChecked = currentCharacter.deceptionChecked
-        binding.deception.text = currentCharacter.deception
-        binding.historyButton.isChecked = currentCharacter.historyChecked
-        binding.history.text = currentCharacter.history
-        binding.insightButton.isChecked = currentCharacter.insightChecked
-        binding.insight.text = currentCharacter.insight
-        binding.intimidationButton.isChecked = currentCharacter.intimidationChecked
-        binding.intimidation.text = currentCharacter.intimidation
-        binding.investigationButton.isChecked = currentCharacter.investigationChecked
-        binding.investigation.text = currentCharacter.investigation
-        binding.medicineButton.isChecked = currentCharacter.medicineChecked
-        binding.medicine.text = currentCharacter.medicine
-        binding.natureButton.isChecked = currentCharacter.natureChecked
-        binding.nature.text = currentCharacter.nature
-        binding.perceptionButton.isChecked = currentCharacter.perceptionChecked
-        binding.perception.text = currentCharacter.perception
-        binding.performanceButton.isChecked = currentCharacter.performanceChecked
-        binding.performance.text = currentCharacter.performance
-        binding.persuasionButton.isChecked = currentCharacter.persuasionChecked
-        binding.persuasion.text = currentCharacter.persuasion
-        binding.religionButton.isChecked = currentCharacter.religionChecked
-        binding.religion.text = currentCharacter.religion
-        binding.sleightOfHandButton.isChecked = currentCharacter.sleightOfHandChecked
-        binding.sleightOfHand.text = currentCharacter.sleightOfHand
-        binding.stealthButton.isChecked = currentCharacter.stealthChecked
-        binding.stealth.text = currentCharacter.stealth
-        binding.survivalButton.isChecked = currentCharacter.survivalChecked
-        binding.survival.text = currentCharacter.survival
-        initRecyclerView()
-        binding.copperPieces.text = currentCharacter.copper
-        binding.silverPieces.text = currentCharacter.silver
-        binding.electrumPieces.text = currentCharacter.electrum
-        binding.goldPieces.text = currentCharacter.gold
-        binding.platinumPieces.text = currentCharacter.platinum
-        binding.equipment.text = currentCharacter.equipment
-        binding.proficienciesLanguages.text = currentCharacter.proficiencyLanguages
-        binding.personalityTraits.text = currentCharacter.personalityTraits
-        binding.ideals.text = currentCharacter.ideals
-        binding.bonds.text = currentCharacter.bonds
-        binding.flaws.text = currentCharacter.flaws
     }
 
     private fun getAttackSpells(): List<AttackSpell> {

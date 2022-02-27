@@ -5,8 +5,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <data>
         <variable
-            name="viewModel"
-            type="com.example.charactersheet.CharacterViewModel" />
+            name="attackName"
+            type="String" />
+        <variable
+            name="attackBonus"
+            type="String" />
+        <variable
+            name="attackType"
+            type="String" />
     </data>
     <LinearLayout
         android:layout_width="match_parent"

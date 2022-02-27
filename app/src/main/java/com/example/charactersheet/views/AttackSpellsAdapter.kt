@@ -22,13 +22,7 @@ class AttackSpellsAdapter(private val attackSpells: MutableList<AttackSpell>, va
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bind(viewModel)
-        holder.nameEditText.text = binding.viewModel?.currentCharacter?.value?.attackSpells?.get(position)?.name
-            ?: ""
-        holder.bonusEditText.text = binding.viewModel?.currentCharacter?.value?.attackSpells?.get(position)?.attackBonus
-            ?: ""
-        holder.damageTypeEditText.text = binding.viewModel?.currentCharacter?.value?.attackSpells?.get(position)?.damageType
-            ?: ""
+        holder.bind(viewModel, position)
     }
 
     override fun getItemCount(): Int {
@@ -46,8 +40,10 @@ class AttackSpellsAdapter(private val attackSpells: MutableList<AttackSpell>, va
             )
         }
 
-        fun bind(viewModel: CharacterViewModel) {
-            binding.setVariable(BR.viewModel, viewModel)
+        fun bind(viewModel: CharacterViewModel, position: Int) {
+            binding.setVariable(BR.attackName, viewModel.currentCharacter.value?.attackSpells?.get(position)?.name ?: "")
+            binding.setVariable(BR.attackBonus, viewModel.currentCharacter.value?.attackSpells?.get(position)?.attackBonus ?: "")
+            binding.setVariable(BR.attackType, viewModel.currentCharacter.value?.attackSpells?.get(position)?.damageType ?: "")
         }
     }
 }
