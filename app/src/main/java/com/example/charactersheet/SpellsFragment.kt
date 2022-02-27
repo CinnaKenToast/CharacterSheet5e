@@ -61,6 +61,11 @@ class SpellsFragment : Fragment() {
         initMenuOptions()
         println("----------------------- IN SPELLS")
     }
+
+    override fun onPause() {
+        super.onPause()
+        characterViewModel.saveCurrentCharacter()
+    }
     
     private fun initCantripSpellVariables() {
         binding.cantrip1.binding.viewModel = characterViewModel
@@ -403,7 +408,6 @@ class SpellsFragment : Fragment() {
         binding.toolbar.setOnMenuItemClickListener { item ->
             when (item.itemId) {
                 R.id.saveButton -> {
-//                    updateCharacter()
                     if (currentCharacter.characterName.isBlank()) {
                         Toast.makeText(context, "Your character must have a name", Toast.LENGTH_SHORT).show()
                     } else {
@@ -412,7 +416,6 @@ class SpellsFragment : Fragment() {
                     true
                 }
                 R.id.exportButton -> {
-//                    updateCharacter()
                     if (currentCharacter.characterName.isBlank()) {
                         Toast.makeText(context, "Your character must have a name", Toast.LENGTH_SHORT).show()
                     } else {
