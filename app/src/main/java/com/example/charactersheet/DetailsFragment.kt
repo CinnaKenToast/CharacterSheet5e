@@ -38,9 +38,10 @@ class DetailsFragment : Fragment() {
                 val isNewCharacter = it.getBoolean("creatingCharacter")
                 if (!isNewCharacter) {
                     characterName = it.getString("characterName")!!
-                    currentCharacter = characterViewModel.getCharacter(characterName)!!
+                    currentCharacter = characterViewModel.getCharacter(characterName)
                 } else {
                     currentCharacter = blankCharacter.copy()
+                    characterViewModel.setCharacter(currentCharacter)
                 }
 
             }
@@ -52,14 +53,25 @@ class DetailsFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentDetailsBinding.inflate(layoutInflater)
+        binding.viewModel = characterViewModel
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initMenuOptions()
+        subscribeToVM()
         if (this::currentCharacter.isInitialized) {
-            initializeFields()
+//            initializeFields()
+        }
+    }
+
+    fun subscribeToVM() {
+        characterViewModel.currentCharacter.observe(viewLifecycleOwner) {
+            println(it)
+        }
+        characterViewModel.allCharacters.observe(viewLifecycleOwner) {
+            println(it)
         }
     }
 
@@ -67,6 +79,7 @@ class DetailsFragment : Fragment() {
         binding.toolbar.setOnMenuItemClickListener { item ->
             when (item.itemId) {
                 R.id.saveButton -> {
+                    println("AKLSDJALKSDJ ALKSDJ  ${binding.viewModel?.currentCharacter?.value}")
                     updateCharacter()
                     if (currentCharacter.characterName.isBlank()) {
                         Toast.makeText(context, "Your character must have a name", Toast.LENGTH_SHORT).show()

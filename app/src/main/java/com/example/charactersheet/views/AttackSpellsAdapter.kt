@@ -6,29 +6,34 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.charactersheet.R
 import com.example.charactersheet.data.character.AttackSpell
+import com.example.charactersheet.data.character.Character
+import com.example.charactersheet.databinding.LayoutAttackSpellRecyclerViewBinding
 
 class AttackSpellsAdapter(private val attackSpells: MutableList<AttackSpell>):
     RecyclerView.Adapter<AttackSpellsAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.layout_attack_spell_recycler_view, parent, false)
-        return ViewHolder(view)
+        val binding = LayoutAttackSpellRecyclerViewBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        return ViewHolder(binding)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.nameEditText.text = attackSpells[position].name
-        holder.bonusEditText.text = attackSpells[position].attackBonus
-        holder.damageTypeEditText.text = attackSpells[position].damageType
+        holder.nameEditText.text = holder.binding.viewModel?.currentCharacter?.value?.attackSpells?.get(position)?.name
+            ?: ""
+        holder.bonusEditText.text = holder.binding.viewModel?.currentCharacter?.value?.attackSpells?.get(position)?.attackBonus
+            ?: ""
+        holder.damageTypeEditText.text = holder.binding.viewModel?.currentCharacter?.value?.attackSpells?.get(position)?.damageType
+            ?: ""
     }
 
     override fun getItemCount(): Int {
         return attackSpells.size
     }
 
-    class ViewHolder(view: View): RecyclerView.ViewHolder(view) {
-        val nameEditText: CSTextView = view.findViewById(R.id.spellAttackName)
-        val bonusEditText: CSTextView = view.findViewById(R.id.spellAttackBonus)
-        val damageTypeEditText: CSTextView = view.findViewById(R.id.spellAttackType)
+    class ViewHolder(val binding: LayoutAttackSpellRecyclerViewBinding): RecyclerView.ViewHolder(binding.root) {
+        val nameEditText: CSTextView = binding.spellAttackName
+        val bonusEditText: CSTextView = binding.spellAttackBonus
+        val damageTypeEditText: CSTextView = binding.spellAttackType
 
         fun getAttackSpell(): AttackSpell {
             return AttackSpell(

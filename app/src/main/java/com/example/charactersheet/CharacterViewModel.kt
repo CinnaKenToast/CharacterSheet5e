@@ -1,6 +1,7 @@
 package com.example.charactersheet
 
 import android.app.Application
+import androidx.databinding.BaseObservable
 import androidx.lifecycle.*
 import com.example.charactersheet.data.character.Character
 import com.example.charactersheet.domain.CharacterUseCase
@@ -14,10 +15,17 @@ class CharacterViewModel(
     private val _allCharacters = MutableLiveData<List<Character>>()
     val allCharacters: LiveData<List<Character>> = _allCharacters
 
+    private val _currentCharacter = MutableLiveData<Character>()
+    val currentCharacter: LiveData<Character> = _currentCharacter
+
     fun getCharacters() {
         viewModelScope.launch {
             _allCharacters.postValue(characterUseCase.getCharacters())
         }
+    }
+
+    fun setCharacter(character: Character) {
+        _currentCharacter.postValue(character)
     }
 
     fun getCharacter(characterName: String): Character {
@@ -29,6 +37,7 @@ class CharacterViewModel(
                 }
                 .onFailure {  }
         }
+        _currentCharacter.postValue(character)
         return character
     }
 
@@ -37,12 +46,12 @@ class CharacterViewModel(
             characterUseCase.getCharacter(newCharacter.characterName)
                 .onSuccess {
                     characterUseCase.updateCharacter(newCharacter)
-
+                    _currentCharacter.postValue(newCharacter)
                     _allCharacters.postValue(characterUseCase.getCharacters())
                 }
                 .onFailure {
                     characterUseCase.addCharacter(newCharacter)
-
+                    _currentCharacter.postValue(newCharacter)
                     _allCharacters.postValue(characterUseCase.getCharacters())
                 }
         }
