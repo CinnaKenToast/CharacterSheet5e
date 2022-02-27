@@ -5,14 +5,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <data>
         <variable
-            name="attackName"
-            type="String" />
+            name="position"
+            type="Integer" />
         <variable
-            name="attackBonus"
-            type="String" />
-        <variable
-            name="attackType"
-            type="String" />
+            name="viewModel"
+            type="com.example.charactersheet.CharacterViewModel" />
     </data>
     <LinearLayout
         android:layout_width="match_parent"
@@ -25,7 +22,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="40"
-            android:text="alskdjalkdj"
+            android:text="@={viewModel.currentCharacter.attackSpells[position].name}"
+            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
             app:isText="true"
             android:background="@drawable/edit_text_border"
             android:padding="2dp"/>
@@ -36,7 +34,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="22"
-            android:text="alskdjalkdj"
+            android:text="@={viewModel.currentCharacter.attackSpells[position].attackBonus}"
+            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
             app:isText="true"
             android:background="@drawable/edit_text_border"
             android:padding="2dp"/>
@@ -47,7 +46,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="38"
-            android:text="alskdjalkdj"
+            android:text="@={viewModel.currentCharacter.attackSpells[position].damageType}"
+            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
             app:isText="true"
             android:background="@drawable/edit_text_border"
             android:padding="2dp"/>

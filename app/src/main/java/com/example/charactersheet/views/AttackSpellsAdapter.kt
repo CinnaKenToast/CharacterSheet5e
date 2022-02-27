@@ -41,9 +41,8 @@ class AttackSpellsAdapter(private val attackSpells: MutableList<AttackSpell>, va
         }
 
         fun bind(viewModel: CharacterViewModel, position: Int) {
-            binding.setVariable(BR.attackName, viewModel.currentCharacter.value?.attackSpells?.get(position)?.name ?: "")
-            binding.setVariable(BR.attackBonus, viewModel.currentCharacter.value?.attackSpells?.get(position)?.attackBonus ?: "")
-            binding.setVariable(BR.attackType, viewModel.currentCharacter.value?.attackSpells?.get(position)?.damageType ?: "")
+            binding.setVariable(BR.viewModel, viewModel)
+            binding.setVariable(BR.position, position)
         }
     }
 }
