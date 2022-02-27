@@ -3,7 +3,6 @@ package com.example.charactersheet.views
 import android.content.Context
 import android.text.InputType
 import android.util.AttributeSet
-import android.view.KeyEvent
 import android.view.WindowManager
 import android.view.inputmethod.EditorInfo
 import androidx.appcompat.widget.AppCompatTextView

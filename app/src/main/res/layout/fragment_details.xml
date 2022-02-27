@@ -590,6 +590,22 @@
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toTopOf="parent" />
 
+<!--                            <CheckBox-->
+<!--                                android:id="@+id/inspirationChecked"-->
+<!--                                android:layout_width="0dp"-->
+<!--                                android:layout_height="0dp"-->
+<!--                                android:button="@drawable/inspiration_checkbox"-->
+<!--                                android:buttonTint="@color/black"-->
+<!--                                android:checked="@={viewModel.currentCharacter.inspiration}"-->
+<!--                                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                                app:layout_constraintStart_toStartOf="parent"-->
+<!--                                app:layout_constraintTop_toTopOf="parent"-->
+<!--                                app:layout_constraintVertical_bias="0.5"-->
+<!--                                app:layout_constraintHorizontal_bias="0.06"-->
+<!--                                app:layout_constraintHeight_percent="0.72"-->
+<!--                                app:layout_constraintWidth_percent="0.2" />-->
+
                             <com.example.charactersheet.views.CSTextView
                                 android:id="@+id/inspiration"
                                 android:contentDescription="Inspiration"
@@ -1226,7 +1242,7 @@
 
                         <com.example.charactersheet.views.CSTextView
                             android:id="@+id/acrobatics"
-                            android:contentDescription="Acrobatics Bonus"
+                            android:contentDescription="Acrobatics (Dex) Bonus"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             android:autoSizeTextType="uniform"
@@ -1260,7 +1276,7 @@
 
                         <com.example.charactersheet.views.CSTextView
                             android:id="@+id/animalHandling"
-                            android:contentDescription="Animal Handling Bonus"
+                            android:contentDescription="Animal Handling (Wis) Bonus"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             android:gravity="center"
@@ -1293,7 +1309,7 @@
 
                         <com.example.charactersheet.views.CSTextView
                             android:id="@+id/arcana"
-                            android:contentDescription="Arcana Bonus"
+                            android:contentDescription="Arcana (Int) Bonus"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             android:gravity="center"
@@ -1326,7 +1342,7 @@
 
                         <com.example.charactersheet.views.CSTextView
                             android:id="@+id/athletics"
-                            android:contentDescription="Athletics Bonus"
+                            android:contentDescription="Athletics (Str) Bonus"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             android:gravity="center"
@@ -1359,7 +1375,7 @@
 
                         <com.example.charactersheet.views.CSTextView
                             android:id="@+id/deception"
-                            android:contentDescription="Deception Bonus"
+                            android:contentDescription="Deception (Cha) Bonus"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             android:gravity="center"
@@ -1392,7 +1408,7 @@
 
                         <com.example.charactersheet.views.CSTextView
                             android:id="@+id/history"
-                            android:contentDescription="History Bonus"
+                            android:contentDescription="History (Int) Bonus"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             android:gravity="center"
@@ -1425,7 +1441,7 @@
 
                         <com.example.charactersheet.views.CSTextView
                             android:id="@+id/insight"
-                            android:contentDescription="Insight Bonus"
+                            android:contentDescription="Insight (Wis) Bonus"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             android:gravity="center"
@@ -1458,7 +1474,7 @@
 
                         <com.example.charactersheet.views.CSTextView
                             android:id="@+id/intimidation"
-                            android:contentDescription="Intimidation Bonus"
+                            android:contentDescription="Intimidation (Cha) Bonus"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             android:gravity="center"
@@ -1492,7 +1508,7 @@
 
                         <com.example.charactersheet.views.CSTextView
                             android:id="@+id/investigation"
-                            android:contentDescription="Investigation Bonus"
+                            android:contentDescription="Investigation (Int) Bonus"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             android:gravity="center"
@@ -1525,7 +1541,7 @@
 
                         <com.example.charactersheet.views.CSTextView
                             android:id="@+id/medicine"
-                            android:contentDescription="Medicine Bonus"
+                            android:contentDescription="Medicine (Wis) Bonus"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             android:autoSizeTextType="uniform"
@@ -1559,7 +1575,7 @@
 
                         <com.example.charactersheet.views.CSTextView
                             android:id="@+id/nature"
-                            android:contentDescription="Nature Bonus"
+                            android:contentDescription="Nature (Int) Bonus"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             android:autoSizeTextType="uniform"
@@ -1593,7 +1609,7 @@
 
                         <com.example.charactersheet.views.CSTextView
                             android:id="@+id/perception"
-                            android:contentDescription="Perception Bonus"
+                            android:contentDescription="Perception (Wis) Bonus"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             android:gravity="center"
@@ -1626,7 +1642,7 @@
 
                         <com.example.charactersheet.views.CSTextView
                             android:id="@+id/performance"
-                            android:contentDescription="Performance Bonus"
+                            android:contentDescription="Performance (Cha) Bonus"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             android:gravity="center"
@@ -1659,7 +1675,7 @@
 
                         <com.example.charactersheet.views.CSTextView
                             android:id="@+id/persuasion"
-                            android:contentDescription="Persuasion Bonus"
+                            android:contentDescription="Persuasion (Cha) Bonus"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             android:gravity="center"
@@ -1692,7 +1708,7 @@
 
                         <com.example.charactersheet.views.CSTextView
                             android:id="@+id/religion"
-                            android:contentDescription="Religion Bonus"
+                            android:contentDescription="Religion (Wis) Bonus"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             android:gravity="center"
@@ -1725,7 +1741,7 @@
 
                         <com.example.charactersheet.views.CSTextView
                             android:id="@+id/sleightOfHand"
-                            android:contentDescription="Sleight of Hand Bonus"
+                            android:contentDescription="Sleight of Hand (Dex) Bonus"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             android:gravity="center"
@@ -1758,7 +1774,7 @@
 
                         <com.example.charactersheet.views.CSTextView
                             android:id="@+id/stealth"
-                            android:contentDescription="Stealth Bonus"
+                            android:contentDescription="Stealth (Dex) Bonus"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             android:gravity="center"
@@ -1791,7 +1807,7 @@
 
                         <com.example.charactersheet.views.CSTextView
                             android:id="@+id/survival"
-                            android:contentDescription="Survival Bonus"
+                            android:contentDescription="Survival (Wis) Bonus"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             android:gravity="center"

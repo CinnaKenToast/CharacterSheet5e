@@ -7,13 +7,15 @@
         <entry key="..\:/Users/rockm/Desktop/CharacterSheet5e/app/src/main/res/layout/fragment_details.xml" value="0.4" />
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1895" />
         <entry key="app/src/main/res/drawable/edit_text_border.xml" value="0.518" />
+        <entry key="app/src/main/res/drawable/inspiration_check.xml" value="0.301" />
+        <entry key="app/src/main/res/drawable/inspiration_checkbox.xml" value="0.301" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.309640522875817" />
         <entry key="app/src/main/res/layout/cs_action_buttons.xml" value="0.42967079948696024" />
         <entry key="app/src/main/res/layout/cs_checkbox_radio_button.xml" value="0.1" />
         <entry key="app/src/main/res/layout/cs_radio_check_box.xml" value="0.42967079948696024" />
         <entry key="app/src/main/res/layout/fragment_character_select.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_character_select_list.xml" value="0.1345591307981613" />
-        <entry key="app/src/main/res/layout/fragment_details.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_details.xml" value="0.67" />
         <entry key="app/src/main/res/layout/fragment_import_dialog.xml" value="0.67" />
         <entry key="app/src/main/res/layout/fragment_spells.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_view_pager.xml" value="0.1761436511329628" />
