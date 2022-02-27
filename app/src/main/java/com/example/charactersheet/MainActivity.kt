@@ -34,6 +34,7 @@ class MainActivity : AppCompatActivity() {
 //                    .show()
 //            }
 //        }
+        characterViewModel.saveCurrentCharacter()
         super.onBackPressed()
     }
 }

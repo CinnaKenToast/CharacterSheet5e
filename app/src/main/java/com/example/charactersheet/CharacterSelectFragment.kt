@@ -5,6 +5,7 @@ import android.content.ClipData
 import android.content.ClipboardManager
 import android.os.Bundle
 import android.view.*
+import android.view.inputmethod.EditorInfo
 import android.widget.Toast
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
@@ -123,7 +124,8 @@ class CharacterSelectFragment : Fragment() {
         editText.id = R.id.importDialog
         editText.hint = "Insert Character Data"
         editText.maxLines = 15
-        MaterialAlertDialogBuilder(requireContext())
+        editText.requestFocus()
+       val dialog = MaterialAlertDialogBuilder(requireContext())
             .setTitle("Import Character")
             .setNegativeButton("Cancel") { dialog, which ->
                 dialog.dismiss()
@@ -140,6 +142,21 @@ class CharacterSelectFragment : Fragment() {
             }
             .setView(editText)
             .show()
+
+        val window = dialog.window
+        window?.clearFlags(WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE or WindowManager.LayoutParams.FLAG_ALT_FOCUSABLE_IM)
+        window?.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE)
+        editText.setOnEditorActionListener { textView, actionId, keyEvent ->
+            val characterData = editText.text.toString()
+            if (characterData.isNotEmpty()) {
+                val newCharacter = characterData.fromJsonString<Character>()
+                characterViewModel.saveCharacter(newCharacter)
+                dialog.dismiss()
+            } else {
+                Toast.makeText(requireContext(), "Character data cannot be empty", Toast.LENGTH_SHORT).show()
+            }
+            true
+        }
     }
 
     private fun createDeleteDialog(selectedCharacter: Character) {

@@ -3,11 +3,15 @@ package com.example.charactersheet.views
 import android.content.Context
 import android.text.InputType
 import android.util.AttributeSet
+import android.view.KeyEvent
+import android.view.WindowManager
+import android.view.inputmethod.EditorInfo
 import androidx.appcompat.widget.AppCompatTextView
 import androidx.core.widget.TextViewCompat
 import com.example.charactersheet.R
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.textfield.TextInputEditText
+
 
 class CSTextView: AppCompatTextView {
     constructor(context: Context) : super(context) { init(context) }
@@ -49,7 +53,9 @@ class CSTextView: AppCompatTextView {
         editText.id = R.id.importDialog
         editText.hint = "Insert ${this.contentDescription}"
         editText.setText(this.text)
-        MaterialAlertDialogBuilder(context)
+        editText.imeOptions = EditorInfo.IME_ACTION_DONE
+        editText.requestFocus()
+        val dialog = MaterialAlertDialogBuilder(context)
             .setTitle("${if (editText.text!!.isEmpty()) "Add" else "Edit"} ${this.contentDescription}")
             .setNegativeButton("Cancel") { dialog, which ->
                 dialog.dismiss()
@@ -60,6 +66,16 @@ class CSTextView: AppCompatTextView {
             }
             .setView(editText)
             .show()
+        val window = dialog.window
+        window?.clearFlags(WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE or WindowManager.LayoutParams.FLAG_ALT_FOCUSABLE_IM)
+        window?.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE)
+        editText.setOnEditorActionListener { textView, actionId, keyEvent ->
+            if (actionId == EditorInfo.IME_ACTION_DONE) {
+                this.text = editText.text.toString()
+                dialog.dismiss()
+            }
+            true
+        }
     }
 
     private fun createNumberDialog(context: Context) {
@@ -68,7 +84,9 @@ class CSTextView: AppCompatTextView {
         editText.hint = "Insert ${this.contentDescription}"
         editText.inputType = InputType.TYPE_CLASS_NUMBER
         editText.setText(this.text)
-        MaterialAlertDialogBuilder(context)
+        editText.imeOptions = EditorInfo.IME_ACTION_DONE
+        editText.requestFocus()
+        val dialog = MaterialAlertDialogBuilder(context)
             .setTitle("${if (editText.text!!.isEmpty()) "Add" else "Edit"} ${this.contentDescription}")
             .setNegativeButton("Cancel") { dialog, which ->
                 dialog.dismiss()
@@ -79,6 +97,16 @@ class CSTextView: AppCompatTextView {
             }
             .setView(editText)
             .show()
+        val window = dialog.window
+        window?.clearFlags(WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE or WindowManager.LayoutParams.FLAG_ALT_FOCUSABLE_IM)
+        window?.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE)
+        editText.setOnEditorActionListener { textView, actionId, keyEvent ->
+            if (actionId == EditorInfo.IME_ACTION_DONE) {
+                this.text = editText.text.toString()
+                dialog.dismiss()
+            }
+            true
+        }
     }
 
     private fun createBonusDialog(context: Context) {
@@ -86,21 +114,36 @@ class CSTextView: AppCompatTextView {
         editText.id = R.id.importDialog
         editText.hint = "Insert ${this.contentDescription}"
         editText.inputType = InputType.TYPE_CLASS_NUMBER.or(InputType.TYPE_NUMBER_FLAG_SIGNED)
+        editText.imeOptions = EditorInfo.IME_ACTION_DONE
         editText.setText(this.text.toString().replace("+", ""))
-        MaterialAlertDialogBuilder(context)
+        editText.requestFocus()
+        val dialog = MaterialAlertDialogBuilder(context)
             .setTitle("${if (editText.text!!.isEmpty()) "Add" else "Edit"} ${this.contentDescription}")
             .setMessage("A + will automatically be added to positive bonuses")
             .setNegativeButton("Cancel") { dialog, which ->
                 dialog.dismiss()
             }
             .setPositiveButton("Add") { dialog, which ->
-                var newBonus = editText.text.toString()
-                if (!newBonus.contains("-")) { newBonus = "+$newBonus" }
-                this.text = newBonus
+                this.text = getBonusFromText(editText.text.toString())
                 dialog.dismiss()
             }
             .setView(editText)
             .show()
+        val window = dialog.window
+        window?.clearFlags(WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE or WindowManager.LayoutParams.FLAG_ALT_FOCUSABLE_IM)
+        window?.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE)
+        editText.setOnEditorActionListener { textView, actionId, keyEvent ->
+            if (actionId == EditorInfo.IME_ACTION_DONE) {
+                this.text = getBonusFromText(editText.text.toString())
+                dialog.dismiss()
+            }
+            true
+        }
     }
 
+    private fun getBonusFromText(text: String): String {
+        var bonus = text
+        if (!bonus.contains("-")) { bonus = "+$bonus" }
+        return bonus
+    }
 }

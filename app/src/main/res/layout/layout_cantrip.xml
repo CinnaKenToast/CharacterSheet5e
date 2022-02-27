@@ -34,8 +34,7 @@
                 android:layout_height="match_parent"
                 android:textColor="@color/black"
                 app:isText="true"
-                android:text="@={spellName}"
-                android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"/>
+                android:text="@={spellName}" />
         </LinearLayout>
 
         <View

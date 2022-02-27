@@ -2,6 +2,7 @@ package com.example.charactersheet.views
 
 import android.content.Context
 import android.util.AttributeSet
+import android.view.WindowManager
 import androidx.appcompat.widget.AppCompatTextView
 import com.example.charactersheet.R
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
@@ -24,7 +25,8 @@ class CSTextViewLong: AppCompatTextView {
         editText.hint = "Insert ${this.contentDescription}"
         editText.maxLines = 15
         editText.setText(this.text)
-        MaterialAlertDialogBuilder(context)
+        editText.requestFocus()
+        val dialog = MaterialAlertDialogBuilder(context)
             .setTitle("${if (editText.text!!.isEmpty()) "Add" else "Edit"} ${this.contentDescription}")
             .setNegativeButton("Cancel") { dialog, which ->
                 dialog.dismiss()
@@ -35,5 +37,8 @@ class CSTextViewLong: AppCompatTextView {
             }
             .setView(editText)
             .show()
+        val window = dialog.window
+        window?.clearFlags(WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE or WindowManager.LayoutParams.FLAG_ALT_FOCUSABLE_IM)
+        window?.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE)
     }
 }
