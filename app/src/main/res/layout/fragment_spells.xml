@@ -56,7 +56,8 @@
                         android:contentDescription="Spellcasting Class"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
-                        android:text="Bilbary"
+                        android:text='@={viewModel.currentCharacter.spellCastingClass}'
+                        android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                         android:gravity="center_vertical"
                         app:isText="true"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -86,7 +87,8 @@
                         android:contentDescription="Spellcasting Ability"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
-                        android:text="Intelligence"
+                        android:text='@={viewModel.currentCharacter.spellCastingAbility}'
+                        android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                         android:gravity="center"
                         app:isText="true"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -102,7 +104,8 @@
                         android:contentDescription="Spell Save DC"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
-                        android:text="15"
+                        android:text='@={viewModel.currentCharacter.spellSaveDC}'
+                        android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                         android:gravity="center"
                         app:isNumber="true"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -118,7 +121,8 @@
                         android:contentDescription="Spell Attack Bonus"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
-                        android:text="+15"
+                        android:text='@={viewModel.currentCharacter.spellAttackBonus}'
+                        android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                         android:gravity="center"
                         app:isBonus="true"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -219,7 +223,8 @@
                             android:contentDescription="Total Level 1 Spell Slots"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
-                            android:text="10"
+                            android:text='@={viewModel.currentCharacter.level1Spells.totalSpellSlots}'
+                            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             android:textColor="@color/black"
                             android:gravity="center"
                             app:isNumber="true"
@@ -236,7 +241,8 @@
                             android:contentDescription="Level 1 Spells Expended"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
-                            android:text="10"
+                            android:text='@={viewModel.currentCharacter.level1Spells.spellSlotsExpended}'
+                            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             android:textColor="@color/black"
                             android:gravity="center"
                             app:isNumber="true"
@@ -343,7 +349,8 @@
                             android:contentDescription="Level 2 Spell Slots"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
-                            android:text="10"
+                            android:text='@={viewModel.currentCharacter.level2Spells.totalSpellSlots}'
+                            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             android:textColor="@color/black"
                             android:gravity="center"
                             app:isNumber="true"
@@ -360,7 +367,8 @@
                             android:contentDescription="Level 2 Spells Expended"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
-                            android:text="10"
+                            android:text='@={viewModel.currentCharacter.level2Spells.spellSlotsExpended}'
+                            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             android:textColor="@color/black"
                             android:gravity="center"
                             app:isNumber="true"
@@ -467,7 +475,8 @@
                             android:contentDescription="Level 3 Spell Slots"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
-                            android:text="10"
+                            android:text='@={viewModel.currentCharacter.level3Spells.totalSpellSlots}'
+                            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             android:textColor="@color/black"
                             android:gravity="center"
                             app:isNumber="true"
@@ -484,7 +493,8 @@
                             android:contentDescription="Level 3 Spells Expended"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
-                            android:text="10"
+                            android:text='@={viewModel.currentCharacter.level3Spells.spellSlotsExpended}'
+                            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             android:textColor="@color/black"
                             android:gravity="center"
                             app:isNumber="true"
@@ -591,7 +601,8 @@
                             android:contentDescription="Level 4 Spell Slots"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
-                            android:text="10"
+                            android:text='@={viewModel.currentCharacter.level4Spells.totalSpellSlots}'
+                            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             android:textColor="@color/black"
                             android:gravity="center"
                             app:isNumber="true"
@@ -608,7 +619,8 @@
                             android:contentDescription="Level 4 Spells Expended"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
-                            android:text="10"
+                            android:text='@={viewModel.currentCharacter.level4Spells.spellSlotsExpended}'
+                            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             android:textColor="@color/black"
                             android:gravity="center"
                             app:isNumber="true"
@@ -715,7 +727,8 @@
                             android:contentDescription="Level 5 Spell Slots"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
-                            android:text="10"
+                            android:text='@={viewModel.currentCharacter.level5Spells.totalSpellSlots}'
+                            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             android:textColor="@color/black"
                             android:gravity="center"
                             app:isNumber="true"
@@ -732,7 +745,8 @@
                             android:contentDescription="Level 5 Spells Expended"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
-                            android:text="10"
+                            android:text='@={viewModel.currentCharacter.level5Spells.spellSlotsExpended}'
+                            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             android:textColor="@color/black"
                             android:gravity="center"
                             app:isNumber="true"
@@ -829,7 +843,8 @@
                             android:contentDescription="Level 6 Spell Slots"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
-                            android:text="10"
+                            android:text='@={viewModel.currentCharacter.level6Spells.totalSpellSlots}'
+                            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             android:textColor="@color/black"
                             android:gravity="center"
                             app:isNumber="true"
@@ -846,7 +861,8 @@
                             android:contentDescription="Level 6 Spells Expended"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
-                            android:text="10"
+                            android:text='@={viewModel.currentCharacter.level6Spells.spellSlotsExpended}'
+                            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             android:textColor="@color/black"
                             android:gravity="center"
                             app:isNumber="true"
@@ -943,7 +959,8 @@
                             android:contentDescription="Level 7 Spell Slots"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
-                            android:text="10"
+                            android:text='@={viewModel.currentCharacter.level7Spells.totalSpellSlots}'
+                            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             android:textColor="@color/black"
                             android:gravity="center"
                             app:isNumber="true"
@@ -960,7 +977,8 @@
                             android:contentDescription="Level 7 Spells Expended"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
-                            android:text="10"
+                            android:text='@={viewModel.currentCharacter.level7Spells.spellSlotsExpended}'
+                            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             android:textColor="@color/black"
                             android:gravity="center"
                             app:isNumber="true"
@@ -1057,7 +1075,8 @@
                             android:contentDescription="Level 8 Spell Slots"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
-                            android:text="10"
+                            android:text='@={viewModel.currentCharacter.level8Spells.totalSpellSlots}'
+                            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             android:textColor="@color/black"
                             android:gravity="center"
                             app:isNumber="true"
@@ -1074,7 +1093,8 @@
                             android:contentDescription="Level 8 Spells Expended"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
-                            android:text="10"
+                            android:text='@={viewModel.currentCharacter.level8Spells.spellSlotsExpended}'
+                            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             android:textColor="@color/black"
                             android:gravity="center"
                             app:isNumber="true"
@@ -1161,7 +1181,8 @@
                             android:contentDescription="Level 9 Spell Slots"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
-                            android:text="10"
+                            android:text='@={viewModel.currentCharacter.level9Spells.totalSpellSlots}'
+                            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             android:textColor="@color/black"
                             android:gravity="center"
                             app:isNumber="true"
@@ -1178,7 +1199,8 @@
                             android:contentDescription="Level 9 Spells Expended"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
-                            android:text="10"
+                            android:text='@={viewModel.currentCharacter.level9Spells.spellSlotsExpended}'
+                            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             android:textColor="@color/black"
                             android:gravity="center"
                             app:isNumber="true"

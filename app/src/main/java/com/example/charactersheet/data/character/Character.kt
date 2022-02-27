@@ -111,57 +111,214 @@ data class Character(
     var level1Spells: Spell = Spell(
         totalSpellSlots = "",
         spellSlotsExpended = "",
-        spellChecked = List(13) {false},
-        spellName = List(13) {""}
+        spellChecked = List(13) { false },
+        spellName = List(13) { "" }
     ),
     var level2Spells: Spell = Spell(
         totalSpellSlots = "",
         spellSlotsExpended = "",
-        spellChecked = List(13) {false},
-        spellName = List(13) {""}
+        spellChecked = List(13) { false },
+        spellName = List(13) { "" }
     ),
     var level3Spells: Spell = Spell(
         totalSpellSlots = "",
         spellSlotsExpended = "",
-        spellChecked = List(13) {false},
-        spellName = List(13) {""}
+        spellChecked = List(13) { false },
+        spellName = List(13) { "" }
     ),
     var level4Spells: Spell = Spell(
         totalSpellSlots = "",
         spellSlotsExpended = "",
-        spellChecked = List(13) {false},
-        spellName = List(13) {""}
+        spellChecked = List(13) { false },
+        spellName = List(13) { "" }
     ),
     var level5Spells: Spell = Spell(
         totalSpellSlots = "",
         spellSlotsExpended = "",
-        spellChecked = List(11) {false},
-        spellName = List(11) {""}
+        spellChecked = List(11) { false },
+        spellName = List(11) { "" }
     ),
     var level6Spells: Spell = Spell(
         totalSpellSlots = "",
         spellSlotsExpended = "",
-        spellChecked = List(11) {false},
-        spellName = List(11) {""}
+        spellChecked = List(11) { false },
+        spellName = List(11) { "" }
     ),
     var level7Spells: Spell = Spell(
         totalSpellSlots = "",
         spellSlotsExpended = "",
-        spellChecked = List(11) {false},
-        spellName = List(11) {""}
+        spellChecked = List(11) { false },
+        spellName = List(11) { "" }
     ),
     var level8Spells: Spell = Spell(
         totalSpellSlots = "",
         spellSlotsExpended = "",
-        spellChecked = List(9) {false},
-        spellName = List(9) {""}
+        spellChecked = List(9) { false },
+        spellName = List(9) { "" }
     ),
     var level9Spells: Spell = Spell(
         totalSpellSlots = "",
         spellSlotsExpended = "",
-        spellChecked = List(9) {false},
-        spellName = List(9) {""}
+        spellChecked = List(9) { false },
+        spellName = List(9) { "" }
     )
 )
 
 val blankCharacter = Character()
+
+val testCharacter = Character(
+    characterName = "1",
+    classLevel = "2",
+    background = "3",
+    playerName = "4",
+    race = "5",
+    alignmentType = "6",
+    experiencePoints = "7",
+    armorClass = "8",
+    initiative = "9",
+    speed = "10",
+    hitPointMax = "11",
+    currentHitPoints = "12",
+    temporaryHitPoints = "13",
+    totalHitDice = "14",
+    hitDice = "15",
+    successDeathSave1 = false,
+    successDeathSave2 = false,
+    successDeathSave3 = false,
+    failDeathSave1 = false,
+    failDeathSave2 = false,
+    failDeathSave3 = false,
+    inspiration = "16",
+    proficiencyBonus = "17",
+    strength = "18",
+    strengthBonus = "19",
+    dexterity = "20",
+    dexterityBonus = "21",
+    constitution = "22",
+    constitutionBonus = "23",
+    intelligence = "24",
+    intelligenceBonus = "25",
+    wisdom = "26",
+    wisdomBonus = "27",
+    charisma = "28",
+    charismaBonus = "29",
+    strengthSaveChecked = false,
+    strengthSave = "30",
+    dexteritySaveChecked = false,
+    dexteritySave = "31",
+    constitutionSaveChecked = false,
+    constitutionSave = "32",
+    intelligenceSaveChecked = false,
+    intelligenceSave = "33",
+    wisdomSaveChecked = false,
+    wisdomSave = "34",
+    charismaSaveChecked = false,
+    charismaSave = "35",
+    acrobaticsChecked = false,
+    acrobatics = "36",
+    animalHandlingChecked = false,
+    animalHandling = "37",
+    arcanaChecked = false,
+    arcana = "38",
+    athleticsChecked = false,
+    athletics = "39",
+    deceptionChecked = false,
+    deception = "40",
+    historyChecked = false,
+    history = "41",
+    insightChecked = false,
+    insight = "42",
+    intimidationChecked = false,
+    intimidation = "43",
+    investigationChecked = false,
+    investigation = "44",
+    medicineChecked = false,
+    medicine = "45",
+    natureChecked = false,
+    nature = "46",
+    perceptionChecked = false,
+    perception = "47",
+    performanceChecked = false,
+    performance = "48",
+    persuasionChecked = false,
+    persuasion = "49",
+    religionChecked = false,
+    religion = "50",
+    sleightOfHandChecked = false,
+    sleightOfHand = "51",
+    stealthChecked = false,
+    stealth = "52",
+    survivalChecked = false,
+    survival = "53",
+    attackSpells = blankAttackSpell,
+    copper = "54",
+    silver = "55",
+    electrum = "56",
+    gold = "57",
+    platinum = "58",
+    equipment = "59",
+    proficiencyLanguages = "60",
+    personalityTraits = "61",
+    ideals = "62",
+    bonds = "63",
+    flaws = "64",
+    spellCastingClass = "65",
+    spellCastingAbility = "66",
+    spellSaveDC = "67",
+    spellAttackBonus = "67",
+    cantrips = List(8) {"68"},
+    level1Spells = Spell(
+        totalSpellSlots = "69",
+        spellSlotsExpended = "70",
+        spellChecked = List(13) { false },
+        spellName = List(13) { "71" }
+    ),
+    level2Spells = Spell(
+        totalSpellSlots = "72",
+        spellSlotsExpended = "73",
+        spellChecked = List(13) { false },
+        spellName = List(13) { "74" }
+    ),
+    level3Spells = Spell(
+        totalSpellSlots = "75",
+        spellSlotsExpended = "76",
+        spellChecked = List(13) { false },
+        spellName = List(13) { "77" }
+    ),
+    level4Spells = Spell(
+        totalSpellSlots = "78",
+        spellSlotsExpended = "79",
+        spellChecked = List(13) { false },
+        spellName = List(13) { "80" }
+    ),
+    level5Spells = Spell(
+        totalSpellSlots = "81",
+        spellSlotsExpended = "82",
+        spellChecked = List(11) { false },
+        spellName = List(11) { "83" }
+    ),
+    level6Spells = Spell(
+        totalSpellSlots = "84",
+        spellSlotsExpended = "85",
+        spellChecked = List(11) { false },
+        spellName = List(11) { "86" }
+    ),
+    level7Spells = Spell(
+        totalSpellSlots = "87",
+        spellSlotsExpended = "88",
+        spellChecked = List(11) { false },
+        spellName = List(11) { "89" }
+    ),
+    level8Spells = Spell(
+        totalSpellSlots = "90",
+        spellSlotsExpended = "91",
+        spellChecked = List(9) { false },
+        spellName = List(9) { "92" }
+    ),
+    level9Spells = Spell(
+        totalSpellSlots = "93",
+        spellSlotsExpended = "94",
+        spellChecked = List(9) { false },
+        spellName = List(9) { "95" }
+    )
+)

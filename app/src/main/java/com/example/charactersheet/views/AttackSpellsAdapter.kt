@@ -4,25 +4,30 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.charactersheet.BR
+import com.example.charactersheet.CharacterViewModel
 import com.example.charactersheet.R
 import com.example.charactersheet.data.character.AttackSpell
 import com.example.charactersheet.data.character.Character
 import com.example.charactersheet.databinding.LayoutAttackSpellRecyclerViewBinding
 
-class AttackSpellsAdapter(private val attackSpells: MutableList<AttackSpell>):
+class AttackSpellsAdapter(private val attackSpells: MutableList<AttackSpell>, val viewModel: CharacterViewModel):
     RecyclerView.Adapter<AttackSpellsAdapter.ViewHolder>() {
 
+    lateinit var binding: LayoutAttackSpellRecyclerViewBinding
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val binding = LayoutAttackSpellRecyclerViewBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        binding = LayoutAttackSpellRecyclerViewBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return ViewHolder(binding)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.nameEditText.text = holder.binding.viewModel?.currentCharacter?.value?.attackSpells?.get(position)?.name
+        holder.bind(viewModel)
+        holder.nameEditText.text = binding.viewModel?.currentCharacter?.value?.attackSpells?.get(position)?.name
             ?: ""
-        holder.bonusEditText.text = holder.binding.viewModel?.currentCharacter?.value?.attackSpells?.get(position)?.attackBonus
+        holder.bonusEditText.text = binding.viewModel?.currentCharacter?.value?.attackSpells?.get(position)?.attackBonus
             ?: ""
-        holder.damageTypeEditText.text = holder.binding.viewModel?.currentCharacter?.value?.attackSpells?.get(position)?.damageType
+        holder.damageTypeEditText.text = binding.viewModel?.currentCharacter?.value?.attackSpells?.get(position)?.damageType
             ?: ""
     }
 
@@ -39,6 +44,10 @@ class AttackSpellsAdapter(private val attackSpells: MutableList<AttackSpell>):
             return AttackSpell(
                 nameEditText.text.toString(), bonusEditText.text.toString(), damageTypeEditText.text.toString()
             )
+        }
+
+        fun bind(viewModel: CharacterViewModel) {
+            binding.setVariable(BR.viewModel, viewModel)
         }
     }
 }

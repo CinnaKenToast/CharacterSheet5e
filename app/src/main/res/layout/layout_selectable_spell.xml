@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout
-    xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.charactersheet.CharacterViewModel" />
+        <variable
+            name="isChecked"
+            type="Boolean" />
+        <variable
+            name="spell"
+            type="String" />
+    </data>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -8,13 +19,15 @@
         android:clipChildren="false"
         android:clipToPadding="false">
 
-        <com.example.charactersheet.views.CSCheckboxRadioButton
+        <CheckBox
             android:id="@+id/spellButton"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:backgroundTint="@color/black"
+            android:checked="@={isChecked}"
+            android:onCheckedChanged="@{() -> viewModel.saveCurrentCharacter()}"
+            style="@style/Widget.AppCompat.CompoundButton.RadioButton"
             android:layout_marginEnd="-10dp"
-            android:buttonTint="@color/black"/>
+            android:buttonTint="@color/black" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -26,7 +39,9 @@
                 android:layout_height="match_parent"
                 android:textColor="@color/black"
                 android:layout_weight="1000"
-                android:text="Bilbary" />
+                app:isText="true"
+                android:text="@={spell}"
+                android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"/>
             <View
                 android:layout_width="match_parent"
                 android:layout_height="2dp"

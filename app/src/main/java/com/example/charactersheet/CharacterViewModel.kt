@@ -42,18 +42,20 @@ class CharacterViewModel(
     }
 
     fun saveCharacter(newCharacter: Character) {
-        viewModelScope.launch {
-            characterUseCase.getCharacter(newCharacter.characterName)
-                .onSuccess {
-                    characterUseCase.updateCharacter(newCharacter)
-                    _currentCharacter.postValue(newCharacter)
-                    _allCharacters.postValue(characterUseCase.getCharacters())
-                }
-                .onFailure {
-                    characterUseCase.addCharacter(newCharacter)
-                    _currentCharacter.postValue(newCharacter)
-                    _allCharacters.postValue(characterUseCase.getCharacters())
-                }
+        if (newCharacter.characterName.isNotBlank()) {
+            viewModelScope.launch {
+                characterUseCase.getCharacter(newCharacter.characterName)
+                    .onSuccess {
+                        characterUseCase.updateCharacter(newCharacter)
+                        _currentCharacter.postValue(newCharacter)
+                        _allCharacters.postValue(characterUseCase.getCharacters())
+                    }
+                    .onFailure {
+                        characterUseCase.addCharacter(newCharacter)
+                        _currentCharacter.postValue(newCharacter)
+                        _allCharacters.postValue(characterUseCase.getCharacters())
+                    }
+            }
         }
     }
 
@@ -62,6 +64,12 @@ class CharacterViewModel(
             characterUseCase.removeCharacter(character)
 
             _allCharacters.postValue(characterUseCase.getCharacters())
+        }
+    }
+
+    fun saveCurrentCharacter() {
+        viewModelScope.launch {
+            saveCharacter(currentCharacter.value!!)
         }
     }
 }

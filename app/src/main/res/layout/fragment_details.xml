@@ -57,7 +57,8 @@
                         android:contentDescription="Character Name"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
-                        android:text='@{viewModel.currentCharacter.characterName ?? ""}'
+                        android:text='@={viewModel.currentCharacter.characterName}'
+                        android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                         app:isText="true"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -90,7 +91,8 @@
                         android:contentDescription="Class and Level"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
-                        android:text='@{viewModel.currentCharacter.classLevel ?? ""}'
+                        android:text='@={viewModel.currentCharacter.classLevel}'
+                        android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                         app:isText="true"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -106,7 +108,8 @@
                         android:contentDescription="Background"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
-                        android:text='@{viewModel.currentCharacter.background ?? ""}'
+                        android:text='@={viewModel.currentCharacter.background}'
+                        android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                         app:isText="true"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -122,7 +125,8 @@
                         android:contentDescription="Player Name"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
-                        android:text='@{viewModel.currentCharacter.playerName ?? ""}'
+                        android:text='@={viewModel.currentCharacter.playerName}'
+                        android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                         app:isText="true"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -138,7 +142,8 @@
                         android:contentDescription="Race"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
-                        android:text='@{viewModel.currentCharacter.race ?? ""}'
+                        android:text='@={viewModel.currentCharacter.race}'
+                        android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                         app:isText="true"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -154,7 +159,8 @@
                         android:contentDescription="Alignment"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
-                        android:text='@{viewModel.currentCharacter.alignmentType ?? ""}'
+                        android:text='@={viewModel.currentCharacter.alignmentType}'
+                        android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                         app:isText="true"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -170,7 +176,8 @@
                         android:contentDescription="Experience Points"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
-                        android:text='@{viewModel.currentCharacter.experiencePoints ?? ""}'
+                        android:text='@={viewModel.currentCharacter.experiencePoints}'
+                        android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                         app:isNumber="true"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -219,7 +226,8 @@
                                 android:layout_width="0dp"
                                 android:layout_height="0dp"
                                 android:gravity="center"
-                                android:text='@{viewModel.currentCharacter.armorClass ?? ""}'
+                                android:text='@={viewModel.currentCharacter.armorClass}'
+                                android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                                 app:isNumber="true"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
@@ -254,7 +262,8 @@
                                 android:layout_width="0dp"
                                 android:layout_height="0dp"
                                 android:gravity="center"
-                                android:text='@{viewModel.currentCharacter.initiative ?? ""}'
+                                android:text='@={viewModel.currentCharacter.initiative}'
+                                android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                                 app:isNumber="true"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
@@ -289,7 +298,8 @@
                                 android:layout_width="0dp"
                                 android:layout_height="0dp"
                                 android:gravity="center"
-                                android:text='@{viewModel.currentCharacter.speed ?? ""}'
+                                android:text='@={viewModel.currentCharacter.speed}'
+                                android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                                 app:isNumber="true"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
@@ -325,7 +335,8 @@
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             android:gravity="center"
-                            android:text='@{viewModel.currentCharacter.hitPointMax ?? ""}'
+                            android:text='@={viewModel.currentCharacter.hitPointMax}'
+                            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             app:isNumber="true"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -342,7 +353,8 @@
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             android:gravity="center"
-                            android:text='@{viewModel.currentCharacter.currentHitPoints ?? ""}'
+                            android:text='@={viewModel.currentCharacter.currentHitPoints}'
+                            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             app:isNumber="true"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -378,7 +390,8 @@
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             android:gravity="center"
-                            android:text='@{viewModel.currentCharacter.temporaryHitPoints ?? ""}'
+                            android:text='@={viewModel.currentCharacter.temporaryHitPoints}'
+                            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             app:isNumber="true"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -420,7 +433,8 @@
                                 android:layout_width="0dp"
                                 android:layout_height="0dp"
                                 android:gravity="center"
-                                android:text='@{viewModel.currentCharacter.totalHitDice ?? ""}'
+                                android:text='@={viewModel.currentCharacter.totalHitDice}'
+                                android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                                 app:isText="true"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
@@ -437,7 +451,8 @@
                                 android:layout_width="0dp"
                                 android:layout_height="0dp"
                                 android:gravity="center"
-                                android:text='@{viewModel.currentCharacter.hitDice ?? ""}'
+                                android:text='@={viewModel.currentCharacter.hitDice}'
+                                android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                                 app:isText="true"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
@@ -468,11 +483,14 @@
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toTopOf="parent" />
 
-                            <com.example.charactersheet.views.CSCheckboxRadioButton
+                            <CheckBox
                                 android:id="@+id/successSaveButton1"
                                 android:layout_width="0dp"
                                 android:layout_height="0dp"
-                                app:isChecked="@{viewModel.currentCharacter.successDeathSave1 }"
+                                style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+                                android:buttonTint="@color/black"
+                                android:checked="@={viewModel.currentCharacter.successDeathSave1}"
+                                android:onCheckedChanged="@{() -> viewModel.saveCurrentCharacter()}"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintHeight_percent="0.2"
@@ -482,11 +500,14 @@
                                 app:layout_constraintVertical_bias="0.175"
                                 app:layout_constraintWidth_percent="0.17" />
 
-                            <com.example.charactersheet.views.CSCheckboxRadioButton
+                            <CheckBox
                                 android:id="@+id/successSaveButton2"
                                 android:layout_width="0dp"
                                 android:layout_height="0dp"
-                                app:isChecked="@{viewModel.currentCharacter.successDeathSave2 }"
+                                style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+                                android:buttonTint="@color/black"
+                                android:checked="@={viewModel.currentCharacter.successDeathSave2}"
+                                android:onCheckedChanged="@{() -> viewModel.saveCurrentCharacter()}"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintHeight_percent="0.2"
@@ -496,11 +517,14 @@
                                 app:layout_constraintVertical_bias="0.175"
                                 app:layout_constraintWidth_percent="0.17" />
 
-                            <com.example.charactersheet.views.CSCheckboxRadioButton
+                            <CheckBox
                                 android:id="@+id/successSaveButton3"
                                 android:layout_width="0dp"
                                 android:layout_height="0dp"
-                                app:isChecked="@{viewModel.currentCharacter.successDeathSave3 }"
+                                style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+                                android:buttonTint="@color/black"
+                                android:checked="@={viewModel.currentCharacter.successDeathSave3}"
+                                android:onCheckedChanged="@{() -> viewModel.saveCurrentCharacter()}"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintHeight_percent="0.2"
@@ -510,11 +534,14 @@
                                 app:layout_constraintVertical_bias="0.175"
                                 app:layout_constraintWidth_percent="0.17" />
 
-                            <com.example.charactersheet.views.CSCheckboxRadioButton
+                            <CheckBox
                                 android:id="@+id/failSaveButton1"
                                 android:layout_width="0dp"
                                 android:layout_height="0dp"
-                                app:isChecked="@{viewModel.currentCharacter.failDeathSave1 }"
+                                style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+                                android:buttonTint="@color/black"
+                                android:checked="@={viewModel.currentCharacter.failDeathSave1}"
+                                android:onCheckedChanged="@{() -> viewModel.saveCurrentCharacter()}"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintHeight_percent="0.2"
@@ -524,11 +551,14 @@
                                 app:layout_constraintVertical_bias="0.555"
                                 app:layout_constraintWidth_percent="0.17" />
 
-                            <com.example.charactersheet.views.CSCheckboxRadioButton
+                            <CheckBox
                                 android:id="@+id/failSaveButton2"
                                 android:layout_width="0dp"
                                 android:layout_height="0dp"
-                                app:isChecked="@{viewModel.currentCharacter.failDeathSave2 }"
+                                style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+                                android:buttonTint="@color/black"
+                                android:checked="@={viewModel.currentCharacter.failDeathSave2}"
+                                android:onCheckedChanged="@{() -> viewModel.saveCurrentCharacter()}"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintHeight_percent="0.2"
@@ -538,11 +568,14 @@
                                 app:layout_constraintVertical_bias="0.555"
                                 app:layout_constraintWidth_percent="0.17" />
 
-                            <com.example.charactersheet.views.CSCheckboxRadioButton
+                            <CheckBox
                                 android:id="@+id/failSaveButton3"
                                 android:layout_width="0dp"
                                 android:layout_height="0dp"
-                                app:isChecked="@{viewModel.currentCharacter.failDeathSave3 }"
+                                style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+                                android:buttonTint="@color/black"
+                                android:checked="@={viewModel.currentCharacter.failDeathSave3}"
+                                android:onCheckedChanged="@{() -> viewModel.saveCurrentCharacter()}"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintHeight_percent="0.2"
@@ -584,7 +617,8 @@
                                 android:layout_width="0dp"
                                 android:layout_height="0dp"
                                 android:gravity="center"
-                                android:text='@{viewModel.currentCharacter.inspiration ?? ""}'
+                                android:text='@={viewModel.currentCharacter.inspiration}'
+                                android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                                 app:isNumber="true"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
@@ -620,7 +654,8 @@
                                 android:layout_width="0dp"
                                 android:layout_height="0dp"
                                 android:gravity="center"
-                                android:text='@{viewModel.currentCharacter.proficiencyBonus ?? ""}'
+                                android:text='@={viewModel.currentCharacter.proficiencyBonus}'
+                                android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                                 app:isBonus="true"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
@@ -662,7 +697,8 @@
                                 android:layout_width="0dp"
                                 android:layout_height="0dp"
                                 android:gravity="center"
-                                android:text='@{viewModel.currentCharacter.strength ?? ""}'
+                                android:text='@={viewModel.currentCharacter.strength}'
+                                android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                                 app:isNumber="true"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
@@ -679,7 +715,8 @@
                                 android:layout_width="0dp"
                                 android:layout_height="0dp"
                                 android:gravity="center"
-                                android:text='@{viewModel.currentCharacter.strengthBonus ?? ""}'
+                                android:text='@={viewModel.currentCharacter.strengthBonus}'
+                                android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                                 app:isBonus="true"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
@@ -715,7 +752,8 @@
                                 android:layout_width="0dp"
                                 android:layout_height="0dp"
                                 android:gravity="center"
-                                android:text='@{viewModel.currentCharacter.dexterity ?? ""}'
+                                android:text='@={viewModel.currentCharacter.dexterity}'
+                                android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                                 app:isNumber="true"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
@@ -732,7 +770,8 @@
                                 android:layout_width="0dp"
                                 android:layout_height="0dp"
                                 android:gravity="center"
-                                android:text='@{viewModel.currentCharacter.dexterityBonus ?? ""}'
+                                android:text='@={viewModel.currentCharacter.dexterityBonus}'
+                                android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                                 app:isBonus="true"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
@@ -768,7 +807,8 @@
                                 android:layout_width="0dp"
                                 android:layout_height="0dp"
                                 android:gravity="center"
-                                android:text='@{viewModel.currentCharacter.constitution ?? ""}'
+                                android:text='@={viewModel.currentCharacter.constitution}'
+                                android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                                 app:isNumber="true"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
@@ -785,7 +825,8 @@
                                 android:layout_width="0dp"
                                 android:layout_height="0dp"
                                 android:gravity="center"
-                                android:text='@{viewModel.currentCharacter.constitutionBonus ?? ""}'
+                                android:text='@={viewModel.currentCharacter.constitutionBonus}'
+                                android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                                 app:isBonus="true"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
@@ -826,7 +867,8 @@
                                 android:layout_width="0dp"
                                 android:layout_height="0dp"
                                 android:gravity="center"
-                                android:text='@{viewModel.currentCharacter.intelligence ?? ""}'
+                                android:text='@={viewModel.currentCharacter.intelligence}'
+                                android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                                 app:isNumber="true"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
@@ -843,7 +885,8 @@
                                 android:layout_width="0dp"
                                 android:layout_height="0dp"
                                 android:gravity="center"
-                                android:text='@{viewModel.currentCharacter.intelligenceBonus ?? ""}'
+                                android:text='@={viewModel.currentCharacter.intelligenceBonus}'
+                                android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                                 app:isBonus="true"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
@@ -879,7 +922,8 @@
                                 android:layout_width="0dp"
                                 android:layout_height="0dp"
                                 android:gravity="center"
-                                android:text='@{viewModel.currentCharacter.wisdom ?? ""}'
+                                android:text='@={viewModel.currentCharacter.wisdom}'
+                                android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                                 app:isNumber="true"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
@@ -896,7 +940,8 @@
                                 android:layout_width="0dp"
                                 android:layout_height="0dp"
                                 android:gravity="center"
-                                android:text='@{viewModel.currentCharacter.wisdomBonus ?? ""}'
+                                android:text='@={viewModel.currentCharacter.wisdomBonus}'
+                                android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                                 app:isBonus="true"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
@@ -932,7 +977,8 @@
                                 android:layout_width="0dp"
                                 android:layout_height="0dp"
                                 android:gravity="center"
-                                android:text='@{viewModel.currentCharacter.charisma ?? ""}'
+                                android:text='@={viewModel.currentCharacter.charisma}'
+                                android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                                 app:isNumber="true"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
@@ -949,7 +995,8 @@
                                 android:layout_width="0dp"
                                 android:layout_height="0dp"
                                 android:gravity="center"
-                                android:text='@{viewModel.currentCharacter.charismaBonus ?? ""}'
+                                android:text='@={viewModel.currentCharacter.charismaBonus}'
+                                android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                                 app:isBonus="true"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
@@ -979,11 +1026,14 @@
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
 
-                        <com.example.charactersheet.views.CSCheckboxRadioButton
+                        <CheckBox
                             android:id="@+id/strengthSaveButton"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
-                            app:isChecked="@{viewModel.currentCharacter.strengthSaveChecked }"
+                            style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+                            android:buttonTint="@color/black"
+                            android:checked="@={viewModel.currentCharacter.strengthSaveChecked}"
+                            android:onCheckedChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
@@ -1000,7 +1050,8 @@
                             android:layout_height="0dp"
                             android:gravity="center"
                             android:inputType="phone"
-                            android:text='@{viewModel.currentCharacter.strengthSave ?? ""}'
+                            android:text='@={viewModel.currentCharacter.strengthSave}'
+                            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             app:isBonus="true"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -1011,11 +1062,14 @@
                             app:layout_constraintHeight_percent="0.1"
                             app:layout_constraintWidth_percent="0.13" />
 
-                        <com.example.charactersheet.views.CSCheckboxRadioButton
+                        <CheckBox
                             android:id="@+id/dexteritySaveButton"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
-                            app:isChecked="@{viewModel.currentCharacter.dexteritySaveChecked }"
+                            style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+                            android:buttonTint="@color/black"
+                            android:checked="@={viewModel.currentCharacter.dexteritySaveChecked}"
+                            android:onCheckedChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
@@ -1031,7 +1085,8 @@
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             android:gravity="center"
-                            android:text='@{viewModel.currentCharacter.dexteritySave ?? ""}'
+                            android:text='@={viewModel.currentCharacter.dexteritySave}'
+                            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             app:isBonus="true"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -1042,11 +1097,14 @@
                             app:layout_constraintHeight_percent="0.1"
                             app:layout_constraintWidth_percent="0.13" />
 
-                        <com.example.charactersheet.views.CSCheckboxRadioButton
+                        <CheckBox
                             android:id="@+id/constitutionSaveButton"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
-                            app:isChecked="@{viewModel.currentCharacter.constitutionSaveChecked }"
+                            style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+                            android:buttonTint="@color/black"
+                            android:checked="@={viewModel.currentCharacter.constitutionSaveChecked}"
+                            android:onCheckedChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
@@ -1062,7 +1120,8 @@
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             android:gravity="center"
-                            android:text='@{viewModel.currentCharacter.constitutionSave ?? ""}'
+                            android:text='@={viewModel.currentCharacter.constitutionSave}'
+                            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             app:isBonus="true"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -1073,11 +1132,14 @@
                             app:layout_constraintHeight_percent="0.1"
                             app:layout_constraintWidth_percent="0.13" />
 
-                        <com.example.charactersheet.views.CSCheckboxRadioButton
+                        <CheckBox
                             android:id="@+id/intelligenceSaveButton"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
-                            app:isChecked="@{viewModel.currentCharacter.intelligenceSaveChecked }"
+                            style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+                            android:buttonTint="@color/black"
+                            android:checked="@={viewModel.currentCharacter.intelligenceSaveChecked}"
+                            android:onCheckedChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
@@ -1093,7 +1155,8 @@
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             android:gravity="center"
-                            android:text='@{viewModel.currentCharacter.intelligenceSave ?? ""}'
+                            android:text='@={viewModel.currentCharacter.intelligenceSave}'
+                            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             app:isBonus="true"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -1104,11 +1167,14 @@
                             app:layout_constraintHeight_percent="0.1"
                             app:layout_constraintWidth_percent="0.13" />
 
-                        <com.example.charactersheet.views.CSCheckboxRadioButton
+                        <CheckBox
                             android:id="@+id/wisdomSaveButton"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
-                            app:isChecked="@{viewModel.currentCharacter.wisdomSaveChecked }"
+                            style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+                            android:buttonTint="@color/black"
+                            android:checked="@={viewModel.currentCharacter.wisdomSaveChecked}"
+                            android:onCheckedChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
@@ -1124,7 +1190,8 @@
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             android:gravity="center"
-                            android:text='@{viewModel.currentCharacter.wisdomSave ?? ""}'
+                            android:text='@={viewModel.currentCharacter.wisdomSave}'
+                            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             app:isBonus="true"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -1135,11 +1202,14 @@
                             app:layout_constraintHeight_percent="0.1"
                             app:layout_constraintWidth_percent="0.13" />
 
-                        <com.example.charactersheet.views.CSCheckboxRadioButton
+                        <CheckBox
                             android:id="@+id/charismaSaveButton"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
-                            app:isChecked="@{viewModel.currentCharacter.charismaSaveChecked }"
+                            style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+                            android:buttonTint="@color/black"
+                            android:checked="@={viewModel.currentCharacter.charismaSaveChecked}"
+                            android:onCheckedChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
@@ -1155,7 +1225,8 @@
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             android:gravity="center"
-                            android:text='@{viewModel.currentCharacter.charismaSave ?? ""}'
+                            android:text='@={viewModel.currentCharacter.charismaSave}'
+                            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             app:isBonus="true"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -1184,11 +1255,14 @@
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
 
-                        <com.example.charactersheet.views.CSCheckboxRadioButton
+                        <CheckBox
                             android:id="@+id/acrobaticsButton"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
-                            app:isChecked="@{viewModel.currentCharacter.acrobaticsChecked }"
+                            style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+                            android:buttonTint="@color/black"
+                            android:checked="@={viewModel.currentCharacter.acrobaticsChecked}"
+                            android:onCheckedChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
@@ -1205,7 +1279,8 @@
                             android:layout_height="0dp"
                             android:autoSizeTextType="uniform"
                             android:gravity="center"
-                            android:text='@{viewModel.currentCharacter.acrobatics ?? ""}'
+                            android:text='@={viewModel.currentCharacter.acrobatics}'
+                            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             app:isBonus="true"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -1216,11 +1291,14 @@
                             app:layout_constraintHeight_percent="0.04"
                             app:layout_constraintWidth_percent="0.12" />
 
-                        <com.example.charactersheet.views.CSCheckboxRadioButton
+                        <CheckBox
                             android:id="@+id/animalHandlingButton"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
-                            app:isChecked="@{viewModel.currentCharacter.animalHandlingChecked }"
+                            style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+                            android:buttonTint="@color/black"
+                            android:checked="@={viewModel.currentCharacter.animalHandlingChecked}"
+                            android:onCheckedChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
@@ -1236,7 +1314,8 @@
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             android:gravity="center"
-                            android:text='@{viewModel.currentCharacter.animalHandling ?? ""}'
+                            android:text='@={viewModel.currentCharacter.animalHandling}'
+                            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             app:isBonus="true"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -1247,11 +1326,14 @@
                             app:layout_constraintHeight_percent="0.04"
                             app:layout_constraintWidth_percent="0.12" />
 
-                        <com.example.charactersheet.views.CSCheckboxRadioButton
+                        <CheckBox
                             android:id="@+id/arcanaButton"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
-                            app:isChecked="@{viewModel.currentCharacter.arcanaChecked }"
+                            style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+                            android:buttonTint="@color/black"
+                            android:checked="@={viewModel.currentCharacter.arcanaChecked}"
+                            android:onCheckedChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
@@ -1267,7 +1349,8 @@
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             android:gravity="center"
-                            android:text='@{viewModel.currentCharacter.arcana ?? ""}'
+                            android:text='@={viewModel.currentCharacter.arcana}'
+                            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             app:isBonus="true"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -1278,11 +1361,14 @@
                             app:layout_constraintHeight_percent="0.04"
                             app:layout_constraintWidth_percent="0.12" />
 
-                        <com.example.charactersheet.views.CSCheckboxRadioButton
+                        <CheckBox
                             android:id="@+id/athleticsButton"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
-                            app:isChecked="@{viewModel.currentCharacter.athleticsChecked }"
+                            style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+                            android:buttonTint="@color/black"
+                            android:checked="@={viewModel.currentCharacter.athleticsChecked}"
+                            android:onCheckedChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
@@ -1298,7 +1384,8 @@
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             android:gravity="center"
-                            android:text='@{viewModel.currentCharacter.athletics ?? ""}'
+                            android:text='@={viewModel.currentCharacter.athletics}'
+                            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             app:isBonus="true"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -1309,11 +1396,14 @@
                             app:layout_constraintHeight_percent="0.04"
                             app:layout_constraintWidth_percent="0.12" />
 
-                        <com.example.charactersheet.views.CSCheckboxRadioButton
+                        <CheckBox
                             android:id="@+id/deceptionButton"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
-                            app:isChecked="@{viewModel.currentCharacter.deceptionChecked }"
+                            style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+                            android:buttonTint="@color/black"
+                            android:checked="@={viewModel.currentCharacter.deceptionChecked}"
+                            android:onCheckedChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
@@ -1329,7 +1419,8 @@
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             android:gravity="center"
-                            android:text='@{viewModel.currentCharacter.deception ?? ""}'
+                            android:text='@={viewModel.currentCharacter.deception}'
+                            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             app:isBonus="true"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -1340,11 +1431,14 @@
                             app:layout_constraintHeight_percent="0.04"
                             app:layout_constraintWidth_percent="0.12" />
 
-                        <com.example.charactersheet.views.CSCheckboxRadioButton
+                        <CheckBox
                             android:id="@+id/historyButton"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
-                            app:isChecked="@{viewModel.currentCharacter.historyChecked }"
+                            style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+                            android:buttonTint="@color/black"
+                            android:checked="@={viewModel.currentCharacter.historyChecked}"
+                            android:onCheckedChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
@@ -1360,7 +1454,8 @@
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             android:gravity="center"
-                            android:text='@{viewModel.currentCharacter.history ?? ""}'
+                            android:text='@={viewModel.currentCharacter.history}'
+                            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             app:isBonus="true"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -1371,11 +1466,14 @@
                             app:layout_constraintHeight_percent="0.04"
                             app:layout_constraintWidth_percent="0.12" />
 
-                        <com.example.charactersheet.views.CSCheckboxRadioButton
+                        <CheckBox
                             android:id="@+id/insightButton"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
-                            app:isChecked="@{viewModel.currentCharacter.insightChecked }"
+                            style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+                            android:buttonTint="@color/black"
+                            android:checked="@={viewModel.currentCharacter.insightChecked}"
+                            android:onCheckedChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
@@ -1391,7 +1489,8 @@
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             android:gravity="center"
-                            android:text='@{viewModel.currentCharacter.insight ?? ""}'
+                            android:text='@={viewModel.currentCharacter.insight}'
+                            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             app:isBonus="true"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -1402,11 +1501,14 @@
                             app:layout_constraintHeight_percent="0.04"
                             app:layout_constraintWidth_percent="0.12" />
 
-                        <com.example.charactersheet.views.CSCheckboxRadioButton
+                        <CheckBox
                             android:id="@+id/intimidationButton"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
-                            app:isChecked="@{viewModel.currentCharacter.intimidationChecked }"
+                            style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+                            android:buttonTint="@color/black"
+                            android:checked="@={viewModel.currentCharacter.intimidationChecked}"
+                            android:onCheckedChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
@@ -1422,7 +1524,8 @@
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             android:gravity="center"
-                            android:text='@{viewModel.currentCharacter.intimidation ?? ""}'
+                            android:text='@={viewModel.currentCharacter.intimidation}'
+                            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             app:isBonus="true"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -1433,11 +1536,14 @@
                             app:layout_constraintHeight_percent="0.04"
                             app:layout_constraintWidth_percent="0.12" />
 
-                        <com.example.charactersheet.views.CSCheckboxRadioButton
+                        <CheckBox
                             android:id="@+id/investigationButton"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
-                            app:isChecked="@{viewModel.currentCharacter.investigationChecked }"
+                            style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+                            android:buttonTint="@color/black"
+                            android:checked="@={viewModel.currentCharacter.investigationChecked}"
+                            android:onCheckedChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
@@ -1454,7 +1560,8 @@
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             android:gravity="center"
-                            android:text='@{viewModel.currentCharacter.investigation ?? ""}'
+                            android:text='@={viewModel.currentCharacter.investigation}'
+                            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             app:isBonus="true"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -1465,11 +1572,14 @@
                             app:layout_constraintHeight_percent="0.04"
                             app:layout_constraintWidth_percent="0.12" />
 
-                        <com.example.charactersheet.views.CSCheckboxRadioButton
+                        <CheckBox
                             android:id="@+id/medicineButton"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
-                            app:isChecked="@{viewModel.currentCharacter.medicineChecked }"
+                            style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+                            android:buttonTint="@color/black"
+                            android:checked="@={viewModel.currentCharacter.medicineChecked}"
+                            android:onCheckedChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
@@ -1486,7 +1596,8 @@
                             android:layout_height="0dp"
                             android:autoSizeTextType="uniform"
                             android:gravity="center"
-                            android:text='@{viewModel.currentCharacter.medicine ?? ""}'
+                            android:text='@={viewModel.currentCharacter.medicine}'
+                            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             app:isBonus="true"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -1497,11 +1608,14 @@
                             app:layout_constraintHeight_percent="0.04"
                             app:layout_constraintWidth_percent="0.12" />
 
-                        <com.example.charactersheet.views.CSCheckboxRadioButton
+                        <CheckBox
                             android:id="@+id/natureButton"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
-                            app:isChecked="@{viewModel.currentCharacter.natureChecked }"
+                            style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+                            android:buttonTint="@color/black"
+                            android:checked="@={viewModel.currentCharacter.natureChecked}"
+                            android:onCheckedChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
@@ -1518,7 +1632,8 @@
                             android:layout_height="0dp"
                             android:autoSizeTextType="uniform"
                             android:gravity="center"
-                            android:text='@{viewModel.currentCharacter.nature ?? ""}'
+                            android:text='@={viewModel.currentCharacter.nature}'
+                            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             app:isBonus="true"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -1529,11 +1644,14 @@
                             app:layout_constraintHeight_percent="0.04"
                             app:layout_constraintWidth_percent="0.12" />
 
-                        <com.example.charactersheet.views.CSCheckboxRadioButton
+                        <CheckBox
                             android:id="@+id/perceptionButton"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
-                            app:isChecked="@{viewModel.currentCharacter.perceptionChecked }"
+                            style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+                            android:buttonTint="@color/black"
+                            android:checked="@={viewModel.currentCharacter.perceptionChecked}"
+                            android:onCheckedChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
@@ -1549,7 +1667,8 @@
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             android:gravity="center"
-                            android:text='@{viewModel.currentCharacter.perception ?? ""}'
+                            android:text='@={viewModel.currentCharacter.perception}'
+                            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             app:isBonus="true"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -1560,11 +1679,14 @@
                             app:layout_constraintHeight_percent="0.04"
                             app:layout_constraintWidth_percent="0.12" />
 
-                        <com.example.charactersheet.views.CSCheckboxRadioButton
+                        <CheckBox
                             android:id="@+id/performanceButton"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
-                            app:isChecked="@{viewModel.currentCharacter.performanceChecked }"
+                            style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+                            android:buttonTint="@color/black"
+                            android:checked="@={viewModel.currentCharacter.performanceChecked}"
+                            android:onCheckedChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
@@ -1580,7 +1702,8 @@
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             android:gravity="center"
-                            android:text='@{viewModel.currentCharacter.performance ?? ""}'
+                            android:text='@={viewModel.currentCharacter.performance}'
+                            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             app:isBonus="true"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -1591,11 +1714,14 @@
                             app:layout_constraintHeight_percent="0.04"
                             app:layout_constraintWidth_percent="0.12" />
 
-                        <com.example.charactersheet.views.CSCheckboxRadioButton
+                        <CheckBox
                             android:id="@+id/persuasionButton"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
-                            app:isChecked="@{viewModel.currentCharacter.persuasionChecked }"
+                            style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+                            android:buttonTint="@color/black"
+                            android:checked="@={viewModel.currentCharacter.persuasionChecked}"
+                            android:onCheckedChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
@@ -1611,7 +1737,8 @@
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             android:gravity="center"
-                            android:text='@{viewModel.currentCharacter.persuasion ?? ""}'
+                            android:text='@={viewModel.currentCharacter.persuasion}'
+                            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             app:isBonus="true"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -1622,11 +1749,14 @@
                             app:layout_constraintHeight_percent="0.04"
                             app:layout_constraintWidth_percent="0.12" />
 
-                        <com.example.charactersheet.views.CSCheckboxRadioButton
+                        <CheckBox
                             android:id="@+id/religionButton"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
-                            app:isChecked="@{viewModel.currentCharacter.religionChecked }"
+                            style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+                            android:buttonTint="@color/black"
+                            android:checked="@={viewModel.currentCharacter.religionChecked}"
+                            android:onCheckedChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
@@ -1642,7 +1772,8 @@
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             android:gravity="center"
-                            android:text='@{viewModel.currentCharacter.religion ?? ""}'
+                            android:text='@={viewModel.currentCharacter.religion}'
+                            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             app:isBonus="true"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -1653,11 +1784,14 @@
                             app:layout_constraintHeight_percent="0.04"
                             app:layout_constraintWidth_percent="0.12" />
 
-                        <com.example.charactersheet.views.CSCheckboxRadioButton
+                        <CheckBox
                             android:id="@+id/sleightOfHandButton"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
-                            app:isChecked="@{viewModel.currentCharacter.sleightOfHandChecked }"
+                            style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+                            android:buttonTint="@color/black"
+                            android:checked="@={viewModel.currentCharacter.sleightOfHandChecked}"
+                            android:onCheckedChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
@@ -1673,7 +1807,8 @@
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             android:gravity="center"
-                            android:text='@{viewModel.currentCharacter.sleightOfHand ?? ""}'
+                            android:text='@={viewModel.currentCharacter.sleightOfHand}'
+                            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             app:isBonus="true"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -1684,11 +1819,14 @@
                             app:layout_constraintHeight_percent="0.04"
                             app:layout_constraintWidth_percent="0.12" />
 
-                        <com.example.charactersheet.views.CSCheckboxRadioButton
+                        <CheckBox
                             android:id="@+id/stealthButton"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
-                            app:isChecked="@{viewModel.currentCharacter.stealthChecked }"
+                            style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+                            android:buttonTint="@color/black"
+                            android:checked="@={viewModel.currentCharacter.stealthChecked}"
+                            android:onCheckedChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
@@ -1704,7 +1842,8 @@
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             android:gravity="center"
-                            android:text='@{viewModel.currentCharacter.stealth ?? ""}'
+                            android:text='@={viewModel.currentCharacter.stealth}'
+                            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             app:isBonus="true"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -1715,11 +1854,14 @@
                             app:layout_constraintHeight_percent="0.04"
                             app:layout_constraintWidth_percent="0.12" />
 
-                        <com.example.charactersheet.views.CSCheckboxRadioButton
+                        <CheckBox
                             android:id="@+id/survivalButton"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
-                            app:isChecked="@{viewModel.currentCharacter.survivalChecked }"
+                            style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+                            android:buttonTint="@color/black"
+                            android:checked="@={viewModel.currentCharacter.survivalChecked}"
+                            android:onCheckedChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
@@ -1731,10 +1873,13 @@
 
                         <com.example.charactersheet.views.CSTextView
                             android:id="@+id/survival"
+                            android:contentDescription="Survival Bonus"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             android:gravity="center"
-                            android:text='@{viewModel.currentCharacter.survival ?? ""}'
+                            android:text='@={viewModel.currentCharacter.survival}'
+                            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+                            app:isBonus="true"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
@@ -1811,7 +1956,8 @@
                             android:layout_height="0dp"
                             android:gravity="center"
                             android:inputType="number"
-                            android:text='@{viewModel.currentCharacter.copper ?? ""}'
+                            android:text='@={viewModel.currentCharacter.copper}'
+                            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             app:isNumber="true"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -1828,7 +1974,8 @@
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             android:gravity="center"
-                            android:text='@{viewModel.currentCharacter.silver ?? ""}'
+                            android:text='@={viewModel.currentCharacter.silver}'
+                            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             app:isNumber="true"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -1845,7 +1992,8 @@
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             android:gravity="center"
-                            android:text='@{viewModel.currentCharacter.electrum ?? ""}'
+                            android:text='@={viewModel.currentCharacter.electrum}'
+                            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             app:isNumber="true"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -1862,7 +2010,8 @@
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             android:gravity="center"
-                            android:text='@{viewModel.currentCharacter.gold ?? ""}'
+                            android:text='@={viewModel.currentCharacter.gold}'
+                            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             app:isNumber="true"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -1879,7 +2028,8 @@
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             android:gravity="center"
-                            android:text='@{viewModel.currentCharacter.platinum ?? ""}'
+                            android:text='@={viewModel.currentCharacter.platinum}'
+                            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             app:isNumber="true"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -1909,7 +2059,8 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:gravity="top"
-                                android:text='@{viewModel.currentCharacter.equipment ?? ""}'
+                                android:text='@={viewModel.currentCharacter.equipment}'
+                                android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                                 android:textSize="18sp" />
 
                         </androidx.core.widget.NestedScrollView>
@@ -1951,7 +2102,8 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:gravity="top"
-                                android:text='@{viewModel.currentCharacter.proficiencyLanguages ?? ""}'
+                                android:text='@={viewModel.currentCharacter.proficiencyLanguages}'
+                                android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                                 android:textSize="18sp" />
 
                         </androidx.core.widget.NestedScrollView>
@@ -1993,7 +2145,8 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:gravity="top"
-                                android:text='@{viewModel.currentCharacter.personalityTraits ?? ""}'
+                                android:text='@={viewModel.currentCharacter.personalityTraits}'
+                                android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                                 android:textSize="18sp" />
 
                         </androidx.core.widget.NestedScrollView>
@@ -2035,7 +2188,8 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:gravity="top"
-                                android:text='@{viewModel.currentCharacter.ideals ?? ""}'
+                                android:text='@={viewModel.currentCharacter.ideals}'
+                                android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                                 android:textSize="18sp" />
 
                         </androidx.core.widget.NestedScrollView>
@@ -2077,7 +2231,8 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:gravity="top"
-                                android:text='@{viewModel.currentCharacter.bonds ?? ""}'
+                                android:text='@={viewModel.currentCharacter.bonds}'
+                                android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                                 android:textSize="18sp" />
 
                         </androidx.core.widget.NestedScrollView>
@@ -2119,7 +2274,8 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:gravity="top"
-                                android:text='@{viewModel.currentCharacter.flaws ?? ""}'
+                                android:text='@={viewModel.currentCharacter.flaws}'
+                                android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                                 android:textSize="18sp" />
 
                         </androidx.core.widget.NestedScrollView>

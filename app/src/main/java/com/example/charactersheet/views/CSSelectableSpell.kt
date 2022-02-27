@@ -14,7 +14,7 @@ class CSSelectableSpell: LinearLayout {
     constructor(context: Context, attrs: AttributeSet) : super(context, attrs) { init(context) }
     constructor(context: Context, attrs: AttributeSet, defStyle: Int) : super(context, attrs, defStyle) { init(context) }
 
-    private lateinit var binding: LayoutSelectableSpellBinding
+    lateinit var binding: LayoutSelectableSpellBinding
 
     private fun init(context: Context) {
         binding = LayoutSelectableSpellBinding.inflate(LayoutInflater.from(context), this, true)
@@ -25,11 +25,11 @@ class CSSelectableSpell: LinearLayout {
     }
 
     fun isChecked(): Boolean {
-        return binding.spellButton.isChecked()
+        return binding.spellButton.isChecked
     }
 
     fun setChecked(checked: Boolean) {
-        binding.spellButton.setChecked(checked)
+        binding.spellButton.isChecked = checked
     }
 
     fun getText(): String {

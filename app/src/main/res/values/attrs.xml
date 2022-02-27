@@ -5,8 +5,4 @@
         <attr name="isNumber" format="boolean" />
         <attr name="isBonus" format="boolean" />
     </declare-styleable>
-
-    <declare-styleable name="CSCheckboxRadioButton">
-        <attr name="isChecked" format="boolean" />
-    </declare-styleable>
 </resources>

@@ -14,7 +14,7 @@ class CSCantrip: LinearLayout {
     constructor(context: Context, attrs: AttributeSet) : super(context, attrs) { init(context) }
     constructor(context: Context, attrs: AttributeSet, defStyle: Int) : super(context, attrs, defStyle) { init(context) }
 
-    private lateinit var binding: LayoutCantripBinding
+    lateinit var binding: LayoutCantripBinding
 
     private fun init(context: Context) {
         binding = LayoutCantripBinding.inflate(LayoutInflater.from(context), this, true)
