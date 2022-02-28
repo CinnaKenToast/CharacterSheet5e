@@ -6,8 +6,8 @@
             name="viewModel"
             type="com.example.charactersheet.CharacterViewModel" />
         <variable
-            name="spellName"
-            type="String" />
+            name="position"
+            type="Integer" />
     </data>
     <LinearLayout
         android:layout_width="match_parent"
@@ -34,7 +34,7 @@
                 android:layout_height="match_parent"
                 android:textColor="@color/black"
                 app:isText="true"
-                android:text="@={spellName}" />
+                android:text="@={viewModel.currentCharacter.cantrips[position]}" />
         </LinearLayout>
 
         <View

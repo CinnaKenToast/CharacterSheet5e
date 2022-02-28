@@ -18,12 +18,12 @@ class Converters {
     }
 
     @TypeConverter
-    fun fromSpellToString(spell: Spell): String {
+    fun fromSpellListToString(spell: List<Spell>): String {
         return spell.toJsonString()
     }
 
     @TypeConverter
-    fun fromStringToSpell(json: String): Spell {
+    fun fromStringToSpellList(json: String): List<Spell> {
         return json.fromJsonString()
     }
 

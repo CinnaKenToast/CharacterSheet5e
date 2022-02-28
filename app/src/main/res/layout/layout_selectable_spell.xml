@@ -6,11 +6,11 @@
             name="viewModel"
             type="com.example.charactersheet.CharacterViewModel" />
         <variable
-            name="isChecked"
-            type="Boolean" />
+            name="spellLevel"
+            type="Integer" />
         <variable
-            name="spell"
-            type="String" />
+            name="spellPosition"
+            type="Integer" />
     </data>
     <LinearLayout
         android:layout_width="match_parent"
@@ -23,7 +23,7 @@
             android:id="@+id/spellButton"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:checked="@={isChecked}"
+            android:checked="@={viewModel.currentCharacter.spells[spellLevel].spellChecked[spellPosition]}"
             style="@style/Widget.AppCompat.CompoundButton.RadioButton"
             android:layout_marginEnd="-10dp"
             android:buttonTint="@color/black" />
@@ -39,7 +39,7 @@
                 android:textColor="@color/black"
                 android:layout_weight="1000"
                 app:isText="true"
-                android:text="@={spell}" />
+                android:text="@={viewModel.currentCharacter.spells[spellLevel].spellName[spellPosition]}" />
             <View
                 android:layout_width="match_parent"
                 android:layout_height="2dp"

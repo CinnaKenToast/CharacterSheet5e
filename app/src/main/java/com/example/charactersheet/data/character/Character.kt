@@ -108,60 +108,7 @@ data class Character(
     var spellSaveDC: String = "",
     var spellAttackBonus: String = "",
     var cantrips: List<String> = List(8) { "" },
-    var level1Spells: Spell = Spell(
-        totalSpellSlots = "",
-        spellSlotsExpended = "",
-        spellChecked = List(13) { false },
-        spellName = List(13) { "" }
-    ),
-    var level2Spells: Spell = Spell(
-        totalSpellSlots = "",
-        spellSlotsExpended = "",
-        spellChecked = List(13) { false },
-        spellName = List(13) { "" }
-    ),
-    var level3Spells: Spell = Spell(
-        totalSpellSlots = "",
-        spellSlotsExpended = "",
-        spellChecked = List(13) { false },
-        spellName = List(13) { "" }
-    ),
-    var level4Spells: Spell = Spell(
-        totalSpellSlots = "",
-        spellSlotsExpended = "",
-        spellChecked = List(13) { false },
-        spellName = List(13) { "" }
-    ),
-    var level5Spells: Spell = Spell(
-        totalSpellSlots = "",
-        spellSlotsExpended = "",
-        spellChecked = List(11) { false },
-        spellName = List(11) { "" }
-    ),
-    var level6Spells: Spell = Spell(
-        totalSpellSlots = "",
-        spellSlotsExpended = "",
-        spellChecked = List(11) { false },
-        spellName = List(11) { "" }
-    ),
-    var level7Spells: Spell = Spell(
-        totalSpellSlots = "",
-        spellSlotsExpended = "",
-        spellChecked = List(11) { false },
-        spellName = List(11) { "" }
-    ),
-    var level8Spells: Spell = Spell(
-        totalSpellSlots = "",
-        spellSlotsExpended = "",
-        spellChecked = List(9) { false },
-        spellName = List(9) { "" }
-    ),
-    var level9Spells: Spell = Spell(
-        totalSpellSlots = "",
-        spellSlotsExpended = "",
-        spellChecked = List(9) { false },
-        spellName = List(9) { "" }
-    )
+    var spells: List<Spell> = blankSpells
 )
 
 val blankCharacter = Character(
@@ -265,60 +212,7 @@ val blankCharacter = Character(
     spellSaveDC = "",
     spellAttackBonus = "",
     cantrips = List(8) {""},
-    level1Spells = Spell(
-        totalSpellSlots = "",
-        spellSlotsExpended = "",
-        spellChecked = List(13) { false },
-        spellName = List(13) { "" }
-    ),
-    level2Spells = Spell(
-        totalSpellSlots = "",
-        spellSlotsExpended = "",
-        spellChecked = List(13) { false },
-        spellName = List(13) { "" }
-    ),
-    level3Spells = Spell(
-        totalSpellSlots = "",
-        spellSlotsExpended = "",
-        spellChecked = List(13) { false },
-        spellName = List(13) { "" }
-    ),
-    level4Spells = Spell(
-        totalSpellSlots = "",
-        spellSlotsExpended = "",
-        spellChecked = List(13) { false },
-        spellName = List(13) { "" }
-    ),
-    level5Spells = Spell(
-        totalSpellSlots = "",
-        spellSlotsExpended = "",
-        spellChecked = List(11) { false },
-        spellName = List(11) { "" }
-    ),
-    level6Spells = Spell(
-        totalSpellSlots = "",
-        spellSlotsExpended = "",
-        spellChecked = List(11) { false },
-        spellName = List(11) { "" }
-    ),
-    level7Spells = Spell(
-        totalSpellSlots = "",
-        spellSlotsExpended = "",
-        spellChecked = List(11) { false },
-        spellName = List(11) { "" }
-    ),
-    level8Spells = Spell(
-        totalSpellSlots = "",
-        spellSlotsExpended = "",
-        spellChecked = List(9) { false },
-        spellName = List(9) { "" }
-    ),
-    level9Spells = Spell(
-        totalSpellSlots = "",
-        spellSlotsExpended = "",
-        spellChecked = List(9) { false },
-        spellName = List(9) { "" }
-    )
+    spells = blankSpells
 )
 
 val testCharacter = Character(
@@ -422,58 +316,5 @@ val testCharacter = Character(
     spellSaveDC = "67",
     spellAttackBonus = "67",
     cantrips = List(8) {"68"},
-    level1Spells = Spell(
-        totalSpellSlots = "69",
-        spellSlotsExpended = "70",
-        spellChecked = List(13) { false },
-        spellName = List(13) { "71" }
-    ),
-    level2Spells = Spell(
-        totalSpellSlots = "72",
-        spellSlotsExpended = "73",
-        spellChecked = List(13) { false },
-        spellName = List(13) { "74" }
-    ),
-    level3Spells = Spell(
-        totalSpellSlots = "75",
-        spellSlotsExpended = "76",
-        spellChecked = List(13) { false },
-        spellName = List(13) { "77" }
-    ),
-    level4Spells = Spell(
-        totalSpellSlots = "78",
-        spellSlotsExpended = "79",
-        spellChecked = List(13) { false },
-        spellName = List(13) { "80" }
-    ),
-    level5Spells = Spell(
-        totalSpellSlots = "81",
-        spellSlotsExpended = "82",
-        spellChecked = List(11) { false },
-        spellName = List(11) { "83" }
-    ),
-    level6Spells = Spell(
-        totalSpellSlots = "84",
-        spellSlotsExpended = "85",
-        spellChecked = List(11) { false },
-        spellName = List(11) { "86" }
-    ),
-    level7Spells = Spell(
-        totalSpellSlots = "87",
-        spellSlotsExpended = "88",
-        spellChecked = List(11) { false },
-        spellName = List(11) { "89" }
-    ),
-    level8Spells = Spell(
-        totalSpellSlots = "90",
-        spellSlotsExpended = "91",
-        spellChecked = List(9) { false },
-        spellName = List(9) { "92" }
-    ),
-    level9Spells = Spell(
-        totalSpellSlots = "93",
-        spellSlotsExpended = "94",
-        spellChecked = List(9) { false },
-        spellName = List(9) { "95" }
-    )
+    spells = blankSpells
 )
