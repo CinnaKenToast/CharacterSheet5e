@@ -3,6 +3,7 @@ package com.example.charactersheet.views
 import android.content.Context
 import android.text.InputType
 import android.util.AttributeSet
+import android.util.TypedValue
 import android.view.WindowManager
 import android.view.inputmethod.EditorInfo
 import androidx.appcompat.widget.AppCompatTextView
@@ -32,7 +33,7 @@ class CSTextView: AppCompatTextView {
             }
         }
 
-        TextViewCompat.setAutoSizeTextTypeWithDefaults(this, AUTO_SIZE_TEXT_TYPE_UNIFORM)
+        TextViewCompat.setAutoSizeTextTypeUniformWithConfiguration(this, 8, 50, 1, TypedValue.COMPLEX_UNIT_SP)
         setTextColor(context.getColor(R.color.black))
         setOnClickListener {
             when {
