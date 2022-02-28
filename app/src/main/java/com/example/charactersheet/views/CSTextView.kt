@@ -51,8 +51,9 @@ class CSTextView: AppCompatTextView {
         val editText = TextInputEditText(context)
         editText.id = R.id.importDialog
         editText.hint = "Insert ${this.contentDescription}"
-        editText.setText(this.text)
+        editText.inputType = InputType.TYPE_CLASS_TEXT
         editText.imeOptions = EditorInfo.IME_ACTION_DONE
+        editText.setText(this.text)
         editText.requestFocus()
         val dialog = MaterialAlertDialogBuilder(context)
             .setTitle("${if (editText.text!!.isEmpty()) "Add" else "Edit"} ${this.contentDescription}")
