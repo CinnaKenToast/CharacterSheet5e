@@ -18,6 +18,8 @@ import com.example.charactersheet.utils.toJsonString
 import com.example.charactersheet.views.CharacterSelectAdapter
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.textfield.TextInputEditText
+import java.lang.Error
+import java.lang.Exception
 
 class CharacterSelectFragment : Fragment() {
 
@@ -133,9 +135,15 @@ class CharacterSelectFragment : Fragment() {
             .setPositiveButton("Import") { dialog, which ->
                 val characterData = editText.text.toString()
                 if (characterData.isNotEmpty()) {
-                    val newCharacter = characterData.fromJsonString<Character>()
-                    characterViewModel.saveCharacter(newCharacter)
-                    dialog.dismiss()
+                    try {
+                        val newCharacter = characterData.fromJsonString<Character>()
+                        characterViewModel.saveCharacter(newCharacter)
+                        dialog.dismiss()
+                    } catch (e: Exception) {
+                        Toast.makeText(requireContext(), "Invalid character data", Toast.LENGTH_SHORT).show()
+                        dialog.dismiss()
+                    }
+
                 } else {
                     Toast.makeText(requireContext(), "Character data cannot be empty", Toast.LENGTH_SHORT).show()
                 }
