@@ -7,12 +7,12 @@
 
     <fragment
         android:id="@+id/detailsFragment"
-        android:name="com.example.charactersheet.DetailsFragment"
+        android:name="com.shipsco.charactersheet.DetailsFragment"
         android:label="fragment_details"
         tools:layout="@layout/fragment_details" />
     <fragment
         android:id="@+id/characterSelectFragment"
-        android:name="com.example.charactersheet.CharacterSelectFragment"
+        android:name="com.shipsco.charactersheet.CharacterSelectFragment"
         android:label="CharacterSelectFragment" >
         <action
             android:id="@+id/action_characterSelectFragment_to_detailsFragment"
@@ -26,12 +26,12 @@
     </fragment>
     <fragment
         android:id="@+id/spellsFragment"
-        android:name="com.example.charactersheet.SpellsFragment"
+        android:name="com.shipsco.charactersheet.SpellsFragment"
         android:label="fragment_spells"
         tools:layout="@layout/fragment_spells" />
     <fragment
         android:id="@+id/viewPagerFragment"
-        android:name="com.example.charactersheet.ViewPagerFragment"
+        android:name="com.shipsco.charactersheet.ViewPagerFragment"
         android:label="fragment_view_pager"
         tools:layout="@layout/fragment_view_pager" />
 </navigation>

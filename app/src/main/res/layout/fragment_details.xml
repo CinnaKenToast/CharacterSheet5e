@@ -6,7 +6,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.example.charactersheet.CharacterViewModel"/>
+            type="com.shipsco.charactersheet.CharacterViewModel"/>
     </data>
 
     <LinearLayout
@@ -52,7 +52,7 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
-                    <com.example.charactersheet.views.CSTextView
+                    <com.shipsco.charactersheet.views.CSTextView
                         android:id="@+id/characterName"
                         android:contentDescription="Character Name"
                         android:layout_width="0dp"
@@ -85,7 +85,7 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
-                    <com.example.charactersheet.views.CSTextView
+                    <com.shipsco.charactersheet.views.CSTextView
                         android:id="@+id/classLevel"
                         android:contentDescription="Class and Level"
                         android:layout_width="0dp"
@@ -101,7 +101,7 @@
                         app:layout_constraintHeight_percent="0.25"
                         app:layout_constraintWidth_percent="0.35" />
 
-                    <com.example.charactersheet.views.CSTextView
+                    <com.shipsco.charactersheet.views.CSTextView
                         android:id="@+id/characterBackground"
                         android:contentDescription="Background"
                         android:layout_width="0dp"
@@ -117,7 +117,7 @@
                         app:layout_constraintHeight_percent="0.25"
                         app:layout_constraintWidth_percent="0.3" />
 
-                    <com.example.charactersheet.views.CSTextView
+                    <com.shipsco.charactersheet.views.CSTextView
                         android:id="@+id/playerName"
                         android:contentDescription="Player Name"
                         android:layout_width="0dp"
@@ -133,7 +133,7 @@
                         app:layout_constraintHeight_percent="0.25"
                         app:layout_constraintWidth_percent="0.28" />
 
-                    <com.example.charactersheet.views.CSTextView
+                    <com.shipsco.charactersheet.views.CSTextView
                         android:id="@+id/characterRace"
                         android:contentDescription="Race"
                         android:layout_width="0dp"
@@ -149,7 +149,7 @@
                         app:layout_constraintHeight_percent="0.25"
                         app:layout_constraintWidth_percent="0.35" />
 
-                    <com.example.charactersheet.views.CSTextView
+                    <com.shipsco.charactersheet.views.CSTextView
                         android:id="@+id/characterAlignment"
                         android:contentDescription="Alignment"
                         android:layout_width="0dp"
@@ -165,7 +165,7 @@
                         app:layout_constraintHeight_percent="0.25"
                         app:layout_constraintWidth_percent="0.3" />
 
-                    <com.example.charactersheet.views.CSTextView
+                    <com.shipsco.charactersheet.views.CSTextView
                         android:id="@+id/experiencePoints"
                         android:contentDescription="Experience Points"
                         android:layout_width="0dp"
@@ -213,7 +213,7 @@
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toTopOf="parent" />
 
-                            <com.example.charactersheet.views.CSTextView
+                            <com.shipsco.charactersheet.views.CSTextView
                                 android:id="@+id/armorClass"
                                 android:contentDescription="Armor Class"
                                 android:layout_width="0dp"
@@ -248,7 +248,7 @@
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toTopOf="parent" />
 
-                            <com.example.charactersheet.views.CSTextView
+                            <com.shipsco.charactersheet.views.CSTextView
                                 android:id="@+id/initiative"
                                 android:contentDescription="Initiative"
                                 android:layout_width="0dp"
@@ -283,7 +283,7 @@
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toTopOf="parent" />
 
-                            <com.example.charactersheet.views.CSTextView
+                            <com.shipsco.charactersheet.views.CSTextView
                                 android:id="@+id/speed"
                                 android:contentDescription="Speed"
                                 android:layout_width="0dp"
@@ -319,7 +319,7 @@
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
 
-                        <com.example.charactersheet.views.CSTextView
+                        <com.shipsco.charactersheet.views.CSTextView
                             android:id="@+id/hitPointMax"
                             android:contentDescription="Hit Point Maximum"
                             android:layout_width="0dp"
@@ -336,7 +336,7 @@
                             app:layout_constraintHeight_percent="0.2"
                             app:layout_constraintWidth_percent="0.55" />
 
-                        <com.example.charactersheet.views.CSTextView
+                        <com.shipsco.charactersheet.views.CSTextView
                             android:id="@+id/currentHitPoints"
                             android:contentDescription="Current Hit Points"
                             android:layout_width="0dp"
@@ -372,7 +372,7 @@
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
 
-                        <com.example.charactersheet.views.CSTextView
+                        <com.shipsco.charactersheet.views.CSTextView
                             android:id="@+id/tempHitPoints"
                             android:contentDescription="Temporary Hit Points"
                             android:layout_width="0dp"
@@ -414,7 +414,7 @@
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toTopOf="parent" />
 
-                            <com.example.charactersheet.views.CSTextView
+                            <com.shipsco.charactersheet.views.CSTextView
                                 android:id="@+id/totalHitDice"
                                 android:contentDescription="Total Hit Dice"
                                 android:layout_width="0dp"
@@ -431,7 +431,7 @@
                                 app:layout_constraintHeight_percent="0.25"
                                 app:layout_constraintWidth_percent="0.6" />
 
-                            <com.example.charactersheet.views.CSTextView
+                            <com.shipsco.charactersheet.views.CSTextView
                                 android:id="@+id/hitDice"
                                 android:contentDescription="Hit Dice"
                                 android:layout_width="0dp"
@@ -625,7 +625,7 @@
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toTopOf="parent" />
 
-                            <com.example.charactersheet.views.CSTextView
+                            <com.shipsco.charactersheet.views.CSTextView
                                 android:id="@+id/proficiencyBonus"
                                 android:contentDescription="Proficiency Bonus"
                                 android:layout_width="0dp"
@@ -667,7 +667,7 @@
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toTopOf="parent" />
 
-                            <com.example.charactersheet.views.CSTextView
+                            <com.shipsco.charactersheet.views.CSTextView
                                 android:id="@+id/strength"
                                 android:contentDescription="Strength Score"
                                 android:layout_width="0dp"
@@ -684,7 +684,7 @@
                                 app:layout_constraintHeight_percent="0.5"
                                 app:layout_constraintWidth_percent="0.8" />
 
-                            <com.example.charactersheet.views.CSTextView
+                            <com.shipsco.charactersheet.views.CSTextView
                                 android:id="@+id/strengthBonus"
                                 android:contentDescription="Strength Bonus"
                                 android:layout_width="0dp"
@@ -720,7 +720,7 @@
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toTopOf="parent" />
 
-                            <com.example.charactersheet.views.CSTextView
+                            <com.shipsco.charactersheet.views.CSTextView
                                 android:id="@+id/dexterity"
                                 android:contentDescription="Dexterity Score"
                                 android:layout_width="0dp"
@@ -737,7 +737,7 @@
                                 app:layout_constraintHeight_percent="0.5"
                                 app:layout_constraintWidth_percent="0.8" />
 
-                            <com.example.charactersheet.views.CSTextView
+                            <com.shipsco.charactersheet.views.CSTextView
                                 android:id="@+id/dexterityBonus"
                                 android:contentDescription="Dexterity Bonus"
                                 android:layout_width="0dp"
@@ -773,7 +773,7 @@
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toTopOf="parent" />
 
-                            <com.example.charactersheet.views.CSTextView
+                            <com.shipsco.charactersheet.views.CSTextView
                                 android:id="@+id/constitution"
                                 android:contentDescription="Constitution Score"
                                 android:layout_width="0dp"
@@ -790,7 +790,7 @@
                                 app:layout_constraintHeight_percent="0.5"
                                 app:layout_constraintWidth_percent="0.8" />
 
-                            <com.example.charactersheet.views.CSTextView
+                            <com.shipsco.charactersheet.views.CSTextView
                                 android:id="@+id/constitutionBonus"
                                 android:contentDescription="Constitution Bonus"
                                 android:layout_width="0dp"
@@ -831,7 +831,7 @@
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toTopOf="parent" />
 
-                            <com.example.charactersheet.views.CSTextView
+                            <com.shipsco.charactersheet.views.CSTextView
                                 android:id="@+id/intelligence"
                                 android:contentDescription="Intelligence Score"
                                 android:layout_width="0dp"
@@ -848,7 +848,7 @@
                                 app:layout_constraintHeight_percent="0.5"
                                 app:layout_constraintWidth_percent="0.8" />
 
-                            <com.example.charactersheet.views.CSTextView
+                            <com.shipsco.charactersheet.views.CSTextView
                                 android:id="@+id/intelligenceBonus"
                                 android:contentDescription="Intelligence Bonus"
                                 android:layout_width="0dp"
@@ -884,7 +884,7 @@
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toTopOf="parent" />
 
-                            <com.example.charactersheet.views.CSTextView
+                            <com.shipsco.charactersheet.views.CSTextView
                                 android:id="@+id/wisdom"
                                 android:contentDescription="Wisdom Score"
                                 android:layout_width="0dp"
@@ -901,7 +901,7 @@
                                 app:layout_constraintHeight_percent="0.5"
                                 app:layout_constraintWidth_percent="0.8" />
 
-                            <com.example.charactersheet.views.CSTextView
+                            <com.shipsco.charactersheet.views.CSTextView
                                 android:id="@+id/wisdomBonus"
                                 android:contentDescription="Wisdom Bonus"
                                 android:layout_width="0dp"
@@ -937,7 +937,7 @@
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toTopOf="parent" />
 
-                            <com.example.charactersheet.views.CSTextView
+                            <com.shipsco.charactersheet.views.CSTextView
                                 android:id="@+id/charisma"
                                 android:contentDescription="Charisma Score"
                                 android:layout_width="0dp"
@@ -954,7 +954,7 @@
                                 app:layout_constraintHeight_percent="0.5"
                                 app:layout_constraintWidth_percent="0.8" />
 
-                            <com.example.charactersheet.views.CSTextView
+                            <com.shipsco.charactersheet.views.CSTextView
                                 android:id="@+id/charismaBonus"
                                 android:contentDescription="Charisma Bonus"
                                 android:layout_width="0dp"
@@ -1006,7 +1006,7 @@
                             app:layout_constraintHeight_percent="0.07"
                             app:layout_constraintWidth_percent="0.08" />
 
-                        <com.example.charactersheet.views.CSTextView
+                        <com.shipsco.charactersheet.views.CSTextView
                             android:id="@+id/strengthSave"
                             android:contentDescription="Strength Save"
                             android:layout_width="0dp"
@@ -1040,7 +1040,7 @@
                             app:layout_constraintHeight_percent="0.07"
                             app:layout_constraintWidth_percent="0.08" />
 
-                        <com.example.charactersheet.views.CSTextView
+                        <com.shipsco.charactersheet.views.CSTextView
                             android:id="@+id/dexteritySave"
                             android:contentDescription="Dexterity Save"
                             android:layout_width="0dp"
@@ -1073,7 +1073,7 @@
                             app:layout_constraintHeight_percent="0.07"
                             app:layout_constraintWidth_percent="0.08" />
 
-                        <com.example.charactersheet.views.CSTextView
+                        <com.shipsco.charactersheet.views.CSTextView
                             android:id="@+id/constitutionSave"
                             android:contentDescription="Constitution Save"
                             android:layout_width="0dp"
@@ -1106,7 +1106,7 @@
                             app:layout_constraintHeight_percent="0.07"
                             app:layout_constraintWidth_percent="0.08" />
 
-                        <com.example.charactersheet.views.CSTextView
+                        <com.shipsco.charactersheet.views.CSTextView
                             android:id="@+id/intelligenceSave"
                             android:contentDescription="Intelligence Save"
                             android:layout_width="0dp"
@@ -1139,7 +1139,7 @@
                             app:layout_constraintHeight_percent="0.07"
                             app:layout_constraintWidth_percent="0.08" />
 
-                        <com.example.charactersheet.views.CSTextView
+                        <com.shipsco.charactersheet.views.CSTextView
                             android:id="@+id/wisdomSave"
                             android:contentDescription="Wisdom Save"
                             android:layout_width="0dp"
@@ -1172,7 +1172,7 @@
                             app:layout_constraintHeight_percent="0.07"
                             app:layout_constraintWidth_percent="0.08" />
 
-                        <com.example.charactersheet.views.CSTextView
+                        <com.shipsco.charactersheet.views.CSTextView
                             android:id="@+id/charismaSave"
                             android:contentDescription="Charisma Save"
                             android:layout_width="0dp"
@@ -1223,7 +1223,7 @@
                             app:layout_constraintHeight_percent="0.03"
                             app:layout_constraintWidth_percent="0.08" />
 
-                        <com.example.charactersheet.views.CSTextView
+                        <com.shipsco.charactersheet.views.CSTextView
                             android:id="@+id/acrobatics"
                             android:contentDescription="Acrobatics (Dex) Bonus"
                             android:layout_width="0dp"
@@ -1257,7 +1257,7 @@
                             app:layout_constraintHeight_percent="0.03"
                             app:layout_constraintWidth_percent="0.08" />
 
-                        <com.example.charactersheet.views.CSTextView
+                        <com.shipsco.charactersheet.views.CSTextView
                             android:id="@+id/animalHandling"
                             android:contentDescription="Animal Handling (Wis) Bonus"
                             android:layout_width="0dp"
@@ -1290,7 +1290,7 @@
                             app:layout_constraintHeight_percent="0.03"
                             app:layout_constraintWidth_percent="0.08" />
 
-                        <com.example.charactersheet.views.CSTextView
+                        <com.shipsco.charactersheet.views.CSTextView
                             android:id="@+id/arcana"
                             android:contentDescription="Arcana (Int) Bonus"
                             android:layout_width="0dp"
@@ -1323,7 +1323,7 @@
                             app:layout_constraintHeight_percent="0.03"
                             app:layout_constraintWidth_percent="0.08" />
 
-                        <com.example.charactersheet.views.CSTextView
+                        <com.shipsco.charactersheet.views.CSTextView
                             android:id="@+id/athletics"
                             android:contentDescription="Athletics (Str) Bonus"
                             android:layout_width="0dp"
@@ -1356,7 +1356,7 @@
                             app:layout_constraintHeight_percent="0.03"
                             app:layout_constraintWidth_percent="0.08" />
 
-                        <com.example.charactersheet.views.CSTextView
+                        <com.shipsco.charactersheet.views.CSTextView
                             android:id="@+id/deception"
                             android:contentDescription="Deception (Cha) Bonus"
                             android:layout_width="0dp"
@@ -1389,7 +1389,7 @@
                             app:layout_constraintHeight_percent="0.03"
                             app:layout_constraintWidth_percent="0.08" />
 
-                        <com.example.charactersheet.views.CSTextView
+                        <com.shipsco.charactersheet.views.CSTextView
                             android:id="@+id/history"
                             android:contentDescription="History (Int) Bonus"
                             android:layout_width="0dp"
@@ -1422,7 +1422,7 @@
                             app:layout_constraintHeight_percent="0.03"
                             app:layout_constraintWidth_percent="0.08" />
 
-                        <com.example.charactersheet.views.CSTextView
+                        <com.shipsco.charactersheet.views.CSTextView
                             android:id="@+id/insight"
                             android:contentDescription="Insight (Wis) Bonus"
                             android:layout_width="0dp"
@@ -1455,7 +1455,7 @@
                             app:layout_constraintHeight_percent="0.03"
                             app:layout_constraintWidth_percent="0.08" />
 
-                        <com.example.charactersheet.views.CSTextView
+                        <com.shipsco.charactersheet.views.CSTextView
                             android:id="@+id/intimidation"
                             android:contentDescription="Intimidation (Cha) Bonus"
                             android:layout_width="0dp"
@@ -1489,7 +1489,7 @@
                             app:layout_constraintWidth_percent="0.08" />
 
 
-                        <com.example.charactersheet.views.CSTextView
+                        <com.shipsco.charactersheet.views.CSTextView
                             android:id="@+id/investigation"
                             android:contentDescription="Investigation (Int) Bonus"
                             android:layout_width="0dp"
@@ -1522,7 +1522,7 @@
                             app:layout_constraintHeight_percent="0.03"
                             app:layout_constraintWidth_percent="0.08" />
 
-                        <com.example.charactersheet.views.CSTextView
+                        <com.shipsco.charactersheet.views.CSTextView
                             android:id="@+id/medicine"
                             android:contentDescription="Medicine (Wis) Bonus"
                             android:layout_width="0dp"
@@ -1556,7 +1556,7 @@
                             app:layout_constraintHeight_percent="0.03"
                             app:layout_constraintWidth_percent="0.08" />
 
-                        <com.example.charactersheet.views.CSTextView
+                        <com.shipsco.charactersheet.views.CSTextView
                             android:id="@+id/nature"
                             android:contentDescription="Nature (Int) Bonus"
                             android:layout_width="0dp"
@@ -1590,7 +1590,7 @@
                             app:layout_constraintHeight_percent="0.03"
                             app:layout_constraintWidth_percent="0.08" />
 
-                        <com.example.charactersheet.views.CSTextView
+                        <com.shipsco.charactersheet.views.CSTextView
                             android:id="@+id/perception"
                             android:contentDescription="Perception (Wis) Bonus"
                             android:layout_width="0dp"
@@ -1623,7 +1623,7 @@
                             app:layout_constraintHeight_percent="0.03"
                             app:layout_constraintWidth_percent="0.08" />
 
-                        <com.example.charactersheet.views.CSTextView
+                        <com.shipsco.charactersheet.views.CSTextView
                             android:id="@+id/performance"
                             android:contentDescription="Performance (Cha) Bonus"
                             android:layout_width="0dp"
@@ -1656,7 +1656,7 @@
                             app:layout_constraintHeight_percent="0.03"
                             app:layout_constraintWidth_percent="0.08" />
 
-                        <com.example.charactersheet.views.CSTextView
+                        <com.shipsco.charactersheet.views.CSTextView
                             android:id="@+id/persuasion"
                             android:contentDescription="Persuasion (Cha) Bonus"
                             android:layout_width="0dp"
@@ -1689,7 +1689,7 @@
                             app:layout_constraintHeight_percent="0.03"
                             app:layout_constraintWidth_percent="0.08" />
 
-                        <com.example.charactersheet.views.CSTextView
+                        <com.shipsco.charactersheet.views.CSTextView
                             android:id="@+id/religion"
                             android:contentDescription="Religion (Wis) Bonus"
                             android:layout_width="0dp"
@@ -1722,7 +1722,7 @@
                             app:layout_constraintHeight_percent="0.03"
                             app:layout_constraintWidth_percent="0.08" />
 
-                        <com.example.charactersheet.views.CSTextView
+                        <com.shipsco.charactersheet.views.CSTextView
                             android:id="@+id/sleightOfHand"
                             android:contentDescription="Sleight of Hand (Dex) Bonus"
                             android:layout_width="0dp"
@@ -1755,7 +1755,7 @@
                             app:layout_constraintHeight_percent="0.03"
                             app:layout_constraintWidth_percent="0.08" />
 
-                        <com.example.charactersheet.views.CSTextView
+                        <com.shipsco.charactersheet.views.CSTextView
                             android:id="@+id/stealth"
                             android:contentDescription="Stealth (Dex) Bonus"
                             android:layout_width="0dp"
@@ -1788,7 +1788,7 @@
                             app:layout_constraintHeight_percent="0.03"
                             app:layout_constraintWidth_percent="0.08" />
 
-                        <com.example.charactersheet.views.CSTextView
+                        <com.shipsco.charactersheet.views.CSTextView
                             android:id="@+id/survival"
                             android:contentDescription="Survival (Wis) Bonus"
                             android:layout_width="0dp"
@@ -1865,7 +1865,7 @@
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
 
-                        <com.example.charactersheet.views.CSTextView
+                        <com.shipsco.charactersheet.views.CSTextView
                             android:id="@+id/copperPieces"
                             android:contentDescription="Copper Pieces"
                             android:layout_width="0dp"
@@ -1883,7 +1883,7 @@
                             app:layout_constraintHeight_percent="0.11"
                             app:layout_constraintWidth_percent="0.19" />
 
-                        <com.example.charactersheet.views.CSTextView
+                        <com.shipsco.charactersheet.views.CSTextView
                             android:id="@+id/silverPieces"
                             android:contentDescription="Silver Pieces"
                             android:layout_width="0dp"
@@ -1900,7 +1900,7 @@
                             app:layout_constraintHeight_percent="0.11"
                             app:layout_constraintWidth_percent="0.19" />
 
-                        <com.example.charactersheet.views.CSTextView
+                        <com.shipsco.charactersheet.views.CSTextView
                             android:id="@+id/electrumPieces"
                             android:contentDescription="Electrum Pieces"
                             android:layout_width="0dp"
@@ -1917,7 +1917,7 @@
                             app:layout_constraintHeight_percent="0.11"
                             app:layout_constraintWidth_percent="0.19" />
 
-                        <com.example.charactersheet.views.CSTextView
+                        <com.shipsco.charactersheet.views.CSTextView
                             android:id="@+id/goldPieces"
                             android:contentDescription="Gold Pieces"
                             android:layout_width="0dp"
@@ -1934,7 +1934,7 @@
                             app:layout_constraintHeight_percent="0.11"
                             app:layout_constraintWidth_percent="0.19" />
 
-                        <com.example.charactersheet.views.CSTextView
+                        <com.shipsco.charactersheet.views.CSTextView
                             android:id="@+id/platinumPieces"
                             android:contentDescription="Platinum Pieces"
                             android:layout_width="0dp"
@@ -1964,7 +1964,7 @@
                             app:layout_constraintHeight_percent="0.9"
                             app:layout_constraintWidth_percent="0.65">
 
-                            <com.example.charactersheet.views.CSTextViewLong
+                            <com.shipsco.charactersheet.views.CSTextViewLong
                                 android:id="@+id/equipment"
                                 android:contentDescription="Equipment"
                                 android:layout_width="match_parent"
@@ -2006,7 +2006,7 @@
                             app:layout_constraintVertical_bias="0.2"
                             app:layout_constraintWidth_percent="0.9">
 
-                            <com.example.charactersheet.views.CSTextViewLong
+                            <com.shipsco.charactersheet.views.CSTextViewLong
                                 android:id="@+id/proficienciesLanguages"
                                 android:contentDescription="Proficiencies and Languages"
                                 android:layout_width="match_parent"
@@ -2048,7 +2048,7 @@
                             app:layout_constraintHeight_percent="0.7"
                             app:layout_constraintWidth_percent="0.9">
 
-                            <com.example.charactersheet.views.CSTextViewLong
+                            <com.shipsco.charactersheet.views.CSTextViewLong
                                 android:id="@+id/personalityTraits"
                                 android:contentDescription="Personality Traits"
                                 android:layout_width="match_parent"
@@ -2090,7 +2090,7 @@
                             app:layout_constraintHeight_percent="0.7"
                             app:layout_constraintWidth_percent="0.9">
 
-                            <com.example.charactersheet.views.CSTextViewLong
+                            <com.shipsco.charactersheet.views.CSTextViewLong
                                 android:id="@+id/ideals"
                                 android:contentDescription="Ideals"
                                 android:layout_width="match_parent"
@@ -2132,7 +2132,7 @@
                             app:layout_constraintHeight_percent="0.7"
                             app:layout_constraintWidth_percent="0.9">
 
-                            <com.example.charactersheet.views.CSTextViewLong
+                            <com.shipsco.charactersheet.views.CSTextViewLong
                                 android:id="@+id/bonds"
                                 android:contentDescription="Bonds"
                                 android:layout_width="match_parent"
@@ -2174,7 +2174,7 @@
                             app:layout_constraintHeight_percent="0.7"
                             app:layout_constraintWidth_percent="0.9">
 
-                            <com.example.charactersheet.views.CSTextViewLong
+                            <com.shipsco.charactersheet.views.CSTextViewLong
                                 android:id="@+id/flaws"
                                 android:contentDescription="Flaws"
                                 android:layout_width="match_parent"

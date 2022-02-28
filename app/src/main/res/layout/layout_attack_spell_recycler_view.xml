@@ -9,14 +9,14 @@
             type="Integer" />
         <variable
             name="viewModel"
-            type="com.example.charactersheet.CharacterViewModel" />
+            type="com.shipsco.charactersheet.CharacterViewModel" />
     </data>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <com.example.charactersheet.views.CSTextView
+        <com.shipsco.charactersheet.views.CSTextView
             android:id="@+id/spellAttackName"
             android:contentDescription="Attack/Spell Name"
             android:layout_width="0dp"
@@ -28,7 +28,7 @@
             android:background="@drawable/edit_text_border"
             android:padding="2dp"/>
 
-        <com.example.charactersheet.views.CSTextView
+        <com.shipsco.charactersheet.views.CSTextView
             android:id="@+id/spellAttackBonus"
             android:contentDescription="Attack/Spell Attack Bonus"
             android:layout_width="0dp"
@@ -40,7 +40,7 @@
             android:background="@drawable/edit_text_border"
             android:padding="2dp"/>
 
-        <com.example.charactersheet.views.CSTextView
+        <com.shipsco.charactersheet.views.CSTextView
             android:id="@+id/spellAttackType"
             android:contentDescription="Attack/Spell Attack Type"
             android:layout_width="0dp"

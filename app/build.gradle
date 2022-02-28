@@ -9,7 +9,7 @@ android {
     compileSdk 32
 
     defaultConfig {
-        applicationId "com.example.charactersheet"
+        applicationId "com.shipsco.charactersheet"
         minSdk 26
         targetSdk 32
         versionCode 1

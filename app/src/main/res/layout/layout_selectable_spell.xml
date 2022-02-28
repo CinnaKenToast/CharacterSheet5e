@@ -4,7 +4,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.example.charactersheet.CharacterViewModel" />
+            type="com.shipsco.charactersheet.CharacterViewModel" />
         <variable
             name="spellLevel"
             type="Integer" />
@@ -32,7 +32,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:orientation="vertical">
-            <com.example.charactersheet.views.CSTextView
+            <com.shipsco.charactersheet.views.CSTextView
                 android:id="@+id/spellName"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
