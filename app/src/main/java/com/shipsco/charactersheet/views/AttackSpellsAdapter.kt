@@ -5,11 +5,12 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.shipsco.charactersheet.BR
 import com.shipsco.charactersheet.CharacterViewModel
+import com.shipsco.charactersheet.TextChangedEventListener
 import com.shipsco.charactersheet.data.character.AttackSpell
 import com.shipsco.charactersheet.databinding.LayoutAttackSpellRecyclerViewBinding
 
 class AttackSpellsAdapter(private val attackSpells: MutableList<AttackSpell>, val viewModel: CharacterViewModel):
-    RecyclerView.Adapter<AttackSpellsAdapter.ViewHolder>() {
+    RecyclerView.Adapter<AttackSpellsAdapter.ViewHolder>(), TextChangedEventListener {
 
     lateinit var binding: LayoutAttackSpellRecyclerViewBinding
 
@@ -27,13 +28,13 @@ class AttackSpellsAdapter(private val attackSpells: MutableList<AttackSpell>, va
     }
 
     class ViewHolder(val binding: LayoutAttackSpellRecyclerViewBinding): RecyclerView.ViewHolder(binding.root) {
-        val nameEditText: CSTextView = binding.spellAttackName
-        val bonusEditText: CSTextView = binding.spellAttackBonus
-        val damageTypeEditText: CSTextView = binding.spellAttackType
+        val nameTextView: CSTextView = binding.spellAttackName
+        val bonusTextView: CSTextView = binding.spellAttackBonus
+        val damageTypeTextView: CSTextView = binding.spellAttackType
 
         fun getAttackSpell(): AttackSpell {
             return AttackSpell(
-                nameEditText.text.toString(), bonusEditText.text.toString(), damageTypeEditText.text.toString()
+                nameTextView.text.toString(), bonusTextView.text.toString(), damageTypeTextView.text.toString()
             )
         }
 
@@ -41,5 +42,9 @@ class AttackSpellsAdapter(private val attackSpells: MutableList<AttackSpell>, va
             binding.setVariable(BR.viewModel, viewModel)
             binding.setVariable(BR.position, position)
         }
+    }
+
+    override fun textChangedByDialog() {
+        viewModel.saveCurrentCharacter()
     }
 }

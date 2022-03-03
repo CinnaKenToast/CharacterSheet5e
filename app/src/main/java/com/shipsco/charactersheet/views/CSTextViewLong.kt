@@ -7,6 +7,7 @@ import androidx.appcompat.widget.AppCompatTextView
 import com.shipsco.charactersheet.R
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.textfield.TextInputEditText
+import com.shipsco.charactersheet.TextChangedEventListener
 
 class CSTextViewLong: AppCompatTextView {
     constructor(context: Context) : super(context) { init(context) }
@@ -18,6 +19,8 @@ class CSTextViewLong: AppCompatTextView {
         setTextColor(context.getColor(R.color.black))
         setOnClickListener { createTextDialog(context) }
     }
+
+    private var eventListener: TextChangedEventListener? = null
 
     private fun createTextDialog(context: Context) {
         val editText = TextInputEditText(context)
@@ -33,6 +36,7 @@ class CSTextViewLong: AppCompatTextView {
             }
             .setPositiveButton("Add") { dialog, which ->
                 this.text = editText.text.toString()
+                eventListener?.textChangedByDialog()
                 dialog.dismiss()
             }
             .setView(editText)

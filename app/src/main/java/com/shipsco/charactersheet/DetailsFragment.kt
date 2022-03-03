@@ -17,9 +17,10 @@ import com.shipsco.charactersheet.data.character.blankCharacter
 import com.shipsco.charactersheet.databinding.FragmentDetailsBinding
 import com.shipsco.charactersheet.utils.toJsonString
 import com.shipsco.charactersheet.views.AttackSpellsAdapter
+import com.shipsco.charactersheet.views.CSTextView
 import kotlinx.coroutines.runBlocking
 
-class DetailsFragment : Fragment() {
+class DetailsFragment : Fragment(), TextChangedEventListener {
 
     private lateinit var binding: FragmentDetailsBinding
     private lateinit var characterViewModel: CharacterViewModel
@@ -124,5 +125,9 @@ class DetailsFragment : Fragment() {
                 Pair("characterName", characterName)
             )
         }
+    }
+
+    override fun textChangedByDialog() {
+        characterViewModel.saveCurrentCharacter()
     }
 }

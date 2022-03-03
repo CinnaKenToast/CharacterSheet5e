@@ -16,7 +16,7 @@ import com.shipsco.charactersheet.databinding.FragmentSpellsBinding
 import com.shipsco.charactersheet.utils.toJsonString
 import kotlinx.coroutines.runBlocking
 
-class SpellsFragment : Fragment() {
+class SpellsFragment : Fragment(), TextChangedEventListener {
 
     private lateinit var binding: FragmentSpellsBinding
     private lateinit var characterViewModel: CharacterViewModel
@@ -437,5 +437,9 @@ class SpellsFragment : Fragment() {
                     Pair("characterName", characterName)
                 )
             }
+    }
+
+    override fun textChangedByDialog() {
+        characterViewModel.saveCurrentCharacter()
     }
 }

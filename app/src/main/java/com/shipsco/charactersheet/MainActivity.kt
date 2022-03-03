@@ -4,7 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), TextChangedEventListener {
 
     lateinit var characterViewModel: CharacterViewModel
 
@@ -34,5 +34,9 @@ class MainActivity : AppCompatActivity() {
 //        }
         characterViewModel.saveCurrentCharacter()
         super.onBackPressed()
+    }
+
+    override fun textChangedByDialog() {
+        characterViewModel.saveCurrentCharacter()
     }
 }

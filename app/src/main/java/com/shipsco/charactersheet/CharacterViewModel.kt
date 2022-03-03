@@ -18,7 +18,7 @@ class CharacterViewModel(
     val currentCharacter: LiveData<Character> = _currentCharacter
 
     fun getCharacters() {
-        viewModelScope.launch {
+        runBlocking {
             _allCharacters.postValue(characterUseCase.getCharacters())
         }
     }
