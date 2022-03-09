@@ -16,6 +16,9 @@ class AttackSpellsAdapter(private val attackSpells: MutableList<AttackSpell>, va
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         binding = LayoutAttackSpellRecyclerViewBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        binding.spellAttackName.eventListener = this
+        binding.spellAttackBonus.eventListener = this
+        binding.spellAttackType.eventListener = this
         return ViewHolder(binding)
     }
 

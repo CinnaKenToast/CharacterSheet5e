@@ -14,26 +14,47 @@ class DetailsFragmentAdapter(val viewModel: CharacterViewModel): RecyclerView.Ad
         when (viewType) {
             TYPE_CHARACTER_NAME -> {
                 val binding = LayoutDetailsCharacterNameBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+                binding.characterName.eventListener = this
                 return CharacterNameViewHolder(binding)
             }
             TYPE_CHARACTER_DETAILS -> {
                 val binding = LayoutDetailsCharacterDetailsBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+                binding.classLevel.eventListener = this
+                binding.characterBackground.eventListener = this
+                binding.playerName.eventListener = this
+                binding.characterRace.eventListener = this
+                binding.characterAlignment.eventListener = this
+                binding.experiencePoints.eventListener = this
                 return CharacterDetailsViewHolder(binding)
             }
             TYPE_AC_INITIATIVE_SPEED -> {
                 val binding = LayoutDetailsAcInitiativeSpeedBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+                binding.armorClass.eventListener = this
+                binding.initiative.eventListener = this
+                binding.speed.eventListener = this
                 return ACInitiativeSpeedViewHolder(binding)
             }
             TYPE_CURRENT_HIT_POINT -> {
                 val binding = LayoutDetailsCurrentHitPointsBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+                binding.hitPointMax.eventListener = this
+                binding.currentHitPoints.eventListener = this
                 return CurrentHitPointsViewHolder(binding)
             }
             TYPE_TEMP_HIT_POINTS -> {
                 val binding = LayoutDetailsTempHitPointsBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+                binding.tempHitPoints.eventListener = this
                 return TempHitPointsViewHolder(binding)
             }
             TYPE_HITDICE_DEATHSAVES -> {
                 val binding = LayoutDetailsHitdieDeathsavesBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+                binding.totalHitDice.eventListener = this
+                binding.hitDice.eventListener = this
+                binding.successSaveButton1.eventListener = this
+                binding.successSaveButton2.eventListener = this
+                binding.successSaveButton3.eventListener = this
+                binding.failSaveButton1.eventListener = this
+                binding.failSaveButton2.eventListener = this
+                binding.failSaveButton3.eventListener = this
                 return HitDiceDeathSavesViewHolder(binding)
             }
             TYPE_INSPIRATION_PROFICIENCY -> {
