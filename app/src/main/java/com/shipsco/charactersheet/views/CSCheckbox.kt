@@ -9,19 +9,19 @@ import com.shipsco.charactersheet.R
 
 class CSCheckbox: AppCompatCheckBox {
     constructor(context: Context) : super(context) { init(context) }
-    constructor(context: Context, attrs: AttributeSet) : super(context, attrs) { init(context, attrs) }
-    constructor(context: Context, attrs: AttributeSet, defStyle: Int ) : super(context, attrs, defStyle) { init(context, attrs) }
+    constructor(context: Context, attrs: AttributeSet) : super(context, attrs) { init(context) }
+    constructor(context: Context, attrs: AttributeSet, defStyle: Int ) : super(context, attrs, defStyle) { init(context) }
 
     var eventListener: ManualEditListener? = null
 
-    fun init(context: Context, attrs: AttributeSet? = null) {
+    private fun init(context: Context) {
         buttonTintList = ColorStateList.valueOf(context.getColor(R.color.black))
         setOnClickListener {
             setManualCompleted()
         }
     }
 
-    fun setManualCompleted() {
+    private fun setManualCompleted() {
         eventListener?.manualEditCompleted()
     }
 

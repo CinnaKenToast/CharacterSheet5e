@@ -12,6 +12,7 @@ import androidx.activity.viewModels
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import com.shipsco.charactersheet.data.character.Character
+import com.shipsco.charactersheet.data.character.blankCharacter
 import com.shipsco.charactersheet.databinding.FragmentSpellsBinding
 import com.shipsco.charactersheet.utils.toJsonString
 import kotlinx.coroutines.runBlocking
@@ -38,7 +39,7 @@ class SpellsFragment : Fragment(), ManualEditListener {
     ): View {
         binding = FragmentSpellsBinding.inflate(layoutInflater)
         binding.viewModel = characterViewModel
-        currentCharacter = characterViewModel.currentCharacter.value!!
+        currentCharacter = characterViewModel.currentCharacter.value ?: blankCharacter
         initCantripSpellVariables()
         return binding.root
     }

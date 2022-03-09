@@ -13,93 +13,93 @@ class DetailsFragmentAdapter(val viewModel: CharacterViewModel): RecyclerView.Ad
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         when (viewType) {
             TYPE_CHARACTER_NAME -> {
-                val binding = LayoutDetailsCharacterNameBinding.inflate(LayoutInflater.from(parent.context))
-                println("------------------CREATE ${binding.root.height}")
+                val binding = LayoutDetailsCharacterNameBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+                println("------------------CREATE ${binding}")
                 return CharacterNameViewHolder(binding)
             }
             TYPE_CHARACTER_DETAILS -> {
-                val binding = LayoutDetailsCharacterDetailsBinding.inflate(LayoutInflater.from(parent.context))
-                println("------------------CREATE ${binding.root.height}")
+                val binding = LayoutDetailsCharacterDetailsBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+                println("------------------CREATE ${binding}")
                 return CharacterDetailsViewHolder(binding)
             }
             TYPE_AC_INITIATIVE_SPEED -> {
-                val binding = LayoutDetailsAcInitiativeSpeedBinding.inflate(LayoutInflater.from(parent.context))
-                println("------------------CREATE ${binding.root.height}")
+                val binding = LayoutDetailsAcInitiativeSpeedBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+                println("------------------CREATE ${binding}")
                 return ACInitiativeSpeedViewHolder(binding)
             }
             TYPE_CURRENT_HIT_POINT -> {
-                val binding = LayoutDetailsCurrentHitPointsBinding.inflate(LayoutInflater.from(parent.context))
-                println("------------------CREATE ${binding.root.height}")
+                val binding = LayoutDetailsCurrentHitPointsBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+                println("------------------CREATE ${binding}")
                 return CurrentHitPointsViewHolder(binding)
             }
             TYPE_TEMP_HIT_POINTS -> {
-                val binding = LayoutDetailsTempHitPointsBinding.inflate(LayoutInflater.from(parent.context))
-                println("------------------CREATE ${binding.root.height}")
+                val binding = LayoutDetailsTempHitPointsBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+                println("------------------CREATE ${binding}")
                 return TempHitPointsViewHolder(binding)
             }
             TYPE_HITDICE_DEATHSAVES -> {
-                val binding = LayoutDetailsHitdieDeathsavesBinding.inflate(LayoutInflater.from(parent.context))
-                println("------------------CREATE ${binding.root.height}")
+                val binding = LayoutDetailsHitdieDeathsavesBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+                println("------------------CREATE ${binding}")
                 return HitDiceDeathSavesViewHolder(binding)
             }
             TYPE_INSPIRATION_PROFICIENCY -> {
-                val binding = LayoutDetailsInspirationProficiencyBinding.inflate(LayoutInflater.from(parent.context))
-                println("------------------CREATE ${binding.root.height}")
+                val binding = LayoutDetailsInspirationProficiencyBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+                println("------------------CREATE ${binding}")
                 return InspirationProficiency(binding)
             }
             TYPE_STATS_TOP -> {
-                val binding = LayoutDetailsStatsTopBinding.inflate(LayoutInflater.from(parent.context))
-                println("------------------CREATE ${binding.root.height}")
+                val binding = LayoutDetailsStatsTopBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+                println("------------------CREATE ${binding}")
                 return StatsTopViewHolder(binding)
             }
             TYPE_STATS_BOTTOM -> {
-                val binding = LayoutDetailsStatsBottomBinding.inflate(LayoutInflater.from(parent.context))
-                println("------------------CREATE ${binding.root.height}")
+                val binding = LayoutDetailsStatsBottomBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+                println("------------------CREATE ${binding}")
                 return StatsBottomViewHolder(binding)
             }
             TYPE_SAVING_THROWS -> {
-                val binding = LayoutDetailsSavingThrowsBinding.inflate(LayoutInflater.from(parent.context))
-                println("------------------CREATE ${binding.root.height}")
+                val binding = LayoutDetailsSavingThrowsBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+                println("------------------CREATE ${binding}")
                 return SavingThrowsViewHolder(binding)
             }
             TYPE_SKILLS -> {
-                val binding = LayoutDetailsSkillsBinding.inflate(LayoutInflater.from(parent.context))
-                println("------------------CREATE ${binding.root.height}")
+                val binding = LayoutDetailsSkillsBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+                println("------------------CREATE ${binding}")
                 return SkillsViewHolder(binding)
             }
             TYPE_ATTACKS_SPELLS -> {
-                val binding = LayoutDetailsAttackSpellsBinding.inflate(LayoutInflater.from(parent.context))
-                println("------------------CREATE ${binding.root.height}")
+                val binding = LayoutDetailsAttackSpellsBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+                println("------------------CREATE ${binding}")
                 return AttackSpellsViewHolder(binding)
             }
             TYPE_EQUIPMENT -> {
-                val binding = LayoutDetailsEquipmentBinding.inflate(LayoutInflater.from(parent.context))
-                println("------------------CREATE ${binding.root.height}")
+                val binding = LayoutDetailsEquipmentBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+                println("------------------CREATE ${binding}")
                 return EquipmentViewHolder(binding)
             }
             TYPE_PROFICIENCIES_LANGUAGES -> {
-                val binding = LayoutDetailsProficienciesLanguagesBinding.inflate(LayoutInflater.from(parent.context))
-                println("------------------CREATE ${binding.root.height}")
+                val binding = LayoutDetailsProficienciesLanguagesBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+                println("------------------CREATE ${binding}")
                 return ProficienciesLanguagesViewHolder(binding)
             }
             TYPE_PERSONALITY_TRAITS -> {
-                val binding = LayoutDetailsPersonalityTraitsBinding.inflate(LayoutInflater.from(parent.context))
-                println("------------------CREATE ${binding.root.height}")
+                val binding = LayoutDetailsPersonalityTraitsBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+                println("------------------CREATE ${binding}")
                 return PersonalityTraitsViewHolder(binding)
             }
             TYPE_IDEALS -> {
-                val binding = LayoutDetailsIdealsBinding.inflate(LayoutInflater.from(parent.context))
-                println("------------------CREATE ${binding.root.height}")
+                val binding = LayoutDetailsIdealsBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+                println("------------------CREATE ${binding}")
                 return IdealsViewHolder(binding)
             }
             TYPE_BONDS -> {
-                val binding = LayoutDetailsBondsBinding.inflate(LayoutInflater.from(parent.context))
-                println("------------------CREATE ${binding.root.height}")
+                val binding = LayoutDetailsBondsBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+                println("------------------CREATE ${binding}")
                 return BondsViewHolder(binding)
             }
             else -> { // TYPE_FLAWS
-                val binding = LayoutDetailsFlawsBinding.inflate(LayoutInflater.from(parent.context))
-                println("------------------CREATE ${binding.root.height}")
+                val binding = LayoutDetailsFlawsBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+                println("------------------CREATE ${binding}")
                 return FlawsViewHolder(binding)
             }
         }
@@ -107,7 +107,6 @@ class DetailsFragmentAdapter(val viewModel: CharacterViewModel): RecyclerView.Ad
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         println("------------------BIND ${holder.itemViewType}")
-        println(holder.itemView.height)
         when (holder.itemViewType) {
             TYPE_CHARACTER_NAME -> {
                 (holder as CharacterNameViewHolder).bind(viewModel)

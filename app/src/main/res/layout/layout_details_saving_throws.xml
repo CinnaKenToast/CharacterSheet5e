@@ -12,7 +12,9 @@
     <!-- Saving Throws -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="4dp">
 
         <ImageView
             android:layout_width="0dp"

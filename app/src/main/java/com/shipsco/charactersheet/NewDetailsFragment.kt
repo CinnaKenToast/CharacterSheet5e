@@ -44,7 +44,7 @@ class NewDetailsFragment : Fragment(), ManualEditListener {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentNewDetailsBinding.inflate(layoutInflater)
-        currentCharacter = characterViewModel.currentCharacter.value!!
+        currentCharacter = characterViewModel.currentCharacter.value ?: blankCharacter
         return binding.root
     }
 
