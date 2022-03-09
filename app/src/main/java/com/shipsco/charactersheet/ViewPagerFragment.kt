@@ -50,7 +50,7 @@ class ViewPagerFragment : Fragment() {
     ): View {
         binding = FragmentViewPagerBinding.inflate(layoutInflater)
 
-        val fragmentList = listOf(DetailsFragment(), SpellsFragment())
+        val fragmentList = listOf(NewDetailsFragment(), SpellsFragment())
         binding.viewPager.adapter = ViewPagerAdapter(fragmentList, requireActivity().supportFragmentManager, lifecycle)
         binding.viewPager.offscreenPageLimit = 1
         return binding.root

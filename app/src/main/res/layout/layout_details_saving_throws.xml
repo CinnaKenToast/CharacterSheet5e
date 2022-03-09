@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.shipsco.charactersheet.CharacterViewModel"/>
+    </data>
+
+    <!-- Saving Throws -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/saving_throws_no_bubbles"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="H, 1148:1021"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.shipsco.charactersheet.views.CSCheckbox
+            android:id="@+id/strengthSaveButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+            android:checked="@={viewModel.currentCharacter.strengthSaveChecked}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.083"
+            app:layout_constraintHorizontal_bias="0.072"
+            app:layout_constraintHeight_percent="0.07"
+            app:layout_constraintWidth_percent="0.08" />
+
+        <com.shipsco.charactersheet.views.CSTextView
+            android:id="@+id/strengthSave"
+            android:contentDescription="Strength Save"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:inputType="phone"
+            android:text='@={viewModel.currentCharacter.strengthSave}'
+            app:isBonus="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.05"
+            app:layout_constraintHorizontal_bias="0.2"
+            app:layout_constraintHeight_percent="0.1"
+            app:layout_constraintWidth_percent="0.13" />
+
+        <com.shipsco.charactersheet.views.CSCheckbox
+            android:id="@+id/dexteritySaveButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+            android:checked="@={viewModel.currentCharacter.dexteritySaveChecked}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.225"
+            app:layout_constraintHorizontal_bias="0.072"
+            app:layout_constraintHeight_percent="0.07"
+            app:layout_constraintWidth_percent="0.08" />
+
+        <com.shipsco.charactersheet.views.CSTextView
+            android:id="@+id/dexteritySave"
+            android:contentDescription="Dexterity Save"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:text='@={viewModel.currentCharacter.dexteritySave}'
+            app:isBonus="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.2"
+            app:layout_constraintHorizontal_bias="0.2"
+            app:layout_constraintHeight_percent="0.1"
+            app:layout_constraintWidth_percent="0.13" />
+
+        <com.shipsco.charactersheet.views.CSCheckbox
+            android:id="@+id/constitutionSaveButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+            android:checked="@={viewModel.currentCharacter.constitutionSaveChecked}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.366"
+            app:layout_constraintHorizontal_bias="0.072"
+            app:layout_constraintHeight_percent="0.07"
+            app:layout_constraintWidth_percent="0.08" />
+
+        <com.shipsco.charactersheet.views.CSTextView
+            android:id="@+id/constitutionSave"
+            android:contentDescription="Constitution Save"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:text='@={viewModel.currentCharacter.constitutionSave}'
+            app:isBonus="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.35"
+            app:layout_constraintHorizontal_bias="0.2"
+            app:layout_constraintHeight_percent="0.1"
+            app:layout_constraintWidth_percent="0.13" />
+
+        <com.shipsco.charactersheet.views.CSCheckbox
+            android:id="@+id/intelligenceSaveButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+            android:checked="@={viewModel.currentCharacter.intelligenceSaveChecked}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.509"
+            app:layout_constraintHorizontal_bias="0.072"
+            app:layout_constraintHeight_percent="0.07"
+            app:layout_constraintWidth_percent="0.08" />
+
+        <com.shipsco.charactersheet.views.CSTextView
+            android:id="@+id/intelligenceSave"
+            android:contentDescription="Intelligence Save"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:text='@={viewModel.currentCharacter.intelligenceSave}'
+            app:isBonus="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5"
+            app:layout_constraintHorizontal_bias="0.2"
+            app:layout_constraintHeight_percent="0.1"
+            app:layout_constraintWidth_percent="0.13" />
+
+        <com.shipsco.charactersheet.views.CSCheckbox
+            android:id="@+id/wisdomSaveButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+            android:checked="@={viewModel.currentCharacter.wisdomSaveChecked}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.651"
+            app:layout_constraintHorizontal_bias="0.072"
+            app:layout_constraintHeight_percent="0.07"
+            app:layout_constraintWidth_percent="0.08" />
+
+        <com.shipsco.charactersheet.views.CSTextView
+            android:id="@+id/wisdomSave"
+            android:contentDescription="Wisdom Save"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:text='@={viewModel.currentCharacter.wisdomSave}'
+            app:isBonus="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.64"
+            app:layout_constraintHorizontal_bias="0.2"
+            app:layout_constraintHeight_percent="0.1"
+            app:layout_constraintWidth_percent="0.13" />
+
+        <com.shipsco.charactersheet.views.CSCheckbox
+            android:id="@+id/charismaSaveButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+            android:checked="@={viewModel.currentCharacter.charismaSaveChecked}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.792"
+            app:layout_constraintHorizontal_bias="0.072"
+            app:layout_constraintHeight_percent="0.07"
+            app:layout_constraintWidth_percent="0.08" />
+
+        <com.shipsco.charactersheet.views.CSTextView
+            android:id="@+id/charismaSave"
+            android:contentDescription="Charisma Save"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:text='@={viewModel.currentCharacter.charismaSave}'
+            app:isBonus="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.79"
+            app:layout_constraintHorizontal_bias="0.2"
+            app:layout_constraintHeight_percent="0.1"
+            app:layout_constraintWidth_percent="0.13" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

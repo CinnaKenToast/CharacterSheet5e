@@ -11,17 +11,21 @@ import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.shipsco.charactersheet.data.character.AttackSpell
 import com.shipsco.charactersheet.data.character.Character
 import com.shipsco.charactersheet.data.character.blankCharacter
 import com.shipsco.charactersheet.databinding.FragmentDetailsBinding
+import com.shipsco.charactersheet.databinding.FragmentNewDetailsBinding
 import com.shipsco.charactersheet.utils.toJsonString
 import com.shipsco.charactersheet.views.AttackSpellsAdapter
+import com.shipsco.charactersheet.views.DetailsFragmentAdapter
 import kotlinx.coroutines.runBlocking
 
-class DetailsFragment : Fragment(), ManualEditListener {
+class NewDetailsFragment : Fragment(), ManualEditListener {
 
-    private lateinit var binding: FragmentDetailsBinding
+    private lateinit var binding: FragmentNewDetailsBinding
     private lateinit var characterViewModel: CharacterViewModel
     private lateinit var currentCharacter: Character
 
@@ -39,8 +43,7 @@ class DetailsFragment : Fragment(), ManualEditListener {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentDetailsBinding.inflate(layoutInflater)
-        binding.viewModel = characterViewModel
+        binding = FragmentNewDetailsBinding.inflate(layoutInflater)
         currentCharacter = characterViewModel.currentCharacter.value!!
         return binding.root
     }
@@ -86,8 +89,8 @@ class DetailsFragment : Fragment(), ManualEditListener {
     }
 
     private fun initRecyclerView() {
-        val recyclerView = binding.attackSpellsRecyclerView
-        val adapter = AttackSpellsAdapter(currentCharacter.attackSpells, characterViewModel)
+        val recyclerView = binding.detailsRecyclerView
+        val adapter = DetailsFragmentAdapter(characterViewModel)
         recyclerView.adapter = adapter
     }
 

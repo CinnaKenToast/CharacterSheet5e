@@ -28,16 +28,6 @@ class AttackSpellsAdapter(private val attackSpells: MutableList<AttackSpell>, va
     }
 
     class ViewHolder(val binding: LayoutAttackSpellRecyclerViewBinding): RecyclerView.ViewHolder(binding.root) {
-        val nameTextView: CSTextView = binding.spellAttackName
-        val bonusTextView: CSTextView = binding.spellAttackBonus
-        val damageTypeTextView: CSTextView = binding.spellAttackType
-
-        fun getAttackSpell(): AttackSpell {
-            return AttackSpell(
-                nameTextView.text.toString(), bonusTextView.text.toString(), damageTypeTextView.text.toString()
-            )
-        }
-
         fun bind(viewModel: CharacterViewModel, position: Int) {
             binding.setVariable(BR.viewModel, viewModel)
             binding.setVariable(BR.position, position)

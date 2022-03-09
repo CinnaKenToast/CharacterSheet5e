@@ -1,0 +1,607 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.shipsco.charactersheet.CharacterViewModel"/>
+    </data>
+
+    <!-- Skills -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/skills_no_bubbles"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="H, 2297:5369"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.shipsco.charactersheet.views.CSCheckbox
+            android:id="@+id/acrobaticsButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+            android:checked="@={viewModel.currentCharacter.acrobaticsChecked}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.044"
+            app:layout_constraintHorizontal_bias="0.072"
+            app:layout_constraintHeight_percent="0.03"
+            app:layout_constraintWidth_percent="0.08" />
+
+        <com.shipsco.charactersheet.views.CSTextView
+            android:id="@+id/acrobatics"
+            android:contentDescription="Acrobatics (Dex) Bonus"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:autoSizeTextType="uniform"
+            android:gravity="center"
+            android:text='@={viewModel.currentCharacter.acrobatics}'
+            app:isBonus="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.035"
+            app:layout_constraintHorizontal_bias="0.2"
+            app:layout_constraintHeight_percent="0.04"
+            app:layout_constraintWidth_percent="0.12" />
+
+        <com.shipsco.charactersheet.views.CSCheckbox
+            android:id="@+id/animalHandlingButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+            android:checked="@={viewModel.currentCharacter.animalHandlingChecked}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.096"
+            app:layout_constraintHorizontal_bias="0.072"
+            app:layout_constraintHeight_percent="0.03"
+            app:layout_constraintWidth_percent="0.08" />
+
+        <com.shipsco.charactersheet.views.CSTextView
+            android:id="@+id/animalHandling"
+            android:contentDescription="Animal Handling (Wis) Bonus"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:text='@={viewModel.currentCharacter.animalHandling}'
+            app:isBonus="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.085"
+            app:layout_constraintHorizontal_bias="0.2"
+            app:layout_constraintHeight_percent="0.04"
+            app:layout_constraintWidth_percent="0.12" />
+
+        <com.shipsco.charactersheet.views.CSCheckbox
+            android:id="@+id/arcanaButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+            android:checked="@={viewModel.currentCharacter.arcanaChecked}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.148"
+            app:layout_constraintHorizontal_bias="0.072"
+            app:layout_constraintHeight_percent="0.03"
+            app:layout_constraintWidth_percent="0.08" />
+
+        <com.shipsco.charactersheet.views.CSTextView
+            android:id="@+id/arcana"
+            android:contentDescription="Arcana (Int) Bonus"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:text='@={viewModel.currentCharacter.arcana}'
+            app:isBonus="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.14"
+            app:layout_constraintHorizontal_bias="0.2"
+            app:layout_constraintHeight_percent="0.04"
+            app:layout_constraintWidth_percent="0.12" />
+
+        <com.shipsco.charactersheet.views.CSCheckbox
+            android:id="@+id/athleticsButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+            android:checked="@={viewModel.currentCharacter.athleticsChecked}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.2"
+            app:layout_constraintHorizontal_bias="0.072"
+            app:layout_constraintHeight_percent="0.03"
+            app:layout_constraintWidth_percent="0.08" />
+
+        <com.shipsco.charactersheet.views.CSTextView
+            android:id="@+id/athletics"
+            android:contentDescription="Athletics (Str) Bonus"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:text='@={viewModel.currentCharacter.athletics}'
+            app:isBonus="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.19"
+            app:layout_constraintHorizontal_bias="0.2"
+            app:layout_constraintHeight_percent="0.04"
+            app:layout_constraintWidth_percent="0.12" />
+
+        <com.shipsco.charactersheet.views.CSCheckbox
+            android:id="@+id/deceptionButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+            android:checked="@={viewModel.currentCharacter.deceptionChecked}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.252"
+            app:layout_constraintHorizontal_bias="0.072"
+            app:layout_constraintHeight_percent="0.03"
+            app:layout_constraintWidth_percent="0.08" />
+
+        <com.shipsco.charactersheet.views.CSTextView
+            android:id="@+id/deception"
+            android:contentDescription="Deception (Cha) Bonus"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:text='@={viewModel.currentCharacter.deception}'
+            app:isBonus="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.243"
+            app:layout_constraintHorizontal_bias="0.2"
+            app:layout_constraintHeight_percent="0.04"
+            app:layout_constraintWidth_percent="0.12" />
+
+        <com.shipsco.charactersheet.views.CSCheckbox
+            android:id="@+id/historyButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+            android:checked="@={viewModel.currentCharacter.historyChecked}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.303"
+            app:layout_constraintHorizontal_bias="0.072"
+            app:layout_constraintHeight_percent="0.03"
+            app:layout_constraintWidth_percent="0.08" />
+
+        <com.shipsco.charactersheet.views.CSTextView
+            android:id="@+id/history"
+            android:contentDescription="History (Int) Bonus"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:text='@={viewModel.currentCharacter.history}'
+            app:isBonus="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.294"
+            app:layout_constraintHorizontal_bias="0.2"
+            app:layout_constraintHeight_percent="0.04"
+            app:layout_constraintWidth_percent="0.12" />
+
+        <com.shipsco.charactersheet.views.CSCheckbox
+            android:id="@+id/insightButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+            android:checked="@={viewModel.currentCharacter.insightChecked}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.355"
+            app:layout_constraintHorizontal_bias="0.072"
+            app:layout_constraintHeight_percent="0.03"
+            app:layout_constraintWidth_percent="0.08" />
+
+        <com.shipsco.charactersheet.views.CSTextView
+            android:id="@+id/insight"
+            android:contentDescription="Insight (Wis) Bonus"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:text='@={viewModel.currentCharacter.insight}'
+            app:isBonus="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.346"
+            app:layout_constraintHorizontal_bias="0.2"
+            app:layout_constraintHeight_percent="0.04"
+            app:layout_constraintWidth_percent="0.12" />
+
+        <com.shipsco.charactersheet.views.CSCheckbox
+            android:id="@+id/intimidationButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+            android:checked="@={viewModel.currentCharacter.intimidationChecked}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.407"
+            app:layout_constraintHorizontal_bias="0.072"
+            app:layout_constraintHeight_percent="0.03"
+            app:layout_constraintWidth_percent="0.08" />
+
+        <com.shipsco.charactersheet.views.CSTextView
+            android:id="@+id/intimidation"
+            android:contentDescription="Intimidation (Cha) Bonus"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:text='@={viewModel.currentCharacter.intimidation}'
+            app:isBonus="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.4"
+            app:layout_constraintHorizontal_bias="0.2"
+            app:layout_constraintHeight_percent="0.04"
+            app:layout_constraintWidth_percent="0.12" />
+
+        <com.shipsco.charactersheet.views.CSCheckbox
+            android:id="@+id/investigationButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+            android:checked="@={viewModel.currentCharacter.investigationChecked}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.4585"
+            app:layout_constraintHorizontal_bias="0.072"
+            app:layout_constraintHeight_percent="0.03"
+            app:layout_constraintWidth_percent="0.08" />
+
+
+        <com.shipsco.charactersheet.views.CSTextView
+            android:id="@+id/investigation"
+            android:contentDescription="Investigation (Int) Bonus"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:text='@={viewModel.currentCharacter.investigation}'
+            app:isBonus="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.452"
+            app:layout_constraintHorizontal_bias="0.2"
+            app:layout_constraintHeight_percent="0.04"
+            app:layout_constraintWidth_percent="0.12" />
+
+        <com.shipsco.charactersheet.views.CSCheckbox
+            android:id="@+id/medicineButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+            android:checked="@={viewModel.currentCharacter.medicineChecked}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.511"
+            app:layout_constraintHorizontal_bias="0.072"
+            app:layout_constraintHeight_percent="0.03"
+            app:layout_constraintWidth_percent="0.08" />
+
+        <com.shipsco.charactersheet.views.CSTextView
+            android:id="@+id/medicine"
+            android:contentDescription="Medicine (Wis) Bonus"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:autoSizeTextType="uniform"
+            android:gravity="center"
+            android:text='@={viewModel.currentCharacter.medicine}'
+            app:isBonus="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.505"
+            app:layout_constraintHorizontal_bias="0.2"
+            app:layout_constraintHeight_percent="0.04"
+            app:layout_constraintWidth_percent="0.12" />
+
+        <com.shipsco.charactersheet.views.CSCheckbox
+            android:id="@+id/natureButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+            android:checked="@={viewModel.currentCharacter.natureChecked}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.562"
+            app:layout_constraintHorizontal_bias="0.072"
+            app:layout_constraintHeight_percent="0.03"
+            app:layout_constraintWidth_percent="0.08" />
+
+        <com.shipsco.charactersheet.views.CSTextView
+            android:id="@+id/nature"
+            android:contentDescription="Nature (Int) Bonus"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:autoSizeTextType="uniform"
+            android:gravity="center"
+            android:text='@={viewModel.currentCharacter.nature}'
+            app:isBonus="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.557"
+            app:layout_constraintHorizontal_bias="0.2"
+            app:layout_constraintHeight_percent="0.04"
+            app:layout_constraintWidth_percent="0.12" />
+
+        <com.shipsco.charactersheet.views.CSCheckbox
+            android:id="@+id/perceptionButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+            android:checked="@={viewModel.currentCharacter.perceptionChecked}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.614"
+            app:layout_constraintHorizontal_bias="0.072"
+            app:layout_constraintHeight_percent="0.03"
+            app:layout_constraintWidth_percent="0.08" />
+
+        <com.shipsco.charactersheet.views.CSTextView
+            android:id="@+id/perception"
+            android:contentDescription="Perception (Wis) Bonus"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:text='@={viewModel.currentCharacter.perception}'
+            app:isBonus="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.61"
+            app:layout_constraintHorizontal_bias="0.2"
+            app:layout_constraintHeight_percent="0.04"
+            app:layout_constraintWidth_percent="0.12" />
+
+        <com.shipsco.charactersheet.views.CSCheckbox
+            android:id="@+id/performanceButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+            android:checked="@={viewModel.currentCharacter.performanceChecked}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.666"
+            app:layout_constraintHorizontal_bias="0.072"
+            app:layout_constraintHeight_percent="0.03"
+            app:layout_constraintWidth_percent="0.08" />
+
+        <com.shipsco.charactersheet.views.CSTextView
+            android:id="@+id/performance"
+            android:contentDescription="Performance (Cha) Bonus"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:text='@={viewModel.currentCharacter.performance}'
+            app:isBonus="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.66"
+            app:layout_constraintHorizontal_bias="0.2"
+            app:layout_constraintHeight_percent="0.04"
+            app:layout_constraintWidth_percent="0.12" />
+
+        <com.shipsco.charactersheet.views.CSCheckbox
+            android:id="@+id/persuasionButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+            android:checked="@={viewModel.currentCharacter.persuasionChecked}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.718"
+            app:layout_constraintHorizontal_bias="0.072"
+            app:layout_constraintHeight_percent="0.03"
+            app:layout_constraintWidth_percent="0.08" />
+
+        <com.shipsco.charactersheet.views.CSTextView
+            android:id="@+id/persuasion"
+            android:contentDescription="Persuasion (Cha) Bonus"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:text='@={viewModel.currentCharacter.persuasion}'
+            app:isBonus="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.714"
+            app:layout_constraintHorizontal_bias="0.2"
+            app:layout_constraintHeight_percent="0.04"
+            app:layout_constraintWidth_percent="0.12" />
+
+        <com.shipsco.charactersheet.views.CSCheckbox
+            android:id="@+id/religionButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+            android:checked="@={viewModel.currentCharacter.religionChecked}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.77"
+            app:layout_constraintHorizontal_bias="0.072"
+            app:layout_constraintHeight_percent="0.03"
+            app:layout_constraintWidth_percent="0.08" />
+
+        <com.shipsco.charactersheet.views.CSTextView
+            android:id="@+id/religion"
+            android:contentDescription="Religion (Wis) Bonus"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:text='@={viewModel.currentCharacter.religion}'
+            app:isBonus="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.767"
+            app:layout_constraintHorizontal_bias="0.2"
+            app:layout_constraintHeight_percent="0.04"
+            app:layout_constraintWidth_percent="0.12" />
+
+        <com.shipsco.charactersheet.views.CSCheckbox
+            android:id="@+id/sleightOfHandButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+            android:checked="@={viewModel.currentCharacter.sleightOfHandChecked}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.822"
+            app:layout_constraintHorizontal_bias="0.072"
+            app:layout_constraintHeight_percent="0.03"
+            app:layout_constraintWidth_percent="0.08" />
+
+        <com.shipsco.charactersheet.views.CSTextView
+            android:id="@+id/sleightOfHand"
+            android:contentDescription="Sleight of Hand (Dex) Bonus"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:text='@={viewModel.currentCharacter.sleightOfHand}'
+            app:isBonus="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.82"
+            app:layout_constraintHorizontal_bias="0.2"
+            app:layout_constraintHeight_percent="0.04"
+            app:layout_constraintWidth_percent="0.12" />
+
+        <com.shipsco.charactersheet.views.CSCheckbox
+            android:id="@+id/stealthButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+            android:checked="@={viewModel.currentCharacter.stealthChecked}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.874"
+            app:layout_constraintHorizontal_bias="0.072"
+            app:layout_constraintHeight_percent="0.03"
+            app:layout_constraintWidth_percent="0.08" />
+
+        <com.shipsco.charactersheet.views.CSTextView
+            android:id="@+id/stealth"
+            android:contentDescription="Stealth (Dex) Bonus"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:text='@={viewModel.currentCharacter.stealth}'
+            app:isBonus="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.87"
+            app:layout_constraintHorizontal_bias="0.2"
+            app:layout_constraintHeight_percent="0.04"
+            app:layout_constraintWidth_percent="0.12" />
+
+        <com.shipsco.charactersheet.views.CSCheckbox
+            android:id="@+id/survivalButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+            android:checked="@={viewModel.currentCharacter.survivalChecked}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.925"
+            app:layout_constraintHorizontal_bias="0.072"
+            app:layout_constraintHeight_percent="0.03"
+            app:layout_constraintWidth_percent="0.08" />
+
+        <com.shipsco.charactersheet.views.CSTextView
+            android:id="@+id/survival"
+            android:contentDescription="Survival (Wis) Bonus"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:text='@={viewModel.currentCharacter.survival}'
+            app:isBonus="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.925"
+            app:layout_constraintHorizontal_bias="0.2"
+            app:layout_constraintHeight_percent="0.04"
+            app:layout_constraintWidth_percent="0.12" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

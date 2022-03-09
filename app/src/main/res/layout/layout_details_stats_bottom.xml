@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.shipsco.charactersheet.CharacterViewModel"/>
+    </data>
+
+    <!-- Stats -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <!-- Intelligence -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:src="@drawable/intelligence"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="H, 532:619"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.shipsco.charactersheet.views.CSTextView
+                android:id="@+id/intelligence"
+                android:contentDescription="Intelligence Score"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:text='@={viewModel.currentCharacter.intelligence}'
+                app:isNumber="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.3"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHeight_percent="0.5"
+                app:layout_constraintWidth_percent="0.8" />
+
+            <com.shipsco.charactersheet.views.CSTextView
+                android:id="@+id/intelligenceBonus"
+                android:contentDescription="Intelligence Bonus"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:text='@={viewModel.currentCharacter.intelligenceBonus}'
+                app:isBonus="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.93"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHeight_percent="0.25"
+                app:layout_constraintWidth_percent="0.4" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <Space
+            android:layout_width="8dp"
+            android:layout_height="wrap_content"/>
+        <!-- Wisdom -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:src="@drawable/wisdom"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="H, 152:177"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.shipsco.charactersheet.views.CSTextView
+                android:id="@+id/wisdom"
+                android:contentDescription="Wisdom Score"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:text='@={viewModel.currentCharacter.wisdom}'
+                app:isNumber="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.3"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHeight_percent="0.5"
+                app:layout_constraintWidth_percent="0.8" />
+
+            <com.shipsco.charactersheet.views.CSTextView
+                android:id="@+id/wisdomBonus"
+                android:contentDescription="Wisdom Bonus"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:text='@={viewModel.currentCharacter.wisdomBonus}'
+                app:isBonus="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.93"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHeight_percent="0.25"
+                app:layout_constraintWidth_percent="0.4" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <Space
+            android:layout_width="8dp"
+            android:layout_height="wrap_content"/>
+        <!-- Charisma -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:src="@drawable/charisma"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="H, 1064:1247"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.shipsco.charactersheet.views.CSTextView
+                android:id="@+id/charisma"
+                android:contentDescription="Charisma Score"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:text='@={viewModel.currentCharacter.charisma}'
+                app:isNumber="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.3"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHeight_percent="0.5"
+                app:layout_constraintWidth_percent="0.8" />
+
+            <com.shipsco.charactersheet.views.CSTextView
+                android:id="@+id/charismaBonus"
+                android:contentDescription="Charisma Bonus"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:text='@={viewModel.currentCharacter.charismaBonus}'
+                app:isBonus="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.93"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHeight_percent="0.25"
+                app:layout_constraintWidth_percent="0.4" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</layout>
