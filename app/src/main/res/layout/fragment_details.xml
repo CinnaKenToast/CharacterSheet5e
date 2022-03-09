@@ -468,12 +468,11 @@
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toTopOf="parent" />
 
-                            <CheckBox
+                            <com.shipsco.charactersheet.views.CSCheckbox
                                 android:id="@+id/successSaveButton1"
                                 android:layout_width="0dp"
                                 android:layout_height="0dp"
                                 style="@style/Widget.AppCompat.CompoundButton.RadioButton"
-                                android:buttonTint="@color/black"
                                 android:checked="@={viewModel.currentCharacter.successDeathSave1}"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
@@ -484,12 +483,11 @@
                                 app:layout_constraintVertical_bias="0.175"
                                 app:layout_constraintWidth_percent="0.17" />
 
-                            <CheckBox
+                            <com.shipsco.charactersheet.views.CSCheckbox
                                 android:id="@+id/successSaveButton2"
                                 android:layout_width="0dp"
                                 android:layout_height="0dp"
                                 style="@style/Widget.AppCompat.CompoundButton.RadioButton"
-                                android:buttonTint="@color/black"
                                 android:checked="@={viewModel.currentCharacter.successDeathSave2}"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
@@ -500,12 +498,11 @@
                                 app:layout_constraintVertical_bias="0.175"
                                 app:layout_constraintWidth_percent="0.17" />
 
-                            <CheckBox
+                            <com.shipsco.charactersheet.views.CSCheckbox
                                 android:id="@+id/successSaveButton3"
                                 android:layout_width="0dp"
                                 android:layout_height="0dp"
                                 style="@style/Widget.AppCompat.CompoundButton.RadioButton"
-                                android:buttonTint="@color/black"
                                 android:checked="@={viewModel.currentCharacter.successDeathSave3}"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
@@ -516,12 +513,11 @@
                                 app:layout_constraintVertical_bias="0.175"
                                 app:layout_constraintWidth_percent="0.17" />
 
-                            <CheckBox
+                            <com.shipsco.charactersheet.views.CSCheckbox
                                 android:id="@+id/failSaveButton1"
                                 android:layout_width="0dp"
                                 android:layout_height="0dp"
                                 style="@style/Widget.AppCompat.CompoundButton.RadioButton"
-                                android:buttonTint="@color/black"
                                 android:checked="@={viewModel.currentCharacter.failDeathSave1}"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
@@ -532,12 +528,11 @@
                                 app:layout_constraintVertical_bias="0.555"
                                 app:layout_constraintWidth_percent="0.17" />
 
-                            <CheckBox
+                            <com.shipsco.charactersheet.views.CSCheckbox
                                 android:id="@+id/failSaveButton2"
                                 android:layout_width="0dp"
                                 android:layout_height="0dp"
                                 style="@style/Widget.AppCompat.CompoundButton.RadioButton"
-                                android:buttonTint="@color/black"
                                 android:checked="@={viewModel.currentCharacter.failDeathSave2}"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
@@ -548,12 +543,11 @@
                                 app:layout_constraintVertical_bias="0.555"
                                 app:layout_constraintWidth_percent="0.17" />
 
-                            <CheckBox
+                            <com.shipsco.charactersheet.views.CSCheckbox
                                 android:id="@+id/failSaveButton3"
                                 android:layout_width="0dp"
                                 android:layout_height="0dp"
                                 style="@style/Widget.AppCompat.CompoundButton.RadioButton"
-                                android:buttonTint="@color/black"
                                 android:checked="@={viewModel.currentCharacter.failDeathSave3}"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
@@ -990,12 +984,11 @@
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
 
-                        <CheckBox
+                        <com.shipsco.charactersheet.views.CSCheckbox
                             android:id="@+id/strengthSaveButton"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             style="@style/Widget.AppCompat.CompoundButton.RadioButton"
-                            android:buttonTint="@color/black"
                             android:checked="@={viewModel.currentCharacter.strengthSaveChecked}"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -1024,12 +1017,11 @@
                             app:layout_constraintHeight_percent="0.1"
                             app:layout_constraintWidth_percent="0.13" />
 
-                        <CheckBox
+                        <com.shipsco.charactersheet.views.CSCheckbox
                             android:id="@+id/dexteritySaveButton"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             style="@style/Widget.AppCompat.CompoundButton.RadioButton"
-                            android:buttonTint="@color/black"
                             android:checked="@={viewModel.currentCharacter.dexteritySaveChecked}"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -1057,12 +1049,11 @@
                             app:layout_constraintHeight_percent="0.1"
                             app:layout_constraintWidth_percent="0.13" />
 
-                        <CheckBox
+                        <com.shipsco.charactersheet.views.CSCheckbox
                             android:id="@+id/constitutionSaveButton"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             style="@style/Widget.AppCompat.CompoundButton.RadioButton"
-                            android:buttonTint="@color/black"
                             android:checked="@={viewModel.currentCharacter.constitutionSaveChecked}"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -1090,12 +1081,11 @@
                             app:layout_constraintHeight_percent="0.1"
                             app:layout_constraintWidth_percent="0.13" />
 
-                        <CheckBox
+                        <com.shipsco.charactersheet.views.CSCheckbox
                             android:id="@+id/intelligenceSaveButton"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             style="@style/Widget.AppCompat.CompoundButton.RadioButton"
-                            android:buttonTint="@color/black"
                             android:checked="@={viewModel.currentCharacter.intelligenceSaveChecked}"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -1123,12 +1113,11 @@
                             app:layout_constraintHeight_percent="0.1"
                             app:layout_constraintWidth_percent="0.13" />
 
-                        <CheckBox
+                        <com.shipsco.charactersheet.views.CSCheckbox
                             android:id="@+id/wisdomSaveButton"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             style="@style/Widget.AppCompat.CompoundButton.RadioButton"
-                            android:buttonTint="@color/black"
                             android:checked="@={viewModel.currentCharacter.wisdomSaveChecked}"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -1156,12 +1145,11 @@
                             app:layout_constraintHeight_percent="0.1"
                             app:layout_constraintWidth_percent="0.13" />
 
-                        <CheckBox
+                        <com.shipsco.charactersheet.views.CSCheckbox
                             android:id="@+id/charismaSaveButton"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             style="@style/Widget.AppCompat.CompoundButton.RadioButton"
-                            android:buttonTint="@color/black"
                             android:checked="@={viewModel.currentCharacter.charismaSaveChecked}"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -1207,12 +1195,11 @@
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
 
-                        <CheckBox
+                        <com.shipsco.charactersheet.views.CSCheckbox
                             android:id="@+id/acrobaticsButton"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             style="@style/Widget.AppCompat.CompoundButton.RadioButton"
-                            android:buttonTint="@color/black"
                             android:checked="@={viewModel.currentCharacter.acrobaticsChecked}"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -1241,12 +1228,11 @@
                             app:layout_constraintHeight_percent="0.04"
                             app:layout_constraintWidth_percent="0.12" />
 
-                        <CheckBox
+                        <com.shipsco.charactersheet.views.CSCheckbox
                             android:id="@+id/animalHandlingButton"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             style="@style/Widget.AppCompat.CompoundButton.RadioButton"
-                            android:buttonTint="@color/black"
                             android:checked="@={viewModel.currentCharacter.animalHandlingChecked}"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -1274,12 +1260,11 @@
                             app:layout_constraintHeight_percent="0.04"
                             app:layout_constraintWidth_percent="0.12" />
 
-                        <CheckBox
+                        <com.shipsco.charactersheet.views.CSCheckbox
                             android:id="@+id/arcanaButton"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             style="@style/Widget.AppCompat.CompoundButton.RadioButton"
-                            android:buttonTint="@color/black"
                             android:checked="@={viewModel.currentCharacter.arcanaChecked}"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -1307,12 +1292,11 @@
                             app:layout_constraintHeight_percent="0.04"
                             app:layout_constraintWidth_percent="0.12" />
 
-                        <CheckBox
+                        <com.shipsco.charactersheet.views.CSCheckbox
                             android:id="@+id/athleticsButton"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             style="@style/Widget.AppCompat.CompoundButton.RadioButton"
-                            android:buttonTint="@color/black"
                             android:checked="@={viewModel.currentCharacter.athleticsChecked}"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -1340,12 +1324,11 @@
                             app:layout_constraintHeight_percent="0.04"
                             app:layout_constraintWidth_percent="0.12" />
 
-                        <CheckBox
+                        <com.shipsco.charactersheet.views.CSCheckbox
                             android:id="@+id/deceptionButton"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             style="@style/Widget.AppCompat.CompoundButton.RadioButton"
-                            android:buttonTint="@color/black"
                             android:checked="@={viewModel.currentCharacter.deceptionChecked}"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -1373,12 +1356,11 @@
                             app:layout_constraintHeight_percent="0.04"
                             app:layout_constraintWidth_percent="0.12" />
 
-                        <CheckBox
+                        <com.shipsco.charactersheet.views.CSCheckbox
                             android:id="@+id/historyButton"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             style="@style/Widget.AppCompat.CompoundButton.RadioButton"
-                            android:buttonTint="@color/black"
                             android:checked="@={viewModel.currentCharacter.historyChecked}"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -1406,12 +1388,11 @@
                             app:layout_constraintHeight_percent="0.04"
                             app:layout_constraintWidth_percent="0.12" />
 
-                        <CheckBox
+                        <com.shipsco.charactersheet.views.CSCheckbox
                             android:id="@+id/insightButton"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             style="@style/Widget.AppCompat.CompoundButton.RadioButton"
-                            android:buttonTint="@color/black"
                             android:checked="@={viewModel.currentCharacter.insightChecked}"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -1439,12 +1420,11 @@
                             app:layout_constraintHeight_percent="0.04"
                             app:layout_constraintWidth_percent="0.12" />
 
-                        <CheckBox
+                        <com.shipsco.charactersheet.views.CSCheckbox
                             android:id="@+id/intimidationButton"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             style="@style/Widget.AppCompat.CompoundButton.RadioButton"
-                            android:buttonTint="@color/black"
                             android:checked="@={viewModel.currentCharacter.intimidationChecked}"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -1472,12 +1452,11 @@
                             app:layout_constraintHeight_percent="0.04"
                             app:layout_constraintWidth_percent="0.12" />
 
-                        <CheckBox
+                        <com.shipsco.charactersheet.views.CSCheckbox
                             android:id="@+id/investigationButton"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             style="@style/Widget.AppCompat.CompoundButton.RadioButton"
-                            android:buttonTint="@color/black"
                             android:checked="@={viewModel.currentCharacter.investigationChecked}"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -1506,12 +1485,11 @@
                             app:layout_constraintHeight_percent="0.04"
                             app:layout_constraintWidth_percent="0.12" />
 
-                        <CheckBox
+                        <com.shipsco.charactersheet.views.CSCheckbox
                             android:id="@+id/medicineButton"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             style="@style/Widget.AppCompat.CompoundButton.RadioButton"
-                            android:buttonTint="@color/black"
                             android:checked="@={viewModel.currentCharacter.medicineChecked}"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -1540,12 +1518,11 @@
                             app:layout_constraintHeight_percent="0.04"
                             app:layout_constraintWidth_percent="0.12" />
 
-                        <CheckBox
+                        <com.shipsco.charactersheet.views.CSCheckbox
                             android:id="@+id/natureButton"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             style="@style/Widget.AppCompat.CompoundButton.RadioButton"
-                            android:buttonTint="@color/black"
                             android:checked="@={viewModel.currentCharacter.natureChecked}"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -1574,12 +1551,11 @@
                             app:layout_constraintHeight_percent="0.04"
                             app:layout_constraintWidth_percent="0.12" />
 
-                        <CheckBox
+                        <com.shipsco.charactersheet.views.CSCheckbox
                             android:id="@+id/perceptionButton"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             style="@style/Widget.AppCompat.CompoundButton.RadioButton"
-                            android:buttonTint="@color/black"
                             android:checked="@={viewModel.currentCharacter.perceptionChecked}"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -1607,12 +1583,11 @@
                             app:layout_constraintHeight_percent="0.04"
                             app:layout_constraintWidth_percent="0.12" />
 
-                        <CheckBox
+                        <com.shipsco.charactersheet.views.CSCheckbox
                             android:id="@+id/performanceButton"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             style="@style/Widget.AppCompat.CompoundButton.RadioButton"
-                            android:buttonTint="@color/black"
                             android:checked="@={viewModel.currentCharacter.performanceChecked}"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -1640,12 +1615,11 @@
                             app:layout_constraintHeight_percent="0.04"
                             app:layout_constraintWidth_percent="0.12" />
 
-                        <CheckBox
+                        <com.shipsco.charactersheet.views.CSCheckbox
                             android:id="@+id/persuasionButton"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             style="@style/Widget.AppCompat.CompoundButton.RadioButton"
-                            android:buttonTint="@color/black"
                             android:checked="@={viewModel.currentCharacter.persuasionChecked}"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -1673,12 +1647,11 @@
                             app:layout_constraintHeight_percent="0.04"
                             app:layout_constraintWidth_percent="0.12" />
 
-                        <CheckBox
+                        <com.shipsco.charactersheet.views.CSCheckbox
                             android:id="@+id/religionButton"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             style="@style/Widget.AppCompat.CompoundButton.RadioButton"
-                            android:buttonTint="@color/black"
                             android:checked="@={viewModel.currentCharacter.religionChecked}"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -1706,12 +1679,11 @@
                             app:layout_constraintHeight_percent="0.04"
                             app:layout_constraintWidth_percent="0.12" />
 
-                        <CheckBox
+                        <com.shipsco.charactersheet.views.CSCheckbox
                             android:id="@+id/sleightOfHandButton"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             style="@style/Widget.AppCompat.CompoundButton.RadioButton"
-                            android:buttonTint="@color/black"
                             android:checked="@={viewModel.currentCharacter.sleightOfHandChecked}"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -1739,12 +1711,11 @@
                             app:layout_constraintHeight_percent="0.04"
                             app:layout_constraintWidth_percent="0.12" />
 
-                        <CheckBox
+                        <com.shipsco.charactersheet.views.CSCheckbox
                             android:id="@+id/stealthButton"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             style="@style/Widget.AppCompat.CompoundButton.RadioButton"
-                            android:buttonTint="@color/black"
                             android:checked="@={viewModel.currentCharacter.stealthChecked}"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -1772,12 +1743,11 @@
                             app:layout_constraintHeight_percent="0.04"
                             app:layout_constraintWidth_percent="0.12" />
 
-                        <CheckBox
+                        <com.shipsco.charactersheet.views.CSCheckbox
                             android:id="@+id/survivalButton"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             style="@style/Widget.AppCompat.CompoundButton.RadioButton"
-                            android:buttonTint="@color/black"
                             android:checked="@={viewModel.currentCharacter.survivalChecked}"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"

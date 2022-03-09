@@ -21,7 +21,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_weight="1000">
-            <CheckBox
+            <com.shipsco.charactersheet.views.CSCheckbox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 style="@style/Widget.AppCompat.CompoundButton.RadioButton"

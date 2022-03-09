@@ -5,12 +5,12 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.shipsco.charactersheet.BR
 import com.shipsco.charactersheet.CharacterViewModel
-import com.shipsco.charactersheet.TextChangedEventListener
+import com.shipsco.charactersheet.ManualEditListener
 import com.shipsco.charactersheet.data.character.AttackSpell
 import com.shipsco.charactersheet.databinding.LayoutAttackSpellRecyclerViewBinding
 
 class AttackSpellsAdapter(private val attackSpells: MutableList<AttackSpell>, val viewModel: CharacterViewModel):
-    RecyclerView.Adapter<AttackSpellsAdapter.ViewHolder>(), TextChangedEventListener {
+    RecyclerView.Adapter<AttackSpellsAdapter.ViewHolder>(), ManualEditListener {
 
     lateinit var binding: LayoutAttackSpellRecyclerViewBinding
 
@@ -44,7 +44,7 @@ class AttackSpellsAdapter(private val attackSpells: MutableList<AttackSpell>, va
         }
     }
 
-    override fun textChangedByDialog() {
+    override fun manualEditCompleted() {
         viewModel.saveCurrentCharacter()
     }
 }

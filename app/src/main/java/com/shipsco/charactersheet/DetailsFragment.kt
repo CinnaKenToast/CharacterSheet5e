@@ -17,10 +17,9 @@ import com.shipsco.charactersheet.data.character.blankCharacter
 import com.shipsco.charactersheet.databinding.FragmentDetailsBinding
 import com.shipsco.charactersheet.utils.toJsonString
 import com.shipsco.charactersheet.views.AttackSpellsAdapter
-import com.shipsco.charactersheet.views.CSTextView
 import kotlinx.coroutines.runBlocking
 
-class DetailsFragment : Fragment(), TextChangedEventListener {
+class DetailsFragment : Fragment(), ManualEditListener {
 
     private lateinit var binding: FragmentDetailsBinding
     private lateinit var characterViewModel: CharacterViewModel
@@ -34,20 +33,6 @@ class DetailsFragment : Fragment(), TextChangedEventListener {
 //        val factory = CharacterViewModelFactory(requireActivity().application)
 //        characterViewModel = ViewModelProvider(this, factory)[CharacterViewModel::class.java]
         characterViewModel = requireActivity().viewModels<CharacterViewModel>().value
-
-        runBlocking {
-            arguments?.let {
-                val isNewCharacter = it.getBoolean("creatingCharacter")
-                if (!isNewCharacter) {
-                    characterName = it.getString("characterName")!!
-                    currentCharacter = characterViewModel.getCharacter(characterName)
-                } else {
-                    currentCharacter = blankCharacter.copy()
-                    characterViewModel.setCharacter(currentCharacter)
-                }
-
-            }
-        }
     }
 
     override fun onCreateView(
@@ -56,6 +41,7 @@ class DetailsFragment : Fragment(), TextChangedEventListener {
     ): View {
         binding = FragmentDetailsBinding.inflate(layoutInflater)
         binding.viewModel = characterViewModel
+        currentCharacter = characterViewModel.currentCharacter.value!!
         return binding.root
     }
 
@@ -118,16 +104,7 @@ class DetailsFragment : Fragment(), TextChangedEventListener {
         return list
     }
 
-    companion object {
-        fun createInstance(creatingCharacter: Boolean, characterName: String) = DetailsFragment().apply {
-            arguments = bundleOf(
-                Pair("creatingCharacter", creatingCharacter),
-                Pair("characterName", characterName)
-            )
-        }
-    }
-
-    override fun textChangedByDialog() {
+    override fun manualEditCompleted() {
         characterViewModel.saveCurrentCharacter()
     }
 }

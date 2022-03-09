@@ -16,7 +16,7 @@ import com.shipsco.charactersheet.databinding.FragmentSpellsBinding
 import com.shipsco.charactersheet.utils.toJsonString
 import kotlinx.coroutines.runBlocking
 
-class SpellsFragment : Fragment(), TextChangedEventListener {
+class SpellsFragment : Fragment(), ManualEditListener {
 
     private lateinit var binding: FragmentSpellsBinding
     private lateinit var characterViewModel: CharacterViewModel
@@ -30,18 +30,6 @@ class SpellsFragment : Fragment(), TextChangedEventListener {
 //        val factory = CharacterViewModelFactory(requireActivity().application)
 //        characterViewModel = ViewModelProvider(this, factory)[CharacterViewModel::class.java]
         characterViewModel = requireActivity().viewModels<CharacterViewModel>().value
-        runBlocking {
-            arguments?.let {
-                val isNewCharacter = it.getBoolean("creatingCharacter")
-                if (!isNewCharacter) {
-                    characterName = it.getString("characterName")!!
-                    currentCharacter = characterViewModel.currentCharacter.value!!
-                } else {
-                    currentCharacter = characterViewModel.currentCharacter.value!!
-                }
-
-            }
-        }
     }
 
     override fun onCreateView(
@@ -50,6 +38,7 @@ class SpellsFragment : Fragment(), TextChangedEventListener {
     ): View {
         binding = FragmentSpellsBinding.inflate(layoutInflater)
         binding.viewModel = characterViewModel
+        currentCharacter = characterViewModel.currentCharacter.value!!
         initCantripSpellVariables()
         return binding.root
     }
@@ -430,16 +419,7 @@ class SpellsFragment : Fragment(), TextChangedEventListener {
         }
     }
 
-    companion object {
-        fun createInstance(creatingCharacter: Boolean, characterName: String) = SpellsFragment().apply {
-                arguments = bundleOf(
-                    Pair("creatingCharacter", creatingCharacter),
-                    Pair("characterName", characterName)
-                )
-            }
-    }
-
-    override fun textChangedByDialog() {
+    override fun manualEditCompleted() {
         characterViewModel.saveCurrentCharacter()
     }
 }
