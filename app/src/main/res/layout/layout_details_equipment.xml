@@ -9,22 +9,106 @@
             type="com.shipsco.charactersheet.CharacterViewModel"/>
     </data>
 
-    <!-- Personality Traits -->
+    <!-- Equipment -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingHorizontal="8dp"
-        android:paddingVertical="4dp">
+        android:layout_height="wrap_content">
 
         <ImageView
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:src="@drawable/personality_traits"
+            android:src="@drawable/equipment"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintDimensionRatio="H, 799:309"
+            app:layout_constraintDimensionRatio="H, 1612:1563"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <com.shipsco.charactersheet.views.CSTextView
+            android:id="@+id/copperPieces"
+            android:contentDescription="Copper Pieces"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:inputType="number"
+            android:text='@={viewModel.currentCharacter.copper}'
+            app:isNumber="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.06"
+            app:layout_constraintHorizontal_bias="0.1"
+            app:layout_constraintHeight_percent="0.11"
+            app:layout_constraintWidth_percent="0.19" />
+
+        <com.shipsco.charactersheet.views.CSTextView
+            android:id="@+id/silverPieces"
+            android:contentDescription="Silver Pieces"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:text='@={viewModel.currentCharacter.silver}'
+            app:isNumber="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.22"
+            app:layout_constraintHorizontal_bias="0.1"
+            app:layout_constraintHeight_percent="0.11"
+            app:layout_constraintWidth_percent="0.19" />
+
+        <com.shipsco.charactersheet.views.CSTextView
+            android:id="@+id/electrumPieces"
+            android:contentDescription="Electrum Pieces"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:text='@={viewModel.currentCharacter.electrum}'
+            app:isNumber="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.385"
+            app:layout_constraintHorizontal_bias="0.1"
+            app:layout_constraintHeight_percent="0.11"
+            app:layout_constraintWidth_percent="0.19" />
+
+        <com.shipsco.charactersheet.views.CSTextView
+            android:id="@+id/goldPieces"
+            android:contentDescription="Gold Pieces"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:text='@={viewModel.currentCharacter.gold}'
+            app:isNumber="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.55"
+            app:layout_constraintHorizontal_bias="0.1"
+            app:layout_constraintHeight_percent="0.11"
+            app:layout_constraintWidth_percent="0.19" />
+
+        <com.shipsco.charactersheet.views.CSTextView
+            android:id="@+id/platinumPieces"
+            android:contentDescription="Platinum Pieces"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:text='@={viewModel.currentCharacter.platinum}'
+            app:isNumber="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.71"
+            app:layout_constraintHorizontal_bias="0.1"
+            app:layout_constraintHeight_percent="0.11"
+            app:layout_constraintWidth_percent="0.19" />
 
         <androidx.core.widget.NestedScrollView
             android:layout_width="0dp"
@@ -35,17 +119,17 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.2"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintHeight_percent="0.7"
-            app:layout_constraintWidth_percent="0.9">
+            app:layout_constraintHorizontal_bias="0.9"
+            app:layout_constraintHeight_percent="0.9"
+            app:layout_constraintWidth_percent="0.65">
 
             <com.shipsco.charactersheet.views.CSTextViewLong
-                android:id="@+id/personalityTraits"
-                android:contentDescription="Personality Traits"
+                android:id="@+id/equipment"
+                android:contentDescription="Equipment"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="top"
-                android:text='@={viewModel.currentCharacter.personalityTraits}'
+                android:text='@={viewModel.currentCharacter.equipment}'
                 android:textSize="18sp" />
 
         </androidx.core.widget.NestedScrollView>

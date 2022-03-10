@@ -20,7 +20,7 @@ class CSTextViewLong: AppCompatTextView {
         setOnClickListener { createTextDialog(context) }
     }
 
-    private var eventListener: ManualEditListener? = null
+    var eventListener: ManualEditListener? = null
 
     private fun createTextDialog(context: Context) {
         val editText = TextInputEditText(context)

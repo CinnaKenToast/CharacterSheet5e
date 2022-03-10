@@ -59,22 +59,84 @@ class DetailsFragmentAdapter(val viewModel: CharacterViewModel): RecyclerView.Ad
             }
             TYPE_INSPIRATION_PROFICIENCY -> {
                 val binding = LayoutDetailsInspirationProficiencyBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+                binding.inspirationChecked.eventListener = this
+                binding.proficiencyBonus.eventListener = this
                 return InspirationProficiency(binding)
             }
             TYPE_STATS_TOP -> {
                 val binding = LayoutDetailsStatsTopBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+                binding.strength.eventListener = this
+                binding.strengthBonus.eventListener = this
+                binding.constitution.eventListener = this
+                binding.constitutionBonus.eventListener = this
+                binding.dexterity.eventListener = this
+                binding.dexterityBonus.eventListener = this
                 return StatsTopViewHolder(binding)
             }
             TYPE_STATS_BOTTOM -> {
                 val binding = LayoutDetailsStatsBottomBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+                binding.intelligence.eventListener = this
+                binding.intelligenceBonus.eventListener = this
+                binding.wisdom.eventListener = this
+                binding.wisdomBonus.eventListener = this
+                binding.charisma.eventListener = this
+                binding.charismaBonus.eventListener = this
                 return StatsBottomViewHolder(binding)
             }
             TYPE_SAVING_THROWS -> {
                 val binding = LayoutDetailsSavingThrowsBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+                binding.strengthSaveButton.eventListener = this
+                binding.strengthSave.eventListener = this
+                binding.charismaSaveButton.eventListener = this
+                binding.constitutionSave.eventListener = this
+                binding.dexteritySaveButton.eventListener = this
+                binding.dexteritySave.eventListener = this
+                binding.intelligenceSaveButton.eventListener = this
+                binding.intelligenceSave.eventListener = this
+                binding.wisdomSaveButton.eventListener = this
+                binding.wisdomSave.eventListener = this
+                binding.charismaSaveButton.eventListener = this
+                binding.charismaSave.eventListener = this
                 return SavingThrowsViewHolder(binding)
             }
             TYPE_SKILLS -> {
                 val binding = LayoutDetailsSkillsBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+                binding.acrobaticsButton.eventListener = this
+                binding.acrobatics.eventListener = this
+                binding.animalHandlingButton.eventListener = this
+                binding.animalHandling.eventListener = this
+                binding.arcanaButton.eventListener = this
+                binding.arcana.eventListener = this
+                binding.athleticsButton.eventListener = this
+                binding.athletics.eventListener = this
+                binding.deceptionButton.eventListener = this
+                binding.deception.eventListener = this
+                binding.historyButton.eventListener = this
+                binding.history.eventListener = this
+                binding.insightButton.eventListener = this
+                binding.insight.eventListener = this
+                binding.intimidationButton.eventListener = this
+                binding.intimidation.eventListener = this
+                binding.investigationButton.eventListener = this
+                binding.investigation.eventListener = this
+                binding.medicineButton.eventListener = this
+                binding.medicine.eventListener = this
+                binding.natureButton.eventListener = this
+                binding.nature.eventListener = this
+                binding.perceptionButton.eventListener = this
+                binding.perception.eventListener = this
+                binding.performanceButton.eventListener = this
+                binding.performance.eventListener = this
+                binding.persuasionButton.eventListener = this
+                binding.persuasion.eventListener = this
+                binding.religionButton.eventListener = this
+                binding.religion.eventListener = this
+                binding.sleightOfHandButton.eventListener = this
+                binding.sleightOfHand.eventListener = this
+                binding.stealthButton.eventListener = this
+                binding.stealth.eventListener = this
+                binding.survivalButton.eventListener = this
+                binding.survival.eventListener = this
                 return SkillsViewHolder(binding)
             }
             TYPE_ATTACKS_SPELLS -> {
@@ -83,26 +145,37 @@ class DetailsFragmentAdapter(val viewModel: CharacterViewModel): RecyclerView.Ad
             }
             TYPE_EQUIPMENT -> {
                 val binding = LayoutDetailsEquipmentBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+                binding.copperPieces.eventListener = this
+                binding.silverPieces.eventListener = this
+                binding.electrumPieces.eventListener = this
+                binding.goldPieces.eventListener = this
+                binding.platinumPieces.eventListener = this
+                binding.equipment.eventListener = this
                 return EquipmentViewHolder(binding)
             }
             TYPE_PROFICIENCIES_LANGUAGES -> {
                 val binding = LayoutDetailsProficienciesLanguagesBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+                binding.proficienciesLanguages.eventListener = this
                 return ProficienciesLanguagesViewHolder(binding)
             }
             TYPE_PERSONALITY_TRAITS -> {
                 val binding = LayoutDetailsPersonalityTraitsBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+                binding.personalityTraits.eventListener = this
                 return PersonalityTraitsViewHolder(binding)
             }
             TYPE_IDEALS -> {
                 val binding = LayoutDetailsIdealsBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+                binding.ideals.eventListener = this
                 return IdealsViewHolder(binding)
             }
             TYPE_BONDS -> {
                 val binding = LayoutDetailsBondsBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+                binding.bonds.eventListener = this
                 return BondsViewHolder(binding)
             }
             else -> { // TYPE_FLAWS
                 val binding = LayoutDetailsFlawsBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+                binding.flaws.eventListener = this
                 return FlawsViewHolder(binding)
             }
         }
