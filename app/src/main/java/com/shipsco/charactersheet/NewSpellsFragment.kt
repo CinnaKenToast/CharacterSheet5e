@@ -9,23 +9,17 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.activity.viewModels
-import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.shipsco.charactersheet.data.character.AttackSpell
 import com.shipsco.charactersheet.data.character.Character
 import com.shipsco.charactersheet.data.character.blankCharacter
-import com.shipsco.charactersheet.databinding.FragmentDetailsBinding
-import com.shipsco.charactersheet.databinding.FragmentNewDetailsBinding
+import com.shipsco.charactersheet.databinding.FragmentNewSpellsBinding
 import com.shipsco.charactersheet.utils.toJsonString
-import com.shipsco.charactersheet.views.AttackSpellsAdapter
 import com.shipsco.charactersheet.views.DetailsFragmentAdapter
-import kotlinx.coroutines.runBlocking
+import com.shipsco.charactersheet.views.SpellsFragmentAdapter
 
-class NewDetailsFragment : Fragment() {
+class NewSpellsFragment : Fragment() {
 
-    private lateinit var binding: FragmentNewDetailsBinding
+    private lateinit var binding: FragmentNewSpellsBinding
     private lateinit var characterViewModel: CharacterViewModel
     private lateinit var currentCharacter: Character
 
@@ -43,7 +37,7 @@ class NewDetailsFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentNewDetailsBinding.inflate(layoutInflater)
+        binding = FragmentNewSpellsBinding.inflate(layoutInflater)
         currentCharacter = characterViewModel.currentCharacter.value ?: blankCharacter
         return binding.root
     }
@@ -52,7 +46,7 @@ class NewDetailsFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         initMenuOptions()
         initRecyclerView()
-        println("----------------------- IN DETAILS")
+        println("----------------------- IN SPELLS")
     }
 
     override fun onPause() {
@@ -77,7 +71,7 @@ class NewDetailsFragment : Fragment() {
                     } else {
                         val json = currentCharacter.toJsonString()
                         val clipboard = requireContext().getSystemService(Service.CLIPBOARD_SERVICE) as ClipboardManager
-                        val clip = ClipData.newPlainText("characterData", json)
+                        val clip = ClipData.newPlainText("characterSpellsData", json)
                         clipboard.setPrimaryClip(clip)
                         Toast.makeText(context, "${currentCharacter.characterName}'s data has been copied to your clipboard", Toast.LENGTH_SHORT).show()
                     }
@@ -89,8 +83,8 @@ class NewDetailsFragment : Fragment() {
     }
 
     private fun initRecyclerView() {
-        val recyclerView = binding.detailsRecyclerView
-        val adapter = DetailsFragmentAdapter(characterViewModel)
+        val recyclerView = binding.spellsRecyclerView
+        val adapter = SpellsFragmentAdapter(characterViewModel)
         recyclerView.adapter = adapter
     }
 }

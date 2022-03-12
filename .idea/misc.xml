@@ -18,6 +18,7 @@
         <entry key="app/src/main/res/layout/fragment_details.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_import_dialog.xml" value="0.67" />
         <entry key="app/src/main/res/layout/fragment_new_details.xml" value="0.2484134179510426" />
+        <entry key="app/src/main/res/layout/fragment_new_spells.xml" value="0.1598412035102382" />
         <entry key="app/src/main/res/layout/fragment_spells.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_view_pager.xml" value="0.1761436511329628" />
         <entry key="app/src/main/res/layout/layout_attack_spell_recycler_view.xml" value="0.33" />
@@ -43,6 +44,18 @@
         <entry key="app/src/main/res/layout/layout_details_temp_hit_points.xml" value="0.1" />
         <entry key="app/src/main/res/layout/layout_new_details.xml" value="0.1996579734929457" />
         <entry key="app/src/main/res/layout/layout_selectable_spell.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/layout_spells_cantrips.xml" value="0.1598412035102382" />
+        <entry key="app/src/main/res/layout/layout_spells_class_info.xml" value="0.1598412035102382" />
+        <entry key="app/src/main/res/layout/layout_spells_class_type.xml" value="0.3270628473706712" />
+        <entry key="app/src/main/res/layout/layout_spells_level_eight.xml" value="0.1598412035102382" />
+        <entry key="app/src/main/res/layout/layout_spells_level_five.xml" value="0.1598412035102382" />
+        <entry key="app/src/main/res/layout/layout_spells_level_four.xml" value="0.1598412035102382" />
+        <entry key="app/src/main/res/layout/layout_spells_level_nine.xml" value="0.1598412035102382" />
+        <entry key="app/src/main/res/layout/layout_spells_level_one.xml" value="0.1598412035102382" />
+        <entry key="app/src/main/res/layout/layout_spells_level_seven.xml" value="0.1598412035102382" />
+        <entry key="app/src/main/res/layout/layout_spells_level_six.xml" value="0.1598412035102382" />
+        <entry key="app/src/main/res/layout/layout_spells_level_three.xml" value="0.1598412035102382" />
+        <entry key="app/src/main/res/layout/layout_spells_level_two.xml" value="0.1598412035102382" />
         <entry key="app/src/main/res/layout/test.xml" value="0.25" />
         <entry key="app/src/main/res/menu/character_long_press_menu.xml" value="0.2997007268063275" />
         <entry key="app/src/main/res/menu/character_selection_menu.xml" value="0.28544949026876737" />

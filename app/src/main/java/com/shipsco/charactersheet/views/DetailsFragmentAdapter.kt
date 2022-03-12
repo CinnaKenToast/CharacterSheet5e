@@ -47,19 +47,19 @@ class DetailsFragmentAdapter(val viewModel: CharacterViewModel): RecyclerView.Ad
             }
             TYPE_HITDICE_DEATHSAVES -> {
                 val binding = LayoutDetailsHitdieDeathsavesBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-                binding.totalHitDice.eventListener = this
-                binding.hitDice.eventListener = this
-                binding.successSaveButton1.eventListener = this
-                binding.successSaveButton2.eventListener = this
-                binding.successSaveButton3.eventListener = this
-                binding.failSaveButton1.eventListener = this
-                binding.failSaveButton2.eventListener = this
-                binding.failSaveButton3.eventListener = this
+//                binding.totalHitDice.eventListener = this
+//                binding.hitDice.eventListener = this
+//                binding.successSaveButton1.eventListener = this
+//                binding.successSaveButton2.eventListener = this
+//                binding.successSaveButton3.eventListener = this
+//                binding.failSaveButton1.eventListener = this
+//                binding.failSaveButton2.eventListener = this
+//                binding.failSaveButton3.eventListener = this
                 return HitDiceDeathSavesViewHolder(binding)
             }
             TYPE_INSPIRATION_PROFICIENCY -> {
                 val binding = LayoutDetailsInspirationProficiencyBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-                binding.inspirationChecked.eventListener = this
+//                binding.inspirationChecked.eventListener = this
                 binding.proficiencyBonus.eventListener = this
                 return InspirationProficiency(binding)
             }
