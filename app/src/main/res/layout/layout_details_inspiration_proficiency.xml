@@ -76,6 +76,7 @@
                 android:layout_height="0dp"
                 android:gravity="center"
                 android:text='@={viewModel.currentCharacter.proficiencyBonus}'
+                android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                 app:isBonus="true"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"

@@ -30,6 +30,7 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:text='@={viewModel.currentCharacter.spellCastingClass}'
+            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
             android:gravity="center_vertical"
             app:isText="true"
             app:layout_constraintBottom_toBottomOf="parent"

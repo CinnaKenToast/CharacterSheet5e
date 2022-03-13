@@ -33,6 +33,7 @@
             android:layout_height="0dp"
             android:gravity="center"
             android:text='@={viewModel.currentCharacter.hitPointMax}'
+            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
             app:isNumber="true"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -50,6 +51,7 @@
             android:layout_height="0dp"
             android:gravity="center"
             android:text='@={viewModel.currentCharacter.currentHitPoints}'
+            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
             app:isNumber="true"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

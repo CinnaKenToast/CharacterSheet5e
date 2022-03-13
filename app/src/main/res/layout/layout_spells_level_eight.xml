@@ -31,6 +31,7 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:text='@={viewModel.currentCharacter.spells[7].totalSpellSlots}'
+            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
             android:textColor="@color/black"
             android:gravity="center"
             app:isNumber="true"
@@ -48,6 +49,7 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:text='@={viewModel.currentCharacter.spells[7].spellSlotsExpended}'
+            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
             android:textColor="@color/black"
             android:gravity="center"
             app:isNumber="true"

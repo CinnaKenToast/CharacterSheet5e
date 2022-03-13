@@ -39,6 +39,7 @@
                 android:layout_height="0dp"
                 android:gravity="center"
                 android:text='@={viewModel.currentCharacter.totalHitDice}'
+                android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                 app:isText="true"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -56,6 +57,7 @@
                 android:layout_height="0dp"
                 android:gravity="center"
                 android:text='@={viewModel.currentCharacter.hitDice}'
+                android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                 app:isText="true"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"

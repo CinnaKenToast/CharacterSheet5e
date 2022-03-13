@@ -39,6 +39,7 @@
                 android:layout_height="0dp"
                 android:gravity="center"
                 android:text='@={viewModel.currentCharacter.strength}'
+                android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                 app:isNumber="true"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -56,6 +57,7 @@
                 android:layout_height="0dp"
                 android:gravity="center"
                 android:text='@={viewModel.currentCharacter.strengthBonus}'
+                android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                 app:isBonus="true"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -92,6 +94,7 @@
                 android:layout_height="0dp"
                 android:gravity="center"
                 android:text='@={viewModel.currentCharacter.dexterity}'
+                android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                 app:isNumber="true"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -109,6 +112,7 @@
                 android:layout_height="0dp"
                 android:gravity="center"
                 android:text='@={viewModel.currentCharacter.dexterityBonus}'
+                android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                 app:isBonus="true"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -145,6 +149,7 @@
                 android:layout_height="0dp"
                 android:gravity="center"
                 android:text='@={viewModel.currentCharacter.constitution}'
+                android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                 app:isNumber="true"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -162,6 +167,7 @@
                 android:layout_height="0dp"
                 android:gravity="center"
                 android:text='@={viewModel.currentCharacter.constitutionBonus}'
+                android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                 app:isBonus="true"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"

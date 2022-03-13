@@ -44,6 +44,7 @@
                 android:layout_height="match_parent"
                 android:gravity="top"
                 android:text='@={viewModel.currentCharacter.personalityTraits}'
+                android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                 android:textSize="18sp" />
 
         </androidx.core.widget.NestedScrollView>
