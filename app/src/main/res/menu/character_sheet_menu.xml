@@ -3,6 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
+        android:id="@+id/lockButton"
+        android:icon="@drawable/ic_lock_open"
+        android:title="Lock"
+        app:showAsAction="always"
+        />
+
+    <item
         android:id="@+id/saveButton"
         android:icon="@android:drawable/ic_menu_save"
         android:title="Save"

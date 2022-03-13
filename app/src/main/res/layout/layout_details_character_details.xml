@@ -33,6 +33,7 @@
             android:layout_height="0dp"
             android:text='@={viewModel.currentCharacter.classLevel}'
             android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+            app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
             app:isText="true"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -50,6 +51,7 @@
             android:layout_height="0dp"
             android:text='@={viewModel.currentCharacter.background}'
             android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+            app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
             app:isText="true"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -67,6 +69,7 @@
             android:layout_height="0dp"
             android:text='@={viewModel.currentCharacter.playerName}'
             android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+            app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
             app:isText="true"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -84,6 +87,7 @@
             android:layout_height="0dp"
             android:text='@={viewModel.currentCharacter.race}'
             android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+            app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
             app:isText="true"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -101,6 +105,7 @@
             android:layout_height="0dp"
             android:text='@={viewModel.currentCharacter.alignmentType}'
             android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+            app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
             app:isText="true"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -118,6 +123,7 @@
             android:layout_height="0dp"
             android:text='@={viewModel.currentCharacter.experiencePoints}'
             android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+            app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
             app:isNumber="true"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

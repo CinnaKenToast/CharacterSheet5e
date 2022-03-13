@@ -37,7 +37,7 @@ class ViewPagerFragment : Fragment() {
                     characterName = it.getString("characterName")!!
                     characterViewModel.getCharacter(characterName)
                 } else {
-                    characterViewModel.setCharacter(blankCharacter)
+                    characterViewModel.setCharacter(blankCharacter.copy())
                 }
 
             }

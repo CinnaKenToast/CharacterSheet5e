@@ -23,7 +23,13 @@ class CSSelectableSpell: LinearLayout {
         binding = LayoutSelectableSpellBinding.inflate(LayoutInflater.from(context), this, true)
 
         binding.spellName.setOnClickListener {
+            if (!binding.spellName.isLocked) {
+                createSpellDialog(context)
+            }
+        }
+        binding.spellName.setOnLongClickListener {
             createSpellDialog(context)
+            true
         }
     }
 

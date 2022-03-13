@@ -30,6 +30,7 @@
             android:layout_height="0dp"
             android:text='@={viewModel.currentCharacter.spellCastingAbility}'
             android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+            app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
             android:gravity="center"
             app:isText="true"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -47,6 +48,7 @@
             android:layout_height="0dp"
             android:text='@={viewModel.currentCharacter.spellSaveDC}'
             android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+            app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
             android:gravity="center"
             app:isNumber="true"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -64,6 +66,7 @@
             android:layout_height="0dp"
             android:text='@={viewModel.currentCharacter.spellAttackBonus}'
             android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+            app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
             android:gravity="center"
             app:isBonus="true"
             app:layout_constraintBottom_toBottomOf="parent"

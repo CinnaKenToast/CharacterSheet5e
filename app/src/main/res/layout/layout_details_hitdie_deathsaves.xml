@@ -40,6 +40,7 @@
                 android:gravity="center"
                 android:text='@={viewModel.currentCharacter.totalHitDice}'
                 android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+                app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
                 app:isText="true"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -58,6 +59,7 @@
                 android:gravity="center"
                 android:text='@={viewModel.currentCharacter.hitDice}'
                 android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+                app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
                 app:isText="true"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"

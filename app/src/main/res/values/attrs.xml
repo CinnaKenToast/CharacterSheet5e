@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <attr name="isLocked" format = "boolean"/>
     <declare-styleable name="CSTextView">
         <attr name="isText" format="boolean" />
         <attr name="isNumber" format="boolean" />
         <attr name="isBonus" format="boolean" />
+        <attr name="isLocked"/>
+    </declare-styleable>
+
+    <declare-styleable name="CSTextViewLong">
+        <attr name="isLocked"/>
     </declare-styleable>
 </resources>

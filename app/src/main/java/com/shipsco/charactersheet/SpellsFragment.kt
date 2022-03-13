@@ -39,7 +39,7 @@ class SpellsFragment : Fragment(), ManualEditListener {
     ): View {
         binding = FragmentSpellsBinding.inflate(layoutInflater)
         binding.viewModel = characterViewModel
-        currentCharacter = characterViewModel.currentCharacter.value ?: blankCharacter
+        currentCharacter = characterViewModel.currentCharacter.value ?: blankCharacter.copy()
         initCantripSpellVariables()
         return binding.root
     }

@@ -40,6 +40,7 @@
                 android:gravity="center"
                 android:text='@={viewModel.currentCharacter.intelligence}'
                 android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+                app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
                 app:isNumber="true"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -58,6 +59,7 @@
                 android:gravity="center"
                 android:text='@={viewModel.currentCharacter.intelligenceBonus}'
                 android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+                app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
                 app:isBonus="true"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -95,6 +97,7 @@
                 android:gravity="center"
                 android:text='@={viewModel.currentCharacter.wisdom}'
                 android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+                app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
                 app:isNumber="true"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -113,6 +116,7 @@
                 android:gravity="center"
                 android:text='@={viewModel.currentCharacter.wisdomBonus}'
                 android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+                app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
                 app:isBonus="true"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -150,6 +154,7 @@
                 android:gravity="center"
                 android:text='@={viewModel.currentCharacter.charisma}'
                 android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+                app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
                 app:isNumber="true"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -168,6 +173,7 @@
                 android:gravity="center"
                 android:text='@={viewModel.currentCharacter.charismaBonus}'
                 android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+                app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
                 app:isBonus="true"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"

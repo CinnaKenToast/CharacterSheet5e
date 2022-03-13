@@ -9,6 +9,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.activity.viewModels
+import androidx.appcompat.content.res.AppCompatResources
+import androidx.core.view.get
 import androidx.fragment.app.Fragment
 import com.shipsco.charactersheet.data.character.Character
 import com.shipsco.charactersheet.data.character.blankCharacter
@@ -38,7 +40,7 @@ class NewSpellsFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentNewSpellsBinding.inflate(layoutInflater)
-        currentCharacter = characterViewModel.currentCharacter.value ?: blankCharacter
+        currentCharacter = characterViewModel.currentCharacter.value ?: blankCharacter.copy()
         return binding.root
     }
 
@@ -49,14 +51,36 @@ class NewSpellsFragment : Fragment() {
         println("----------------------- IN SPELLS")
     }
 
+    override fun onResume() {
+        super.onResume()
+        initMenuOptions()
+    }
+
     override fun onPause() {
         super.onPause()
         characterViewModel.saveCurrentCharacter()
     }
 
     private fun initMenuOptions() {
+        val lockButton = binding.toolbar.menu[0]
+        if (currentCharacter.editingIsLocked) {
+            lockButton.icon = AppCompatResources.getDrawable(requireContext(), R.drawable.ic_lock)
+        } else {
+            lockButton.icon = AppCompatResources.getDrawable(requireContext(), R.drawable.ic_lock_open)
+        }
         binding.toolbar.setOnMenuItemClickListener { item ->
             when (item.itemId) {
+                R.id.lockButton -> {
+                    currentCharacter.editingIsLocked = !currentCharacter.editingIsLocked
+                    characterViewModel.saveCurrentCharacter()
+                    binding.spellsRecyclerView.adapter?.notifyDataSetChanged()
+                    if (currentCharacter.editingIsLocked) {
+                        lockButton.icon = AppCompatResources.getDrawable(requireContext(), R.drawable.ic_lock)
+                    } else {
+                        lockButton.icon = AppCompatResources.getDrawable(requireContext(), R.drawable.ic_lock_open)
+                    }
+                    true
+                }
                 R.id.saveButton -> {
                     if (currentCharacter.characterName.isBlank()) {
                         Toast.makeText(context, "Your character must have a name", Toast.LENGTH_SHORT).show()
@@ -71,7 +95,7 @@ class NewSpellsFragment : Fragment() {
                     } else {
                         val json = currentCharacter.toJsonString()
                         val clipboard = requireContext().getSystemService(Service.CLIPBOARD_SERVICE) as ClipboardManager
-                        val clip = ClipData.newPlainText("characterSpellsData", json)
+                        val clip = ClipData.newPlainText("characterData", json)
                         clipboard.setPrimaryClip(clip)
                         Toast.makeText(context, "${currentCharacter.characterName}'s data has been copied to your clipboard", Toast.LENGTH_SHORT).show()
                     }

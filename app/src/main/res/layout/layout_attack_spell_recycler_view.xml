@@ -24,6 +24,7 @@
             android:layout_weight="40"
             android:text="@={viewModel.currentCharacter.attackSpells[position].name}"
             android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+            app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
             app:isText="true"
             android:background="@drawable/edit_text_border"
             android:padding="2dp"/>
@@ -36,6 +37,7 @@
             android:layout_weight="22"
             android:text="@={viewModel.currentCharacter.attackSpells[position].attackBonus}"
             android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+            app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
             app:isText="true"
             android:background="@drawable/edit_text_border"
             android:padding="2dp"/>
@@ -48,6 +50,7 @@
             android:layout_weight="38"
             android:text="@={viewModel.currentCharacter.attackSpells[position].damageType}"
             android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+            app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
             app:isText="true"
             android:background="@drawable/edit_text_border"
             android:padding="2dp"/>

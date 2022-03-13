@@ -34,6 +34,7 @@
             android:gravity="center"
             android:text='@={viewModel.currentCharacter.hitPointMax}'
             android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+            app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
             app:isNumber="true"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -52,6 +53,7 @@
             android:gravity="center"
             android:text='@={viewModel.currentCharacter.currentHitPoints}'
             android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+            app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
             app:isNumber="true"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

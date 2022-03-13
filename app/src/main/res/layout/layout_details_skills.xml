@@ -51,6 +51,7 @@
             android:gravity="center"
             android:text='@={viewModel.currentCharacter.acrobatics}'
             android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+            app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
             app:isBonus="true"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -85,6 +86,7 @@
             android:gravity="center"
             android:text='@={viewModel.currentCharacter.animalHandling}'
             android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+            app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
             app:isBonus="true"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -119,6 +121,7 @@
             android:gravity="center"
             android:text='@={viewModel.currentCharacter.arcana}'
             android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+            app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
             app:isBonus="true"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -153,6 +156,7 @@
             android:gravity="center"
             android:text='@={viewModel.currentCharacter.athletics}'
             android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+            app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
             app:isBonus="true"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -187,6 +191,7 @@
             android:gravity="center"
             android:text='@={viewModel.currentCharacter.deception}'
             android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+            app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
             app:isBonus="true"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -221,6 +226,7 @@
             android:gravity="center"
             android:text='@={viewModel.currentCharacter.history}'
             android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+            app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
             app:isBonus="true"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -255,6 +261,7 @@
             android:gravity="center"
             android:text='@={viewModel.currentCharacter.insight}'
             android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+            app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
             app:isBonus="true"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -289,6 +296,7 @@
             android:gravity="center"
             android:text='@={viewModel.currentCharacter.intimidation}'
             android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+            app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
             app:isBonus="true"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -324,6 +332,7 @@
             android:gravity="center"
             android:text='@={viewModel.currentCharacter.investigation}'
             android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+            app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
             app:isBonus="true"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -359,6 +368,7 @@
             android:gravity="center"
             android:text='@={viewModel.currentCharacter.medicine}'
             android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+            app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
             app:isBonus="true"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -394,6 +404,7 @@
             android:gravity="center"
             android:text='@={viewModel.currentCharacter.nature}'
             android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+            app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
             app:isBonus="true"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -428,6 +439,7 @@
             android:gravity="center"
             android:text='@={viewModel.currentCharacter.perception}'
             android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+            app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
             app:isBonus="true"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -462,6 +474,7 @@
             android:gravity="center"
             android:text='@={viewModel.currentCharacter.performance}'
             android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+            app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
             app:isBonus="true"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -496,6 +509,7 @@
             android:gravity="center"
             android:text='@={viewModel.currentCharacter.persuasion}'
             android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+            app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
             app:isBonus="true"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -530,6 +544,7 @@
             android:gravity="center"
             android:text='@={viewModel.currentCharacter.religion}'
             android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+            app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
             app:isBonus="true"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -564,6 +579,7 @@
             android:gravity="center"
             android:text='@={viewModel.currentCharacter.sleightOfHand}'
             android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+            app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
             app:isBonus="true"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -598,6 +614,7 @@
             android:gravity="center"
             android:text='@={viewModel.currentCharacter.stealth}'
             android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+            app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
             app:isBonus="true"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -632,6 +649,7 @@
             android:gravity="center"
             android:text='@={viewModel.currentCharacter.survival}'
             android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+            app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
             app:isBonus="true"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

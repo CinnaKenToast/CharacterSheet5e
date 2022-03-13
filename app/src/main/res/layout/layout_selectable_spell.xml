@@ -39,7 +39,8 @@
                 android:textColor="@color/black"
                 android:layout_weight="1000"
                 app:isText="true"
-                android:text="@={viewModel.currentCharacter.spells[spellLevel].spellName[spellPosition]}" />
+                android:text="@={viewModel.currentCharacter.spells[spellLevel].spellName[spellPosition]}"
+                app:isLocked="@{viewModel.currentCharacter.editingIsLocked}" />
             <View
                 android:layout_width="match_parent"
                 android:layout_height="2dp"

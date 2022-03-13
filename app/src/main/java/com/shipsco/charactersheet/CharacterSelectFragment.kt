@@ -17,6 +17,8 @@ import com.shipsco.charactersheet.utils.toJsonString
 import com.shipsco.charactersheet.views.CharacterSelectAdapter
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.textfield.TextInputEditText
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.runBlocking
 import java.lang.Exception
 
 class CharacterSelectFragment : Fragment() {
@@ -52,9 +54,13 @@ class CharacterSelectFragment : Fragment() {
             findNavController().navigate(R.id.action_characterSelectFragment_to_viewPagerFragment, bundle)
         }
 
+        characterViewModel.getCharacters()
         subscribeToViewModel()
 
-        characterViewModel.getCharacters()
+        binding.swipeRefreshLayout.setOnRefreshListener {
+            characterViewModel.getCharacters()
+            binding.swipeRefreshLayout.isRefreshing = false
+        }
     }
 
     override fun onCreateContextMenu(menu: ContextMenu, v: View, menuInfo: ContextMenu.ContextMenuInfo?) {
@@ -92,7 +98,7 @@ class CharacterSelectFragment : Fragment() {
 
     private fun subscribeToViewModel() {
         characterViewModel.allCharacters.observe(viewLifecycleOwner) { characters ->
-            initRecyclerView(characters)
+            initRecyclerView()
             if (characters.isEmpty()) {
                 binding.addCharacterPrompt.visibility = View.VISIBLE
             } else {
@@ -101,9 +107,9 @@ class CharacterSelectFragment : Fragment() {
         }
     }
 
-    private fun initRecyclerView(characters: List<Character>) {
+    private fun initRecyclerView() {
         val recyclerView = binding.characterSelectRecycler
-        val adapter = CharacterSelectAdapter(characters = characters, findNavController())
+        val adapter = CharacterSelectAdapter(characters = characterViewModel.allCharacters.value!!, findNavController())
         recyclerView.adapter = adapter
     }
 

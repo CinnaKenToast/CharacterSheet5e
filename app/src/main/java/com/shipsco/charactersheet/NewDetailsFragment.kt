@@ -5,11 +5,14 @@ import android.content.ClipData
 import android.content.ClipboardManager
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.activity.viewModels
+import androidx.appcompat.content.res.AppCompatResources
 import androidx.core.os.bundleOf
+import androidx.core.view.get
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -44,7 +47,7 @@ class NewDetailsFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentNewDetailsBinding.inflate(layoutInflater)
-        currentCharacter = characterViewModel.currentCharacter.value ?: blankCharacter
+        currentCharacter = characterViewModel.currentCharacter.value ?: blankCharacter.copy()
         return binding.root
     }
 
@@ -55,14 +58,36 @@ class NewDetailsFragment : Fragment() {
         println("----------------------- IN DETAILS")
     }
 
+    override fun onResume() {
+        super.onResume()
+        initMenuOptions()
+    }
+
     override fun onPause() {
         super.onPause()
         characterViewModel.saveCurrentCharacter()
     }
 
     private fun initMenuOptions() {
+        val lockButton = binding.toolbar.menu[0]
+        if (currentCharacter.editingIsLocked) {
+            lockButton.icon = AppCompatResources.getDrawable(requireContext(), R.drawable.ic_lock)
+        } else {
+            lockButton.icon = AppCompatResources.getDrawable(requireContext(), R.drawable.ic_lock_open)
+        }
         binding.toolbar.setOnMenuItemClickListener { item ->
             when (item.itemId) {
+                R.id.lockButton -> {
+                    currentCharacter.editingIsLocked = !currentCharacter.editingIsLocked
+                    characterViewModel.saveCurrentCharacter()
+                    binding.detailsRecyclerView.adapter?.notifyDataSetChanged()
+                    if (currentCharacter.editingIsLocked) {
+                        lockButton.icon = AppCompatResources.getDrawable(requireContext(), R.drawable.ic_lock)
+                    } else {
+                        lockButton.icon = AppCompatResources.getDrawable(requireContext(), R.drawable.ic_lock_open)
+                    }
+                    true
+                }
                 R.id.saveButton -> {
                     if (currentCharacter.characterName.isBlank()) {
                         Toast.makeText(context, "Your character must have a name", Toast.LENGTH_SHORT).show()

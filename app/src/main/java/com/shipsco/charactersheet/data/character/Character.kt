@@ -9,6 +9,7 @@ import kotlinx.serialization.Serializable
 data class Character(
     @PrimaryKey(autoGenerate = false)
     var characterName: String = "",
+    var editingIsLocked: Boolean = false,
     var classLevel: String = "",
     var background: String = "",
     var playerName: String = "",
@@ -113,6 +114,7 @@ data class Character(
 
 val blankCharacter = Character(
     characterName = "",
+    editingIsLocked = false,
     classLevel = "",
     background = "",
     playerName = "",
@@ -217,6 +219,7 @@ val blankCharacter = Character(
 
 val testCharacter = Character(
     characterName = "1",
+    editingIsLocked = false,
     classLevel = "2",
     background = "3",
     playerName = "4",
