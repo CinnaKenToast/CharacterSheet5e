@@ -26,5 +26,7 @@
             android:layout_weight="1"
             android:nestedScrollingEnabled="true"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+
     </LinearLayout>
 </layout>

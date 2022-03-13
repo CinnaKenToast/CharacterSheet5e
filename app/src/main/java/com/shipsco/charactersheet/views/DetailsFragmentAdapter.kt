@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.shipsco.charactersheet.BR
 import com.shipsco.charactersheet.CharacterViewModel
 import com.shipsco.charactersheet.ManualEditListener
+import com.shipsco.charactersheet.data.character.blankAttackSpell
 import com.shipsco.charactersheet.databinding.*
 
 class DetailsFragmentAdapter(val viewModel: CharacterViewModel): RecyclerView.Adapter<RecyclerView.ViewHolder>(), ManualEditListener {
@@ -344,7 +345,7 @@ class SkillsViewHolder(val binding: LayoutDetailsSkillsBinding): RecyclerView.Vi
 class AttackSpellsViewHolder(val binding: LayoutDetailsAttackSpellsBinding): RecyclerView.ViewHolder(binding.root) {
     fun bind(viewModel: CharacterViewModel) {
         val recyclerView = binding.attackSpellsRecyclerView
-        val adapter = AttackSpellsAdapter(viewModel.currentCharacter.value!!.attackSpells, viewModel)
+        val adapter = AttackSpellsAdapter(viewModel.currentCharacter.value?.attackSpells ?: blankAttackSpell, viewModel)
         recyclerView.adapter = adapter
     }
 }
