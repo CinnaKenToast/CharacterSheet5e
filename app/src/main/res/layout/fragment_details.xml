@@ -1188,7 +1188,7 @@
                         <ImageView
                             android:layout_width="0dp"
                             android:layout_height="0dp"
-                            android:src="@drawable/skills_no_bubbles"
+                            android:src="@drawable/skills_passive_blurb"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintDimensionRatio="H, 2297:5369"
                             app:layout_constraintEnd_toEndOf="parent"
