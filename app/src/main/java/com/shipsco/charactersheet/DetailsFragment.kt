@@ -1,23 +1,20 @@
 package com.shipsco.charactersheet
 
-import android.app.Service
-import android.content.ClipData
-import android.content.ClipboardManager
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.activity.viewModels
-import androidx.core.os.bundleOf
+import androidx.appcompat.content.res.AppCompatResources
+import androidx.core.view.get
 import androidx.fragment.app.Fragment
-import com.shipsco.charactersheet.data.character.AttackSpell
 import com.shipsco.charactersheet.data.character.Character
-import com.shipsco.charactersheet.data.character.blankCharacter
 import com.shipsco.charactersheet.databinding.FragmentDetailsBinding
 import com.shipsco.charactersheet.utils.toJsonString
 import com.shipsco.charactersheet.views.AttackSpellsAdapter
-import kotlinx.coroutines.runBlocking
+
 
 class DetailsFragment : Fragment(), ManualEditListener {
 
@@ -58,8 +55,27 @@ class DetailsFragment : Fragment(), ManualEditListener {
     }
 
     private fun initMenuOptions() {
+        val lockButton = binding.toolbar.menu[0]
+        if (currentCharacter.editingIsLocked) {
+            lockButton.icon = AppCompatResources.getDrawable(requireContext(), R.drawable.ic_lock)
+        } else {
+            lockButton.icon = AppCompatResources.getDrawable(requireContext(), R.drawable.ic_lock_open)
+        }
         binding.toolbar.setOnMenuItemClickListener { item ->
             when (item.itemId) {
+                R.id.lockButton -> {
+                    currentCharacter.editingIsLocked = !currentCharacter.editingIsLocked
+                    characterViewModel.saveCurrentCharacter()
+                    binding.invalidateAll()
+                    if (currentCharacter.editingIsLocked) {
+                        lockButton.icon = AppCompatResources.getDrawable(requireContext(), R.drawable.ic_lock)
+                        Toast.makeText(context, "Editing locked. Tap and hold a text field to edit.", Toast.LENGTH_SHORT).show()
+                    } else {
+                        lockButton.icon = AppCompatResources.getDrawable(requireContext(), R.drawable.ic_lock_open)
+                        Toast.makeText(context, "Editing unlocked. Tap a text field to edit.", Toast.LENGTH_SHORT).show()
+                    }
+                    true
+                }
                 R.id.saveButton -> {
                     if (currentCharacter.characterName.isBlank()) {
                         Toast.makeText(context, "Your character must have a name", Toast.LENGTH_SHORT).show()
@@ -73,10 +89,30 @@ class DetailsFragment : Fragment(), ManualEditListener {
                         Toast.makeText(context, "Your character must have a name", Toast.LENGTH_SHORT).show()
                     } else {
                         val json = currentCharacter.toJsonString()
-                        val clipboard = requireContext().getSystemService(Service.CLIPBOARD_SERVICE) as ClipboardManager
-                        val clip = ClipData.newPlainText("characterData", json)
-                        clipboard.setPrimaryClip(clip)
-                        Toast.makeText(context, "${currentCharacter.characterName}'s data has been copied to your clipboard", Toast.LENGTH_SHORT).show()
+
+                        // Add a custom intent to handle the "copy to clipboard" option.
+
+                        // Add a custom intent to handle the "copy to clipboard" option.
+//                        val copyToClipboard = Intent(requireContext(), CopyToClipboardService::class.java)
+//
+//                        val labeledCopyToClipboard =
+//                            LabeledIntent(copyToClipboard, "R", "Copy", R.drawable.ic_copy)
+//                        labeledCopyToClipboard.action = Intent.EXTRA_INITIAL_INTENTS
+////                        val clipboard = requireContext().getSystemService(Service.CLIPBOARD_SERVICE) as ClipboardManager
+////                        val clip = ClipData.newPlainText("characterData", json)
+////                        clipboard.setPrimaryClip(clip)
+////                        Toast.makeText(context, "${currentCharacter.characterName}'s data has been copied to your clipboard", Toast.LENGTH_SHORT).show()
+//                        val shareIntent = Intent().apply {
+//                            this.action = Intent.ACTION_SEND
+//                            this.type = "plain/text"
+//                            this.putExtra(Intent.EXTRA_TEXT, json)
+                        val share = Intent(Intent.ACTION_SEND)
+                        share.type = "text/plain"
+                        share.putExtra(Intent.EXTRA_TEXT, json)
+                        val shareIntent = Intent.createChooser(share, "Export Character Data")
+                        if (shareIntent.resolveActivity(requireActivity().packageManager) != null) {
+                            startActivity(shareIntent)
+                        }
                     }
                     true
                 }
