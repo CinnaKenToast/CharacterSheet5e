@@ -1,8 +1,6 @@
 package com.shipsco.charactersheet
 
-import android.app.Service
-import android.content.ClipData
-import android.content.ClipboardManager
+import android.content.Intent
 import android.os.Bundle
 import android.view.*
 import android.widget.Toast
@@ -17,8 +15,6 @@ import com.shipsco.charactersheet.utils.toJsonString
 import com.shipsco.charactersheet.views.CharacterSelectAdapter
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.textfield.TextInputEditText
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.runBlocking
 import java.lang.Exception
 
 class CharacterSelectFragment : Fragment() {
@@ -83,10 +79,13 @@ class CharacterSelectFragment : Fragment() {
                 val selectedCharacter = adapter.getSelectedCharacter()
                 selectedCharacter?.let {
                     val json = selectedCharacter.toJsonString()
-                    val clipboard = requireContext().getSystemService(Service.CLIPBOARD_SERVICE) as ClipboardManager
-                    val clip = ClipData.newPlainText("characterData", json)
-                    clipboard.setPrimaryClip(clip)
-                    Toast.makeText(context, "${selectedCharacter.characterName}'s data has been copied to your clipboard", Toast.LENGTH_SHORT).show()
+                    val share = Intent(Intent.ACTION_SEND)
+                    share.type = "text/plain"
+                    share.putExtra(Intent.EXTRA_TEXT, json)
+                    val shareIntent = Intent.createChooser(share, "Export Character Data")
+                    if (shareIntent.resolveActivity(requireActivity().packageManager) != null) {
+                        startActivity(shareIntent)
+                    }
                 }
                 true
             }

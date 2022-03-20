@@ -58,7 +58,7 @@
                         android:layout_width="0dp"
                         android:layout_height="0dp"
                         android:text='@={viewModel.currentCharacter.characterName}'
-                        android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+                        android:afterTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                         app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
                         app:isText="true"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -93,7 +93,7 @@
                         android:layout_width="0dp"
                         android:layout_height="0dp"
                         android:text='@={viewModel.currentCharacter.classLevel}'
-                        android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+                        android:afterTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                         app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
                         app:isText="true"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -111,7 +111,7 @@
                         android:layout_width="0dp"
                         android:layout_height="0dp"
                         android:text='@={viewModel.currentCharacter.background}'
-                        android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+                        android:afterTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                         app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
                         app:isText="true"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -129,7 +129,7 @@
                         android:layout_width="0dp"
                         android:layout_height="0dp"
                         android:text='@={viewModel.currentCharacter.playerName}'
-                        android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+                        android:afterTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                         app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
                         app:isText="true"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -147,7 +147,7 @@
                         android:layout_width="0dp"
                         android:layout_height="0dp"
                         android:text='@={viewModel.currentCharacter.race}'
-                        android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+                        android:afterTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                         app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
                         app:isText="true"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -165,7 +165,7 @@
                         android:layout_width="0dp"
                         android:layout_height="0dp"
                         android:text='@={viewModel.currentCharacter.alignmentType}'
-                        android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+                        android:afterTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                         app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
                         app:isText="true"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -183,7 +183,7 @@
                         android:layout_width="0dp"
                         android:layout_height="0dp"
                         android:text='@={viewModel.currentCharacter.experiencePoints}'
-                        android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+                        android:afterTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                         app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
                         app:isNumber="true"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -234,7 +234,7 @@
                                 android:layout_height="0dp"
                                 android:gravity="center"
                                 android:text='@={viewModel.currentCharacter.armorClass}'
-                                android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+                                android:afterTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                                 app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
                                 app:isNumber="true"
                                 app:layout_constraintBottom_toBottomOf="parent"
@@ -271,7 +271,7 @@
                                 android:layout_height="0dp"
                                 android:gravity="center"
                                 android:text='@={viewModel.currentCharacter.initiative}'
-                                android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+                                android:afterTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                                 app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
                                 app:isBonus="true"
                                 app:layout_constraintBottom_toBottomOf="parent"
@@ -308,7 +308,7 @@
                                 android:layout_height="0dp"
                                 android:gravity="center"
                                 android:text='@={viewModel.currentCharacter.speed}'
-                                android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+                                android:afterTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                                 app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
                                 app:isNumber="true"
                                 app:layout_constraintBottom_toBottomOf="parent"
@@ -346,7 +346,7 @@
                             android:layout_height="0dp"
                             android:gravity="center"
                             android:text='@={viewModel.currentCharacter.hitPointMax}'
-                            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+                            android:afterTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
                             app:isNumber="true"
                             app:layout_constraintBottom_toBottomOf="parent"
@@ -365,7 +365,7 @@
                             android:layout_height="0dp"
                             android:gravity="center"
                             android:text='@={viewModel.currentCharacter.currentHitPoints}'
-                            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+                            android:afterTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
                             app:isNumber="true"
                             app:layout_constraintBottom_toBottomOf="parent"
@@ -403,7 +403,7 @@
                             android:layout_height="0dp"
                             android:gravity="center"
                             android:text='@={viewModel.currentCharacter.temporaryHitPoints}'
-                            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+                            android:afterTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
                             app:isNumber="true"
                             app:layout_constraintBottom_toBottomOf="parent"
@@ -447,7 +447,7 @@
                                 android:layout_height="0dp"
                                 android:gravity="center"
                                 android:text='@={viewModel.currentCharacter.totalHitDice}'
-                                android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+                                android:afterTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                                 app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
                                 app:isText="true"
                                 app:layout_constraintBottom_toBottomOf="parent"
@@ -466,7 +466,7 @@
                                 android:layout_height="0dp"
                                 android:gravity="center"
                                 android:text='@={viewModel.currentCharacter.hitDice}'
-                                android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+                                android:afterTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                                 app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
                                 app:isText="true"
                                 app:layout_constraintBottom_toBottomOf="parent"
@@ -663,7 +663,7 @@
                                 android:layout_height="0dp"
                                 android:gravity="center"
                                 android:text='@={viewModel.currentCharacter.proficiencyBonus}'
-                                android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+                                android:afterTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                                 app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
                                 app:isBonus="true"
                                 app:layout_constraintBottom_toBottomOf="parent"
@@ -707,7 +707,7 @@
                                 android:layout_height="0dp"
                                 android:gravity="center"
                                 android:text='@={viewModel.currentCharacter.strength}'
-                                android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+                                android:afterTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                                 app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
                                 app:isNumber="true"
                                 app:layout_constraintBottom_toBottomOf="parent"
@@ -726,7 +726,7 @@
                                 android:layout_height="0dp"
                                 android:gravity="center"
                                 android:text='@={viewModel.currentCharacter.strengthBonus}'
-                                android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+                                android:afterTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                                 app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
                                 app:isBonus="true"
                                 app:layout_constraintBottom_toBottomOf="parent"
@@ -764,7 +764,7 @@
                                 android:layout_height="0dp"
                                 android:gravity="center"
                                 android:text='@={viewModel.currentCharacter.dexterity}'
-                                android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+                                android:afterTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                                 app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
                                 app:isNumber="true"
                                 app:layout_constraintBottom_toBottomOf="parent"
@@ -783,7 +783,7 @@
                                 android:layout_height="0dp"
                                 android:gravity="center"
                                 android:text='@={viewModel.currentCharacter.dexterityBonus}'
-                                android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+                                android:afterTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                                 app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
                                 app:isBonus="true"
                                 app:layout_constraintBottom_toBottomOf="parent"
@@ -821,7 +821,7 @@
                                 android:layout_height="0dp"
                                 android:gravity="center"
                                 android:text='@={viewModel.currentCharacter.constitution}'
-                                android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+                                android:afterTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                                 app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
                                 app:isNumber="true"
                                 app:layout_constraintBottom_toBottomOf="parent"
@@ -840,7 +840,7 @@
                                 android:layout_height="0dp"
                                 android:gravity="center"
                                 android:text='@={viewModel.currentCharacter.constitutionBonus}'
-                                android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+                                android:afterTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                                 app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
                                 app:isBonus="true"
                                 app:layout_constraintBottom_toBottomOf="parent"
@@ -883,7 +883,7 @@
                                 android:layout_height="0dp"
                                 android:gravity="center"
                                 android:text='@={viewModel.currentCharacter.intelligence}'
-                                android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+                                android:afterTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                                 app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
                                 app:isNumber="true"
                                 app:layout_constraintBottom_toBottomOf="parent"
@@ -902,7 +902,7 @@
                                 android:layout_height="0dp"
                                 android:gravity="center"
                                 android:text='@={viewModel.currentCharacter.intelligenceBonus}'
-                                android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+                                android:afterTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                                 app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
                                 app:isBonus="true"
                                 app:layout_constraintBottom_toBottomOf="parent"
@@ -940,7 +940,7 @@
                                 android:layout_height="0dp"
                                 android:gravity="center"
                                 android:text='@={viewModel.currentCharacter.wisdom}'
-                                android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+                                android:afterTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                                 app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
                                 app:isNumber="true"
                                 app:layout_constraintBottom_toBottomOf="parent"
@@ -959,7 +959,7 @@
                                 android:layout_height="0dp"
                                 android:gravity="center"
                                 android:text='@={viewModel.currentCharacter.wisdomBonus}'
-                                android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+                                android:afterTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                                 app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
                                 app:isBonus="true"
                                 app:layout_constraintBottom_toBottomOf="parent"
@@ -997,7 +997,7 @@
                                 android:layout_height="0dp"
                                 android:gravity="center"
                                 android:text='@={viewModel.currentCharacter.charisma}'
-                                android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+                                android:afterTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                                 app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
                                 app:isNumber="true"
                                 app:layout_constraintBottom_toBottomOf="parent"
@@ -1016,7 +1016,7 @@
                                 android:layout_height="0dp"
                                 android:gravity="center"
                                 android:text='@={viewModel.currentCharacter.charismaBonus}'
-                                android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+                                android:afterTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                                 app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
                                 app:isBonus="true"
                                 app:layout_constraintBottom_toBottomOf="parent"
@@ -1071,7 +1071,7 @@
                             android:gravity="center"
                             android:inputType="phone"
                             android:text='@={viewModel.currentCharacter.strengthSave}'
-                            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+                            android:afterTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
                             app:isBonus="true"
                             app:layout_constraintBottom_toBottomOf="parent"
@@ -1106,7 +1106,7 @@
                             android:layout_height="0dp"
                             android:gravity="center"
                             android:text='@={viewModel.currentCharacter.dexteritySave}'
-                            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+                            android:afterTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
                             app:isBonus="true"
                             app:layout_constraintBottom_toBottomOf="parent"
@@ -1141,7 +1141,7 @@
                             android:layout_height="0dp"
                             android:gravity="center"
                             android:text='@={viewModel.currentCharacter.constitutionSave}'
-                            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+                            android:afterTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
                             app:isBonus="true"
                             app:layout_constraintBottom_toBottomOf="parent"
@@ -1176,7 +1176,7 @@
                             android:layout_height="0dp"
                             android:gravity="center"
                             android:text='@={viewModel.currentCharacter.intelligenceSave}'
-                            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+                            android:afterTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
                             app:isBonus="true"
                             app:layout_constraintBottom_toBottomOf="parent"
@@ -1211,7 +1211,7 @@
                             android:layout_height="0dp"
                             android:gravity="center"
                             android:text='@={viewModel.currentCharacter.wisdomSave}'
-                            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+                            android:afterTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
                             app:isBonus="true"
                             app:layout_constraintBottom_toBottomOf="parent"
@@ -1246,7 +1246,7 @@
                             android:layout_height="0dp"
                             android:gravity="center"
                             android:text='@={viewModel.currentCharacter.charismaSave}'
-                            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+                            android:afterTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
                             app:isBonus="true"
                             app:layout_constraintBottom_toBottomOf="parent"
@@ -1300,7 +1300,7 @@
                             android:autoSizeTextType="uniform"
                             android:gravity="center"
                             android:text='@={viewModel.currentCharacter.acrobatics}'
-                            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+                            android:afterTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
                             app:isBonus="true"
                             app:layout_constraintBottom_toBottomOf="parent"
@@ -1335,7 +1335,7 @@
                             android:layout_height="0dp"
                             android:gravity="center"
                             android:text='@={viewModel.currentCharacter.animalHandling}'
-                            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+                            android:afterTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
                             app:isBonus="true"
                             app:layout_constraintBottom_toBottomOf="parent"
@@ -1370,7 +1370,7 @@
                             android:layout_height="0dp"
                             android:gravity="center"
                             android:text='@={viewModel.currentCharacter.arcana}'
-                            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+                            android:afterTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
                             app:isBonus="true"
                             app:layout_constraintBottom_toBottomOf="parent"
@@ -1405,7 +1405,7 @@
                             android:layout_height="0dp"
                             android:gravity="center"
                             android:text='@={viewModel.currentCharacter.athletics}'
-                            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+                            android:afterTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
                             app:isBonus="true"
                             app:layout_constraintBottom_toBottomOf="parent"
@@ -1440,7 +1440,7 @@
                             android:layout_height="0dp"
                             android:gravity="center"
                             android:text='@={viewModel.currentCharacter.deception}'
-                            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+                            android:afterTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
                             app:isBonus="true"
                             app:layout_constraintBottom_toBottomOf="parent"
@@ -1475,7 +1475,7 @@
                             android:layout_height="0dp"
                             android:gravity="center"
                             android:text='@={viewModel.currentCharacter.history}'
-                            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+                            android:afterTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
                             app:isBonus="true"
                             app:layout_constraintBottom_toBottomOf="parent"
@@ -1510,7 +1510,7 @@
                             android:layout_height="0dp"
                             android:gravity="center"
                             android:text='@={viewModel.currentCharacter.insight}'
-                            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+                            android:afterTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
                             app:isBonus="true"
                             app:layout_constraintBottom_toBottomOf="parent"
@@ -1545,7 +1545,7 @@
                             android:layout_height="0dp"
                             android:gravity="center"
                             android:text='@={viewModel.currentCharacter.intimidation}'
-                            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+                            android:afterTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
                             app:isBonus="true"
                             app:layout_constraintBottom_toBottomOf="parent"
@@ -1581,7 +1581,7 @@
                             android:layout_height="0dp"
                             android:gravity="center"
                             android:text='@={viewModel.currentCharacter.investigation}'
-                            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+                            android:afterTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
                             app:isBonus="true"
                             app:layout_constraintBottom_toBottomOf="parent"
@@ -1617,7 +1617,7 @@
                             android:autoSizeTextType="uniform"
                             android:gravity="center"
                             android:text='@={viewModel.currentCharacter.medicine}'
-                            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+                            android:afterTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
                             app:isBonus="true"
                             app:layout_constraintBottom_toBottomOf="parent"
@@ -1653,7 +1653,7 @@
                             android:autoSizeTextType="uniform"
                             android:gravity="center"
                             android:text='@={viewModel.currentCharacter.nature}'
-                            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+                            android:afterTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
                             app:isBonus="true"
                             app:layout_constraintBottom_toBottomOf="parent"
@@ -1688,7 +1688,7 @@
                             android:layout_height="0dp"
                             android:gravity="center"
                             android:text='@={viewModel.currentCharacter.perception}'
-                            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+                            android:afterTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
                             app:isBonus="true"
                             app:layout_constraintBottom_toBottomOf="parent"
@@ -1723,7 +1723,7 @@
                             android:layout_height="0dp"
                             android:gravity="center"
                             android:text='@={viewModel.currentCharacter.performance}'
-                            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+                            android:afterTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
                             app:isBonus="true"
                             app:layout_constraintBottom_toBottomOf="parent"
@@ -1758,7 +1758,7 @@
                             android:layout_height="0dp"
                             android:gravity="center"
                             android:text='@={viewModel.currentCharacter.persuasion}'
-                            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+                            android:afterTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
                             app:isBonus="true"
                             app:layout_constraintBottom_toBottomOf="parent"
@@ -1793,7 +1793,7 @@
                             android:layout_height="0dp"
                             android:gravity="center"
                             android:text='@={viewModel.currentCharacter.religion}'
-                            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+                            android:afterTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
                             app:isBonus="true"
                             app:layout_constraintBottom_toBottomOf="parent"
@@ -1828,7 +1828,7 @@
                             android:layout_height="0dp"
                             android:gravity="center"
                             android:text='@={viewModel.currentCharacter.sleightOfHand}'
-                            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+                            android:afterTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
                             app:isBonus="true"
                             app:layout_constraintBottom_toBottomOf="parent"
@@ -1864,7 +1864,7 @@
                             android:gravity="center"
                             android:text='@={viewModel.currentCharacter.stealth}'
                             app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
-                            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+                            android:afterTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             app:isBonus="true"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -1898,7 +1898,7 @@
                             android:layout_height="0dp"
                             android:gravity="center"
                             android:text='@={viewModel.currentCharacter.survival}'
-                            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+                            android:afterTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
                             app:isBonus="true"
                             app:layout_constraintBottom_toBottomOf="parent"
@@ -1969,7 +1969,7 @@
                             android:gravity="center"
                             android:inputType="number"
                             android:text='@={viewModel.currentCharacter.copper}'
-                            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+                            android:afterTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
                             app:isNumber="true"
                             app:layout_constraintBottom_toBottomOf="parent"
@@ -1988,7 +1988,7 @@
                             android:layout_height="0dp"
                             android:gravity="center"
                             android:text='@={viewModel.currentCharacter.silver}'
-                            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+                            android:afterTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
                             app:isNumber="true"
                             app:layout_constraintBottom_toBottomOf="parent"
@@ -2007,7 +2007,7 @@
                             android:layout_height="0dp"
                             android:gravity="center"
                             android:text='@={viewModel.currentCharacter.electrum}'
-                            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+                            android:afterTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
                             app:isNumber="true"
                             app:layout_constraintBottom_toBottomOf="parent"
@@ -2026,7 +2026,7 @@
                             android:layout_height="0dp"
                             android:gravity="center"
                             android:text='@={viewModel.currentCharacter.gold}'
-                            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+                            android:afterTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
                             app:isNumber="true"
                             app:layout_constraintBottom_toBottomOf="parent"
@@ -2045,7 +2045,7 @@
                             android:layout_height="0dp"
                             android:gravity="center"
                             android:text='@={viewModel.currentCharacter.platinum}'
-                            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+                            android:afterTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                             app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
                             app:isNumber="true"
                             app:layout_constraintBottom_toBottomOf="parent"
@@ -2077,7 +2077,7 @@
                                 android:layout_height="match_parent"
                                 android:gravity="top"
                                 android:text='@={viewModel.currentCharacter.equipment}'
-                                android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+                                android:afterTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                                 app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
                                 android:textSize="18sp" />
 
@@ -2121,7 +2121,7 @@
                                 android:layout_height="match_parent"
                                 android:gravity="top"
                                 android:text='@={viewModel.currentCharacter.proficiencyLanguages}'
-                                android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+                                android:afterTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                                 app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
                                 android:textSize="18sp" />
 
@@ -2165,7 +2165,7 @@
                                 android:layout_height="match_parent"
                                 android:gravity="top"
                                 android:text='@={viewModel.currentCharacter.personalityTraits}'
-                                android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+                                android:afterTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                                 app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
                                 android:textSize="18sp" />
 
@@ -2209,7 +2209,7 @@
                                 android:layout_height="match_parent"
                                 android:gravity="top"
                                 android:text='@={viewModel.currentCharacter.ideals}'
-                                android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+                                android:afterTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                                 app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
                                 android:textSize="18sp" />
 
@@ -2253,7 +2253,7 @@
                                 android:layout_height="match_parent"
                                 android:gravity="top"
                                 android:text='@={viewModel.currentCharacter.bonds}'
-                                android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+                                android:afterTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                                 app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
                                 android:textSize="18sp" />
 
@@ -2297,7 +2297,7 @@
                                 android:layout_height="match_parent"
                                 android:gravity="top"
                                 android:text='@={viewModel.currentCharacter.flaws}'
-                                android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
+                                android:afterTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
                                 app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
                                 android:textSize="18sp" />
 

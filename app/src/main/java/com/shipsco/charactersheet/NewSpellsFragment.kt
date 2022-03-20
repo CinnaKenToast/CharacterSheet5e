@@ -1,8 +1,6 @@
 package com.shipsco.charactersheet
 
-import android.app.Service
-import android.content.ClipData
-import android.content.ClipboardManager
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -16,7 +14,6 @@ import com.shipsco.charactersheet.data.character.Character
 import com.shipsco.charactersheet.data.character.blankCharacter
 import com.shipsco.charactersheet.databinding.FragmentNewSpellsBinding
 import com.shipsco.charactersheet.utils.toJsonString
-import com.shipsco.charactersheet.views.DetailsFragmentAdapter
 import com.shipsco.charactersheet.views.SpellsFragmentAdapter
 
 class NewSpellsFragment : Fragment() {
@@ -94,10 +91,13 @@ class NewSpellsFragment : Fragment() {
                         Toast.makeText(context, "Your character must have a name", Toast.LENGTH_SHORT).show()
                     } else {
                         val json = currentCharacter.toJsonString()
-                        val clipboard = requireContext().getSystemService(Service.CLIPBOARD_SERVICE) as ClipboardManager
-                        val clip = ClipData.newPlainText("characterData", json)
-                        clipboard.setPrimaryClip(clip)
-                        Toast.makeText(context, "${currentCharacter.characterName}'s data has been copied to your clipboard", Toast.LENGTH_SHORT).show()
+                        val share = Intent(Intent.ACTION_SEND)
+                        share.type = "text/plain"
+                        share.putExtra(Intent.EXTRA_TEXT, json)
+                        val shareIntent = Intent.createChooser(share, "Export Character Data")
+                        if (shareIntent.resolveActivity(requireActivity().packageManager) != null) {
+                            startActivity(shareIntent)
+                        }
                     }
                     true
                 }

@@ -15,8 +15,12 @@
             android:layout_height="match_parent"
             android:padding="3dp">
 
-            <com.shipsco.charactersheet.views.CSTextView
+            <TextView
                 android:id="@+id/characterName"
+                android:autoSizeTextType="uniform"
+                app:autoSizeMinTextSize="8sp"
+                app:autoSizeMaxTextSize="50sp"
+                android:textColor="@color/black"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:padding="3dp"
@@ -24,8 +28,12 @@
                 android:layout_weight="1"
                 android:text="Bilbary"/>
 
-            <com.shipsco.charactersheet.views.CSTextView
+            <TextView
                 android:id="@+id/characterClass"
+                android:autoSizeTextType="uniform"
+                app:autoSizeMinTextSize="8sp"
+                app:autoSizeMaxTextSize="50sp"
+                android:textColor="@color/black"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:padding="3dp"
@@ -33,14 +41,18 @@
                 android:layout_weight="1"
                 android:text="Barbarian 7"/>
 
-            <com.shipsco.charactersheet.views.CSTextView
+            <TextView
                 android:id="@+id/characterRace"
+                android:autoSizeTextType="uniform"
+                app:autoSizeMinTextSize="8sp"
+                app:autoSizeMaxTextSize="50sp"
+                android:textColor="@color/black"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:padding="3dp"
                 android:gravity="end"
                 android:layout_weight="1"
-                android:text="Aaracokra"/>
+                android:text="Aarakora"/>
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>

@@ -1,9 +1,12 @@
 package com.shipsco.charactersheet
 
 import android.app.Application
+import android.text.Editable
+import android.text.SpannableStringBuilder
 import androidx.lifecycle.*
 import com.shipsco.charactersheet.data.character.Character
 import com.shipsco.charactersheet.domain.CharacterUseCase
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 
@@ -67,8 +70,34 @@ class CharacterViewModel(
     }
 
     fun saveCurrentCharacter() {
-        viewModelScope.launch {
+        runBlocking {
             saveCharacter(currentCharacter.value!!)
+        }
+    }
+
+    fun setStrengthBonus(strength: Editable) {
+
+        saveCurrentCharacter()
+        runBlocking {
+            delay(1000)
+            val strengthBase = strength.toString().toInt() - 10
+            val strengthBonus = strengthBase / 2
+            var strengthBonusString = strengthBonus.toString()
+            if (!strengthBonusString.contains('-')) {
+                strengthBonusString = "+$strengthBonusString"
+            }
+            currentCharacter.value?.strengthBonus = strengthBonusString
+            updateStrengthBonuses(SpannableStringBuilder(strengthBonusString))
+        }
+    }
+
+    fun updateStrengthBonuses(strengthBonus: Editable) {
+        currentCharacter.value?.let { currentCharacter ->
+            val bonus = strengthBonus.toString()
+            currentCharacter.strengthSave = bonus
+            currentCharacter.athletics = bonus
+            saveCurrentCharacter()
+//            FragmentDetailsBinding.inflate(LayoutInflater.from(getApplication<Application?>().applicationContext)).invalidateAll()
         }
     }
 }

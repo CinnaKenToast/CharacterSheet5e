@@ -4,6 +4,7 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.core.os.bundleOf
 import androidx.navigation.NavController
 import androidx.recyclerview.widget.RecyclerView
@@ -26,9 +27,6 @@ class CharacterSelectAdapter(var characters: List<Character>, private val navCon
         holder.nameEditText.text = characters[position].characterName
         holder.classEditText.text = characters[position].classLevel
         holder.raceEditText.text = characters[position].race
-        holder.nameEditText.setOnClickListener { holder.itemView.performClick() }
-        holder.classEditText.setOnClickListener { holder.itemView.performClick() }
-        holder.raceEditText.setOnClickListener { holder.itemView.performClick() }
         holder.itemView.setOnClickListener {
             val bundle = bundleOf(
                 Pair("creatingCharacter", false),
@@ -54,8 +52,8 @@ class CharacterSelectAdapter(var characters: List<Character>, private val navCon
     }
 
     class ViewHolder(view: View): RecyclerView.ViewHolder(view) {
-        val nameEditText: CSTextView = view.findViewById(R.id.characterName)
-        val classEditText: CSTextView = view.findViewById(R.id.characterClass)
-        val raceEditText: CSTextView = view.findViewById(R.id.characterRace)
+        val nameEditText: TextView = view.findViewById(R.id.characterName)
+        val classEditText: TextView = view.findViewById(R.id.characterClass)
+        val raceEditText: TextView = view.findViewById(R.id.characterRace)
     }
 }

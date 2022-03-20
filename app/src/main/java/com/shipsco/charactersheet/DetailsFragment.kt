@@ -11,12 +11,13 @@ import androidx.appcompat.content.res.AppCompatResources
 import androidx.core.view.get
 import androidx.fragment.app.Fragment
 import com.shipsco.charactersheet.data.character.Character
+import com.shipsco.charactersheet.data.character.blankCharacter
 import com.shipsco.charactersheet.databinding.FragmentDetailsBinding
 import com.shipsco.charactersheet.utils.toJsonString
 import com.shipsco.charactersheet.views.AttackSpellsAdapter
 
 
-class DetailsFragment : Fragment(), ManualEditListener {
+class DetailsFragment : Fragment() {
 
     private lateinit var binding: FragmentDetailsBinding
     private lateinit var characterViewModel: CharacterViewModel
@@ -38,7 +39,8 @@ class DetailsFragment : Fragment(), ManualEditListener {
     ): View {
         binding = FragmentDetailsBinding.inflate(layoutInflater)
         binding.viewModel = characterViewModel
-        currentCharacter = characterViewModel.currentCharacter.value!!
+        binding.lifecycleOwner = viewLifecycleOwner
+        currentCharacter = characterViewModel.currentCharacter.value ?: blankCharacter.copy()
         return binding.root
     }
 
@@ -89,23 +91,6 @@ class DetailsFragment : Fragment(), ManualEditListener {
                         Toast.makeText(context, "Your character must have a name", Toast.LENGTH_SHORT).show()
                     } else {
                         val json = currentCharacter.toJsonString()
-
-                        // Add a custom intent to handle the "copy to clipboard" option.
-
-                        // Add a custom intent to handle the "copy to clipboard" option.
-//                        val copyToClipboard = Intent(requireContext(), CopyToClipboardService::class.java)
-//
-//                        val labeledCopyToClipboard =
-//                            LabeledIntent(copyToClipboard, "R", "Copy", R.drawable.ic_copy)
-//                        labeledCopyToClipboard.action = Intent.EXTRA_INITIAL_INTENTS
-////                        val clipboard = requireContext().getSystemService(Service.CLIPBOARD_SERVICE) as ClipboardManager
-////                        val clip = ClipData.newPlainText("characterData", json)
-////                        clipboard.setPrimaryClip(clip)
-////                        Toast.makeText(context, "${currentCharacter.characterName}'s data has been copied to your clipboard", Toast.LENGTH_SHORT).show()
-//                        val shareIntent = Intent().apply {
-//                            this.action = Intent.ACTION_SEND
-//                            this.type = "plain/text"
-//                            this.putExtra(Intent.EXTRA_TEXT, json)
                         val share = Intent(Intent.ACTION_SEND)
                         share.type = "text/plain"
                         share.putExtra(Intent.EXTRA_TEXT, json)
@@ -125,9 +110,5 @@ class DetailsFragment : Fragment(), ManualEditListener {
         val recyclerView = binding.attackSpellsRecyclerView
         val adapter = AttackSpellsAdapter(currentCharacter.attackSpells, characterViewModel)
         recyclerView.adapter = adapter
-    }
-
-    override fun manualEditCompleted() {
-        characterViewModel.saveCurrentCharacter()
     }
 }
