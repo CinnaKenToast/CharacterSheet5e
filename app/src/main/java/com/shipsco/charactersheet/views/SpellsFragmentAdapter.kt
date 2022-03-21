@@ -27,19 +27,19 @@ class SpellsFragmentAdapter(val viewModel: CharacterViewModel): RecyclerView.Ada
                 binding.cantrip1.binding.viewModel = viewModel
                 binding.cantrip1.binding.position =  0
                 binding.cantrip2.binding.viewModel = viewModel
-                binding.cantrip1.binding.position =  1
+                binding.cantrip2.binding.position =  1
                 binding.cantrip3.binding.viewModel = viewModel
-                binding.cantrip1.binding.position =  2
+                binding.cantrip3.binding.position =  2
                 binding.cantrip4.binding.viewModel = viewModel
-                binding.cantrip1.binding.position =  3
+                binding.cantrip4.binding.position =  3
                 binding.cantrip5.binding.viewModel = viewModel
-                binding.cantrip1.binding.position =  4
+                binding.cantrip5.binding.position =  4
                 binding.cantrip6.binding.viewModel = viewModel
-                binding.cantrip1.binding.position =  5
+                binding.cantrip6.binding.position =  5
                 binding.cantrip7.binding.viewModel = viewModel
-                binding.cantrip1.binding.position =  6
+                binding.cantrip7.binding.position =  6
                 binding.cantrip8.binding.viewModel = viewModel
-                binding.cantrip1.binding.position =  7
+                binding.cantrip8.binding.position =  7
                 return CantripsViewHolder(binding)
             }
             TYPE_LEVEL_ONE -> {
