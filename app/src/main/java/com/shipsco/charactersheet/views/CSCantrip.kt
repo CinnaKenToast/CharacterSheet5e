@@ -21,15 +21,15 @@ class CSCantrip: LinearLayout {
 
     private fun init(context: Context) {
         binding = LayoutCantripBinding.inflate(LayoutInflater.from(context), this, true)
-        binding.cantripName.setOnClickListener {
-            if (!binding.cantripName.isLocked) {
-                createCantripDialog(context)
-            }
-        }
-        binding.cantripName.setOnLongClickListener {
-            createCantripDialog(context)
-            true
-        }
+//        binding.cantripName.setOnClickListener {
+//            if (!binding.cantripName.isLocked) {
+//                createCantripDialog(context)
+//            }
+//        }
+//        binding.cantripName.setOnLongClickListener {
+//            createCantripDialog(context)
+//            true
+//        }
     }
 
     fun setText(text: String) {

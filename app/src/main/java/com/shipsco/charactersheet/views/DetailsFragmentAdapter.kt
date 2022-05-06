@@ -1,9 +1,9 @@
 package com.shipsco.charactersheet.views
 
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.shipsco.charactersheet.BR
 import com.shipsco.charactersheet.CharacterViewModel
 import com.shipsco.charactersheet.ManualEditListener
 import com.shipsco.charactersheet.data.character.blankAttackSpell
@@ -249,7 +249,7 @@ class DetailsFragmentAdapter(val viewModel: CharacterViewModel): RecyclerView.Ad
         return 18
     }
 
-    override fun manualEditCompleted() {
+    override fun manualEditCompleted(view: View) {
         viewModel.saveCurrentCharacter()
     }
 
@@ -278,67 +278,67 @@ class DetailsFragmentAdapter(val viewModel: CharacterViewModel): RecyclerView.Ad
 
 class CharacterNameViewHolder(val binding: LayoutDetailsCharacterNameBinding): RecyclerView.ViewHolder(binding.root) {
     fun bind(viewModel: CharacterViewModel) {
-        binding.setVariable(BR.viewModel, viewModel)
+//        binding.setVariable(BR.viewModel, viewModel)
     }
 }
 
 class CharacterDetailsViewHolder(val binding: LayoutDetailsCharacterDetailsBinding): RecyclerView.ViewHolder(binding.root) {
     fun bind(viewModel: CharacterViewModel) {
-        binding.setVariable(BR.viewModel, viewModel)
+//        binding.setVariable(BR.viewModel, viewModel)
     }
 }
 
 class ACInitiativeSpeedViewHolder(val binding: LayoutDetailsAcInitiativeSpeedBinding): RecyclerView.ViewHolder(binding.root) {
     fun bind(viewModel: CharacterViewModel) {
-        binding.setVariable(BR.viewModel, viewModel)
+//        binding.setVariable(BR.viewModel, viewModel)
     }
 }
 
 class CurrentHitPointsViewHolder(val binding: LayoutDetailsCurrentHitPointsBinding): RecyclerView.ViewHolder(binding.root) {
     fun bind(viewModel: CharacterViewModel) {
-        binding.setVariable(BR.viewModel, viewModel)
+//        binding.setVariable(BR.viewModel, viewModel)
     }
 }
 
 class TempHitPointsViewHolder(val binding: LayoutDetailsTempHitPointsBinding): RecyclerView.ViewHolder(binding.root) {
     fun bind(viewModel: CharacterViewModel) {
-        binding.setVariable(BR.viewModel, viewModel)
+//        binding.setVariable(BR.viewModel, viewModel)
     }
 }
 
 class HitDiceDeathSavesViewHolder(val binding: LayoutDetailsHitdieDeathsavesBinding): RecyclerView.ViewHolder(binding.root) {
     fun bind(viewModel: CharacterViewModel) {
-        binding.setVariable(BR.viewModel, viewModel)
+//        binding.setVariable(BR.viewModel, viewModel)
     }
 }
 
 class InspirationProficiency(val binding: LayoutDetailsInspirationProficiencyBinding): RecyclerView.ViewHolder(binding.root) {
     fun bind(viewModel: CharacterViewModel) {
-        binding.setVariable(BR.viewModel, viewModel)
+//        binding.setVariable(BR.viewModel, viewModel)
     }
 }
 
 class StatsTopViewHolder(val binding: LayoutDetailsStatsTopBinding): RecyclerView.ViewHolder(binding.root) {
     fun bind(viewModel: CharacterViewModel) {
-        binding.setVariable(BR.viewModel, viewModel)
+//        binding.setVariable(BR.viewModel, viewModel)
     }
 }
 
 class StatsBottomViewHolder(val binding: LayoutDetailsStatsBottomBinding): RecyclerView.ViewHolder(binding.root) {
     fun bind(viewModel: CharacterViewModel) {
-        binding.setVariable(BR.viewModel, viewModel)
+//        binding.setVariable(BR.viewModel, viewModel)
     }
 }
 
 class SavingThrowsViewHolder(val binding: LayoutDetailsSavingThrowsBinding): RecyclerView.ViewHolder(binding.root) {
     fun bind(viewModel: CharacterViewModel) {
-        binding.setVariable(BR.viewModel, viewModel)
+//        binding.setVariable(BR.viewModel, viewModel)
     }
 }
 
 class SkillsViewHolder(val binding: LayoutDetailsSkillsBinding): RecyclerView.ViewHolder(binding.root) {
     fun bind(viewModel: CharacterViewModel) {
-        binding.setVariable(BR.viewModel, viewModel)
+//        binding.setVariable(BR.viewModel, viewModel)
     }
 }
 
@@ -352,36 +352,36 @@ class AttackSpellsViewHolder(val binding: LayoutDetailsAttackSpellsBinding): Rec
 
 class EquipmentViewHolder(val binding: LayoutDetailsEquipmentBinding): RecyclerView.ViewHolder(binding.root) {
     fun bind(viewModel: CharacterViewModel) {
-        binding.setVariable(BR.viewModel, viewModel)
+//        binding.setVariable(BR.viewModel, viewModel)
     }
 }
 
 class ProficienciesLanguagesViewHolder(val binding: LayoutDetailsProficienciesLanguagesBinding): RecyclerView.ViewHolder(binding.root) {
     fun bind(viewModel: CharacterViewModel) {
-        binding.setVariable(BR.viewModel, viewModel)
+//        binding.setVariable(BR.viewModel, viewModel)
     }
 }
 
 class PersonalityTraitsViewHolder(val binding: LayoutDetailsPersonalityTraitsBinding): RecyclerView.ViewHolder(binding.root) {
     fun bind(viewModel: CharacterViewModel) {
-        binding.setVariable(BR.viewModel, viewModel)
+//        binding.setVariable(BR.viewModel, viewModel)
     }
 }
 
 class IdealsViewHolder(val binding: LayoutDetailsIdealsBinding): RecyclerView.ViewHolder(binding.root) {
     fun bind(viewModel: CharacterViewModel) {
-        binding.setVariable(BR.viewModel, viewModel)
+//        binding.setVariable(BR.viewModel, viewModel)
     }
 }
 
 class BondsViewHolder(val binding: LayoutDetailsBondsBinding): RecyclerView.ViewHolder(binding.root) {
     fun bind(viewModel: CharacterViewModel) {
-        binding.setVariable(BR.viewModel, viewModel)
+//        binding.setVariable(BR.viewModel, viewModel)
     }
 }
 
 class FlawsViewHolder(val binding: LayoutDetailsFlawsBinding): RecyclerView.ViewHolder(binding.root) {
     fun bind(viewModel: CharacterViewModel) {
-        binding.setVariable(BR.viewModel, viewModel)
+//        binding.setVariable(BR.viewModel, viewModel)
     }
 }

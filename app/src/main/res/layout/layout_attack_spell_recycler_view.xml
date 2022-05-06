@@ -1,58 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<layout
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
-    <data>
-        <variable
-            name="position"
-            type="Integer" />
-        <variable
-            name="viewModel"
-            type="com.shipsco.charactersheet.CharacterViewModel" />
-    </data>
-    <LinearLayout
-        android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <com.shipsco.charactersheet.views.CSTextView
+        android:id="@+id/spellAttackName"
+        android:contentDescription="Attack/Spell Name"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_weight="40"
+        app:isText="true"
+        android:background="@drawable/edit_text_border"
+        android:padding="2dp"/>
 
-        <com.shipsco.charactersheet.views.CSTextView
-            android:id="@+id/spellAttackName"
-            android:contentDescription="Attack/Spell Name"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="40"
-            android:text="@={viewModel.currentCharacter.attackSpells[position].name}"
-            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
-            app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
-            app:isText="true"
-            android:background="@drawable/edit_text_border"
-            android:padding="2dp"/>
+    <com.shipsco.charactersheet.views.CSTextView
+        android:id="@+id/spellAttackBonus"
+        android:contentDescription="Attack/Spell Attack Bonus"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="22"
+        app:isText="true"
+        android:background="@drawable/edit_text_border"
+        android:padding="2dp"/>
 
-        <com.shipsco.charactersheet.views.CSTextView
-            android:id="@+id/spellAttackBonus"
-            android:contentDescription="Attack/Spell Attack Bonus"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="22"
-            android:text="@={viewModel.currentCharacter.attackSpells[position].attackBonus}"
-            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
-            app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
-            app:isText="true"
-            android:background="@drawable/edit_text_border"
-            android:padding="2dp"/>
-
-        <com.shipsco.charactersheet.views.CSTextView
-            android:id="@+id/spellAttackType"
-            android:contentDescription="Attack/Spell Attack Type"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="38"
-            android:text="@={viewModel.currentCharacter.attackSpells[position].damageType}"
-            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
-            app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
-            app:isText="true"
-            android:background="@drawable/edit_text_border"
-            android:padding="2dp"/>
-    </LinearLayout>
-</layout>
+    <com.shipsco.charactersheet.views.CSTextView
+        android:id="@+id/spellAttackType"
+        android:contentDescription="Attack/Spell Attack Type"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="38"
+        app:isText="true"
+        android:background="@drawable/edit_text_border"
+        android:padding="2dp"/>
+</LinearLayout>

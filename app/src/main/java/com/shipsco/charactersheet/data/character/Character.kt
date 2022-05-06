@@ -108,8 +108,8 @@ data class Character(
     var spellCastingAbility: String = "",
     var spellSaveDC: String = "",
     var spellAttackBonus: String = "",
-    var cantrips: List<String> = List(8) { "" },
-    var spells: List<Spell> = blankSpells
+    var cantrips: MutableList<String> = MutableList(8) { "" },
+    var spells:  List<Spell> = blankSpells
 )
 
 val blankCharacter = Character(
@@ -213,7 +213,7 @@ val blankCharacter = Character(
     spellCastingAbility = "",
     spellSaveDC = "",
     spellAttackBonus = "",
-    cantrips = List(8) {""},
+    cantrips = MutableList(8) {""},
     spells = blankSpells
 )
 
@@ -318,6 +318,6 @@ val testCharacter = Character(
     spellCastingAbility = "66",
     spellSaveDC = "67",
     spellAttackBonus = "67",
-    cantrips = List(8) {"68"},
+    cantrips = MutableList(8) {"68"},
     spells = blankSpells
 )

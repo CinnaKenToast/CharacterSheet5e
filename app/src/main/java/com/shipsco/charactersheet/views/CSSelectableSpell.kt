@@ -11,6 +11,7 @@ import com.shipsco.charactersheet.R
 import com.shipsco.charactersheet.databinding.LayoutSelectableSpellBinding
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.textfield.TextInputEditText
+import com.shipsco.charactersheet.ManualEditListener
 
 class CSSelectableSpell: LinearLayout {
     constructor(context: Context) : super(context) { init(context) }
@@ -22,15 +23,15 @@ class CSSelectableSpell: LinearLayout {
     private fun init(context: Context) {
         binding = LayoutSelectableSpellBinding.inflate(LayoutInflater.from(context), this, true)
 
-        binding.spellName.setOnClickListener {
-            if (!binding.spellName.isLocked) {
-                createSpellDialog(context)
-            }
-        }
-        binding.spellName.setOnLongClickListener {
-            createSpellDialog(context)
-            true
-        }
+//        binding.spellName.setOnClickListener {
+//            if (!binding.spellName.isLocked) {
+//                createSpellDialog(context)
+//            }
+//        }
+//        binding.spellName.setOnLongClickListener {
+//            createSpellDialog(context)
+//            true
+//        }
     }
 
     fun isChecked(): Boolean {
@@ -49,6 +50,8 @@ class CSSelectableSpell: LinearLayout {
         binding.spellName.setText(text)
     }
 
+    var eventListener: ManualEditListener? = null
+
     private fun createSpellDialog(context: Context) {
         val editText = TextInputEditText(context)
         editText.id = R.id.importDialog
@@ -64,6 +67,7 @@ class CSSelectableSpell: LinearLayout {
             }
             .setPositiveButton("Add") { dialog, which ->
                 binding.spellName.text = editText.text.toString()
+                eventListener?.manualEditCompleted(this)
                 dialog.dismiss()
             }
             .setView(editText)
@@ -74,6 +78,7 @@ class CSSelectableSpell: LinearLayout {
         editText.setOnEditorActionListener { textView, actionId, keyEvent ->
             if (actionId == EditorInfo.IME_ACTION_DONE) {
                 binding.spellName.text = editText.text.toString()
+                eventListener?.manualEditCompleted(this)
                 dialog.dismiss()
             }
             true

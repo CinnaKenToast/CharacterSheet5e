@@ -1,81 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout
+<!-- Spellcasting Info -->
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="4dp"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
-    <data>
-        <variable
-            name="viewModel"
-            type="com.shipsco.charactersheet.CharacterViewModel"/>
-    </data>
-
-    <!-- Spellcasting Info -->
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingVertical="4dp">
-        <ImageView
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:src="@drawable/spellcasting_info"
-            app:layout_constraintDimensionRatio="295:72"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
-        <com.shipsco.charactersheet.views.CSTextView
-            android:id="@+id/spellcastingAbility"
-            android:contentDescription="Spellcasting Ability"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:text='@={viewModel.currentCharacter.spellCastingAbility}'
-            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
-            app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
-            android:gravity="center"
-            app:isText="true"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintHorizontal_bias="0.1"
-            app:layout_constraintVertical_bias="0.35"
-            app:layout_constraintHeight_percent="0.4 "
-            app:layout_constraintWidth_percent="0.2"/>
-        <com.shipsco.charactersheet.views.CSTextView
-            android:id="@+id/spellSaveDC"
-            android:contentDescription="Spell Save DC"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:text='@={viewModel.currentCharacter.spellSaveDC}'
-            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
-            app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
-            android:gravity="center"
-            app:isNumber="true"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintHorizontal_bias="0.49"
-            app:layout_constraintVertical_bias="0.35"
-            app:layout_constraintHeight_percent="0.4 "
-            app:layout_constraintWidth_percent="0.2"/>
-        <com.shipsco.charactersheet.views.CSTextView
-            android:id="@+id/spellBonus"
-            android:contentDescription="Spell Attack Bonus"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:text='@={viewModel.currentCharacter.spellAttackBonus}'
-            android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
-            app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
-            android:gravity="center"
-            app:isBonus="true"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintHorizontal_bias="0.89"
-            app:layout_constraintVertical_bias="0.35"
-            app:layout_constraintHeight_percent="0.4 "
-            app:layout_constraintWidth_percent="0.2"/>
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</layout>
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/spellcasting_info"
+        app:layout_constraintDimensionRatio="295:72"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+    <com.shipsco.charactersheet.views.CSTextView
+        android:id="@+id/spellcastingAbility"
+        android:contentDescription="Spellcasting Ability"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        app:isText="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintVertical_bias="0.35"
+        app:layout_constraintHeight_percent="0.4 "
+        app:layout_constraintWidth_percent="0.2"/>
+    <com.shipsco.charactersheet.views.CSTextView
+        android:id="@+id/spellSaveDC"
+        android:contentDescription="Spell Save DC"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        app:isNumber="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintVertical_bias="0.35"
+        app:layout_constraintHeight_percent="0.4 "
+        app:layout_constraintWidth_percent="0.2"/>
+    <com.shipsco.charactersheet.views.CSTextView
+        android:id="@+id/spellBonus"
+        android:contentDescription="Spell Attack Bonus"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        app:isBonus="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.89"
+        app:layout_constraintVertical_bias="0.35"
+        app:layout_constraintHeight_percent="0.4 "
+        app:layout_constraintWidth_percent="0.2"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

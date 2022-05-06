@@ -1,92 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout
+<!-- Inspiration, Proficiency Bonus -->
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingHorizontal="8dp"
+    android:paddingVertical="4dp"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
-    <data>
-        <variable
-            name="viewModel"
-            type="com.shipsco.charactersheet.CharacterViewModel"/>
-    </data>
-
-    <!-- Inspiration, Proficiency Bonus -->
-    <LinearLayout
+    <!-- Inspiration -->
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        android:paddingHorizontal="8dp"
-        android:paddingVertical="4dp">
-        <!-- Inspiration -->
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1">
+        android:layout_weight="1">
 
-            <ImageView
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:src="@drawable/inspiration"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintDimensionRatio="H, 1068:265"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/inspiration"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="H, 1068:265"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <com.shipsco.charactersheet.views.CSCheckbox
-                android:id="@+id/inspirationChecked"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:button="@drawable/inspiration_checkbox"
-                android:buttonTint="@color/black"
-                android:checked="@={viewModel.currentCharacter.inspiration}"
-                android:onCheckedChanged="@{() -> viewModel.saveCurrentCharacter()}"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.5"
-                app:layout_constraintHorizontal_bias="0.04"
-                app:layout_constraintHeight_percent="0.72"
-                app:layout_constraintWidth_percent="0.2" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-        <Space
-            android:layout_width="8dp"
-            android:layout_height="wrap_content"/>
-        <!-- Proficiency Bonus -->
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1">
+        <com.shipsco.charactersheet.views.CSCheckbox
+            android:id="@+id/inspirationChecked"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:button="@drawable/inspiration_checkbox"
+            android:buttonTint="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5"
+            app:layout_constraintHorizontal_bias="0.04"
+            app:layout_constraintHeight_percent="0.72"
+            app:layout_constraintWidth_percent="0.2" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <Space
+        android:layout_width="8dp"
+        android:layout_height="wrap_content"/>
+    <!-- Proficiency Bonus -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
 
-            <ImageView
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:src="@drawable/proficiency_bonus"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintDimensionRatio="H, 2148:653"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/proficiency_bonus"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="H, 2148:653"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <com.shipsco.charactersheet.views.CSTextView
-                android:id="@+id/proficiencyBonus"
-                android:contentDescription="Proficiency Bonus"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:gravity="center"
-                android:text='@={viewModel.currentCharacter.proficiencyBonus}'
-                android:onTextChanged="@{() -> viewModel.saveCurrentCharacter()}"
-                app:isLocked="@{viewModel.currentCharacter.editingIsLocked}"
-                app:isBonus="true"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.4"
-                app:layout_constraintHorizontal_bias="0.03"
-                app:layout_constraintHeight_percent="0.7"
-                app:layout_constraintWidth_percent="0.2" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </LinearLayout>
-</layout>
+        <com.shipsco.charactersheet.views.CSTextView
+            android:id="@+id/proficiencyBonus"
+            android:contentDescription="Proficiency Bonus"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            app:isBonus="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.4"
+            app:layout_constraintHorizontal_bias="0.03"
+            app:layout_constraintHeight_percent="0.7"
+            app:layout_constraintWidth_percent="0.2" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

@@ -1,10 +1,11 @@
 package com.shipsco.charactersheet
 
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 
-class MainActivity : AppCompatActivity(), ManualEditListener {
+class MainActivity : AppCompatActivity() {
 
     lateinit var characterViewModel: CharacterViewModel
 
@@ -34,9 +35,5 @@ class MainActivity : AppCompatActivity(), ManualEditListener {
 //        }
         characterViewModel.saveCurrentCharacter()
         super.onBackPressed()
-    }
-
-    override fun manualEditCompleted() {
-        characterViewModel.saveCurrentCharacter()
     }
 }

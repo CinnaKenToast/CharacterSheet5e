@@ -5,7 +5,6 @@ import android.util.AttributeSet
 import android.view.View
 import android.view.WindowManager
 import androidx.appcompat.widget.AppCompatTextView
-import androidx.databinding.BindingAdapter
 import com.shipsco.charactersheet.R
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.textfield.TextInputEditText
@@ -55,7 +54,7 @@ class CSTextViewLong: AppCompatTextView {
             }
             .setPositiveButton("Add") { dialog, which ->
                 this.text = editText.text.toString()
-                eventListener?.manualEditCompleted()
+                eventListener?.manualEditCompleted(this)
                 dialog.dismiss()
             }
             .setView(editText)

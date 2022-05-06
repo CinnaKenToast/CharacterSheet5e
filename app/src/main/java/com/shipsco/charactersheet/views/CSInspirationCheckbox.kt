@@ -7,7 +7,7 @@ import androidx.appcompat.widget.AppCompatCheckBox
 import com.shipsco.charactersheet.ManualEditListener
 import com.shipsco.charactersheet.R
 
-class CSCheckbox: AppCompatCheckBox {
+class CSInspirationCheckbox: AppCompatCheckBox {
     constructor(context: Context) : super(context) { init(context) }
     constructor(context: Context, attrs: AttributeSet) : super(context, attrs) { init(context) }
     constructor(context: Context, attrs: AttributeSet, defStyle: Int ) : super(context, attrs, defStyle) { init(context) }
@@ -15,6 +15,7 @@ class CSCheckbox: AppCompatCheckBox {
     var eventListener: ManualEditListener? = null
 
     private fun init(context: Context) {
+        buttonDrawable = context.getDrawable(R.drawable.inspiration_checkbox)
         buttonTintList = ColorStateList.valueOf(context.getColor(R.color.black))
         setOnClickListener {
             setManualCompleted()

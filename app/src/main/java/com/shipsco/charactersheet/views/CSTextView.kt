@@ -10,7 +10,6 @@ import android.view.WindowManager
 import android.view.inputmethod.EditorInfo
 import androidx.appcompat.widget.AppCompatTextView
 import androidx.core.widget.TextViewCompat
-import androidx.databinding.BindingAdapter
 import com.shipsco.charactersheet.R
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.textfield.TextInputEditText
@@ -80,7 +79,7 @@ class CSTextView: AppCompatTextView {
             }
             .setPositiveButton("Add") { dialog, which ->
                 this.text = editText.text.toString()
-                eventListener?.manualEditCompleted()
+                eventListener?.manualEditCompleted(this)
                 dialog.dismiss()
             }
             .setView(editText)
@@ -91,7 +90,7 @@ class CSTextView: AppCompatTextView {
         editText.setOnEditorActionListener { textView, actionId, keyEvent ->
             if (actionId == EditorInfo.IME_ACTION_DONE) {
                 this.text = editText.text.toString()
-                eventListener?.manualEditCompleted()
+                eventListener?.manualEditCompleted(this)
                 dialog.dismiss()
             }
             true
@@ -113,7 +112,7 @@ class CSTextView: AppCompatTextView {
             }
             .setPositiveButton("Add") { dialog, which ->
                 this.text = editText.text.toString()
-                eventListener?.manualEditCompleted()
+                eventListener?.manualEditCompleted(this)
                 dialog.dismiss()
             }
             .setView(editText)
@@ -124,7 +123,7 @@ class CSTextView: AppCompatTextView {
         editText.setOnEditorActionListener { textView, actionId, keyEvent ->
             if (actionId == EditorInfo.IME_ACTION_DONE) {
                 this.text = editText.text.toString()
-                eventListener?.manualEditCompleted()
+                eventListener?.manualEditCompleted(this)
                 dialog.dismiss()
             }
             true
@@ -147,6 +146,7 @@ class CSTextView: AppCompatTextView {
             }
             .setPositiveButton("Add") { dialog, which ->
                 this.text = getBonusFromText(editText.text.toString())
+                eventListener?.manualEditCompleted(this)
                 dialog.dismiss()
             }
             .setView(editText)
@@ -157,7 +157,7 @@ class CSTextView: AppCompatTextView {
         editText.setOnEditorActionListener { textView, actionId, keyEvent ->
             if (actionId == EditorInfo.IME_ACTION_DONE) {
                 this.text = getBonusFromText(editText.text.toString())
-                eventListener?.manualEditCompleted()
+                eventListener?.manualEditCompleted(this)
                 dialog.dismiss()
             }
             true
@@ -167,6 +167,7 @@ class CSTextView: AppCompatTextView {
     private fun getBonusFromText(text: String): String {
         var bonus = text
         if (!bonus.contains("-")) { bonus = "+$bonus" }
+        if (bonus.length == 1) { bonus = "" }
         return bonus
     }
 }

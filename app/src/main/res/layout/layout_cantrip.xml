@@ -1,50 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
-    <data>
-        <variable
-            name="viewModel"
-            type="com.shipsco.charactersheet.CharacterViewModel" />
-        <variable
-            name="position"
-            type="Integer" />
-    </data>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:clipChildren="false"
-        android:clipToPadding="false">
-
-        <LinearLayout
-            android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_weight="1000">
+        <com.shipsco.charactersheet.views.CSCheckbox
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_weight="1000">
-            <com.shipsco.charactersheet.views.CSCheckbox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                style="@style/Widget.AppCompat.CompoundButton.RadioButton"
-                android:visibility="invisible"
-                android:clickable="false"
-                android:layout_marginEnd="-10dp"/>
-            <com.shipsco.charactersheet.views.CSTextView
-                android:id="@+id/cantripName"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:textColor="@color/black"
-                app:isText="true"
-                android:text="@={viewModel.currentCharacter.cantrips[position]}"
-                app:isLocked="@{viewModel.currentCharacter.editingIsLocked}" />
-        </LinearLayout>
-
-        <View
+            style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+            android:visibility="invisible"
+            android:clickable="false"
+            android:layout_marginEnd="-10dp"/>
+        <com.shipsco.charactersheet.views.CSTextView
+            android:id="@+id/cantripName"
+            android:contentDescription="Cantrip"
             android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:minHeight="2dp"
-            android:layout_weight="1"
-            android:background="@color/black"
-            android:visibility="visible"/>
-
+            android:layout_height="match_parent"
+            android:textColor="@color/black"
+            app:isText="true" />
     </LinearLayout>
-</layout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:minHeight="2dp"
+        android:layout_weight="1"
+        android:background="@color/black"
+        android:visibility="visible"/>
+
+</LinearLayout>

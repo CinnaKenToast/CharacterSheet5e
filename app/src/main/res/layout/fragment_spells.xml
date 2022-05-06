@@ -1,1256 +1,1247 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<layout
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SpellsFragment"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:theme="@style/Theme.MaterialComponents.NoActionBar">
-    <data>
-        <variable
-            name="viewModel"
-            type="com.shipsco.charactersheet.CharacterViewModel" />
-    </data>
 
-    <LinearLayout
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        tools:context=".SpellsFragment">
-
-        <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/toolbar"
+        android:background="@color/purple_500"
+        app:titleTextColor="@color/white"
+        app:title="Spells"
+        app:titleTextAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+        app:menu="@menu/character_sheet_menu"/>
+    <!-- External Scroll -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!-- External Linear Layout -->
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_width="match_parent"
-            android:background="@color/purple_500"
-            app:titleTextColor="@color/white"
-            app:title="Spells"
-            app:titleTextAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
-            app:menu="@menu/character_sheet_menu"/>
-        <!-- External Scroll -->
-        <androidx.core.widget.NestedScrollView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <!-- External Linear Layout -->
+            android:orientation="vertical">
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="8dp"/>
+            <!-- Spellcasting Class -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:src="@drawable/spellcasting_class"
+                    app:layout_constraintDimensionRatio="779:293"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+                <com.shipsco.charactersheet.views.CSTextView
+                    android:id="@+id/spellcastingClass"
+                    android:contentDescription="Spellcasting Class"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:text='@={viewModel.currentCharacter.spellCastingClass}'
+                    android:gravity="center_vertical"
+                    app:isText="true"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintHorizontal_bias="0.3"
+                    app:layout_constraintVertical_bias="0.7"
+                    app:layout_constraintHeight_percent="0.35 "
+                    app:layout_constraintWidth_percent="0.7"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <!-- Spellcasting Info -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:src="@drawable/spellcasting_info"
+                    app:layout_constraintDimensionRatio="295:72"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+                <com.shipsco.charactersheet.views.CSTextView
+                    android:id="@+id/spellcastingAbility"
+                    android:contentDescription="Spellcasting Ability"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:text='@={viewModel.currentCharacter.spellCastingAbility}'
+                    android:gravity="center"
+                    app:isText="true"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintHorizontal_bias="0.1"
+                    app:layout_constraintVertical_bias="0.35"
+                    app:layout_constraintHeight_percent="0.4 "
+                    app:layout_constraintWidth_percent="0.2"/>
+                <com.shipsco.charactersheet.views.CSTextView
+                    android:id="@+id/spellSaveDC"
+                    android:contentDescription="Spell Save DC"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:text='@={viewModel.currentCharacter.spellSaveDC}'
+                    android:gravity="center"
+                    app:isNumber="true"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintHorizontal_bias="0.49"
+                    app:layout_constraintVertical_bias="0.35"
+                    app:layout_constraintHeight_percent="0.4 "
+                    app:layout_constraintWidth_percent="0.2"/>
+                <com.shipsco.charactersheet.views.CSTextView
+                    android:id="@+id/spellBonus"
+                    android:contentDescription="Spell Attack Bonus"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:text='@={viewModel.currentCharacter.spellAttackBonus}'
+                    android:gravity="center"
+                    app:isBonus="true"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintHorizontal_bias="0.89"
+                    app:layout_constraintVertical_bias="0.35"
+                    app:layout_constraintHeight_percent="0.4 "
+                    app:layout_constraintWidth_percent="0.2"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <Space
-                    android:layout_width="wrap_content"
-                    android:layout_height="8dp"/>
-                <!-- Spellcasting Class -->
+                android:orientation="vertical"
+                android:paddingHorizontal="8dp">
+                <!-- Cantrips -->
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <ImageView
+                        android:id="@+id/cantrip"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
-                        android:src="@drawable/spellcasting_class"
-                        app:layout_constraintDimensionRatio="779:293"
+                        android:src="@drawable/cantrips_no_list"
+                        app:layout_constraintDimensionRatio="1747:373"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintBottom_toTopOf="@id/cantripLayout"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"/>
-                    <com.shipsco.charactersheet.views.CSTextView
-                        android:id="@+id/spellcastingClass"
-                        android:contentDescription="Spellcasting Class"
-                        android:layout_width="0dp"
-                        android:layout_height="0dp"
-                        android:text='@={viewModel.currentCharacter.spellCastingClass}'
-                        android:gravity="center_vertical"
-                        app:isText="true"
+                    <LinearLayout
+                        android:id="@+id/cantripLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintTop_toBottomOf="@id/cantrip"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintHorizontal_bias="0.3"
-                        app:layout_constraintVertical_bias="0.7"
-                        app:layout_constraintHeight_percent="0.35 "
-                        app:layout_constraintWidth_percent="0.7"/>
+                        app:layout_constraintEnd_toEndOf="parent">
+                        <com.shipsco.charactersheet.views.CSCantrip
+                            android:id="@+id/cantrip1"
+                            android:contentDescription="Cantrip 1"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp" />
+                        <com.shipsco.charactersheet.views.CSCantrip
+                            android:id="@+id/cantrip2"
+                            android:contentDescription="Cantrip 2"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                        <com.shipsco.charactersheet.views.CSCantrip
+                            android:id="@+id/cantrip3"
+                            android:contentDescription="Cantrip 3"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                        <com.shipsco.charactersheet.views.CSCantrip
+                            android:id="@+id/cantrip4"
+                            android:contentDescription="Cantrip 4"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                        <com.shipsco.charactersheet.views.CSCantrip
+                            android:id="@+id/cantrip5"
+                            android:contentDescription="Cantrip 5"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                        <com.shipsco.charactersheet.views.CSCantrip
+                            android:id="@+id/cantrip6"
+                            android:contentDescription="Cantrip 6"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                        <com.shipsco.charactersheet.views.CSCantrip
+                            android:id="@+id/cantrip7"
+                            android:contentDescription="Cantrip 7"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                        <com.shipsco.charactersheet.views.CSCantrip
+                            android:id="@+id/cantrip8"
+                            android:contentDescription="Cantrip 8"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                    </LinearLayout>
                 </androidx.constraintlayout.widget.ConstraintLayout>
-                <!-- Spellcasting Info -->
+                <!-- Level 1 Spells -->
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <ImageView
+                        android:id="@+id/level1"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
-                        android:src="@drawable/spellcasting_info"
-                        app:layout_constraintDimensionRatio="295:72"
+                        android:src="@drawable/level_1_spells_no_list"
+                        app:layout_constraintDimensionRatio="1606:477"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintBottom_toTopOf="@id/level1Layout"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"/>
                     <com.shipsco.charactersheet.views.CSTextView
-                        android:id="@+id/spellcastingAbility"
-                        android:contentDescription="Spellcasting Ability"
+                        android:id="@+id/level1SlotsTotal"
+                        android:contentDescription="Total Level 1 Spell Slots"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
-                        android:text='@={viewModel.currentCharacter.spellCastingAbility}'
-                        android:gravity="center"
-                        app:isText="true"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintHorizontal_bias="0.1"
-                        app:layout_constraintVertical_bias="0.35"
-                        app:layout_constraintHeight_percent="0.4 "
-                        app:layout_constraintWidth_percent="0.2"/>
-                    <com.shipsco.charactersheet.views.CSTextView
-                        android:id="@+id/spellSaveDC"
-                        android:contentDescription="Spell Save DC"
-                        android:layout_width="0dp"
-                        android:layout_height="0dp"
-                        android:text='@={viewModel.currentCharacter.spellSaveDC}'
+                        android:text='@={viewModel.currentCharacter.spells[0].totalSpellSlots}'
+                        android:textColor="@color/black"
                         android:gravity="center"
                         app:isNumber="true"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintHorizontal_bias="0.49"
-                        app:layout_constraintVertical_bias="0.35"
-                        app:layout_constraintHeight_percent="0.4 "
-                        app:layout_constraintWidth_percent="0.2"/>
+                        app:layout_constraintHorizontal_bias="0.1"
+                        app:layout_constraintVertical_bias="0.075"
+                        app:layout_constraintHeight_percent="0.1"
+                        app:layout_constraintWidth_percent="0.3"/>
                     <com.shipsco.charactersheet.views.CSTextView
-                        android:id="@+id/spellBonus"
-                        android:contentDescription="Spell Attack Bonus"
+                        android:id="@+id/level1SlotsExpended"
+                        android:contentDescription="Level 1 Spells Expended"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
-                        android:text='@={viewModel.currentCharacter.spellAttackBonus}'
+                        android:text='@={viewModel.currentCharacter.spells[0].spellSlotsExpended}'
+                        android:textColor="@color/black"
                         android:gravity="center"
-                        app:isBonus="true"
+                        app:isNumber="true"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintHorizontal_bias="0.89"
-                        app:layout_constraintVertical_bias="0.35"
-                        app:layout_constraintHeight_percent="0.4 "
-                        app:layout_constraintWidth_percent="0.2"/>
+                        app:layout_constraintHorizontal_bias="1"
+                        app:layout_constraintVertical_bias="0.075"
+                        app:layout_constraintHeight_percent="0.1"
+                        app:layout_constraintWidth_percent="0.6"/>
+                    <LinearLayout
+                        android:id="@+id/level1Layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintTop_toBottomOf="@id/level1"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent">
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level1Spell1"
+                            android:contentDescription="Level 1 Spell 1"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp" />
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level1Spell2"
+                            android:contentDescription="Level 1 Spell 2"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level1Spell3"
+                            android:contentDescription="Level 1 Spell 3"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level1Spell4"
+                            android:contentDescription="Level 1 Spell 4"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level1Spell5"
+                            android:contentDescription="Level 1 Spell 5"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level1Spell6"
+                            android:contentDescription="Level 1 Spell 6"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level1Spell7"
+                            android:contentDescription="Level 1 Spell 7"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level1Spell8"
+                            android:contentDescription="Level 1 Spell 8"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level1Spell9"
+                            android:contentDescription="Level 1 Spell 9"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level1Spell10"
+                            android:contentDescription="Level 1 Spell 10"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level1Spell11"
+                            android:contentDescription="Level 1 Spell 11"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level1Spell12"
+                            android:contentDescription="Level 1 Spell 12"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level1Spell13"
+                            android:contentDescription="Level 1 Spell 13"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                    </LinearLayout>
                 </androidx.constraintlayout.widget.ConstraintLayout>
-                <LinearLayout
+                <!-- Level 2 Spells -->
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:paddingHorizontal="8dp">
-                    <!-- Cantrips -->
-                    <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/level2"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:src="@drawable/level_2_spells_no_list"
+                        app:layout_constraintDimensionRatio="803:172"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toTopOf="@id/level2Layout"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+                    <com.shipsco.charactersheet.views.CSTextView
+                        android:id="@+id/level2SlotsTotal"
+                        android:contentDescription="Level 2 Spell Slots"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:text='@={viewModel.currentCharacter.spells[1].totalSpellSlots}'
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        app:isNumber="true"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintHorizontal_bias="0.1"
+                        app:layout_constraintVertical_bias="0.02"
+                        app:layout_constraintHeight_percent="0.1"
+                        app:layout_constraintWidth_percent="0.3"/>
+                    <com.shipsco.charactersheet.views.CSTextView
+                        android:id="@+id/level2SlotsExpended"
+                        android:contentDescription="Level 2 Spells Expended"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:text='@={viewModel.currentCharacter.spells[1].spellSlotsExpended}'
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        app:isNumber="true"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintHorizontal_bias="1"
+                        app:layout_constraintVertical_bias="0.02"
+                        app:layout_constraintHeight_percent="0.1"
+                        app:layout_constraintWidth_percent="0.6"/>
+                    <LinearLayout
+                        android:id="@+id/level2Layout"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-                        <ImageView
-                            android:id="@+id/cantrip"
-                            android:layout_width="0dp"
-                            android:layout_height="0dp"
-                            android:src="@drawable/cantrips_no_list"
-                            app:layout_constraintDimensionRatio="1747:373"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintBottom_toTopOf="@id/cantripLayout"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"/>
-                        <LinearLayout
-                            android:id="@+id/cantripLayout"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintTop_toBottomOf="@id/level2"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent">
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level2Spell1"
+                            android:contentDescription="Level 2 Spell 1"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            app:layout_constraintTop_toBottomOf="@id/cantrip"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent">
-                            <com.shipsco.charactersheet.views.CSCantrip
-                                android:id="@+id/cantrip1"
-                                android:contentDescription="Cantrip 1"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp" />
-                            <com.shipsco.charactersheet.views.CSCantrip
-                                android:id="@+id/cantrip2"
-                                android:contentDescription="Cantrip 2"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                            <com.shipsco.charactersheet.views.CSCantrip
-                                android:id="@+id/cantrip3"
-                                android:contentDescription="Cantrip 3"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                            <com.shipsco.charactersheet.views.CSCantrip
-                                android:id="@+id/cantrip4"
-                                android:contentDescription="Cantrip 4"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                            <com.shipsco.charactersheet.views.CSCantrip
-                                android:id="@+id/cantrip5"
-                                android:contentDescription="Cantrip 5"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                            <com.shipsco.charactersheet.views.CSCantrip
-                                android:id="@+id/cantrip6"
-                                android:contentDescription="Cantrip 6"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                            <com.shipsco.charactersheet.views.CSCantrip
-                                android:id="@+id/cantrip7"
-                                android:contentDescription="Cantrip 7"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                            <com.shipsco.charactersheet.views.CSCantrip
-                                android:id="@+id/cantrip8"
-                                android:contentDescription="Cantrip 8"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                        </LinearLayout>
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-                    <!-- Level 1 Spells -->
-                    <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_height="36dp" />
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level2Spell2"
+                            android:contentDescription="Level 2 Spell 2"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level2Spell3"
+                            android:contentDescription="Level 2 Spell 3"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level2Spell4"
+                            android:contentDescription="Level 2 Spell 4"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level2Spell5"
+                            android:contentDescription="Level 2 Spell 5"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level2Spell6"
+                            android:contentDescription="Level 2 Spell 6"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level2Spell7"
+                            android:contentDescription="Level 2 Spell 7"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level2Spell8"
+                            android:contentDescription="Level 2 Spell 8"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level2Spell9"
+                            android:contentDescription="Level 2 Spell 9"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level2Spell10"
+                            android:contentDescription="Level 2 Spell 10"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level2Spell11"
+                            android:contentDescription="Level 2 Spell 11"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level2Spell12"
+                            android:contentDescription="Level 2 Spell 12"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level2Spell13"
+                            android:contentDescription="Level 2 Spell 13"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                    </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <!-- Level 3 Spells -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/level3"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:src="@drawable/level_3_spells_no_list"
+                        app:layout_constraintDimensionRatio="803:172"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toTopOf="@id/level3Layout"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+                    <com.shipsco.charactersheet.views.CSTextView
+                        android:id="@+id/level3SlotsTotal"
+                        android:contentDescription="Level 3 Spell Slots"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:text='@={viewModel.currentCharacter.spells[2].totalSpellSlots}'
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        app:isNumber="true"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintHorizontal_bias="0.1"
+                        app:layout_constraintVertical_bias="0.02"
+                        app:layout_constraintHeight_percent="0.1"
+                        app:layout_constraintWidth_percent="0.3"/>
+                    <com.shipsco.charactersheet.views.CSTextView
+                        android:id="@+id/level3SlotsExpended"
+                        android:contentDescription="Level 3 Spells Expended"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:text='@={viewModel.currentCharacter.spells[2].spellSlotsExpended}'
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        app:isNumber="true"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintHorizontal_bias="1"
+                        app:layout_constraintVertical_bias="0.02"
+                        app:layout_constraintHeight_percent="0.1"
+                        app:layout_constraintWidth_percent="0.6"/>
+                    <LinearLayout
+                        android:id="@+id/level3Layout"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-                        <ImageView
-                            android:id="@+id/level1"
-                            android:layout_width="0dp"
-                            android:layout_height="0dp"
-                            android:src="@drawable/level_1_spells_no_list"
-                            app:layout_constraintDimensionRatio="1606:477"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintBottom_toTopOf="@id/level1Layout"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"/>
-                        <com.shipsco.charactersheet.views.CSTextView
-                            android:id="@+id/level1SlotsTotal"
-                            android:contentDescription="Total Level 1 Spell Slots"
-                            android:layout_width="0dp"
-                            android:layout_height="0dp"
-                            android:text='@={viewModel.currentCharacter.spells[0].totalSpellSlots}'
-                            android:textColor="@color/black"
-                            android:gravity="center"
-                            app:isNumber="true"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintHorizontal_bias="0.1"
-                            app:layout_constraintVertical_bias="0.075"
-                            app:layout_constraintHeight_percent="0.1"
-                            app:layout_constraintWidth_percent="0.3"/>
-                        <com.shipsco.charactersheet.views.CSTextView
-                            android:id="@+id/level1SlotsExpended"
-                            android:contentDescription="Level 1 Spells Expended"
-                            android:layout_width="0dp"
-                            android:layout_height="0dp"
-                            android:text='@={viewModel.currentCharacter.spells[0].spellSlotsExpended}'
-                            android:textColor="@color/black"
-                            android:gravity="center"
-                            app:isNumber="true"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintHorizontal_bias="1"
-                            app:layout_constraintVertical_bias="0.075"
-                            app:layout_constraintHeight_percent="0.1"
-                            app:layout_constraintWidth_percent="0.6"/>
-                        <LinearLayout
-                            android:id="@+id/level1Layout"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintTop_toBottomOf="@id/level3"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent">
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level3Spell1"
+                            android:contentDescription="Level 3 Spell 1"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            app:layout_constraintTop_toBottomOf="@id/level1"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent">
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level1Spell1"
-                                android:contentDescription="Level 1 Spell 1"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp" />
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level1Spell2"
-                                android:contentDescription="Level 1 Spell 2"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level1Spell3"
-                                android:contentDescription="Level 1 Spell 3"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level1Spell4"
-                                android:contentDescription="Level 1 Spell 4"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level1Spell5"
-                                android:contentDescription="Level 1 Spell 5"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level1Spell6"
-                                android:contentDescription="Level 1 Spell 6"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level1Spell7"
-                                android:contentDescription="Level 1 Spell 7"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level1Spell8"
-                                android:contentDescription="Level 1 Spell 8"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level1Spell9"
-                                android:contentDescription="Level 1 Spell 9"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level1Spell10"
-                                android:contentDescription="Level 1 Spell 10"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level1Spell11"
-                                android:contentDescription="Level 1 Spell 11"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level1Spell12"
-                                android:contentDescription="Level 1 Spell 12"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level1Spell13"
-                                android:contentDescription="Level 1 Spell 13"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                        </LinearLayout>
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-                    <!-- Level 2 Spells -->
-                    <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_height="36dp" />
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level3Spell2"
+                            android:contentDescription="Level 3 Spell 2"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level3Spell3"
+                            android:contentDescription="Level 3 Spell 3"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level3Spell4"
+                            android:contentDescription="Level 3 Spell 4"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level3Spell5"
+                            android:contentDescription="Level 3 Spell 5"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level3Spell6"
+                            android:contentDescription="Level 3 Spell 6"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level3Spell7"
+                            android:contentDescription="Level 3 Spell 7"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level3Spell8"
+                            android:contentDescription="Level 3 Spell 8"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level3Spell9"
+                            android:contentDescription="Level 3 Spell 9"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level3Spell10"
+                            android:contentDescription="Level 3 Spell 10"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level3Spell11"
+                            android:contentDescription="Level 3 Spell 11"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level3Spell12"
+                            android:contentDescription="Level 3 Spell 12"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level3Spell13"
+                            android:contentDescription="Level 3 Spell 13"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                    </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <!-- Level 4 Spells -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/level4"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:src="@drawable/level_4_spells_no_list"
+                        app:layout_constraintDimensionRatio="803:172"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toTopOf="@id/level4Layout"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+                    <com.shipsco.charactersheet.views.CSTextView
+                        android:id="@+id/level4SlotsTotal"
+                        android:contentDescription="Level 4 Spell Slots"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:text='@={viewModel.currentCharacter.spells[3].totalSpellSlots}'
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        app:isNumber="true"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintHorizontal_bias="0.1"
+                        app:layout_constraintVertical_bias="0.02"
+                        app:layout_constraintHeight_percent="0.1"
+                        app:layout_constraintWidth_percent="0.3"/>
+                    <com.shipsco.charactersheet.views.CSTextView
+                        android:id="@+id/level4SlotsExpended"
+                        android:contentDescription="Level 4 Spells Expended"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:text='@={viewModel.currentCharacter.spells[3].spellSlotsExpended}'
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        app:isNumber="true"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintHorizontal_bias="1"
+                        app:layout_constraintVertical_bias="0.02"
+                        app:layout_constraintHeight_percent="0.1"
+                        app:layout_constraintWidth_percent="0.6"/>
+                    <LinearLayout
+                        android:id="@+id/level4Layout"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-                        <ImageView
-                            android:id="@+id/level2"
-                            android:layout_width="0dp"
-                            android:layout_height="0dp"
-                            android:src="@drawable/level_2_spells_no_list"
-                            app:layout_constraintDimensionRatio="803:172"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintBottom_toTopOf="@id/level2Layout"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"/>
-                        <com.shipsco.charactersheet.views.CSTextView
-                            android:id="@+id/level2SlotsTotal"
-                            android:contentDescription="Level 2 Spell Slots"
-                            android:layout_width="0dp"
-                            android:layout_height="0dp"
-                            android:text='@={viewModel.currentCharacter.spells[1].totalSpellSlots}'
-                            android:textColor="@color/black"
-                            android:gravity="center"
-                            app:isNumber="true"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintHorizontal_bias="0.1"
-                            app:layout_constraintVertical_bias="0.02"
-                            app:layout_constraintHeight_percent="0.1"
-                            app:layout_constraintWidth_percent="0.3"/>
-                        <com.shipsco.charactersheet.views.CSTextView
-                            android:id="@+id/level2SlotsExpended"
-                            android:contentDescription="Level 2 Spells Expended"
-                            android:layout_width="0dp"
-                            android:layout_height="0dp"
-                            android:text='@={viewModel.currentCharacter.spells[1].spellSlotsExpended}'
-                            android:textColor="@color/black"
-                            android:gravity="center"
-                            app:isNumber="true"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintHorizontal_bias="1"
-                            app:layout_constraintVertical_bias="0.02"
-                            app:layout_constraintHeight_percent="0.1"
-                            app:layout_constraintWidth_percent="0.6"/>
-                        <LinearLayout
-                            android:id="@+id/level2Layout"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintTop_toBottomOf="@id/level4"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent">
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level4Spell1"
+                            android:contentDescription="Level 4 Spell 1"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            app:layout_constraintTop_toBottomOf="@id/level2"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent">
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level2Spell1"
-                                android:contentDescription="Level 2 Spell 1"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp" />
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level2Spell2"
-                                android:contentDescription="Level 2 Spell 2"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level2Spell3"
-                                android:contentDescription="Level 2 Spell 3"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level2Spell4"
-                                android:contentDescription="Level 2 Spell 4"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level2Spell5"
-                                android:contentDescription="Level 2 Spell 5"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level2Spell6"
-                                android:contentDescription="Level 2 Spell 6"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level2Spell7"
-                                android:contentDescription="Level 2 Spell 7"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level2Spell8"
-                                android:contentDescription="Level 2 Spell 8"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level2Spell9"
-                                android:contentDescription="Level 2 Spell 9"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level2Spell10"
-                                android:contentDescription="Level 2 Spell 10"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level2Spell11"
-                                android:contentDescription="Level 2 Spell 11"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level2Spell12"
-                                android:contentDescription="Level 2 Spell 12"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level2Spell13"
-                                android:contentDescription="Level 2 Spell 13"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                        </LinearLayout>
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-                    <!-- Level 3 Spells -->
-                    <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_height="36dp" />
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level4Spell2"
+                            android:contentDescription="Level 4 Spell 2"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level4Spell3"
+                            android:contentDescription="Level 4 Spell 3"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level4Spell4"
+                            android:contentDescription="Level 4 Spell 4"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level4Spell5"
+                            android:contentDescription="Level 4 Spell 5"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level4Spell6"
+                            android:contentDescription="Level 4 Spell 6"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level4Spell7"
+                            android:contentDescription="Level 4 Spell 7"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level4Spell8"
+                            android:contentDescription="Level 4 Spell 8"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level4Spell9"
+                            android:contentDescription="Level 4 Spell 9"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level4Spell10"
+                            android:contentDescription="Level 4 Spell 10"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level4Spell11"
+                            android:contentDescription="Level 4 Spell 11"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level4Spell12"
+                            android:contentDescription="Level 4 Spell 12"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level4Spell13"
+                            android:contentDescription="Level 4 Spell 13"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                    </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <!-- Level 5 Spells -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/level5"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:src="@drawable/level_5_spells_no_list"
+                        app:layout_constraintDimensionRatio="803:172"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toTopOf="@id/level5Layout"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+                    <com.shipsco.charactersheet.views.CSTextView
+                        android:id="@+id/level5SlotsTotal"
+                        android:contentDescription="Level 5 Spell Slots"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:text='@={viewModel.currentCharacter.spells[4].totalSpellSlots}'
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        app:isNumber="true"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintHorizontal_bias="0.1"
+                        app:layout_constraintVertical_bias="0.025"
+                        app:layout_constraintHeight_percent="0.12"
+                        app:layout_constraintWidth_percent="0.3"/>
+                    <com.shipsco.charactersheet.views.CSTextView
+                        android:id="@+id/level5SlotsExpended"
+                        android:contentDescription="Level 5 Spells Expended"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:text='@={viewModel.currentCharacter.spells[4].spellSlotsExpended}'
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        app:isNumber="true"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintHorizontal_bias="1"
+                        app:layout_constraintVertical_bias="0.025"
+                        app:layout_constraintHeight_percent="0.12"
+                        app:layout_constraintWidth_percent="0.6"/>
+                    <LinearLayout
+                        android:id="@+id/level5Layout"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-                        <ImageView
-                            android:id="@+id/level3"
-                            android:layout_width="0dp"
-                            android:layout_height="0dp"
-                            android:src="@drawable/level_3_spells_no_list"
-                            app:layout_constraintDimensionRatio="803:172"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintBottom_toTopOf="@id/level3Layout"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"/>
-                        <com.shipsco.charactersheet.views.CSTextView
-                            android:id="@+id/level3SlotsTotal"
-                            android:contentDescription="Level 3 Spell Slots"
-                            android:layout_width="0dp"
-                            android:layout_height="0dp"
-                            android:text='@={viewModel.currentCharacter.spells[2].totalSpellSlots}'
-                            android:textColor="@color/black"
-                            android:gravity="center"
-                            app:isNumber="true"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintHorizontal_bias="0.1"
-                            app:layout_constraintVertical_bias="0.02"
-                            app:layout_constraintHeight_percent="0.1"
-                            app:layout_constraintWidth_percent="0.3"/>
-                        <com.shipsco.charactersheet.views.CSTextView
-                            android:id="@+id/level3SlotsExpended"
-                            android:contentDescription="Level 3 Spells Expended"
-                            android:layout_width="0dp"
-                            android:layout_height="0dp"
-                            android:text='@={viewModel.currentCharacter.spells[2].spellSlotsExpended}'
-                            android:textColor="@color/black"
-                            android:gravity="center"
-                            app:isNumber="true"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintHorizontal_bias="1"
-                            app:layout_constraintVertical_bias="0.02"
-                            app:layout_constraintHeight_percent="0.1"
-                            app:layout_constraintWidth_percent="0.6"/>
-                        <LinearLayout
-                            android:id="@+id/level3Layout"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintTop_toBottomOf="@id/level5"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent">
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level5Spell1"
+                            android:contentDescription="Level 5 Spell 1"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            app:layout_constraintTop_toBottomOf="@id/level3"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent">
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level3Spell1"
-                                android:contentDescription="Level 3 Spell 1"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp" />
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level3Spell2"
-                                android:contentDescription="Level 3 Spell 2"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level3Spell3"
-                                android:contentDescription="Level 3 Spell 3"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level3Spell4"
-                                android:contentDescription="Level 3 Spell 4"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level3Spell5"
-                                android:contentDescription="Level 3 Spell 5"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level3Spell6"
-                                android:contentDescription="Level 3 Spell 6"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level3Spell7"
-                                android:contentDescription="Level 3 Spell 7"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level3Spell8"
-                                android:contentDescription="Level 3 Spell 8"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level3Spell9"
-                                android:contentDescription="Level 3 Spell 9"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level3Spell10"
-                                android:contentDescription="Level 3 Spell 10"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level3Spell11"
-                                android:contentDescription="Level 3 Spell 11"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level3Spell12"
-                                android:contentDescription="Level 3 Spell 12"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level3Spell13"
-                                android:contentDescription="Level 3 Spell 13"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                        </LinearLayout>
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-                    <!-- Level 4 Spells -->
-                    <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_height="36dp" />
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level5Spell2"
+                            android:contentDescription="Level 5 Spell 2"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level5Spell3"
+                            android:contentDescription="Level 5 Spell 3"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level5Spell4"
+                            android:contentDescription="Level 5 Spell 4"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level5Spell5"
+                            android:contentDescription="Level 5 Spell 5"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level5Spell6"
+                            android:contentDescription="Level 5 Spell 6"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level5Spell7"
+                            android:contentDescription="Level 5 Spell 7"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level5Spell8"
+                            android:contentDescription="Level 5 Spell 8"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level5Spell9"
+                            android:contentDescription="Level 5 Spell 9"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level5Spell10"
+                            android:contentDescription="Level 5 Spell 10"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level5Spell11"
+                            android:contentDescription="Level 5 Spell 11"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                    </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <!-- Level 6 Spells -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/level6"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:src="@drawable/level_6_spells_no_list"
+                        app:layout_constraintDimensionRatio="803:172"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toTopOf="@id/level6Layout"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+                    <com.shipsco.charactersheet.views.CSTextView
+                        android:id="@+id/level6SlotsTotal"
+                        android:contentDescription="Level 6 Spell Slots"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:text='@={viewModel.currentCharacter.spells[5].totalSpellSlots}'
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        app:isNumber="true"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintHorizontal_bias="0.1"
+                        app:layout_constraintVertical_bias="0.025"
+                        app:layout_constraintHeight_percent="0.12"
+                        app:layout_constraintWidth_percent="0.3"/>
+                    <com.shipsco.charactersheet.views.CSTextView
+                        android:id="@+id/level6SlotsExpended"
+                        android:contentDescription="Level 6 Spells Expended"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:text='@={viewModel.currentCharacter.spells[5].spellSlotsExpended}'
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        app:isNumber="true"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintHorizontal_bias="1"
+                        app:layout_constraintVertical_bias="0.025"
+                        app:layout_constraintHeight_percent="0.12"
+                        app:layout_constraintWidth_percent="0.6"/>
+                    <LinearLayout
+                        android:id="@+id/level6Layout"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-                        <ImageView
-                            android:id="@+id/level4"
-                            android:layout_width="0dp"
-                            android:layout_height="0dp"
-                            android:src="@drawable/level_4_spells_no_list"
-                            app:layout_constraintDimensionRatio="803:172"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintBottom_toTopOf="@id/level4Layout"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"/>
-                        <com.shipsco.charactersheet.views.CSTextView
-                            android:id="@+id/level4SlotsTotal"
-                            android:contentDescription="Level 4 Spell Slots"
-                            android:layout_width="0dp"
-                            android:layout_height="0dp"
-                            android:text='@={viewModel.currentCharacter.spells[3].totalSpellSlots}'
-                            android:textColor="@color/black"
-                            android:gravity="center"
-                            app:isNumber="true"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintHorizontal_bias="0.1"
-                            app:layout_constraintVertical_bias="0.02"
-                            app:layout_constraintHeight_percent="0.1"
-                            app:layout_constraintWidth_percent="0.3"/>
-                        <com.shipsco.charactersheet.views.CSTextView
-                            android:id="@+id/level4SlotsExpended"
-                            android:contentDescription="Level 4 Spells Expended"
-                            android:layout_width="0dp"
-                            android:layout_height="0dp"
-                            android:text='@={viewModel.currentCharacter.spells[3].spellSlotsExpended}'
-                            android:textColor="@color/black"
-                            android:gravity="center"
-                            app:isNumber="true"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintHorizontal_bias="1"
-                            app:layout_constraintVertical_bias="0.02"
-                            app:layout_constraintHeight_percent="0.1"
-                            app:layout_constraintWidth_percent="0.6"/>
-                        <LinearLayout
-                            android:id="@+id/level4Layout"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintTop_toBottomOf="@id/level6"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent">
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level6Spell1"
+                            android:contentDescription="Level 6 Spell 1"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            app:layout_constraintTop_toBottomOf="@id/level4"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent">
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level4Spell1"
-                                android:contentDescription="Level 4 Spell 1"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp" />
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level4Spell2"
-                                android:contentDescription="Level 4 Spell 2"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level4Spell3"
-                                android:contentDescription="Level 4 Spell 3"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level4Spell4"
-                                android:contentDescription="Level 4 Spell 4"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level4Spell5"
-                                android:contentDescription="Level 4 Spell 5"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level4Spell6"
-                                android:contentDescription="Level 4 Spell 6"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level4Spell7"
-                                android:contentDescription="Level 4 Spell 7"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level4Spell8"
-                                android:contentDescription="Level 4 Spell 8"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level4Spell9"
-                                android:contentDescription="Level 4 Spell 9"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level4Spell10"
-                                android:contentDescription="Level 4 Spell 10"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level4Spell11"
-                                android:contentDescription="Level 4 Spell 11"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level4Spell12"
-                                android:contentDescription="Level 4 Spell 12"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level4Spell13"
-                                android:contentDescription="Level 4 Spell 13"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                        </LinearLayout>
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-                    <!-- Level 5 Spells -->
-                    <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_height="36dp" />
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level6Spell2"
+                            android:contentDescription="Level 6 Spell 2"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level6Spell3"
+                            android:contentDescription="Level 6 Spell 3"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level6Spell4"
+                            android:contentDescription="Level 6 Spell 4"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level6Spell5"
+                            android:contentDescription="Level 6 Spell 5"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level6Spell6"
+                            android:contentDescription="Level 6 Spell 6"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level6Spell7"
+                            android:contentDescription="Level 6 Spell 7"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level6Spell8"
+                            android:contentDescription="Level 6 Spell 8"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level6Spell9"
+                            android:contentDescription="Level 6 Spell 9"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level6Spell10"
+                            android:contentDescription="Level 6 Spell 10"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level6Spell11"
+                            android:contentDescription="Level 6 Spell 11"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                    </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <!-- Level 7 Spells -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/level7"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:src="@drawable/level_7_spells_no_list"
+                        app:layout_constraintDimensionRatio="803:172"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toTopOf="@id/level7Layout"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+                    <com.shipsco.charactersheet.views.CSTextView
+                        android:id="@+id/level7SlotsTotal"
+                        android:contentDescription="Level 7 Spell Slots"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:text='@={viewModel.currentCharacter.spells[6].totalSpellSlots}'
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        app:isNumber="true"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintHorizontal_bias="0.1"
+                        app:layout_constraintVertical_bias="0.025"
+                        app:layout_constraintHeight_percent="0.12"
+                        app:layout_constraintWidth_percent="0.3"/>
+                    <com.shipsco.charactersheet.views.CSTextView
+                        android:id="@+id/level7SlotsExpended"
+                        android:contentDescription="Level 7 Spells Expended"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:text='@={viewModel.currentCharacter.spells[6].spellSlotsExpended}'
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        app:isNumber="true"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintHorizontal_bias="1"
+                        app:layout_constraintVertical_bias="0.025"
+                        app:layout_constraintHeight_percent="0.12"
+                        app:layout_constraintWidth_percent="0.6"/>
+                    <LinearLayout
+                        android:id="@+id/level7Layout"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-                        <ImageView
-                            android:id="@+id/level5"
-                            android:layout_width="0dp"
-                            android:layout_height="0dp"
-                            android:src="@drawable/level_5_spells_no_list"
-                            app:layout_constraintDimensionRatio="803:172"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintBottom_toTopOf="@id/level5Layout"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"/>
-                        <com.shipsco.charactersheet.views.CSTextView
-                            android:id="@+id/level5SlotsTotal"
-                            android:contentDescription="Level 5 Spell Slots"
-                            android:layout_width="0dp"
-                            android:layout_height="0dp"
-                            android:text='@={viewModel.currentCharacter.spells[4].totalSpellSlots}'
-                            android:textColor="@color/black"
-                            android:gravity="center"
-                            app:isNumber="true"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintHorizontal_bias="0.1"
-                            app:layout_constraintVertical_bias="0.025"
-                            app:layout_constraintHeight_percent="0.12"
-                            app:layout_constraintWidth_percent="0.3"/>
-                        <com.shipsco.charactersheet.views.CSTextView
-                            android:id="@+id/level5SlotsExpended"
-                            android:contentDescription="Level 5 Spells Expended"
-                            android:layout_width="0dp"
-                            android:layout_height="0dp"
-                            android:text='@={viewModel.currentCharacter.spells[4].spellSlotsExpended}'
-                            android:textColor="@color/black"
-                            android:gravity="center"
-                            app:isNumber="true"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintHorizontal_bias="1"
-                            app:layout_constraintVertical_bias="0.025"
-                            app:layout_constraintHeight_percent="0.12"
-                            app:layout_constraintWidth_percent="0.6"/>
-                        <LinearLayout
-                            android:id="@+id/level5Layout"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintTop_toBottomOf="@id/level7"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent">
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level7Spell1"
+                            android:contentDescription="Level 7 Spell 1"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            app:layout_constraintTop_toBottomOf="@id/level5"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent">
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level5Spell1"
-                                android:contentDescription="Level 5 Spell 1"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp" />
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level5Spell2"
-                                android:contentDescription="Level 5 Spell 2"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level5Spell3"
-                                android:contentDescription="Level 5 Spell 3"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level5Spell4"
-                                android:contentDescription="Level 5 Spell 4"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level5Spell5"
-                                android:contentDescription="Level 5 Spell 5"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level5Spell6"
-                                android:contentDescription="Level 5 Spell 6"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level5Spell7"
-                                android:contentDescription="Level 5 Spell 7"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level5Spell8"
-                                android:contentDescription="Level 5 Spell 8"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level5Spell9"
-                                android:contentDescription="Level 5 Spell 9"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level5Spell10"
-                                android:contentDescription="Level 5 Spell 10"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level5Spell11"
-                                android:contentDescription="Level 5 Spell 11"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                        </LinearLayout>
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-                    <!-- Level 6 Spells -->
-                    <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_height="36dp" />
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level7Spell2"
+                            android:contentDescription="Level 7 Spell 2"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level7Spell3"
+                            android:contentDescription="Level 7 Spell 3"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level7Spell4"
+                            android:contentDescription="Level 7 Spell 4"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level7Spell5"
+                            android:contentDescription="Level 7 Spell 5"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level7Spell6"
+                            android:contentDescription="Level 7 Spell 6"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level7Spell7"
+                            android:contentDescription="Level 7 Spell 7"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level7Spell8"
+                            android:contentDescription="Level 7 Spell 8"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level7Spell9"
+                            android:contentDescription="Level 7 Spell 9"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level7Spell10"
+                            android:contentDescription="Level 7 Spell 10"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level7Spell11"
+                            android:contentDescription="Level 7 Spell 11"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                    </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <!-- Level 8 Spells -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/level8"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:src="@drawable/level_8_spells_no_list"
+                        app:layout_constraintDimensionRatio="803:172"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toTopOf="@id/level8Layout"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+                    <com.shipsco.charactersheet.views.CSTextView
+                        android:id="@+id/level8SlotsTotal"
+                        android:contentDescription="Level 8 Spell Slots"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:text='@={viewModel.currentCharacter.spells[7].totalSpellSlots}'
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        app:isNumber="true"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintHorizontal_bias="0.1"
+                        app:layout_constraintVertical_bias="0.03"
+                        app:layout_constraintHeight_percent="0.14"
+                        app:layout_constraintWidth_percent="0.3"/>
+                    <com.shipsco.charactersheet.views.CSTextView
+                        android:id="@+id/level8SlotsExpended"
+                        android:contentDescription="Level 8 Spells Expended"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:text='@={viewModel.currentCharacter.spells[7].spellSlotsExpended}'
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        app:isNumber="true"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintHorizontal_bias="1"
+                        app:layout_constraintVertical_bias="0.03"
+                        app:layout_constraintHeight_percent="0.14"
+                        app:layout_constraintWidth_percent="0.6"/>
+                    <LinearLayout
+                        android:id="@+id/level8Layout"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-                        <ImageView
-                            android:id="@+id/level6"
-                            android:layout_width="0dp"
-                            android:layout_height="0dp"
-                            android:src="@drawable/level_6_spells_no_list"
-                            app:layout_constraintDimensionRatio="803:172"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintBottom_toTopOf="@id/level6Layout"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"/>
-                        <com.shipsco.charactersheet.views.CSTextView
-                            android:id="@+id/level6SlotsTotal"
-                            android:contentDescription="Level 6 Spell Slots"
-                            android:layout_width="0dp"
-                            android:layout_height="0dp"
-                            android:text='@={viewModel.currentCharacter.spells[5].totalSpellSlots}'
-                            android:textColor="@color/black"
-                            android:gravity="center"
-                            app:isNumber="true"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintHorizontal_bias="0.1"
-                            app:layout_constraintVertical_bias="0.025"
-                            app:layout_constraintHeight_percent="0.12"
-                            app:layout_constraintWidth_percent="0.3"/>
-                        <com.shipsco.charactersheet.views.CSTextView
-                            android:id="@+id/level6SlotsExpended"
-                            android:contentDescription="Level 6 Spells Expended"
-                            android:layout_width="0dp"
-                            android:layout_height="0dp"
-                            android:text='@={viewModel.currentCharacter.spells[5].spellSlotsExpended}'
-                            android:textColor="@color/black"
-                            android:gravity="center"
-                            app:isNumber="true"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintHorizontal_bias="1"
-                            app:layout_constraintVertical_bias="0.025"
-                            app:layout_constraintHeight_percent="0.12"
-                            app:layout_constraintWidth_percent="0.6"/>
-                        <LinearLayout
-                            android:id="@+id/level6Layout"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintTop_toBottomOf="@id/level8"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent">
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level8Spell1"
+                            android:contentDescription="Level 8 Spell 1"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            app:layout_constraintTop_toBottomOf="@id/level6"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent">
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level6Spell1"
-                                android:contentDescription="Level 6 Spell 1"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp" />
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level6Spell2"
-                                android:contentDescription="Level 6 Spell 2"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level6Spell3"
-                                android:contentDescription="Level 6 Spell 3"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level6Spell4"
-                                android:contentDescription="Level 6 Spell 4"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level6Spell5"
-                                android:contentDescription="Level 6 Spell 5"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level6Spell6"
-                                android:contentDescription="Level 6 Spell 6"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level6Spell7"
-                                android:contentDescription="Level 6 Spell 7"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level6Spell8"
-                                android:contentDescription="Level 6 Spell 8"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level6Spell9"
-                                android:contentDescription="Level 6 Spell 9"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level6Spell10"
-                                android:contentDescription="Level 6 Spell 10"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level6Spell11"
-                                android:contentDescription="Level 6 Spell 11"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                        </LinearLayout>
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-                    <!-- Level 7 Spells -->
-                    <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_height="36dp" />
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level8Spell2"
+                            android:contentDescription="Level 8 Spell 2"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level8Spell3"
+                            android:contentDescription="Level 8 Spell 3"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level8Spell4"
+                            android:contentDescription="Level 8 Spell 4"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level8Spell5"
+                            android:contentDescription="Level 8 Spell 5"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level8Spell6"
+                            android:contentDescription="Level 8 Spell 6"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level8Spell7"
+                            android:contentDescription="Level 8 Spell 7"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level8Spell8"
+                            android:contentDescription="Level 8 Spell 8"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level8Spell9"
+                            android:contentDescription="Level 8 Spell 9"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                    </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <!-- Level 9 Spells -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/level9"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:src="@drawable/level_9_spells_no_list"
+                        app:layout_constraintDimensionRatio="803:172"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toTopOf="@id/level9Layout"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+                    <com.shipsco.charactersheet.views.CSTextView
+                        android:id="@+id/level9SlotsTotal"
+                        android:contentDescription="Level 9 Spell Slots"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:text='@={viewModel.currentCharacter.spells[8].totalSpellSlots}'
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        app:isNumber="true"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintHorizontal_bias="0.1"
+                        app:layout_constraintVertical_bias="0.03"
+                        app:layout_constraintHeight_percent="0.14"
+                        app:layout_constraintWidth_percent="0.3"/>
+                    <com.shipsco.charactersheet.views.CSTextView
+                        android:id="@+id/level9SlotsExpended"
+                        android:contentDescription="Level 9 Spells Expended"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:text='@={viewModel.currentCharacter.spells[8].spellSlotsExpended}'
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        app:isNumber="true"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintHorizontal_bias="1"
+                        app:layout_constraintVertical_bias="0.03"
+                        app:layout_constraintHeight_percent="0.14"
+                        app:layout_constraintWidth_percent="0.6"/>
+                    <LinearLayout
+                        android:id="@+id/level9Layout"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-                        <ImageView
-                            android:id="@+id/level7"
-                            android:layout_width="0dp"
-                            android:layout_height="0dp"
-                            android:src="@drawable/level_7_spells_no_list"
-                            app:layout_constraintDimensionRatio="803:172"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintBottom_toTopOf="@id/level7Layout"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"/>
-                        <com.shipsco.charactersheet.views.CSTextView
-                            android:id="@+id/level7SlotsTotal"
-                            android:contentDescription="Level 7 Spell Slots"
-                            android:layout_width="0dp"
-                            android:layout_height="0dp"
-                            android:text='@={viewModel.currentCharacter.spells[6].totalSpellSlots}'
-                            android:textColor="@color/black"
-                            android:gravity="center"
-                            app:isNumber="true"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintHorizontal_bias="0.1"
-                            app:layout_constraintVertical_bias="0.025"
-                            app:layout_constraintHeight_percent="0.12"
-                            app:layout_constraintWidth_percent="0.3"/>
-                        <com.shipsco.charactersheet.views.CSTextView
-                            android:id="@+id/level7SlotsExpended"
-                            android:contentDescription="Level 7 Spells Expended"
-                            android:layout_width="0dp"
-                            android:layout_height="0dp"
-                            android:text='@={viewModel.currentCharacter.spells[6].spellSlotsExpended}'
-                            android:textColor="@color/black"
-                            android:gravity="center"
-                            app:isNumber="true"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintHorizontal_bias="1"
-                            app:layout_constraintVertical_bias="0.025"
-                            app:layout_constraintHeight_percent="0.12"
-                            app:layout_constraintWidth_percent="0.6"/>
-                        <LinearLayout
-                            android:id="@+id/level7Layout"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintTop_toBottomOf="@id/level9"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent">
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level9Spell1"
+                            android:contentDescription="Level 9 Spell 1"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            app:layout_constraintTop_toBottomOf="@id/level7"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent">
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level7Spell1"
-                                android:contentDescription="Level 7 Spell 1"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp" />
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level7Spell2"
-                                android:contentDescription="Level 7 Spell 2"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level7Spell3"
-                                android:contentDescription="Level 7 Spell 3"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level7Spell4"
-                                android:contentDescription="Level 7 Spell 4"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level7Spell5"
-                                android:contentDescription="Level 7 Spell 5"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level7Spell6"
-                                android:contentDescription="Level 7 Spell 6"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level7Spell7"
-                                android:contentDescription="Level 7 Spell 7"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level7Spell8"
-                                android:contentDescription="Level 7 Spell 8"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level7Spell9"
-                                android:contentDescription="Level 7 Spell 9"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level7Spell10"
-                                android:contentDescription="Level 7 Spell 10"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level7Spell11"
-                                android:contentDescription="Level 7 Spell 11"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                        </LinearLayout>
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-                    <!-- Level 8 Spells -->
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-                        <ImageView
-                            android:id="@+id/level8"
-                            android:layout_width="0dp"
-                            android:layout_height="0dp"
-                            android:src="@drawable/level_8_spells_no_list"
-                            app:layout_constraintDimensionRatio="803:172"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintBottom_toTopOf="@id/level8Layout"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"/>
-                        <com.shipsco.charactersheet.views.CSTextView
-                            android:id="@+id/level8SlotsTotal"
-                            android:contentDescription="Level 8 Spell Slots"
-                            android:layout_width="0dp"
-                            android:layout_height="0dp"
-                            android:text='@={viewModel.currentCharacter.spells[7].totalSpellSlots}'
-                            android:textColor="@color/black"
-                            android:gravity="center"
-                            app:isNumber="true"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintHorizontal_bias="0.1"
-                            app:layout_constraintVertical_bias="0.03"
-                            app:layout_constraintHeight_percent="0.14"
-                            app:layout_constraintWidth_percent="0.3"/>
-                        <com.shipsco.charactersheet.views.CSTextView
-                            android:id="@+id/level8SlotsExpended"
-                            android:contentDescription="Level 8 Spells Expended"
-                            android:layout_width="0dp"
-                            android:layout_height="0dp"
-                            android:text='@={viewModel.currentCharacter.spells[7].spellSlotsExpended}'
-                            android:textColor="@color/black"
-                            android:gravity="center"
-                            app:isNumber="true"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintHorizontal_bias="1"
-                            app:layout_constraintVertical_bias="0.03"
-                            app:layout_constraintHeight_percent="0.14"
-                            app:layout_constraintWidth_percent="0.6"/>
-                        <LinearLayout
-                            android:id="@+id/level8Layout"
+                            android:layout_height="36dp" />
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level9Spell2"
+                            android:contentDescription="Level 9 Spell 2"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            app:layout_constraintTop_toBottomOf="@id/level8"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent">
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level8Spell1"
-                                android:contentDescription="Level 8 Spell 1"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp" />
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level8Spell2"
-                                android:contentDescription="Level 8 Spell 2"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level8Spell3"
-                                android:contentDescription="Level 8 Spell 3"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level8Spell4"
-                                android:contentDescription="Level 8 Spell 4"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level8Spell5"
-                                android:contentDescription="Level 8 Spell 5"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level8Spell6"
-                                android:contentDescription="Level 8 Spell 6"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level8Spell7"
-                                android:contentDescription="Level 8 Spell 7"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level8Spell8"
-                                android:contentDescription="Level 8 Spell 8"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level8Spell9"
-                                android:contentDescription="Level 8 Spell 9"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                        </LinearLayout>
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-                    <!-- Level 9 Spells -->
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-                        <ImageView
-                            android:id="@+id/level9"
-                            android:layout_width="0dp"
-                            android:layout_height="0dp"
-                            android:src="@drawable/level_9_spells_no_list"
-                            app:layout_constraintDimensionRatio="803:172"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintBottom_toTopOf="@id/level9Layout"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"/>
-                        <com.shipsco.charactersheet.views.CSTextView
-                            android:id="@+id/level9SlotsTotal"
-                            android:contentDescription="Level 9 Spell Slots"
-                            android:layout_width="0dp"
-                            android:layout_height="0dp"
-                            android:text='@={viewModel.currentCharacter.spells[8].totalSpellSlots}'
-                            android:textColor="@color/black"
-                            android:gravity="center"
-                            app:isNumber="true"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintHorizontal_bias="0.1"
-                            app:layout_constraintVertical_bias="0.03"
-                            app:layout_constraintHeight_percent="0.14"
-                            app:layout_constraintWidth_percent="0.3"/>
-                        <com.shipsco.charactersheet.views.CSTextView
-                            android:id="@+id/level9SlotsExpended"
-                            android:contentDescription="Level 9 Spells Expended"
-                            android:layout_width="0dp"
-                            android:layout_height="0dp"
-                            android:text='@={viewModel.currentCharacter.spells[8].spellSlotsExpended}'
-                            android:textColor="@color/black"
-                            android:gravity="center"
-                            app:isNumber="true"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintHorizontal_bias="1"
-                            app:layout_constraintVertical_bias="0.03"
-                            app:layout_constraintHeight_percent="0.14"
-                            app:layout_constraintWidth_percent="0.6"/>
-                        <LinearLayout
-                            android:id="@+id/level9Layout"
+                            android:layout_height="36dp"/>
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level9Spell3"
+                            android:contentDescription="Level 9 Spell 3"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            app:layout_constraintTop_toBottomOf="@id/level9"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent">
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level9Spell1"
-                                android:contentDescription="Level 9 Spell 1"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp" />
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level9Spell2"
-                                android:contentDescription="Level 9 Spell 2"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level9Spell3"
-                                android:contentDescription="Level 9 Spell 3"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level9Spell4"
-                                android:contentDescription="Level 9 Spell 4"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level9Spell5"
-                                android:contentDescription="Level 9 Spell 5"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level9Spell6"
-                                android:contentDescription="Level 9 Spell 6"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level9Spell7"
-                                android:contentDescription="Level 9 Spell 7"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level9Spell8"
-                                android:contentDescription="Level 9 Spell 8"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                            <com.shipsco.charactersheet.views.CSSelectableSpell
-                                android:id="@+id/level9Spell9"
-                                android:contentDescription="Level 9 Spell 9"
-                                android:layout_width="match_parent"
-                                android:layout_height="36dp"/>
-                        </LinearLayout>
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-                    <Space
-                        android:layout_width="wrap_content"
-                        android:layout_height="8dp"/>
-                </LinearLayout>
+                            android:layout_height="36dp"/>
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level9Spell4"
+                            android:contentDescription="Level 9 Spell 4"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level9Spell5"
+                            android:contentDescription="Level 9 Spell 5"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level9Spell6"
+                            android:contentDescription="Level 9 Spell 6"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level9Spell7"
+                            android:contentDescription="Level 9 Spell 7"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level9Spell8"
+                            android:contentDescription="Level 9 Spell 8"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                        <com.shipsco.charactersheet.views.CSSelectableSpell
+                            android:id="@+id/level9Spell9"
+                            android:contentDescription="Level 9 Spell 9"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"/>
+                    </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="8dp"/>
             </LinearLayout>
-        </androidx.core.widget.NestedScrollView>
-    </LinearLayout>
-</layout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

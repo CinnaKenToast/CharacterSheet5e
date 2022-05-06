@@ -14,7 +14,7 @@ import com.shipsco.charactersheet.data.character.Character
 import com.shipsco.charactersheet.data.character.blankCharacter
 import com.shipsco.charactersheet.databinding.FragmentDetailsBinding
 import com.shipsco.charactersheet.utils.toJsonString
-import com.shipsco.charactersheet.views.AttackSpellsAdapter
+import com.shipsco.charactersheet.views.*
 
 
 class DetailsFragment : Fragment() {
@@ -22,6 +22,11 @@ class DetailsFragment : Fragment() {
     private lateinit var binding: FragmentDetailsBinding
     private lateinit var characterViewModel: CharacterViewModel
     private lateinit var currentCharacter: Character
+
+    private lateinit var textMap: MutableMap<CSTextView, String>
+    private lateinit var longTextMap: MutableMap<CSTextViewLong, String>
+    private lateinit var checkboxMap: MutableMap<CSCheckbox, Boolean>
+    private lateinit var inspirationCheckboxMap: MutableMap<CSInspirationCheckbox, Boolean>
 
     private lateinit var characterName: String
 
@@ -38,8 +43,6 @@ class DetailsFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentDetailsBinding.inflate(layoutInflater)
-        binding.viewModel = characterViewModel
-        binding.lifecycleOwner = viewLifecycleOwner
         currentCharacter = characterViewModel.currentCharacter.value ?: blankCharacter.copy()
         return binding.root
     }
@@ -48,6 +51,8 @@ class DetailsFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         initMenuOptions()
         initRecyclerView()
+        setMappings()
+        setBindings()
         println("----------------------- IN DETAILS")
     }
 
@@ -68,7 +73,6 @@ class DetailsFragment : Fragment() {
                 R.id.lockButton -> {
                     currentCharacter.editingIsLocked = !currentCharacter.editingIsLocked
                     characterViewModel.saveCurrentCharacter()
-                    binding.invalidateAll()
                     if (currentCharacter.editingIsLocked) {
                         lockButton.icon = AppCompatResources.getDrawable(requireContext(), R.drawable.ic_lock)
                         Toast.makeText(context, "Editing locked. Tap and hold a text field to edit.", Toast.LENGTH_SHORT).show()
@@ -111,4 +115,136 @@ class DetailsFragment : Fragment() {
         val adapter = AttackSpellsAdapter(currentCharacter.attackSpells, characterViewModel)
         recyclerView.adapter = adapter
     }
+
+    private fun setBindings() {
+        textMap.forEach { (theBinding, theString) ->
+            theBinding.text = theString
+            theBinding.eventListener = characterViewModel
+        }
+
+        longTextMap.forEach { (theBinding, theString) ->
+            theBinding.text = theString
+            theBinding.eventListener = characterViewModel
+        }
+
+        checkboxMap.forEach { (theBinding, theBool) ->
+            theBinding.isChecked = theBool
+            theBinding.eventListener = characterViewModel
+        }
+
+        inspirationCheckboxMap.forEach { (theBinding, theBool) ->
+            theBinding.isChecked = theBool
+            theBinding.eventListener = characterViewModel
+        }
+    }
+
+    private fun setMappings() {
+        textMap = mutableMapOf<CSTextView, String>(
+            Pair(binding.characterName, currentCharacter.characterName),
+            Pair(binding.classLevel, currentCharacter.classLevel),
+            Pair(binding.characterBackground, currentCharacter.background),
+            Pair(binding.playerName, currentCharacter.playerName),
+            Pair(binding.characterRace, currentCharacter.race),
+            Pair(binding.characterAlignment, currentCharacter.alignmentType),
+            Pair(binding.experiencePoints, currentCharacter.experiencePoints),
+            Pair(binding.armorClass, currentCharacter.armorClass),
+            Pair(binding.initiative, currentCharacter.initiative),
+            Pair(binding.speed, currentCharacter.speed),
+            Pair(binding.hitPointMax, currentCharacter.hitPointMax),
+            Pair(binding.currentHitPoints, currentCharacter.currentHitPoints),
+            Pair(binding.tempHitPoints, currentCharacter.temporaryHitPoints),
+            Pair(binding.totalHitDice, currentCharacter.totalHitDice),
+            Pair(binding.hitDice, currentCharacter.hitDice),
+            Pair(binding.proficiencyBonus, currentCharacter.proficiencyBonus),
+            Pair(binding.strength, currentCharacter.strength),
+            Pair(binding.strengthBonus, currentCharacter.strengthBonus),
+            Pair(binding.dexterity, currentCharacter.dexterity),
+            Pair(binding.dexterityBonus, currentCharacter.dexterityBonus),
+            Pair(binding.constitution, currentCharacter.constitution),
+            Pair(binding.constitutionBonus, currentCharacter.constitutionBonus),
+            Pair(binding.intelligence, currentCharacter.intelligence),
+            Pair(binding.intelligenceBonus, currentCharacter.intelligenceBonus),
+            Pair(binding.wisdom, currentCharacter.wisdom),
+            Pair(binding.wisdomBonus, currentCharacter.wisdomBonus),
+            Pair(binding.charisma, currentCharacter.charisma),
+            Pair(binding.charismaBonus, currentCharacter.charismaBonus),
+            Pair(binding.strengthSave, currentCharacter.strengthSave),
+            Pair(binding.dexteritySave, currentCharacter.dexteritySave),
+            Pair(binding.constitutionSave, currentCharacter.constitutionSave),
+            Pair(binding.intelligenceSave, currentCharacter.intelligenceSave),
+            Pair(binding.wisdomSave, currentCharacter.wisdomSave),
+            Pair(binding.charismaSave, currentCharacter.charismaSave),
+            Pair(binding.acrobatics, currentCharacter.acrobatics),
+            Pair(binding.animalHandling, currentCharacter.animalHandling),
+            Pair(binding.arcana, currentCharacter.arcana),
+            Pair(binding.athletics, currentCharacter.athletics),
+            Pair(binding.deception, currentCharacter.deception),
+            Pair(binding.history, currentCharacter.history),
+            Pair(binding.insight, currentCharacter.insight),
+            Pair(binding.intimidation, currentCharacter.intimidation),
+            Pair(binding.investigation, currentCharacter.investigation),
+            Pair(binding.medicine, currentCharacter.medicine),
+            Pair(binding.nature, currentCharacter.nature),
+            Pair(binding.perception, currentCharacter.perception),
+            Pair(binding.performance, currentCharacter.performance),
+            Pair(binding.persuasion, currentCharacter.persuasion),
+            Pair(binding.religion, currentCharacter.religion),
+            Pair(binding.sleightOfHand, currentCharacter.sleightOfHand),
+            Pair(binding.stealth, currentCharacter.stealth),
+            Pair(binding.survival, currentCharacter.survival),
+            // attacks and spells
+            Pair(binding.copperPieces, currentCharacter.copper),
+            Pair(binding.silverPieces, currentCharacter.silver),
+            Pair(binding.electrumPieces, currentCharacter.electrum),
+            Pair(binding.goldPieces, currentCharacter.gold),
+            Pair(binding.platinumPieces, currentCharacter.platinum),
+        )
+
+        longTextMap = mutableMapOf<CSTextViewLong, String>(
+            Pair(binding.equipment, currentCharacter.equipment),
+            Pair(binding.proficienciesLanguages, currentCharacter.proficiencyLanguages),
+            Pair(binding.personalityTraits, currentCharacter.personalityTraits),
+            Pair(binding.ideals, currentCharacter.ideals),
+            Pair(binding.bonds, currentCharacter.bonds),
+            Pair(binding.flaws, currentCharacter.flaws),
+        )
+
+        checkboxMap = mutableMapOf<CSCheckbox, Boolean>(
+            Pair(binding.successSaveButton1, currentCharacter.successDeathSave1),
+            Pair(binding.successSaveButton2, currentCharacter.successDeathSave2),
+            Pair(binding.successSaveButton3, currentCharacter.successDeathSave3),
+            Pair(binding.failSaveButton1, currentCharacter.failDeathSave1),
+            Pair(binding.failSaveButton2, currentCharacter.failDeathSave2),
+            Pair(binding.failSaveButton3, currentCharacter.failDeathSave3),
+            Pair(binding.strengthSaveButton, currentCharacter.strengthSaveChecked),
+            Pair(binding.dexteritySaveButton, currentCharacter.dexteritySaveChecked),
+            Pair(binding.constitutionSaveButton, currentCharacter.constitutionSaveChecked),
+            Pair(binding.intelligenceSaveButton, currentCharacter.intelligenceSaveChecked),
+            Pair(binding.wisdomSaveButton, currentCharacter.wisdomSaveChecked),
+            Pair(binding.charismaSaveButton, currentCharacter.charismaSaveChecked),
+            Pair(binding.acrobaticsButton, currentCharacter.acrobaticsChecked),
+            Pair(binding.animalHandlingButton, currentCharacter.animalHandlingChecked),
+            Pair(binding.arcanaButton, currentCharacter.arcanaChecked),
+            Pair(binding.athleticsButton, currentCharacter.athleticsChecked),
+            Pair(binding.deceptionButton, currentCharacter.deceptionChecked),
+            Pair(binding.historyButton, currentCharacter.historyChecked),
+            Pair(binding.insightButton, currentCharacter.insightChecked),
+            Pair(binding.intimidationButton, currentCharacter.intimidationChecked),
+            Pair(binding.investigationButton, currentCharacter.investigationChecked),
+            Pair(binding.medicineButton, currentCharacter.medicineChecked),
+            Pair(binding.natureButton, currentCharacter.natureChecked),
+            Pair(binding.perceptionButton, currentCharacter.perceptionChecked),
+            Pair(binding.performanceButton, currentCharacter.performanceChecked),
+            Pair(binding.persuasionButton, currentCharacter.persuasionChecked),
+            Pair(binding.religionButton, currentCharacter.religionChecked),
+            Pair(binding.sleightOfHandButton, currentCharacter.sleightOfHandChecked),
+            Pair(binding.stealthButton, currentCharacter.stealthChecked),
+            Pair(binding.survivalButton, currentCharacter.survivalChecked),
+        )
+
+        inspirationCheckboxMap = mutableMapOf<CSInspirationCheckbox, Boolean>(
+            Pair(binding.inspirationChecked, currentCharacter.inspiration),
+        )
+    }
 }
+

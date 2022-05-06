@@ -1,79 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout
+<!-- Cantrips -->
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="8dp"
+    android:paddingVertical="4dp"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
-    <data>
-        <variable
-            name="viewModel"
-            type="com.shipsco.charactersheet.CharacterViewModel"/>
-    </data>
-
-    <!-- Cantrips -->
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <ImageView
+        android:id="@+id/cantrip"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/cantrips_no_list"
+        app:layout_constraintDimensionRatio="1747:373"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/cantripLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+    <LinearLayout
+        android:id="@+id/cantripLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingHorizontal="8dp"
-        android:paddingVertical="4dp">
-        <ImageView
-            android:id="@+id/cantrip"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:src="@drawable/cantrips_no_list"
-            app:layout_constraintDimensionRatio="1747:373"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/cantripLayout"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
-        <LinearLayout
-            android:id="@+id/cantripLayout"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/cantrip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        <com.shipsco.charactersheet.views.CSCantrip
+            android:id="@+id/cantrip1"
+            android:contentDescription="Cantrip 1"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintTop_toBottomOf="@id/cantrip"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent">
-            <com.shipsco.charactersheet.views.CSCantrip
-                android:id="@+id/cantrip1"
-                android:contentDescription="Cantrip 1"
-                android:layout_width="match_parent"
-                android:layout_height="36dp" />
-            <com.shipsco.charactersheet.views.CSCantrip
-                android:id="@+id/cantrip2"
-                android:contentDescription="Cantrip 2"
-                android:layout_width="match_parent"
-                android:layout_height="36dp"/>
-            <com.shipsco.charactersheet.views.CSCantrip
-                android:id="@+id/cantrip3"
-                android:contentDescription="Cantrip 3"
-                android:layout_width="match_parent"
-                android:layout_height="36dp"/>
-            <com.shipsco.charactersheet.views.CSCantrip
-                android:id="@+id/cantrip4"
-                android:contentDescription="Cantrip 4"
-                android:layout_width="match_parent"
-                android:layout_height="36dp"/>
-            <com.shipsco.charactersheet.views.CSCantrip
-                android:id="@+id/cantrip5"
-                android:contentDescription="Cantrip 5"
-                android:layout_width="match_parent"
-                android:layout_height="36dp"/>
-            <com.shipsco.charactersheet.views.CSCantrip
-                android:id="@+id/cantrip6"
-                android:contentDescription="Cantrip 6"
-                android:layout_width="match_parent"
-                android:layout_height="36dp"/>
-            <com.shipsco.charactersheet.views.CSCantrip
-                android:id="@+id/cantrip7"
-                android:contentDescription="Cantrip 7"
-                android:layout_width="match_parent"
-                android:layout_height="36dp"/>
-            <com.shipsco.charactersheet.views.CSCantrip
-                android:id="@+id/cantrip8"
-                android:contentDescription="Cantrip 8"
-                android:layout_width="match_parent"
-                android:layout_height="36dp"/>
-        </LinearLayout>
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</layout>
+            android:layout_height="36dp" />
+        <com.shipsco.charactersheet.views.CSCantrip
+            android:id="@+id/cantrip2"
+            android:contentDescription="Cantrip 2"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"/>
+        <com.shipsco.charactersheet.views.CSCantrip
+            android:id="@+id/cantrip3"
+            android:contentDescription="Cantrip 3"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"/>
+        <com.shipsco.charactersheet.views.CSCantrip
+            android:id="@+id/cantrip4"
+            android:contentDescription="Cantrip 4"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"/>
+        <com.shipsco.charactersheet.views.CSCantrip
+            android:id="@+id/cantrip5"
+            android:contentDescription="Cantrip 5"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"/>
+        <com.shipsco.charactersheet.views.CSCantrip
+            android:id="@+id/cantrip6"
+            android:contentDescription="Cantrip 6"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"/>
+        <com.shipsco.charactersheet.views.CSCantrip
+            android:id="@+id/cantrip7"
+            android:contentDescription="Cantrip 7"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"/>
+        <com.shipsco.charactersheet.views.CSCantrip
+            android:id="@+id/cantrip8"
+            android:contentDescription="Cantrip 8"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
