@@ -56,6 +56,12 @@ class DetailsFragment : Fragment() {
         println("----------------------- IN DETAILS")
     }
 
+    override fun onResume() {
+        super.onResume()
+        initMenuOptions()
+        setBindings()
+    }
+
     override fun onPause() {
         super.onPause()
         characterViewModel.saveCurrentCharacter()
@@ -73,6 +79,7 @@ class DetailsFragment : Fragment() {
                 R.id.lockButton -> {
                     currentCharacter.editingIsLocked = !currentCharacter.editingIsLocked
                     characterViewModel.saveCurrentCharacter()
+                    setBindings()
                     if (currentCharacter.editingIsLocked) {
                         lockButton.icon = AppCompatResources.getDrawable(requireContext(), R.drawable.ic_lock)
                         Toast.makeText(context, "Editing locked. Tap and hold a text field to edit.", Toast.LENGTH_SHORT).show()
@@ -119,11 +126,13 @@ class DetailsFragment : Fragment() {
     private fun setBindings() {
         textMap.forEach { (theBinding, theString) ->
             theBinding.text = theString
+            theBinding.isLocked = currentCharacter.editingIsLocked
             theBinding.eventListener = characterViewModel
         }
 
         longTextMap.forEach { (theBinding, theString) ->
             theBinding.text = theString
+            theBinding.isLocked = currentCharacter.editingIsLocked
             theBinding.eventListener = characterViewModel
         }
 

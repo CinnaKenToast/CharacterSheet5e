@@ -51,6 +51,7 @@ class NewSpellsFragment : Fragment() {
     override fun onResume() {
         super.onResume()
         initMenuOptions()
+        binding.spellsRecyclerView.adapter?.notifyDataSetChanged()
     }
 
     override fun onPause() {

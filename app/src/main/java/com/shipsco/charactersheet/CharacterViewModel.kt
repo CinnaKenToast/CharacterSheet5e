@@ -6,12 +6,15 @@ import android.text.SpannableStringBuilder
 import android.view.View
 import androidx.lifecycle.*
 import com.shipsco.charactersheet.data.character.Character
+import com.shipsco.charactersheet.data.character.blankCharacter
 import com.shipsco.charactersheet.domain.CharacterUseCase
 import com.shipsco.charactersheet.views.CSCheckbox
 import com.shipsco.charactersheet.views.CSInspirationCheckbox
 import com.shipsco.charactersheet.views.CSTextView
 import com.shipsco.charactersheet.views.CSTextViewLong
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 
@@ -43,8 +46,8 @@ class CharacterViewModel(
                     character = it
                 }
                 .onFailure {  }
+            _currentCharacter.postValue(character)
         }
-        _currentCharacter.postValue(character)
         return character
     }
 
