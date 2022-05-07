@@ -54,17 +54,20 @@ class DetailsFragment : Fragment() {
         setMappings()
         setBindings()
         println("----------------------- IN DETAILS")
+        subscribeToVM()
     }
 
     override fun onResume() {
         super.onResume()
         initMenuOptions()
+        setMappings()
         setBindings()
     }
 
-    override fun onPause() {
-        super.onPause()
-        characterViewModel.saveCurrentCharacter()
+    private fun subscribeToVM() {
+        characterViewModel.currentCharacter.observe(viewLifecycleOwner) {
+            currentCharacter = it
+        }
     }
 
     private fun initMenuOptions() {

@@ -46,17 +46,20 @@ class NewSpellsFragment : Fragment() {
         initMenuOptions()
         initRecyclerView()
         println("----------------------- IN SPELLS")
+        subscribeToVM()
     }
 
     override fun onResume() {
         super.onResume()
         initMenuOptions()
+        initRecyclerView()
         binding.spellsRecyclerView.adapter?.notifyDataSetChanged()
     }
 
-    override fun onPause() {
-        super.onPause()
-        characterViewModel.saveCurrentCharacter()
+    private fun subscribeToVM() {
+        characterViewModel.currentCharacter.observe(viewLifecycleOwner) {
+            currentCharacter = it
+        }
     }
 
     private fun initMenuOptions() {
