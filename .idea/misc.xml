@@ -17,8 +17,9 @@
         <entry key="app/src/main/res/layout/cs_radio_check_box.xml" value="0.42967079948696024" />
         <entry key="app/src/main/res/layout/fragment_character_select.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_character_select_list.xml" value="0.1345591307981613" />
-        <entry key="app/src/main/res/layout/fragment_details.xml" value="0.12243316543975204" />
+        <entry key="app/src/main/res/layout/fragment_details.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_import_dialog.xml" value="0.67" />
+        <entry key="app/src/main/res/layout/fragment_misc.xml" value="0.22653242522949363" />
         <entry key="app/src/main/res/layout/fragment_new_details.xml" value="0.2484134179510426" />
         <entry key="app/src/main/res/layout/fragment_new_spells.xml" value="0.1598412035102382" />
         <entry key="app/src/main/res/layout/fragment_spells.xml" value="0.1" />
