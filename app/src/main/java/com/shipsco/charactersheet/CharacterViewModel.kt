@@ -105,6 +105,7 @@ class CharacterViewModel(
         if (strength.isEmpty()) {
             currentCharacter.value?.strengthBonus = strength
             updateStrengthBonuses(strength)
+            return
         }
         val strengthBase = strength.toInt() - 10
         val strengthBonus = strengthBase / 2
@@ -129,6 +130,7 @@ class CharacterViewModel(
         if (dexterity.isEmpty()) {
             currentCharacter.value?.dexterityBonus = dexterity
             updateDexterityBonuses(dexterity)
+            return
         }
         val dexterityBase = dexterity.toInt() - 10
         val dexterityBonus = dexterityBase / 2
@@ -156,6 +158,7 @@ class CharacterViewModel(
         if (constitution.isEmpty()) {
             currentCharacter.value?.constitutionBonus = constitution
             updateConstitutionBonuses(constitution)
+            return
         }
         val constitutionBase = constitution.toInt() - 10
         val constitutionBonus = constitutionBase / 2
@@ -179,6 +182,7 @@ class CharacterViewModel(
         if (intelligence.isEmpty()) {
             currentCharacter.value?.intelligenceBonus = intelligence
             updateIntelligenceBonuses(intelligence)
+            return
         }
         val intelligenceBase = intelligence.toInt() - 10
         val intelligenceBonus = intelligenceBase / 2
@@ -207,6 +211,7 @@ class CharacterViewModel(
         if (wisdom.isEmpty()) {
             currentCharacter.value?.wisdomBonus = wisdom
             updateWisdomBonuses(wisdom)
+            return
         }
         val wisdomBase = wisdom.toInt() - 10
         val wisdomBonus = wisdomBase / 2
@@ -235,6 +240,7 @@ class CharacterViewModel(
         if (charisma.isEmpty()) {
             currentCharacter.value?.charismaBonus = charisma
             updateCharismaBonuses(charisma)
+            return
         }
         val charismaBase = charisma.toInt() - 10
         val charismaBonus = charismaBase / 2
