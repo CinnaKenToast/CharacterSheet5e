@@ -1,59 +1,127 @@
 package com.shipsco.charactersheet
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.activity.viewModels
+import androidx.appcompat.content.res.AppCompatResources
+import androidx.core.view.get
+import com.shipsco.charactersheet.data.character.Character
+import com.shipsco.charactersheet.data.character.blankCharacter
+import com.shipsco.charactersheet.databinding.FragmentMiscBinding
+import com.shipsco.charactersheet.utils.toJsonString
+import com.shipsco.charactersheet.views.*
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [MiscFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class MiscFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+
+    private lateinit var binding: FragmentMiscBinding
+    private lateinit var characterViewModel: CharacterViewModel
+    private lateinit var currentCharacter: Character
+
+    private lateinit var longTextMap: MutableMap<CSTextViewLong, String>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
+
+//        val factory = CharacterViewModelFactory(requireActivity().application)
+//        characterViewModel = ViewModelProvider(this, factory)[CharacterViewModel::class.java]
+        characterViewModel = requireActivity().viewModels<CharacterViewModel>().value
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_misc, container, false)
+    ): View {
+        binding = FragmentMiscBinding.inflate(layoutInflater)
+        currentCharacter = characterViewModel.currentCharacter.value ?: blankCharacter.copy()
+        return binding.root
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment MiscFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            MiscFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        initMenuOptions()
+        setMappings()
+        setBindings()
+        println("----------------------- IN SPELLS")
+        subscribeToVM()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        initMenuOptions()
+        setMappings()
+        setBindings()
+    }
+
+    private fun subscribeToVM() {
+        characterViewModel.currentCharacter.observe(viewLifecycleOwner) {
+            currentCharacter = it
+        }
+    }
+
+    private fun initMenuOptions() {
+        val lockButton = binding.toolbar.menu[0]
+        if (currentCharacter.editingIsLocked) {
+            lockButton.icon = AppCompatResources.getDrawable(requireContext(), R.drawable.ic_lock)
+        } else {
+            lockButton.icon = AppCompatResources.getDrawable(requireContext(), R.drawable.ic_lock_open)
+        }
+        binding.toolbar.setOnMenuItemClickListener { item ->
+            when (item.itemId) {
+                R.id.lockButton -> {
+                    currentCharacter.editingIsLocked = !currentCharacter.editingIsLocked
+                    characterViewModel.saveCurrentCharacter()
+                    setBindings()
+                    if (currentCharacter.editingIsLocked) {
+                        lockButton.icon = AppCompatResources.getDrawable(requireContext(), R.drawable.ic_lock)
+                    } else {
+                        lockButton.icon = AppCompatResources.getDrawable(requireContext(), R.drawable.ic_lock_open)
+                    }
+                    true
                 }
+                R.id.saveButton -> {
+                    if (currentCharacter.characterName.isBlank()) {
+                        Toast.makeText(context, "Your character must have a name", Toast.LENGTH_SHORT).show()
+                    } else {
+                        characterViewModel.saveCharacter(currentCharacter)
+                    }
+                    true
+                }
+                R.id.exportButton -> {
+                    if (currentCharacter.characterName.isBlank()) {
+                        Toast.makeText(context, "Your character must have a name", Toast.LENGTH_SHORT).show()
+                    } else {
+                        val json = currentCharacter.toJsonString()
+                        val share = Intent(Intent.ACTION_SEND)
+                        share.type = "text/plain"
+                        share.putExtra(Intent.EXTRA_TEXT, json)
+                        val shareIntent = Intent.createChooser(share, "Export Character Data")
+                        if (shareIntent.resolveActivity(requireActivity().packageManager) != null) {
+                            startActivity(shareIntent)
+                        }
+                    }
+                    true
+                }
+                else -> {true}
             }
+        }
+    }
+
+    private fun setBindings() {
+        longTextMap.forEach { (theBinding, theString) ->
+            theBinding.text = theString
+            theBinding.isLocked = currentCharacter.editingIsLocked
+            theBinding.eventListener = characterViewModel
+        }
+    }
+
+    private fun setMappings() {
+        longTextMap = mutableMapOf<CSTextViewLong, String>(
+            Pair(binding.notesMisc, currentCharacter.notesMisc),
+        )
     }
 }

@@ -68,6 +68,50 @@ class DetailsFragment : Fragment() {
         characterViewModel.currentCharacter.observe(viewLifecycleOwner) {
             currentCharacter = it
         }
+        characterViewModel.strengthBonus.observe(viewLifecycleOwner) { strengthBonus ->
+            binding.strengthBonus.text = strengthBonus
+            binding.strengthSave.text = strengthBonus
+            binding.athletics.text = strengthBonus
+        }
+        characterViewModel.dexterityBonus.observe(viewLifecycleOwner) { dexterityBonus ->
+            binding.dexterityBonus.text = dexterityBonus
+            binding.initiative.text = dexterityBonus
+            binding.dexteritySave.text = dexterityBonus
+            binding.acrobatics.text = dexterityBonus
+            binding.sleightOfHand.text = dexterityBonus
+            binding.stealth.text = dexterityBonus
+        }
+        characterViewModel.constitutionBonus.observe(viewLifecycleOwner) { constitutionBonus ->
+            binding.constitutionBonus.text = constitutionBonus
+            binding.constitutionSave.text = constitutionBonus
+        }
+        characterViewModel.intelligenceBonus.observe(viewLifecycleOwner) { intelligenceBonus ->
+            binding.intelligenceBonus.text = intelligenceBonus
+            binding.intelligenceSave.text = intelligenceBonus
+            binding.arcana.text = intelligenceBonus
+            binding.history.text = intelligenceBonus
+            binding.investigation.text = intelligenceBonus
+            binding.nature.text = intelligenceBonus
+            binding.religion.text = intelligenceBonus
+        }
+        characterViewModel.wisdomBonus.observe(viewLifecycleOwner) { wisdomBonus ->
+            binding.wisdomBonus.text = wisdomBonus
+            binding.wisdomSave.text = wisdomBonus
+            binding.animalHandling.text = wisdomBonus
+            binding.insight.text = wisdomBonus
+            binding.medicine.text = wisdomBonus
+            binding.perception.text = wisdomBonus
+            binding.survival.text = wisdomBonus
+        }
+        characterViewModel.charismaBonus.observe(viewLifecycleOwner) { charismaBonus ->
+            binding.charismaBonus.text = charismaBonus
+            binding.charismaSave.text = charismaBonus
+            binding.deception.text = charismaBonus
+            binding.intimidation.text = charismaBonus
+            binding.investigation.text = charismaBonus
+            binding.performance.text = charismaBonus
+            binding.persuasion.text = charismaBonus
+        }
     }
 
     private fun initMenuOptions() {

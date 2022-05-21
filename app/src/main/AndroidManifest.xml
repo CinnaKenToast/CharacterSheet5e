@@ -12,7 +12,8 @@
         android:theme="@style/Theme.CharacterSheet">
         <activity
             android:name="com.shipsco.charactersheet.MainActivity"
-            android:exported="true">
+            android:exported="true"
+            android:windowSoftInputMode="adjustNothing">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

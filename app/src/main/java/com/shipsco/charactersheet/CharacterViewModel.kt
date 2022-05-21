@@ -28,6 +28,24 @@ class CharacterViewModel(
     private val _currentCharacter = MutableLiveData<Character>()
     val currentCharacter: LiveData<Character> = _currentCharacter
 
+    private val _strengthBonus = MutableLiveData<String>()
+    val strengthBonus:LiveData<String> = _strengthBonus
+
+    private val _dexterityBonus = MutableLiveData<String>()
+    val dexterityBonus:LiveData<String> = _dexterityBonus
+
+    private val _constitutionBonus = MutableLiveData<String>()
+    val constitutionBonus:LiveData<String> = _constitutionBonus
+
+    private val _intelligenceBonus = MutableLiveData<String>()
+    val intelligenceBonus:LiveData<String> = _intelligenceBonus
+
+    private val _wisdomBonus = MutableLiveData<String>()
+    val wisdomBonus:LiveData<String> = _wisdomBonus
+
+    private val _charismaBonus = MutableLiveData<String>()
+    val charismaBonus:LiveData<String> = _charismaBonus
+
     fun getCharacters() {
         runBlocking {
             _allCharacters.postValue(characterUseCase.getCharacters())
@@ -83,29 +101,137 @@ class CharacterViewModel(
         }
     }
 
-    fun setStrengthBonus(strength: Editable) {
+    private fun setStrengthBonus(strength: String) {
+        val strengthBase = strength.toInt() - 10
+        val strengthBonus = strengthBase / 2
+        var strengthBonusString = strengthBonus.toString()
+        if (!strengthBonusString.contains('-')) {
+            strengthBonusString = "+$strengthBonusString"
+        }
+        currentCharacter.value?.strengthBonus = strengthBonusString
+        updateStrengthBonuses(strengthBonusString)
+    }
 
-        saveCurrentCharacter()
-        runBlocking {
-            delay(1000)
-            val strengthBase = strength.toString().toInt() - 10
-            val strengthBonus = strengthBase / 2
-            var strengthBonusString = strengthBonus.toString()
-            if (!strengthBonusString.contains('-')) {
-                strengthBonusString = "+$strengthBonusString"
-            }
-            currentCharacter.value?.strengthBonus = strengthBonusString
-            updateStrengthBonuses(SpannableStringBuilder(strengthBonusString))
+    private fun updateStrengthBonuses(strengthBonus: String) {
+        currentCharacter.value?.let { currentCharacter ->
+            currentCharacter.strengthSave = strengthBonus
+            currentCharacter.athletics = strengthBonus
+            saveCurrentCharacter()
+            this._strengthBonus.postValue(strengthBonus)
         }
     }
 
-    fun updateStrengthBonuses(strengthBonus: Editable) {
+    private fun setDexterityBonus(dexterity: String) {
+        val dexterityBase = dexterity.toInt() - 10
+        val dexterityBonus = dexterityBase / 2
+        var dexterityBonusString = dexterityBonus.toString()
+        if (!dexterityBonusString.contains('-')) {
+            dexterityBonusString = "+$dexterityBonusString"
+        }
+        currentCharacter.value?.dexterityBonus = dexterityBonusString
+        updateDexterityBonuses(dexterityBonusString)
+    }
+
+    private fun updateDexterityBonuses(dexterityBonus: String) {
         currentCharacter.value?.let { currentCharacter ->
-            val bonus = strengthBonus.toString()
-            currentCharacter.strengthSave = bonus
-            currentCharacter.athletics = bonus
+            currentCharacter.initiative = dexterityBonus
+            currentCharacter.dexteritySave = dexterityBonus
+            currentCharacter.acrobatics = dexterityBonus
+            currentCharacter.sleightOfHand = dexterityBonus
+            currentCharacter.stealth = dexterityBonus
             saveCurrentCharacter()
-//            FragmentDetailsBinding.inflate(LayoutInflater.from(getApplication<Application?>().applicationContext)).invalidateAll()
+            this._dexterityBonus.postValue(dexterityBonus)
+        }
+    }
+
+    private fun setConstitutionBonus(constitution: String) {
+        val constitutionBase = constitution.toInt() - 10
+        val constitutionBonus = constitutionBase / 2
+        var constitutionBonusString = constitutionBonus.toString()
+        if (!constitutionBonusString.contains('-')) {
+            constitutionBonusString = "+$constitutionBonusString"
+        }
+        currentCharacter.value?.constitutionBonus = constitutionBonusString
+        updateConstitutionBonuses(constitutionBonusString)
+    }
+
+    private fun updateConstitutionBonuses(constitutionBonus: String) {
+        currentCharacter.value?.let { currentCharacter ->
+            currentCharacter.constitutionSave = constitutionBonus
+            saveCurrentCharacter()
+            this._constitutionBonus.postValue(constitutionBonus)
+        }
+    }
+
+    private fun setIntelligenceBonus(intelligence: String) {
+        val intelligenceBase = intelligence.toInt() - 10
+        val intelligenceBonus = intelligenceBase / 2
+        var intelligenceBonusString = intelligenceBonus.toString()
+        if (!intelligenceBonusString.contains('-')) {
+            intelligenceBonusString = "+$intelligenceBonusString"
+        }
+        currentCharacter.value?.intelligenceBonus = intelligenceBonusString
+        updateIntelligenceBonuses(intelligenceBonusString)
+    }
+
+    private fun updateIntelligenceBonuses(intelligenceBonus: String) {
+        currentCharacter.value?.let { currentCharacter ->
+            currentCharacter.intelligenceSave = intelligenceBonus
+            currentCharacter.arcana = intelligenceBonus
+            currentCharacter.history = intelligenceBonus
+            currentCharacter.investigation = intelligenceBonus
+            currentCharacter.nature = intelligenceBonus
+            currentCharacter.religion = intelligenceBonus
+            saveCurrentCharacter()
+            this._intelligenceBonus.postValue(intelligenceBonus)
+        }
+    }
+
+    private fun setWisdomBonus(wisdom: String) {
+        val wisdomBase = wisdom.toInt() - 10
+        val wisdomBonus = wisdomBase / 2
+        var wisdomBonusString = wisdomBonus.toString()
+        if (!wisdomBonusString.contains('-')) {
+            wisdomBonusString = "+$wisdomBonusString"
+        }
+        currentCharacter.value?.wisdomBonus = wisdomBonusString
+        updateWisdomBonuses(wisdomBonusString)
+    }
+
+    private fun updateWisdomBonuses(wisdomBonus: String) {
+        currentCharacter.value?.let { currentCharacter ->
+            currentCharacter.wisdomSave = wisdomBonus
+            currentCharacter.animalHandling = wisdomBonus
+            currentCharacter.insight = wisdomBonus
+            currentCharacter.medicine = wisdomBonus
+            currentCharacter.perception = wisdomBonus
+            currentCharacter.survival = wisdomBonus
+            saveCurrentCharacter()
+            this._wisdomBonus.postValue(wisdomBonus)
+        }
+    }
+
+    private fun setCharismaBonus(charisma: String) {
+        val charismaBase = charisma.toInt() - 10
+        val charismaBonus = charismaBase / 2
+        var charismaBonusString = charismaBonus.toString()
+        if (!charismaBonusString.contains('-')) {
+            charismaBonusString = "+$charismaBonusString"
+        }
+        currentCharacter.value?.charismaBonus = charismaBonusString
+        updateCharismaBonuses(charismaBonusString)
+    }
+
+    private fun updateCharismaBonuses(charismaBonus: String) {
+        currentCharacter.value?.let { currentCharacter ->
+            currentCharacter.charismaSave = charismaBonus
+            currentCharacter.deception = charismaBonus
+            currentCharacter.intimidation = charismaBonus
+            currentCharacter.investigation = charismaBonus
+            currentCharacter.performance = charismaBonus
+            currentCharacter.persuasion = charismaBonus
+            saveCurrentCharacter()
+            this._charismaBonus.postValue(charismaBonus)
         }
     }
 
@@ -129,17 +255,35 @@ class CharacterViewModel(
                     R.id.totalHitDice -> currentCharacter.value?.totalHitDice = view.text as String
                     R.id.hitDice -> currentCharacter.value?.hitDice = view.text as String
                     R.id.proficiencyBonus -> currentCharacter.value?.proficiencyBonus = view.text as String
-                    R.id.strength -> currentCharacter.value?.strength = view.text as String
+                    R.id.strength -> {
+                        currentCharacter.value?.strength = view.text as String
+                        setStrengthBonus(view.text as String)
+                    }
                     R.id.strengthBonus -> currentCharacter.value?.strengthBonus = view.text as String
-                    R.id.dexterity -> currentCharacter.value?.dexterity = view.text as String
+                    R.id.dexterity -> {
+                        currentCharacter.value?.dexterity = view.text as String
+                        setDexterityBonus(view.text as String)
+                    }
                     R.id.dexterityBonus -> currentCharacter.value?.dexterityBonus = view.text as String
-                    R.id.constitution -> currentCharacter.value?.constitution = view.text as String
+                    R.id.constitution -> {
+                        currentCharacter.value?.constitution = view.text as String
+                        setConstitutionBonus(view.text as String)
+                    }
                     R.id.constitutionBonus -> currentCharacter.value?.constitutionBonus = view.text as String
-                    R.id.intelligence -> currentCharacter.value?.intelligence = view.text as String
+                    R.id.intelligence -> {
+                        currentCharacter.value?.intelligence = view.text as String
+                        setIntelligenceBonus(view.text as String)
+                    }
                     R.id.intelligenceBonus -> currentCharacter.value?.intelligenceBonus = view.text as String
-                    R.id.wisdom -> currentCharacter.value?.wisdom = view.text as String
+                    R.id.wisdom -> {
+                        currentCharacter.value?.wisdom = view.text as String
+                        setWisdomBonus(view.text as String)
+                    }
                     R.id.wisdomBonus -> currentCharacter.value?.wisdomBonus = view.text as String
-                    R.id.charisma -> currentCharacter.value?.charisma = view.text as String
+                    R.id.charisma -> {
+                        currentCharacter.value?.charisma = view.text as String
+                        setCharismaBonus(view.text as String)
+                    }
                     R.id.charismaBonus -> currentCharacter.value?.charismaBonus = view.text as String
                     R.id.strengthSave -> currentCharacter.value?.strengthSave = view.text as String
                     R.id.dexteritySave -> currentCharacter.value?.dexteritySave = view.text as String
@@ -618,6 +762,7 @@ class CharacterViewModel(
                     R.id.ideals -> currentCharacter.value?.ideals = view.text as String
                     R.id.bonds -> currentCharacter.value?.bonds = view.text as String
                     R.id.flaws -> currentCharacter.value?.flaws = view.text as String
+                    R.id.notesMisc -> currentCharacter.value?.notesMisc = view.text as String
                 }
             }
             is CSCheckbox -> {
