@@ -102,6 +102,10 @@ class CharacterViewModel(
     }
 
     private fun setStrengthBonus(strength: String) {
+        if (strength.isEmpty()) {
+            currentCharacter.value?.strengthBonus = strength
+            updateStrengthBonuses(strength)
+        }
         val strengthBase = strength.toInt() - 10
         val strengthBonus = strengthBase / 2
         var strengthBonusString = strengthBonus.toString()
@@ -122,6 +126,10 @@ class CharacterViewModel(
     }
 
     private fun setDexterityBonus(dexterity: String) {
+        if (dexterity.isEmpty()) {
+            currentCharacter.value?.dexterityBonus = dexterity
+            updateDexterityBonuses(dexterity)
+        }
         val dexterityBase = dexterity.toInt() - 10
         val dexterityBonus = dexterityBase / 2
         var dexterityBonusString = dexterityBonus.toString()
@@ -145,6 +153,10 @@ class CharacterViewModel(
     }
 
     private fun setConstitutionBonus(constitution: String) {
+        if (constitution.isEmpty()) {
+            currentCharacter.value?.constitutionBonus = constitution
+            updateConstitutionBonuses(constitution)
+        }
         val constitutionBase = constitution.toInt() - 10
         val constitutionBonus = constitutionBase / 2
         var constitutionBonusString = constitutionBonus.toString()
@@ -164,6 +176,10 @@ class CharacterViewModel(
     }
 
     private fun setIntelligenceBonus(intelligence: String) {
+        if (intelligence.isEmpty()) {
+            currentCharacter.value?.intelligenceBonus = intelligence
+            updateIntelligenceBonuses(intelligence)
+        }
         val intelligenceBase = intelligence.toInt() - 10
         val intelligenceBonus = intelligenceBase / 2
         var intelligenceBonusString = intelligenceBonus.toString()
@@ -188,6 +204,10 @@ class CharacterViewModel(
     }
 
     private fun setWisdomBonus(wisdom: String) {
+        if (wisdom.isEmpty()) {
+            currentCharacter.value?.wisdomBonus = wisdom
+            updateWisdomBonuses(wisdom)
+        }
         val wisdomBase = wisdom.toInt() - 10
         val wisdomBonus = wisdomBase / 2
         var wisdomBonusString = wisdomBonus.toString()
@@ -212,6 +232,10 @@ class CharacterViewModel(
     }
 
     private fun setCharismaBonus(charisma: String) {
+        if (charisma.isEmpty()) {
+            currentCharacter.value?.charismaBonus = charisma
+            updateCharismaBonuses(charisma)
+        }
         val charismaBase = charisma.toInt() - 10
         val charismaBonus = charismaBase / 2
         var charismaBonusString = charismaBonus.toString()
@@ -227,7 +251,6 @@ class CharacterViewModel(
             currentCharacter.charismaSave = charismaBonus
             currentCharacter.deception = charismaBonus
             currentCharacter.intimidation = charismaBonus
-            currentCharacter.investigation = charismaBonus
             currentCharacter.performance = charismaBonus
             currentCharacter.persuasion = charismaBonus
             saveCurrentCharacter()

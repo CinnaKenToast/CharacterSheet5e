@@ -108,7 +108,6 @@ class DetailsFragment : Fragment() {
             binding.charismaSave.text = charismaBonus
             binding.deception.text = charismaBonus
             binding.intimidation.text = charismaBonus
-            binding.investigation.text = charismaBonus
             binding.performance.text = charismaBonus
             binding.persuasion.text = charismaBonus
         }
