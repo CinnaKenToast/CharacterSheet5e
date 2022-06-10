@@ -110,7 +110,7 @@ class MiscFragment : Fragment() {
                     if (currentCharacter.characterName.isBlank()) {
                         Toast.makeText(context, "Your character must have a name", Toast.LENGTH_SHORT).show()
                     } else {
-                        Toast.makeText(context, "You have been healed and all spells are reset", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(context, "You have been healed\nAll spell slots are reset", Toast.LENGTH_SHORT).show()
                         currentCharacter.currentHitPoints = currentCharacter.hitPointMax
                         if (currentCharacter.spells[0].spellSlotsExpended.isNotEmpty()) {
                             currentCharacter.spells[0].spellSlotsExpended = "0"
