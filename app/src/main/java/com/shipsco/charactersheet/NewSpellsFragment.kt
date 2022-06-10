@@ -109,33 +109,34 @@ class NewSpellsFragment : Fragment() {
                     if (currentCharacter.characterName.isBlank()) {
                         Toast.makeText(context, "Your character must have a name", Toast.LENGTH_SHORT).show()
                     } else {
+                        Toast.makeText(context, "You have been healed and all spells are reset", Toast.LENGTH_SHORT).show()
                         currentCharacter.currentHitPoints = currentCharacter.hitPointMax
                         if (currentCharacter.spells[0].spellSlotsExpended.isNotEmpty()) {
-                            currentCharacter.spells[0].spellSlotsExpended = ""
+                            currentCharacter.spells[0].spellSlotsExpended = "0"
                         }
                         if (currentCharacter.spells[1].spellSlotsExpended.isNotEmpty()) {
-                            currentCharacter.spells[1].spellSlotsExpended = ""
+                            currentCharacter.spells[1].spellSlotsExpended = "0"
                         }
                         if (currentCharacter.spells[2].spellSlotsExpended.isNotEmpty()) {
-                            currentCharacter.spells[2].spellSlotsExpended = ""
+                            currentCharacter.spells[2].spellSlotsExpended = "0"
                         }
                         if (currentCharacter.spells[3].spellSlotsExpended.isNotEmpty()) {
-                            currentCharacter.spells[3].spellSlotsExpended = ""
+                            currentCharacter.spells[3].spellSlotsExpended = "0"
                         }
                         if (currentCharacter.spells[4].spellSlotsExpended.isNotEmpty()) {
-                            currentCharacter.spells[4].spellSlotsExpended = ""
+                            currentCharacter.spells[4].spellSlotsExpended = "0"
                         }
                         if (currentCharacter.spells[5].spellSlotsExpended.isNotEmpty()) {
-                            currentCharacter.spells[5].spellSlotsExpended = ""
+                            currentCharacter.spells[5].spellSlotsExpended = "0"
                         }
                         if (currentCharacter.spells[6].spellSlotsExpended.isNotEmpty()) {
-                            currentCharacter.spells[6].spellSlotsExpended = ""
+                            currentCharacter.spells[6].spellSlotsExpended = "0"
                         }
                         if (currentCharacter.spells[7].spellSlotsExpended.isNotEmpty()) {
-                            currentCharacter.spells[7].spellSlotsExpended = ""
+                            currentCharacter.spells[7].spellSlotsExpended = "0"
                         }
                         if (currentCharacter.spells[8].spellSlotsExpended.isNotEmpty()) {
-                            currentCharacter.spells[8].spellSlotsExpended = ""
+                            currentCharacter.spells[8].spellSlotsExpended = "0"
                         }
                         characterViewModel.saveCurrentCharacter()
                         initRecyclerView()

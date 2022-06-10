@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:background="@color/purple_500"
         app:menu="@menu/character_sheet_menu"
-        app:title="Character Details"
+        app:title="Spell Casting"
         app:titleTextAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
         app:titleTextColor="@color/white" />
 
