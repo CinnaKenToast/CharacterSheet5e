@@ -63,7 +63,7 @@ class NewSpellsFragment : Fragment() {
     }
 
     private fun initMenuOptions() {
-        val lockButton = binding.toolbar.menu[0]
+        val lockButton = binding.toolbar.menu[1]
         if (currentCharacter.editingIsLocked) {
             lockButton.icon = AppCompatResources.getDrawable(requireContext(), R.drawable.ic_lock)
         } else {
@@ -102,6 +102,43 @@ class NewSpellsFragment : Fragment() {
                         if (shareIntent.resolveActivity(requireActivity().packageManager) != null) {
                             startActivity(shareIntent)
                         }
+                    }
+                    true
+                }
+                R.id.longRestButton -> {
+                    if (currentCharacter.characterName.isBlank()) {
+                        Toast.makeText(context, "Your character must have a name", Toast.LENGTH_SHORT).show()
+                    } else {
+                        currentCharacter.currentHitPoints = currentCharacter.hitPointMax
+                        if (currentCharacter.spells[0].spellSlotsExpended.isNotEmpty()) {
+                            currentCharacter.spells[0].spellSlotsExpended = ""
+                        }
+                        if (currentCharacter.spells[1].spellSlotsExpended.isNotEmpty()) {
+                            currentCharacter.spells[1].spellSlotsExpended = ""
+                        }
+                        if (currentCharacter.spells[2].spellSlotsExpended.isNotEmpty()) {
+                            currentCharacter.spells[2].spellSlotsExpended = ""
+                        }
+                        if (currentCharacter.spells[3].spellSlotsExpended.isNotEmpty()) {
+                            currentCharacter.spells[3].spellSlotsExpended = ""
+                        }
+                        if (currentCharacter.spells[4].spellSlotsExpended.isNotEmpty()) {
+                            currentCharacter.spells[4].spellSlotsExpended = ""
+                        }
+                        if (currentCharacter.spells[5].spellSlotsExpended.isNotEmpty()) {
+                            currentCharacter.spells[5].spellSlotsExpended = ""
+                        }
+                        if (currentCharacter.spells[6].spellSlotsExpended.isNotEmpty()) {
+                            currentCharacter.spells[6].spellSlotsExpended = ""
+                        }
+                        if (currentCharacter.spells[7].spellSlotsExpended.isNotEmpty()) {
+                            currentCharacter.spells[7].spellSlotsExpended = ""
+                        }
+                        if (currentCharacter.spells[8].spellSlotsExpended.isNotEmpty()) {
+                            currentCharacter.spells[8].spellSlotsExpended = ""
+                        }
+                        characterViewModel.saveCurrentCharacter()
+                        initRecyclerView()
                     }
                     true
                 }

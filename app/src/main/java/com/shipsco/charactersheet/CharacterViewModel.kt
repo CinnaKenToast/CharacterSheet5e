@@ -1,22 +1,14 @@
 package com.shipsco.charactersheet
 
 import android.app.Application
-import android.text.Editable
-import android.text.SpannableStringBuilder
 import android.view.View
 import androidx.lifecycle.*
 import com.shipsco.charactersheet.data.character.Character
-import com.shipsco.charactersheet.data.character.blankCharacter
 import com.shipsco.charactersheet.domain.CharacterUseCase
-import com.shipsco.charactersheet.views.CSCheckbox
-import com.shipsco.charactersheet.views.CSInspirationCheckbox
-import com.shipsco.charactersheet.views.CSTextView
-import com.shipsco.charactersheet.views.CSTextViewLong
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.StateFlow
+import com.shipsco.charactersheet.views.*
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
+import kotlin.math.ceil
 
 class CharacterViewModel(
     application: Application,
@@ -27,6 +19,12 @@ class CharacterViewModel(
 
     private val _currentCharacter = MutableLiveData<Character>()
     val currentCharacter: LiveData<Character> = _currentCharacter
+
+    private val _proficiencyBonus = MutableLiveData<String>()
+    val proficiencyBonus:LiveData<String> = _proficiencyBonus
+
+    private val _currentHitPoint = MutableLiveData<String>()
+    val currentHitPoints:LiveData<String> = _currentHitPoint
 
     private val _strengthBonus = MutableLiveData<String>()
     val strengthBonus:LiveData<String> = _strengthBonus
@@ -99,6 +97,19 @@ class CharacterViewModel(
         runBlocking {
             saveCharacter(currentCharacter.value!!)
         }
+    }
+
+    private fun setProficiencyBonus(level: String) {
+        if (level.isEmpty()) {
+            currentCharacter.value?.proficiencyBonus = level
+            return
+        }
+
+        val levelBase = level.toInt()
+        val proficiencyBonus = (ceil(levelBase/4.0) + 1).toInt()
+        val proficiencyBonusString = "+${proficiencyBonus}"
+        currentCharacter.value?.proficiencyBonus = proficiencyBonusString
+        this._proficiencyBonus.postValue(proficiencyBonusString)
     }
 
     private fun setStrengthBonus(strength: String) {
@@ -275,10 +286,18 @@ class CharacterViewModel(
                     R.id.characterRace -> currentCharacter.value?.race= view.text as String
                     R.id.characterAlignment -> currentCharacter.value?.alignmentType = view.text as String
                     R.id.experiencePoints -> currentCharacter.value?.experiencePoints = view.text as String
+                    R.id.totalLevel -> {
+                        currentCharacter.value?.totalLevel = view.text as String
+                        setProficiencyBonus(view.text as String)
+                    }
                     R.id.armorClass -> currentCharacter.value?.armorClass = view.text as String
                     R.id.initiative -> currentCharacter.value?.initiative = view.text as String
                     R.id.speed -> currentCharacter.value?.speed = view.text as String
-                    R.id.hitPointMax -> currentCharacter.value?.hitPointMax = view.text as String
+                    R.id.hitPointMax -> {
+                        currentCharacter.value?.hitPointMax = view.text as String
+                        currentCharacter.value?.currentHitPoints = view.text as String
+                        this._currentHitPoint.postValue(view.text as String)
+                    }
                     R.id.currentHitPoints -> currentCharacter.value?.currentHitPoints = view.text as String
                     R.id.tempHitPoints -> currentCharacter.value?.temporaryHitPoints = view.text as String
                     R.id.totalHitDice -> currentCharacter.value?.totalHitDice = view.text as String
@@ -314,7 +333,7 @@ class CharacterViewModel(
                         setCharismaBonus(view.text as String)
                     }
                     R.id.charismaBonus -> currentCharacter.value?.charismaBonus = view.text as String
-                    R.id.strengthSave -> currentCharacter.value?.strengthSave = view.text as String
+                    R.id.strengthSave -> currentCharacter.value?.strengthSave = view.text.toString()
                     R.id.dexteritySave -> currentCharacter.value?.dexteritySave = view.text as String
                     R.id.constitutionSave -> currentCharacter.value?.constitutionSave = view.text as String
                     R.id.intelligenceSave -> currentCharacter.value?.intelligenceSave = view.text as String
