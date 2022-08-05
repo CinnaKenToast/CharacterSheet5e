@@ -429,7 +429,7 @@ class CharacterViewModel(
                             "AttackType-19" -> currentCharacter.value?.attackSpells?.get(19)?.damageType = view.text as String
                         }
                     }
-                    R.id.copperPieces -> currentCharacter.value?.copper = view.text as String
+                    R.id.copperPieces -> currentCharacter.value?.copper = view.text.toString()
                     R.id.silverPieces -> currentCharacter.value?.silver = view.text as String
                     R.id.electrumPieces -> currentCharacter.value?.electrum = view.text as String
                     R.id.goldPieces -> currentCharacter.value?.gold = view.text as String
