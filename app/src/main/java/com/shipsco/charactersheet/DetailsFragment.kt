@@ -55,6 +55,7 @@ class DetailsFragment : Fragment() {
         setBindings()
         println("----------------------- IN DETAILS")
         subscribeToVM()
+        characterViewModel.addCharacterToStorage()
     }
 
     override fun onResume() {

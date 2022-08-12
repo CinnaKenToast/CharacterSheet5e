@@ -5,9 +5,11 @@ import android.view.View
 import androidx.lifecycle.*
 import com.shipsco.charactersheet.data.character.Character
 import com.shipsco.charactersheet.domain.RoomCharacterUseCase
+import com.shipsco.charactersheet.domain.StorageCharacterUseCase
 import com.shipsco.charactersheet.views.*
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
+import java.io.File
 import kotlin.math.ceil
 
 class CharacterViewModel(
@@ -67,6 +69,20 @@ class CharacterViewModel(
         return character
     }
 
+    fun getCharacterFile(character: Character): File? {
+        val useCase = StorageCharacterUseCase.createInstance(getApplication<Application>().applicationContext)
+        var file: File? = null
+        runBlocking {
+            useCase.getCharacterFile(character)
+                .onSuccess {
+                    file = it
+                }
+                .onFailure { }
+        }
+        return file
+
+    }
+
     fun saveCharacter(newCharacter: Character) {
         if (newCharacter.characterName.isNotBlank()) {
             viewModelScope.launch {
@@ -82,6 +98,15 @@ class CharacterViewModel(
                         _allCharacters.postValue(characterUseCase.getCharacters())
                     }
             }
+        }
+    }
+
+    fun addCharacterToStorage() {
+        val useCase = StorageCharacterUseCase.createInstance(getApplication<Application>().applicationContext)
+        viewModelScope.launch {
+//            useCase.addCharacter(currentCharacter.value!!)
+//            useCase.getCharacter(currentCharacter.value!!.characterName)
+//            useCase.getCharacters()
         }
     }
 

@@ -1,21 +1,23 @@
 package com.shipsco.charactersheet
 
 import android.content.Intent
+import android.content.pm.PackageManager
+import android.content.pm.ResolveInfo
 import android.os.Bundle
 import android.view.*
 import android.widget.Toast
+import androidx.core.content.FileProvider.getUriForFile
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import com.google.android.material.textfield.TextInputEditText
 import com.shipsco.charactersheet.data.character.Character
 import com.shipsco.charactersheet.databinding.FragmentCharacterSelectBinding
 import com.shipsco.charactersheet.utils.fromJsonString
-import com.shipsco.charactersheet.utils.toJsonString
 import com.shipsco.charactersheet.views.CharacterSelectAdapter
-import com.google.android.material.dialog.MaterialAlertDialogBuilder
-import com.google.android.material.textfield.TextInputEditText
-import java.lang.Exception
+
 
 class CharacterSelectFragment : Fragment() {
 
@@ -78,13 +80,40 @@ class CharacterSelectFragment : Fragment() {
             R.id.exportButton -> {
                 val selectedCharacter = adapter.getSelectedCharacter()
                 selectedCharacter?.let {
-                    val json = selectedCharacter.toJsonString()
-                    val share = Intent(Intent.ACTION_SEND)
-                    share.type = "text/plain"
-                    share.putExtra(Intent.EXTRA_TEXT, json)
-                    val shareIntent = Intent.createChooser(share, "Export Character Data")
-                    if (shareIntent.resolveActivity(requireActivity().packageManager) != null) {
-                        startActivity(shareIntent)
+//                    val json = selectedCharacter.toJsonString()
+//                    val share = Intent(Intent.ACTION_SEND)
+//                    share.type = "text/plain"
+//                    share.putExtra(Intent.EXTRA_TEXT, json)
+//                    val shareIntent = Intent.createChooser(share, "Export Character Data")
+//                    if (shareIntent.resolveActivity(requireActivity().packageManager) != null) {
+//                        startActivity(shareIntent)
+//                    }
+                    val file = characterViewModel.getCharacterFile(selectedCharacter)
+                    file?.let {
+                        val contentUri = getUriForFile(requireContext(), "com.shipsco.charactersheet.fileprovider", file)
+                        val share = Intent(Intent.ACTION_SEND)
+                        share.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+                        share.type = "text/plain"
+                        share.putExtra(Intent.EXTRA_STREAM, contentUri)
+
+                        val resInfoList: List<ResolveInfo> =
+                            requireContext().packageManager.queryIntentActivities(
+                                share,
+                                PackageManager.MATCH_DEFAULT_ONLY
+                            )
+                        for (resolveInfo in resInfoList) {
+                            val packageName = resolveInfo.activityInfo.packageName
+                            requireContext().grantUriPermission(
+                                packageName,
+                                contentUri,
+                                Intent.FLAG_GRANT_WRITE_URI_PERMISSION or Intent.FLAG_GRANT_READ_URI_PERMISSION
+                            )
+                        }
+
+                        val shareIntent = Intent.createChooser(share, "Export Character File")
+                        if (shareIntent.resolveActivity(requireActivity().packageManager) != null) {
+                            startActivity(shareIntent)
+                        }
                     }
                 }
                 true
