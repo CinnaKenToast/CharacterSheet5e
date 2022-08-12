@@ -65,6 +65,7 @@
         <entry key="app/src/main/res/menu/character_long_press_menu.xml" value="0.2997007268063275" />
         <entry key="app/src/main/res/menu/character_selection_menu.xml" value="0.28544949026876737" />
         <entry key="app/src/main/res/menu/character_sheet_menu.xml" value="0.42967079948696024" />
+        <entry key="app/src/main/res/xml/provider_paths.xml" value="0.25651988029072254" />
       </map>
     </option>
   </component>
