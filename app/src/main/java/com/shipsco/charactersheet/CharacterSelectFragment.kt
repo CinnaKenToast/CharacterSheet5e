@@ -5,6 +5,8 @@ import android.content.pm.PackageManager
 import android.content.pm.ResolveInfo
 import android.os.Bundle
 import android.view.*
+import android.view.animation.Animation
+import android.view.animation.AnimationUtils
 import android.widget.Toast
 import androidx.core.content.FileProvider.getUriForFile
 import androidx.core.os.bundleOf
@@ -23,6 +25,13 @@ class CharacterSelectFragment : Fragment() {
 
     private lateinit var binding: FragmentCharacterSelectBinding
     private lateinit var characterViewModel: CharacterViewModel
+
+    private val rotateOpen: Animation by lazy { AnimationUtils.loadAnimation(requireContext(), R.anim.anim_rotate_open) }
+    private val rotateClose: Animation by lazy { AnimationUtils.loadAnimation(requireContext(), R.anim.anim_rotate_close) }
+    private val expand: Animation by lazy { AnimationUtils.loadAnimation(requireContext(), R.anim.anim_expand) }
+    private val collapse: Animation by lazy { AnimationUtils.loadAnimation(requireContext(), R.anim.anim_collapse) }
+
+    private var expanded: Boolean = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -44,12 +53,36 @@ class CharacterSelectFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         initMenuOptions()
 
-        binding.fab.setOnClickListener {
+        binding.addFab.setOnClickListener {
+            if ( expanded ) {
+                binding.campaignFab.visibility = View.INVISIBLE
+                binding.characterFab.visibility = View.INVISIBLE
+
+                binding.campaignFab.startAnimation(collapse)
+                binding.characterFab.startAnimation(collapse)
+                binding.addFab.startAnimation(rotateClose)
+            } else {
+                binding.campaignFab.visibility = View.VISIBLE
+                binding.characterFab.visibility = View.VISIBLE
+
+                binding.campaignFab.startAnimation(expand)
+                binding.characterFab.startAnimation(expand)
+                binding.addFab.startAnimation(rotateOpen)
+            }
+
+            expanded = !expanded
+        }
+
+        binding.characterFab.setOnClickListener {
             val bundle = bundleOf(
                 Pair("creatingCharacter", true),
                 Pair("characterName", "")
             )
             findNavController().navigate(R.id.action_characterSelectFragment_to_viewPagerFragment, bundle)
+        }
+
+        binding.campaignFab.setOnClickListener {
+            Toast.makeText(requireContext(), "ADD A CAMPAIGN FOLDER", Toast.LENGTH_SHORT).show()
         }
 
         characterViewModel.getCharacters()

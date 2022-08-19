@@ -304,524 +304,524 @@ class CharacterViewModel(
         when (view) {
             is CSTextView -> {
                 when (view.id) {
-                    R.id.characterName -> currentCharacter.value?.characterName = view.text as String
-                    R.id.classLevel -> currentCharacter.value?.classLevel = view.text as String
-                    R.id.characterBackground -> currentCharacter.value?.background = view.text as String
-                    R.id.playerName -> currentCharacter.value?.playerName = view.text as String
-                    R.id.characterRace -> currentCharacter.value?.race= view.text as String
-                    R.id.characterAlignment -> currentCharacter.value?.alignmentType = view.text as String
-                    R.id.experiencePoints -> currentCharacter.value?.experiencePoints = view.text as String
+                    R.id.characterName -> currentCharacter.value?.characterName = view.text.toString()
+                    R.id.classLevel -> currentCharacter.value?.classLevel = view.text.toString()
+                    R.id.characterBackground -> currentCharacter.value?.background = view.text.toString()
+                    R.id.playerName -> currentCharacter.value?.playerName = view.text.toString()
+                    R.id.characterRace -> currentCharacter.value?.race= view.text.toString()
+                    R.id.characterAlignment -> currentCharacter.value?.alignmentType = view.text.toString()
+                    R.id.experiencePoints -> currentCharacter.value?.experiencePoints = view.text.toString()
                     R.id.totalLevel -> {
-                        currentCharacter.value?.totalLevel = view.text as String
-                        setProficiencyBonus(view.text as String)
+                        currentCharacter.value?.totalLevel = view.text.toString()
+                        setProficiencyBonus(view.text.toString())
                     }
-                    R.id.armorClass -> currentCharacter.value?.armorClass = view.text as String
-                    R.id.initiative -> currentCharacter.value?.initiative = view.text as String
-                    R.id.speed -> currentCharacter.value?.speed = view.text as String
+                    R.id.armorClass -> currentCharacter.value?.armorClass = view.text.toString()
+                    R.id.initiative -> currentCharacter.value?.initiative = view.text.toString()
+                    R.id.speed -> currentCharacter.value?.speed = view.text.toString()
                     R.id.hitPointMax -> {
-                        currentCharacter.value?.hitPointMax = view.text as String
-                        currentCharacter.value?.currentHitPoints = view.text as String
-                        this._currentHitPoint.postValue(view.text as String)
+                        currentCharacter.value?.hitPointMax = view.text.toString()
+                        currentCharacter.value?.currentHitPoints = view.text.toString()
+                        this._currentHitPoint.postValue(view.text.toString())
                     }
-                    R.id.currentHitPoints -> currentCharacter.value?.currentHitPoints = view.text as String
-                    R.id.tempHitPoints -> currentCharacter.value?.temporaryHitPoints = view.text as String
-                    R.id.totalHitDice -> currentCharacter.value?.totalHitDice = view.text as String
-                    R.id.hitDice -> currentCharacter.value?.hitDice = view.text as String
-                    R.id.proficiencyBonus -> currentCharacter.value?.proficiencyBonus = view.text as String
+                    R.id.currentHitPoints -> currentCharacter.value?.currentHitPoints = view.text.toString()
+                    R.id.tempHitPoints -> currentCharacter.value?.temporaryHitPoints = view.text.toString()
+                    R.id.totalHitDice -> currentCharacter.value?.totalHitDice = view.text.toString()
+                    R.id.hitDice -> currentCharacter.value?.hitDice = view.text.toString()
+                    R.id.proficiencyBonus -> currentCharacter.value?.proficiencyBonus = view.text.toString()
                     R.id.strength -> {
-                        currentCharacter.value?.strength = view.text as String
-                        setStrengthBonus(view.text as String)
+                        currentCharacter.value?.strength = view.text.toString()
+                        setStrengthBonus(view.text.toString())
                     }
-                    R.id.strengthBonus -> currentCharacter.value?.strengthBonus = view.text as String
+                    R.id.strengthBonus -> currentCharacter.value?.strengthBonus = view.text.toString()
                     R.id.dexterity -> {
-                        currentCharacter.value?.dexterity = view.text as String
-                        setDexterityBonus(view.text as String)
+                        currentCharacter.value?.dexterity = view.text.toString()
+                        setDexterityBonus(view.text.toString())
                     }
-                    R.id.dexterityBonus -> currentCharacter.value?.dexterityBonus = view.text as String
+                    R.id.dexterityBonus -> currentCharacter.value?.dexterityBonus = view.text.toString()
                     R.id.constitution -> {
-                        currentCharacter.value?.constitution = view.text as String
-                        setConstitutionBonus(view.text as String)
+                        currentCharacter.value?.constitution = view.text.toString()
+                        setConstitutionBonus(view.text.toString())
                     }
-                    R.id.constitutionBonus -> currentCharacter.value?.constitutionBonus = view.text as String
+                    R.id.constitutionBonus -> currentCharacter.value?.constitutionBonus = view.text.toString()
                     R.id.intelligence -> {
-                        currentCharacter.value?.intelligence = view.text as String
-                        setIntelligenceBonus(view.text as String)
+                        currentCharacter.value?.intelligence = view.text.toString()
+                        setIntelligenceBonus(view.text.toString())
                     }
-                    R.id.intelligenceBonus -> currentCharacter.value?.intelligenceBonus = view.text as String
+                    R.id.intelligenceBonus -> currentCharacter.value?.intelligenceBonus = view.text.toString()
                     R.id.wisdom -> {
-                        currentCharacter.value?.wisdom = view.text as String
-                        setWisdomBonus(view.text as String)
+                        currentCharacter.value?.wisdom = view.text.toString()
+                        setWisdomBonus(view.text.toString())
                     }
-                    R.id.wisdomBonus -> currentCharacter.value?.wisdomBonus = view.text as String
+                    R.id.wisdomBonus -> currentCharacter.value?.wisdomBonus = view.text.toString()
                     R.id.charisma -> {
-                        currentCharacter.value?.charisma = view.text as String
-                        setCharismaBonus(view.text as String)
+                        currentCharacter.value?.charisma = view.text.toString()
+                        setCharismaBonus(view.text.toString())
                     }
-                    R.id.charismaBonus -> currentCharacter.value?.charismaBonus = view.text as String
+                    R.id.charismaBonus -> currentCharacter.value?.charismaBonus = view.text.toString()
                     R.id.strengthSave -> currentCharacter.value?.strengthSave = view.text.toString()
-                    R.id.dexteritySave -> currentCharacter.value?.dexteritySave = view.text as String
-                    R.id.constitutionSave -> currentCharacter.value?.constitutionSave = view.text as String
-                    R.id.intelligenceSave -> currentCharacter.value?.intelligenceSave = view.text as String
-                    R.id.wisdomSave -> currentCharacter.value?.wisdomSave = view.text as String
-                    R.id.charismaSave -> currentCharacter.value?.charismaSave = view.text as String
-                    R.id.acrobatics -> currentCharacter.value?.acrobatics = view.text as String
-                    R.id.animalHandling -> currentCharacter.value?.animalHandling = view.text as String
-                    R.id.arcana -> currentCharacter.value?.arcana = view.text as String
-                    R.id.athletics -> currentCharacter.value?.athletics = view.text as String
-                    R.id.deception -> currentCharacter.value?.deception = view.text as String
-                    R.id.history -> currentCharacter.value?.history = view.text as String
-                    R.id.insight -> currentCharacter.value?.insight = view.text as String
-                    R.id.intimidation -> currentCharacter.value?.intimidation = view.text as String
-                    R.id.investigation -> currentCharacter.value?.investigation = view.text as String
-                    R.id.medicine -> currentCharacter.value?.medicine = view.text as String
-                    R.id.nature -> currentCharacter.value?.nature = view.text as String
-                    R.id.perception -> currentCharacter.value?.perception = view.text as String
-                    R.id.performance -> currentCharacter.value?.performance = view.text as String
-                    R.id.persuasion -> currentCharacter.value?.persuasion = view.text as String
-                    R.id.religion -> currentCharacter.value?.religion = view.text as String
-                    R.id.sleightOfHand -> currentCharacter.value?.sleightOfHand = view.text as String
-                    R.id.stealth -> currentCharacter.value?.stealth = view.text as String
-                    R.id.survival -> currentCharacter.value?.survival = view.text as String
+                    R.id.dexteritySave -> currentCharacter.value?.dexteritySave = view.text.toString()
+                    R.id.constitutionSave -> currentCharacter.value?.constitutionSave = view.text.toString()
+                    R.id.intelligenceSave -> currentCharacter.value?.intelligenceSave = view.text.toString()
+                    R.id.wisdomSave -> currentCharacter.value?.wisdomSave = view.text.toString()
+                    R.id.charismaSave -> currentCharacter.value?.charismaSave = view.text.toString()
+                    R.id.acrobatics -> currentCharacter.value?.acrobatics = view.text.toString()
+                    R.id.animalHandling -> currentCharacter.value?.animalHandling = view.text.toString()
+                    R.id.arcana -> currentCharacter.value?.arcana = view.text.toString()
+                    R.id.athletics -> currentCharacter.value?.athletics = view.text.toString()
+                    R.id.deception -> currentCharacter.value?.deception = view.text.toString()
+                    R.id.history -> currentCharacter.value?.history = view.text.toString()
+                    R.id.insight -> currentCharacter.value?.insight = view.text.toString()
+                    R.id.intimidation -> currentCharacter.value?.intimidation = view.text.toString()
+                    R.id.investigation -> currentCharacter.value?.investigation = view.text.toString()
+                    R.id.medicine -> currentCharacter.value?.medicine = view.text.toString()
+                    R.id.nature -> currentCharacter.value?.nature = view.text.toString()
+                    R.id.perception -> currentCharacter.value?.perception = view.text.toString()
+                    R.id.performance -> currentCharacter.value?.performance = view.text.toString()
+                    R.id.persuasion -> currentCharacter.value?.persuasion = view.text.toString()
+                    R.id.religion -> currentCharacter.value?.religion = view.text.toString()
+                    R.id.sleightOfHand -> currentCharacter.value?.sleightOfHand = view.text.toString()
+                    R.id.stealth -> currentCharacter.value?.stealth = view.text.toString()
+                    R.id.survival -> currentCharacter.value?.survival = view.text.toString()
                     R.id.spellAttackName -> {
                         when (view.tag) {
-                            "AttackName-0" -> currentCharacter.value?.attackSpells?.get(0)?.name = view.text as String
-                            "AttackName-1" -> currentCharacter.value?.attackSpells?.get(1)?.name = view.text as String
-                            "AttackName-2" -> currentCharacter.value?.attackSpells?.get(2)?.name = view.text as String
-                            "AttackName-3" -> currentCharacter.value?.attackSpells?.get(3)?.name = view.text as String
-                            "AttackName-4" -> currentCharacter.value?.attackSpells?.get(4)?.name = view.text as String
-                            "AttackName-5" -> currentCharacter.value?.attackSpells?.get(5)?.name = view.text as String
-                            "AttackName-6" -> currentCharacter.value?.attackSpells?.get(6)?.name = view.text as String
-                            "AttackName-7" -> currentCharacter.value?.attackSpells?.get(7)?.name = view.text as String
-                            "AttackName-8" -> currentCharacter.value?.attackSpells?.get(8)?.name = view.text as String
-                            "AttackName-9" -> currentCharacter.value?.attackSpells?.get(9)?.name = view.text as String
-                            "AttackName-10" -> currentCharacter.value?.attackSpells?.get(10)?.name = view.text as String
-                            "AttackName-11" -> currentCharacter.value?.attackSpells?.get(11)?.name = view.text as String
-                            "AttackName-12" -> currentCharacter.value?.attackSpells?.get(12)?.name = view.text as String
-                            "AttackName-13" -> currentCharacter.value?.attackSpells?.get(13)?.name = view.text as String
-                            "AttackName-14" -> currentCharacter.value?.attackSpells?.get(14)?.name = view.text as String
-                            "AttackName-15" -> currentCharacter.value?.attackSpells?.get(15)?.name = view.text as String
-                            "AttackName-16" -> currentCharacter.value?.attackSpells?.get(16)?.name = view.text as String
-                            "AttackName-17" -> currentCharacter.value?.attackSpells?.get(17)?.name = view.text as String
-                            "AttackName-18" -> currentCharacter.value?.attackSpells?.get(18)?.name = view.text as String
-                            "AttackName-19" -> currentCharacter.value?.attackSpells?.get(19)?.name = view.text as String
+                            "AttackName-0" -> currentCharacter.value?.attackSpells?.get(0)?.name = view.text.toString()
+                            "AttackName-1" -> currentCharacter.value?.attackSpells?.get(1)?.name = view.text.toString()
+                            "AttackName-2" -> currentCharacter.value?.attackSpells?.get(2)?.name = view.text.toString()
+                            "AttackName-3" -> currentCharacter.value?.attackSpells?.get(3)?.name = view.text.toString()
+                            "AttackName-4" -> currentCharacter.value?.attackSpells?.get(4)?.name = view.text.toString()
+                            "AttackName-5" -> currentCharacter.value?.attackSpells?.get(5)?.name = view.text.toString()
+                            "AttackName-6" -> currentCharacter.value?.attackSpells?.get(6)?.name = view.text.toString()
+                            "AttackName-7" -> currentCharacter.value?.attackSpells?.get(7)?.name = view.text.toString()
+                            "AttackName-8" -> currentCharacter.value?.attackSpells?.get(8)?.name = view.text.toString()
+                            "AttackName-9" -> currentCharacter.value?.attackSpells?.get(9)?.name = view.text.toString()
+                            "AttackName-10" -> currentCharacter.value?.attackSpells?.get(10)?.name = view.text.toString()
+                            "AttackName-11" -> currentCharacter.value?.attackSpells?.get(11)?.name = view.text.toString()
+                            "AttackName-12" -> currentCharacter.value?.attackSpells?.get(12)?.name = view.text.toString()
+                            "AttackName-13" -> currentCharacter.value?.attackSpells?.get(13)?.name = view.text.toString()
+                            "AttackName-14" -> currentCharacter.value?.attackSpells?.get(14)?.name = view.text.toString()
+                            "AttackName-15" -> currentCharacter.value?.attackSpells?.get(15)?.name = view.text.toString()
+                            "AttackName-16" -> currentCharacter.value?.attackSpells?.get(16)?.name = view.text.toString()
+                            "AttackName-17" -> currentCharacter.value?.attackSpells?.get(17)?.name = view.text.toString()
+                            "AttackName-18" -> currentCharacter.value?.attackSpells?.get(18)?.name = view.text.toString()
+                            "AttackName-19" -> currentCharacter.value?.attackSpells?.get(19)?.name = view.text.toString()
                         }
                     }
                     R.id.spellAttackBonus -> {
                         when (view.tag) {
-                            "AttackBonus-0" -> currentCharacter.value?.attackSpells?.get(0)?.attackBonus = view.text as String
-                            "AttackBonus-1" -> currentCharacter.value?.attackSpells?.get(1)?.attackBonus = view.text as String
-                            "AttackBonus-2" -> currentCharacter.value?.attackSpells?.get(2)?.attackBonus = view.text as String
-                            "AttackBonus-3" -> currentCharacter.value?.attackSpells?.get(3)?.attackBonus = view.text as String
-                            "AttackBonus-4" -> currentCharacter.value?.attackSpells?.get(4)?.attackBonus = view.text as String
-                            "AttackBonus-5" -> currentCharacter.value?.attackSpells?.get(5)?.attackBonus = view.text as String
-                            "AttackBonus-6" -> currentCharacter.value?.attackSpells?.get(6)?.attackBonus = view.text as String
-                            "AttackBonus-7" -> currentCharacter.value?.attackSpells?.get(7)?.attackBonus = view.text as String
-                            "AttackBonus-8" -> currentCharacter.value?.attackSpells?.get(8)?.attackBonus = view.text as String
-                            "AttackBonus-9" -> currentCharacter.value?.attackSpells?.get(9)?.attackBonus = view.text as String
-                            "AttackBonus-10" -> currentCharacter.value?.attackSpells?.get(10)?.attackBonus = view.text as String
-                            "AttackBonus-11" -> currentCharacter.value?.attackSpells?.get(11)?.attackBonus = view.text as String
-                            "AttackBonus-12" -> currentCharacter.value?.attackSpells?.get(12)?.attackBonus = view.text as String
-                            "AttackBonus-13" -> currentCharacter.value?.attackSpells?.get(13)?.attackBonus = view.text as String
-                            "AttackBonus-14" -> currentCharacter.value?.attackSpells?.get(14)?.attackBonus = view.text as String
-                            "AttackBonus-15" -> currentCharacter.value?.attackSpells?.get(15)?.attackBonus = view.text as String
-                            "AttackBonus-16" -> currentCharacter.value?.attackSpells?.get(16)?.attackBonus = view.text as String
-                            "AttackBonus-17" -> currentCharacter.value?.attackSpells?.get(17)?.attackBonus = view.text as String
-                            "AttackBonus-18" -> currentCharacter.value?.attackSpells?.get(18)?.attackBonus = view.text as String
-                            "AttackBonus-19" -> currentCharacter.value?.attackSpells?.get(19)?.attackBonus = view.text as String
+                            "AttackBonus-0" -> currentCharacter.value?.attackSpells?.get(0)?.attackBonus = view.text.toString()
+                            "AttackBonus-1" -> currentCharacter.value?.attackSpells?.get(1)?.attackBonus = view.text.toString()
+                            "AttackBonus-2" -> currentCharacter.value?.attackSpells?.get(2)?.attackBonus = view.text.toString()
+                            "AttackBonus-3" -> currentCharacter.value?.attackSpells?.get(3)?.attackBonus = view.text.toString()
+                            "AttackBonus-4" -> currentCharacter.value?.attackSpells?.get(4)?.attackBonus = view.text.toString()
+                            "AttackBonus-5" -> currentCharacter.value?.attackSpells?.get(5)?.attackBonus = view.text.toString()
+                            "AttackBonus-6" -> currentCharacter.value?.attackSpells?.get(6)?.attackBonus = view.text.toString()
+                            "AttackBonus-7" -> currentCharacter.value?.attackSpells?.get(7)?.attackBonus = view.text.toString()
+                            "AttackBonus-8" -> currentCharacter.value?.attackSpells?.get(8)?.attackBonus = view.text.toString()
+                            "AttackBonus-9" -> currentCharacter.value?.attackSpells?.get(9)?.attackBonus = view.text.toString()
+                            "AttackBonus-10" -> currentCharacter.value?.attackSpells?.get(10)?.attackBonus = view.text.toString()
+                            "AttackBonus-11" -> currentCharacter.value?.attackSpells?.get(11)?.attackBonus = view.text.toString()
+                            "AttackBonus-12" -> currentCharacter.value?.attackSpells?.get(12)?.attackBonus = view.text.toString()
+                            "AttackBonus-13" -> currentCharacter.value?.attackSpells?.get(13)?.attackBonus = view.text.toString()
+                            "AttackBonus-14" -> currentCharacter.value?.attackSpells?.get(14)?.attackBonus = view.text.toString()
+                            "AttackBonus-15" -> currentCharacter.value?.attackSpells?.get(15)?.attackBonus = view.text.toString()
+                            "AttackBonus-16" -> currentCharacter.value?.attackSpells?.get(16)?.attackBonus = view.text.toString()
+                            "AttackBonus-17" -> currentCharacter.value?.attackSpells?.get(17)?.attackBonus = view.text.toString()
+                            "AttackBonus-18" -> currentCharacter.value?.attackSpells?.get(18)?.attackBonus = view.text.toString()
+                            "AttackBonus-19" -> currentCharacter.value?.attackSpells?.get(19)?.attackBonus = view.text.toString()
                         }
                     }
                     R.id.spellAttackType -> {
                         when (view.tag) {
-                            "AttackType-0" -> currentCharacter.value?.attackSpells?.get(0)?.damageType = view.text as String
-                            "AttackType-1" -> currentCharacter.value?.attackSpells?.get(1)?.damageType = view.text as String
-                            "AttackType-2" -> currentCharacter.value?.attackSpells?.get(2)?.damageType = view.text as String
-                            "AttackType-3" -> currentCharacter.value?.attackSpells?.get(3)?.damageType = view.text as String
-                            "AttackType-4" -> currentCharacter.value?.attackSpells?.get(4)?.damageType = view.text as String
-                            "AttackType-5" -> currentCharacter.value?.attackSpells?.get(5)?.damageType = view.text as String
-                            "AttackType-6" -> currentCharacter.value?.attackSpells?.get(6)?.damageType = view.text as String
-                            "AttackType-7" -> currentCharacter.value?.attackSpells?.get(7)?.damageType = view.text as String
-                            "AttackType-8" -> currentCharacter.value?.attackSpells?.get(8)?.damageType = view.text as String
-                            "AttackType-9" -> currentCharacter.value?.attackSpells?.get(9)?.damageType = view.text as String
-                            "AttackType-10" -> currentCharacter.value?.attackSpells?.get(10)?.damageType = view.text as String
-                            "AttackType-11" -> currentCharacter.value?.attackSpells?.get(11)?.damageType = view.text as String
-                            "AttackType-12" -> currentCharacter.value?.attackSpells?.get(12)?.damageType = view.text as String
-                            "AttackType-13" -> currentCharacter.value?.attackSpells?.get(13)?.damageType = view.text as String
-                            "AttackType-14" -> currentCharacter.value?.attackSpells?.get(14)?.damageType = view.text as String
-                            "AttackType-15" -> currentCharacter.value?.attackSpells?.get(15)?.damageType = view.text as String
-                            "AttackType-16" -> currentCharacter.value?.attackSpells?.get(16)?.damageType = view.text as String
-                            "AttackType-17" -> currentCharacter.value?.attackSpells?.get(17)?.damageType = view.text as String
-                            "AttackType-18" -> currentCharacter.value?.attackSpells?.get(18)?.damageType = view.text as String
-                            "AttackType-19" -> currentCharacter.value?.attackSpells?.get(19)?.damageType = view.text as String
+                            "AttackType-0" -> currentCharacter.value?.attackSpells?.get(0)?.damageType = view.text.toString()
+                            "AttackType-1" -> currentCharacter.value?.attackSpells?.get(1)?.damageType = view.text.toString()
+                            "AttackType-2" -> currentCharacter.value?.attackSpells?.get(2)?.damageType = view.text.toString()
+                            "AttackType-3" -> currentCharacter.value?.attackSpells?.get(3)?.damageType = view.text.toString()
+                            "AttackType-4" -> currentCharacter.value?.attackSpells?.get(4)?.damageType = view.text.toString()
+                            "AttackType-5" -> currentCharacter.value?.attackSpells?.get(5)?.damageType = view.text.toString()
+                            "AttackType-6" -> currentCharacter.value?.attackSpells?.get(6)?.damageType = view.text.toString()
+                            "AttackType-7" -> currentCharacter.value?.attackSpells?.get(7)?.damageType = view.text.toString()
+                            "AttackType-8" -> currentCharacter.value?.attackSpells?.get(8)?.damageType = view.text.toString()
+                            "AttackType-9" -> currentCharacter.value?.attackSpells?.get(9)?.damageType = view.text.toString()
+                            "AttackType-10" -> currentCharacter.value?.attackSpells?.get(10)?.damageType = view.text.toString()
+                            "AttackType-11" -> currentCharacter.value?.attackSpells?.get(11)?.damageType = view.text.toString()
+                            "AttackType-12" -> currentCharacter.value?.attackSpells?.get(12)?.damageType = view.text.toString()
+                            "AttackType-13" -> currentCharacter.value?.attackSpells?.get(13)?.damageType = view.text.toString()
+                            "AttackType-14" -> currentCharacter.value?.attackSpells?.get(14)?.damageType = view.text.toString()
+                            "AttackType-15" -> currentCharacter.value?.attackSpells?.get(15)?.damageType = view.text.toString()
+                            "AttackType-16" -> currentCharacter.value?.attackSpells?.get(16)?.damageType = view.text.toString()
+                            "AttackType-17" -> currentCharacter.value?.attackSpells?.get(17)?.damageType = view.text.toString()
+                            "AttackType-18" -> currentCharacter.value?.attackSpells?.get(18)?.damageType = view.text.toString()
+                            "AttackType-19" -> currentCharacter.value?.attackSpells?.get(19)?.damageType = view.text.toString()
                         }
                     }
                     R.id.copperPieces -> currentCharacter.value?.copper = view.text.toString()
-                    R.id.silverPieces -> currentCharacter.value?.silver = view.text as String
-                    R.id.electrumPieces -> currentCharacter.value?.electrum = view.text as String
-                    R.id.goldPieces -> currentCharacter.value?.gold = view.text as String
-                    R.id.platinumPieces -> currentCharacter.value?.platinum = view.text as String
+                    R.id.silverPieces -> currentCharacter.value?.silver = view.text.toString()
+                    R.id.electrumPieces -> currentCharacter.value?.electrum = view.text.toString()
+                    R.id.goldPieces -> currentCharacter.value?.gold = view.text.toString()
+                    R.id.platinumPieces -> currentCharacter.value?.platinum = view.text.toString()
 
-                    R.id.spellcastingClass -> currentCharacter.value?.spellCastingClass = view.text as String
-                    R.id.spellcastingAbility -> currentCharacter.value?.spellCastingAbility = view.text as String
-                    R.id.spellSaveDC -> currentCharacter.value?.spellSaveDC = view.text as String
-                    R.id.spellBonus -> currentCharacter.value?.spellAttackBonus = view.text as String
+                    R.id.spellcastingClass -> currentCharacter.value?.spellCastingClass = view.text.toString()
+                    R.id.spellcastingAbility -> currentCharacter.value?.spellCastingAbility = view.text.toString()
+                    R.id.spellSaveDC -> currentCharacter.value?.spellSaveDC = view.text.toString()
+                    R.id.spellBonus -> currentCharacter.value?.spellAttackBonus = view.text.toString()
                     R.id.cantripName -> {
                         when (view.tag) {
-                            "Cantrip1" -> currentCharacter.value?.cantrips?.set(0, view.text as String)
-                            "Cantrip2" -> currentCharacter.value?.cantrips?.set(1, view.text as String)
-                            "Cantrip3" -> currentCharacter.value?.cantrips?.set(2, view.text as String)
-                            "Cantrip4" -> currentCharacter.value?.cantrips?.set(3, view.text as String)
-                            "Cantrip5" -> currentCharacter.value?.cantrips?.set(4, view.text as String)
-                            "Cantrip6" -> currentCharacter.value?.cantrips?.set(5, view.text as String)
-                            "Cantrip7" -> currentCharacter.value?.cantrips?.set(6, view.text as String)
-                            "Cantrip8" -> currentCharacter.value?.cantrips?.set(7, view.text as String)
+                            "Cantrip1" -> currentCharacter.value?.cantrips?.set(0, view.text.toString())
+                            "Cantrip2" -> currentCharacter.value?.cantrips?.set(1, view.text.toString())
+                            "Cantrip3" -> currentCharacter.value?.cantrips?.set(2, view.text.toString())
+                            "Cantrip4" -> currentCharacter.value?.cantrips?.set(3, view.text.toString())
+                            "Cantrip5" -> currentCharacter.value?.cantrips?.set(4, view.text.toString())
+                            "Cantrip6" -> currentCharacter.value?.cantrips?.set(5, view.text.toString())
+                            "Cantrip7" -> currentCharacter.value?.cantrips?.set(6, view.text.toString())
+                            "Cantrip8" -> currentCharacter.value?.cantrips?.set(7, view.text.toString())
                         }
                     }
                     R.id.level1SlotsTotal -> currentCharacter.value?.spells?.get(0)?.totalSpellSlots =
-                        view.text as String
+                        view.text.toString()
                     R.id.level1SlotsExpended -> currentCharacter.value?.spells?.get(0)?.spellSlotsExpended =
-                        view.text as String
+                        view.text.toString()
                     R.id.level2SlotsTotal -> currentCharacter.value?.spells?.get(1)?.totalSpellSlots =
-                        view.text as String
+                        view.text.toString()
                     R.id.level2SlotsExpended -> currentCharacter.value?.spells?.get(1)?.spellSlotsExpended =
-                        view.text as String
+                        view.text.toString()
                     R.id.level3SlotsTotal -> currentCharacter.value?.spells?.get(2)?.totalSpellSlots =
-                        view.text as String
+                        view.text.toString()
                     R.id.level3SlotsExpended -> currentCharacter.value?.spells?.get(2)?.spellSlotsExpended =
-                        view.text as String
+                        view.text.toString()
                     R.id.level4SlotsTotal -> currentCharacter.value?.spells?.get(3)?.totalSpellSlots =
-                        view.text as String
+                        view.text.toString()
                     R.id.level4SlotsExpended -> currentCharacter.value?.spells?.get(3)?.spellSlotsExpended =
-                        view.text as String
+                        view.text.toString()
                     R.id.level5SlotsTotal -> currentCharacter.value?.spells?.get(4)?.totalSpellSlots =
-                        view.text as String
+                        view.text.toString()
                     R.id.level5SlotsExpended -> currentCharacter.value?.spells?.get(4)?.spellSlotsExpended =
-                        view.text as String
+                        view.text.toString()
                     R.id.level6SlotsTotal -> currentCharacter.value?.spells?.get(5)?.totalSpellSlots =
-                        view.text as String
+                        view.text.toString()
                     R.id.level6SlotsExpended -> currentCharacter.value?.spells?.get(5)?.spellSlotsExpended =
-                        view.text as String
+                        view.text.toString()
                     R.id.level7SlotsTotal -> currentCharacter.value?.spells?.get(6)?.totalSpellSlots =
-                        view.text as String
+                        view.text.toString()
                     R.id.level7SlotsExpended -> currentCharacter.value?.spells?.get(6)?.spellSlotsExpended =
-                        view.text as String
+                        view.text.toString()
                     R.id.level8SlotsTotal -> currentCharacter.value?.spells?.get(7)?.totalSpellSlots =
-                        view.text as String
+                        view.text.toString()
                     R.id.level8SlotsExpended -> currentCharacter.value?.spells?.get(7)?.spellSlotsExpended =
-                        view.text as String
+                        view.text.toString()
                     R.id.level9SlotsTotal -> currentCharacter.value?.spells?.get(8)?.totalSpellSlots =
-                        view.text as String
+                        view.text.toString()
                     R.id.level9SlotsExpended -> currentCharacter.value?.spells?.get(8)?.spellSlotsExpended =
-                        view.text as String
+                        view.text.toString()
                     R.id.spellName -> {
                         when (view.tag) {
                             "SpellName1-1" -> currentCharacter.value?.spells?.get(0)?.spellName?.set(0,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName1-2" -> currentCharacter.value?.spells?.get(0)?.spellName?.set(1,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName1-3" -> currentCharacter.value?.spells?.get(0)?.spellName?.set(2,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName1-4" -> currentCharacter.value?.spells?.get(0)?.spellName?.set(3,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName1-5" -> currentCharacter.value?.spells?.get(0)?.spellName?.set(4,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName1-6" -> currentCharacter.value?.spells?.get(0)?.spellName?.set(5,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName1-7" -> currentCharacter.value?.spells?.get(0)?.spellName?.set(6,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName1-8" -> currentCharacter.value?.spells?.get(0)?.spellName?.set(7,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName1-9" -> currentCharacter.value?.spells?.get(0)?.spellName?.set(8,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName1-10" -> currentCharacter.value?.spells?.get(0)?.spellName?.set(9,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName1-11" -> currentCharacter.value?.spells?.get(0)?.spellName?.set(10,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName1-12" -> currentCharacter.value?.spells?.get(0)?.spellName?.set(11,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName1-13" -> currentCharacter.value?.spells?.get(0)?.spellName?.set(12,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName2-1" -> currentCharacter.value?.spells?.get(1)?.spellName?.set(0,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName2-2" -> currentCharacter.value?.spells?.get(1)?.spellName?.set(1,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName2-3" -> currentCharacter.value?.spells?.get(1)?.spellName?.set(2,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName2-4" -> currentCharacter.value?.spells?.get(1)?.spellName?.set(3,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName2-5" -> currentCharacter.value?.spells?.get(1)?.spellName?.set(4,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName2-6" -> currentCharacter.value?.spells?.get(1)?.spellName?.set(5,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName2-7" -> currentCharacter.value?.spells?.get(1)?.spellName?.set(6,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName2-8" -> currentCharacter.value?.spells?.get(1)?.spellName?.set(7,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName2-9" -> currentCharacter.value?.spells?.get(1)?.spellName?.set(8,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName2-10" -> currentCharacter.value?.spells?.get(1)?.spellName?.set(9,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName2-11" -> currentCharacter.value?.spells?.get(1)?.spellName?.set(10,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName2-12" -> currentCharacter.value?.spells?.get(1)?.spellName?.set(11,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName2-13" -> currentCharacter.value?.spells?.get(1)?.spellName?.set(12,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName3-1" -> currentCharacter.value?.spells?.get(2)?.spellName?.set(0,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName3-2" -> currentCharacter.value?.spells?.get(2)?.spellName?.set(1,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName3-3" -> currentCharacter.value?.spells?.get(2)?.spellName?.set(2,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName3-4" -> currentCharacter.value?.spells?.get(2)?.spellName?.set(3,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName3-5" -> currentCharacter.value?.spells?.get(2)?.spellName?.set(4,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName3-6" -> currentCharacter.value?.spells?.get(2)?.spellName?.set(5,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName3-7" -> currentCharacter.value?.spells?.get(2)?.spellName?.set(6,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName3-8" -> currentCharacter.value?.spells?.get(2)?.spellName?.set(7,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName3-9" -> currentCharacter.value?.spells?.get(2)?.spellName?.set(8,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName3-10" -> currentCharacter.value?.spells?.get(2)?.spellName?.set(9,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName3-11" -> currentCharacter.value?.spells?.get(2)?.spellName?.set(10,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName3-12" -> currentCharacter.value?.spells?.get(2)?.spellName?.set(11,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName3-13" -> currentCharacter.value?.spells?.get(2)?.spellName?.set(12,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName4-1" -> currentCharacter.value?.spells?.get(3)?.spellName?.set(0,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName4-2" -> currentCharacter.value?.spells?.get(3)?.spellName?.set(1,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName4-3" -> currentCharacter.value?.spells?.get(3)?.spellName?.set(2,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName4-4" -> currentCharacter.value?.spells?.get(3)?.spellName?.set(3,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName4-5" -> currentCharacter.value?.spells?.get(3)?.spellName?.set(4,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName4-6" -> currentCharacter.value?.spells?.get(3)?.spellName?.set(5,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName4-7" -> currentCharacter.value?.spells?.get(3)?.spellName?.set(6,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName4-8" -> currentCharacter.value?.spells?.get(3)?.spellName?.set(7,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName4-9" -> currentCharacter.value?.spells?.get(3)?.spellName?.set(8,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName4-10" -> currentCharacter.value?.spells?.get(3)?.spellName?.set(9,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName4-11" -> currentCharacter.value?.spells?.get(3)?.spellName?.set(10,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName4-12" -> currentCharacter.value?.spells?.get(3)?.spellName?.set(11,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName4-13" -> currentCharacter.value?.spells?.get(3)?.spellName?.set(12,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName5-1" -> currentCharacter.value?.spells?.get(4)?.spellName?.set(0,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName5-2" -> currentCharacter.value?.spells?.get(4)?.spellName?.set(1,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName5-3" -> currentCharacter.value?.spells?.get(4)?.spellName?.set(2,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName5-4" -> currentCharacter.value?.spells?.get(4)?.spellName?.set(3,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName5-5" -> currentCharacter.value?.spells?.get(4)?.spellName?.set(4,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName5-6" -> currentCharacter.value?.spells?.get(4)?.spellName?.set(5,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName5-7" -> currentCharacter.value?.spells?.get(4)?.spellName?.set(6,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName5-8" -> currentCharacter.value?.spells?.get(4)?.spellName?.set(7,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName5-9" -> currentCharacter.value?.spells?.get(4)?.spellName?.set(8,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName5-10" -> currentCharacter.value?.spells?.get(4)?.spellName?.set(9,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName5-11" -> currentCharacter.value?.spells?.get(4)?.spellName?.set(10,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName6-1" -> currentCharacter.value?.spells?.get(5)?.spellName?.set(0,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName6-2" -> currentCharacter.value?.spells?.get(5)?.spellName?.set(1,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName6-3" -> currentCharacter.value?.spells?.get(5)?.spellName?.set(2,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName6-4" -> currentCharacter.value?.spells?.get(5)?.spellName?.set(3,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName6-5" -> currentCharacter.value?.spells?.get(5)?.spellName?.set(4,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName6-6" -> currentCharacter.value?.spells?.get(5)?.spellName?.set(5,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName6-7" -> currentCharacter.value?.spells?.get(5)?.spellName?.set(6,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName6-8" -> currentCharacter.value?.spells?.get(5)?.spellName?.set(7,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName6-9" -> currentCharacter.value?.spells?.get(5)?.spellName?.set(8,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName6-10" -> currentCharacter.value?.spells?.get(5)?.spellName?.set(9,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName6-11" -> currentCharacter.value?.spells?.get(5)?.spellName?.set(10,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName7-1" -> currentCharacter.value?.spells?.get(6)?.spellName?.set(0,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName7-2" -> currentCharacter.value?.spells?.get(6)?.spellName?.set(1,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName7-3" -> currentCharacter.value?.spells?.get(6)?.spellName?.set(2,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName7-4" -> currentCharacter.value?.spells?.get(6)?.spellName?.set(3,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName7-5" -> currentCharacter.value?.spells?.get(6)?.spellName?.set(4,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName7-6" -> currentCharacter.value?.spells?.get(6)?.spellName?.set(5,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName7-7" -> currentCharacter.value?.spells?.get(6)?.spellName?.set(6,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName7-8" -> currentCharacter.value?.spells?.get(6)?.spellName?.set(7,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName7-9" -> currentCharacter.value?.spells?.get(6)?.spellName?.set(8,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName7-10" -> currentCharacter.value?.spells?.get(6)?.spellName?.set(9,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName7-11" -> currentCharacter.value?.spells?.get(6)?.spellName?.set(10,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName8-1" -> currentCharacter.value?.spells?.get(7)?.spellName?.set(0,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName8-2" -> currentCharacter.value?.spells?.get(7)?.spellName?.set(1,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName8-3" -> currentCharacter.value?.spells?.get(7)?.spellName?.set(2,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName8-4" -> currentCharacter.value?.spells?.get(7)?.spellName?.set(3,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName8-5" -> currentCharacter.value?.spells?.get(7)?.spellName?.set(4,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName8-6" -> currentCharacter.value?.spells?.get(7)?.spellName?.set(5,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName8-7" -> currentCharacter.value?.spells?.get(7)?.spellName?.set(6,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName8-8" -> currentCharacter.value?.spells?.get(7)?.spellName?.set(7,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName8-9" -> currentCharacter.value?.spells?.get(7)?.spellName?.set(8,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName9-1" -> currentCharacter.value?.spells?.get(8)?.spellName?.set(0,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName9-2" -> currentCharacter.value?.spells?.get(8)?.spellName?.set(1,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName9-3" -> currentCharacter.value?.spells?.get(8)?.spellName?.set(2,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName9-4" -> currentCharacter.value?.spells?.get(8)?.spellName?.set(3,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName9-5" -> currentCharacter.value?.spells?.get(8)?.spellName?.set(4,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName9-6" -> currentCharacter.value?.spells?.get(8)?.spellName?.set(5,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName9-7" -> currentCharacter.value?.spells?.get(8)?.spellName?.set(6,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName9-8" -> currentCharacter.value?.spells?.get(8)?.spellName?.set(7,
-                                view.text as String
+                                view.text.toString()
                             )
                             "SpellName9-9" -> currentCharacter.value?.spells?.get(8)?.spellName?.set(8,
-                                view.text as String
+                                view.text.toString()
                             )
                         }
                     }
@@ -829,13 +829,14 @@ class CharacterViewModel(
             }
             is CSTextViewLong -> {
                 when (view.id) {
-                    R.id.equipment -> currentCharacter.value?.equipment = view.text as String
-                    R.id.proficienciesLanguages -> currentCharacter.value?.proficiencyLanguages = view.text as String
-                    R.id.personalityTraits -> currentCharacter.value?.personalityTraits = view.text as String
-                    R.id.ideals -> currentCharacter.value?.ideals = view.text as String
-                    R.id.bonds -> currentCharacter.value?.bonds = view.text as String
-                    R.id.flaws -> currentCharacter.value?.flaws = view.text as String
-                    R.id.notesMisc -> currentCharacter.value?.notesMisc = view.text as String
+                    R.id.equipment -> currentCharacter.value?.equipment = view.text.toString()
+                    R.id.featuresTraits -> currentCharacter.value?.featuresTraits = view.text.toString()
+                    R.id.proficienciesLanguages -> currentCharacter.value?.proficiencyLanguages = view.text.toString()
+                    R.id.personalityTraits -> currentCharacter.value?.personalityTraits = view.text.toString()
+                    R.id.ideals -> currentCharacter.value?.ideals = view.text.toString()
+                    R.id.bonds -> currentCharacter.value?.bonds = view.text.toString()
+                    R.id.flaws -> currentCharacter.value?.flaws = view.text.toString()
+                    R.id.notesMisc -> currentCharacter.value?.notesMisc = view.text.toString()
                 }
             }
             is CSCheckbox -> {

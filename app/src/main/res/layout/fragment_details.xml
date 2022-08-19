@@ -1857,6 +1857,47 @@
                 <Space
                     android:layout_width="wrap_content"
                     android:layout_height="8dp"/>
+                <!-- Features and Traits -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:src="@drawable/features_traits"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintDimensionRatio="H, 2199:2149"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.core.widget.NestedScrollView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:fillViewport="true"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHeight_percent="0.9"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.2"
+                        app:layout_constraintWidth_percent="0.9">
+
+                        <com.shipsco.charactersheet.views.CSTextViewLong
+                            android:id="@+id/featuresTraits"
+                            android:contentDescription="Features and Traits"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="top"
+                            android:textSize="18sp" />
+
+                    </androidx.core.widget.NestedScrollView>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="8dp"/>
                 <!-- Proficiency, Languages -->
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"

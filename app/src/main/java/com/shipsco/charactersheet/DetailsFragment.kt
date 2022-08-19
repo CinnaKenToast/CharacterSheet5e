@@ -56,6 +56,7 @@ class DetailsFragment : Fragment() {
         println("----------------------- IN DETAILS")
         subscribeToVM()
         characterViewModel.addCharacterToStorage()
+        println(context?.filesDir)
     }
 
     override fun onResume() {
@@ -308,6 +309,7 @@ class DetailsFragment : Fragment() {
 
         longTextMap = mutableMapOf<CSTextViewLong, String>(
             Pair(binding.equipment, currentCharacter.equipment),
+            Pair(binding.featuresTraits, currentCharacter.featuresTraits),
             Pair(binding.proficienciesLanguages, currentCharacter.proficiencyLanguages),
             Pair(binding.personalityTraits, currentCharacter.personalityTraits),
             Pair(binding.ideals, currentCharacter.ideals),
