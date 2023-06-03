@@ -836,7 +836,16 @@ class CharacterViewModel(
                     R.id.ideals -> currentCharacter.value?.ideals = view.text.toString()
                     R.id.bonds -> currentCharacter.value?.bonds = view.text.toString()
                     R.id.flaws -> currentCharacter.value?.flaws = view.text.toString()
-                    R.id.notesMisc -> currentCharacter.value?.notesMisc = view.text.toString()
+                    R.id.notesCategory -> currentCharacter.value?.selectedNote = view.text.toString().dropLast(2)
+                    R.id.notesMisc -> {
+                        val index = currentCharacter.value?.notesMisc?.indexOfFirst {
+                            it[0] == currentCharacter.value?.selectedNote
+                        }
+                        index?.let {
+                            currentCharacter.value?.notesMisc?.get(index)?.set(1, view.text.toString())
+                        }
+
+                    }
                 }
             }
             is CSCheckbox -> {

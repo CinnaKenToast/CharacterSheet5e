@@ -36,4 +36,14 @@ class Converters {
     fun fromStringToSStringList(json: String): List<String> {
         return json.fromJsonString()
     }
+
+    @TypeConverter
+    fun fromNotesListToString(notesList: List<List<String>>): String {
+        return notesList.toJsonString()
+    }
+
+    @TypeConverter
+    fun fromStringToNotesList(json: String): List<List<String>> {
+        return json.fromJsonString()
+    }
 }

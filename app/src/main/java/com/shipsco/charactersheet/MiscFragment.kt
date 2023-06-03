@@ -1,20 +1,27 @@
 package com.shipsco.charactersheet
 
+import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.Fragment
+import android.text.InputType
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.WindowManager
+import android.view.inputmethod.EditorInfo
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.core.view.get
+import androidx.fragment.app.Fragment
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import com.google.android.material.textfield.TextInputEditText
 import com.shipsco.charactersheet.data.character.Character
 import com.shipsco.charactersheet.data.character.blankCharacter
 import com.shipsco.charactersheet.databinding.FragmentMiscBinding
 import com.shipsco.charactersheet.utils.toJsonString
 import com.shipsco.charactersheet.views.*
+
 
 class MiscFragment : Fragment() {
 
@@ -46,7 +53,7 @@ class MiscFragment : Fragment() {
         initMenuOptions()
         setMappings()
         setBindings()
-        println("----------------------- IN SPELLS")
+        println("----------------------- IN NOTES")
         subscribeToVM()
     }
 
@@ -154,11 +161,103 @@ class MiscFragment : Fragment() {
             theBinding.isLocked = currentCharacter.editingIsLocked
             theBinding.eventListener = characterViewModel
         }
+
+        binding.notesCategory.text = "${currentCharacter.selectedNote} ▼"
+
+        binding.notesCategory.setOnClickListener {
+            println("------------- I AM TOTALLY DOING SOMETHING HERE")
+            characterViewModel.saveCurrentCharacter()
+            showNoteOptions()
+        }
     }
 
     private fun setMappings() {
+        val index = currentCharacter.notesMisc.indexOfFirst {
+            it[0] == currentCharacter.selectedNote
+        }
         longTextMap = mutableMapOf<CSTextViewLong, String>(
-            Pair(binding.notesMisc, currentCharacter.notesMisc),
+            Pair(binding.notesMisc, currentCharacter.notesMisc[index][1]),
         )
+    }
+
+    private fun showNoteOptions() {
+        val categories: MutableList<String> = mutableListOf()
+        for (category in currentCharacter.notesMisc) {
+            categories.add(category[0])
+        }
+        var checkedItem = categories.indexOf(currentCharacter.selectedNote)
+        var selectedItem = currentCharacter.selectedNote
+
+        val deleteDialog = MaterialAlertDialogBuilder(requireContext())
+            .setPositiveButton("Yes") { dialog, which ->
+                currentCharacter.notesMisc.removeAt(checkedItem)
+                if (selectedItem == currentCharacter.selectedNote) {
+                    selectedItem = categories[0]
+                    checkedItem = 0
+                    currentCharacter.selectedNote = selectedItem
+                }
+                setMappings()
+                setBindings()
+            }
+            .setNegativeButton("No") { dialog, which ->
+
+            }
+
+        val editText = TextInputEditText(requireContext())
+        editText.id = R.id.importDialog
+        editText.hint = "Insert Category Name"
+        editText.inputType = InputType.TYPE_CLASS_TEXT
+        editText.imeOptions = EditorInfo.IME_ACTION_DONE
+        editText.requestFocus()
+
+        val addDialog = MaterialAlertDialogBuilder(requireContext())
+            .setTitle("Enter Note Category")
+            .setPositiveButton("Add") { dialog, which ->
+                currentCharacter.notesMisc.add(mutableListOf(editText.text.toString(), ""))
+                currentCharacter.selectedNote = editText.text.toString()
+                setMappings()
+                setBindings()
+            }
+            .setNegativeButton("Cancel") { dialog, which ->
+
+            }
+            .setView(editText)
+
+        val dialog = MaterialAlertDialogBuilder(requireContext())
+            .setTitle("Select Note Category")
+            .setNegativeButton("Add") { dialog, which ->
+                println("Need to add a category")
+                val shownDialog = addDialog.show()
+
+                val window = shownDialog.window
+                window?.clearFlags(WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE or WindowManager.LayoutParams.FLAG_ALT_FOCUSABLE_IM)
+                window?.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE)
+                editText.setOnEditorActionListener { textView, actionId, keyEvent ->
+                    if (actionId == EditorInfo.IME_ACTION_DONE) {
+                        currentCharacter.notesMisc.add(mutableListOf(editText.text.toString(), ""))
+                        currentCharacter.selectedNote = editText.text.toString()
+                        setMappings()
+                        setBindings()
+                        shownDialog.dismiss()
+                    }
+                    true
+                }
+            }
+            .setNeutralButton("Delete") { dialog, which ->
+                println("Need to delete a category")
+                deleteDialog.setTitle("Are you sure you want to delete ${selectedItem}?")
+                deleteDialog.show()
+            }
+            .setPositiveButton("Select") { dialog, which ->
+                println("Need to select a category")
+                currentCharacter.selectedNote = selectedItem
+                setMappings()
+                setBindings()
+            }
+        dialog.setSingleChoiceItems(categories.toTypedArray(), checkedItem) { dialog, which ->
+            selectedItem = categories[which]
+            checkedItem = which
+        }
+        dialog.show()
     }
 }

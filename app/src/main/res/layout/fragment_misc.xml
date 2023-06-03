@@ -51,17 +51,36 @@
                     app:layout_constraintVertical_bias="0.99"
                     app:layout_constraintWidth_percent="0.85"/>
 
+                <Button
+                    android:id="@+id/notesCategory"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:text="Test 123 ▼"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/scala_sans"
+                    android:autoSizeTextType="uniform"
+                    android:background="@android:color/transparent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHeight_percent="0.05"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.01"
+                    app:layout_constraintWidth_percent="0.9"/>
+
                 <androidx.core.widget.NestedScrollView
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:fillViewport="true"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHeight_percent="0.94"
+                    app:layout_constraintHeight_percent="0.90"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.26"
+                    app:layout_constraintVertical_bias="0.55"
                     app:layout_constraintWidth_percent="0.9">
 
                     <com.shipsco.charactersheet.views.CSTextViewLong

@@ -112,7 +112,8 @@ data class Character(
     var spellAttackBonus: String = "",
     var cantrips: MutableList<String> = MutableList(8) { "" },
     var spells:  List<Spell> = blankSpells,
-    var notesMisc: String = ""
+    var notesMisc: MutableList<MutableList<String>> = MutableList(1){ mutableListOf("","") },
+    var selectedNote: String = notesMisc[0][0]
 )
 
 val blankCharacter = Character(
@@ -220,7 +221,20 @@ val blankCharacter = Character(
     spellAttackBonus = "",
     cantrips = MutableList(8) {""},
     spells = blankSpells,
-    notesMisc = ""
+    notesMisc = mutableListOf(
+        mutableListOf("General",""),
+        mutableListOf("Cantrips",""),
+        mutableListOf("Level 1 Spells",""),
+        mutableListOf("Level 2 Spells",""),
+        mutableListOf("Level 3 Spells",""),
+        mutableListOf("Level 4 Spells",""),
+        mutableListOf("Level 5 Spells",""),
+        mutableListOf("Level 6 Spells",""),
+        mutableListOf("Level 7 Spells",""),
+        mutableListOf("Level 8 Spells",""),
+        mutableListOf("Level 9 Spells","")
+    ),
+    selectedNote = "General"
 )
 
 val testCharacter = Character(
@@ -326,7 +340,9 @@ val testCharacter = Character(
     spellCastingAbility = "66",
     spellSaveDC = "67",
     spellAttackBonus = "67",
-    cantrips = MutableList(8) {"68"},
+    cantrips = MutableList(8) { "68" },
     spells = blankSpells,
-    notesMisc = "69"
+    notesMisc = MutableList(1) { mutableListOf("69","70") },
+    selectedNote = "69"
+
 )
