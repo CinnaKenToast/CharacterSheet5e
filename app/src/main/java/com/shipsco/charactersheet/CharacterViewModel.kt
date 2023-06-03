@@ -4,7 +4,6 @@ import android.app.Application
 import android.view.View
 import androidx.lifecycle.*
 import com.shipsco.charactersheet.data.character.Character
-import com.shipsco.charactersheet.domain.RoomCharacterUseCase
 import com.shipsco.charactersheet.domain.StorageCharacterUseCase
 import com.shipsco.charactersheet.views.*
 import kotlinx.coroutines.launch
@@ -14,7 +13,7 @@ import kotlin.math.ceil
 
 class CharacterViewModel(
     application: Application,
-    private val characterUseCase: RoomCharacterUseCase
+    private val characterUseCase: StorageCharacterUseCase
 ): AndroidViewModel(application), ManualEditListener {
     private val _allCharacters = MutableLiveData<List<Character>>()
     val allCharacters: LiveData<List<Character>> = _allCharacters
@@ -1210,7 +1209,7 @@ class CharacterViewModelFactory(private val application: Application): ViewModel
         if (modelClass.isAssignableFrom(CharacterViewModel::class.java)) {
             return CharacterViewModel(
                 application = application,
-                characterUseCase = RoomCharacterUseCase.createInstance(application.applicationContext)
+                characterUseCase = StorageCharacterUseCase.createInstance(application.applicationContext)
             ) as T
         }
         throw IllegalArgumentException("Unknown ViewModel Class")

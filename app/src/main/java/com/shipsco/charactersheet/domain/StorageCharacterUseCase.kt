@@ -11,13 +11,25 @@ class StorageCharacterUseCase(
     private val context: Context
 ): CharacterInterface {
     override suspend fun getCharacters(): List<Character> {
-        TODO("Not yet implemented")
+        val files = context.filesDir.listFiles()
+        val characters = mutableListOf<Character>()
+        files?.forEach { file ->
+            if (file.isFile ) {
+                val characterJson = file.readText()
+                characters.add(characterJson.fromJsonString())
+            }
+        }
+
+        return characters
         // context.filesDir.listFiles() gets a list of files
         // File.isFile, File.isDirectory
     }
 
     override suspend fun getCharacter(name: String): Result<Character> {
         val file = File(context.filesDir, "${name}.char")
+        if (!file.exists()) {
+            return Result.failure(Throwable("Could not find character: $name"))
+        }
         val characterJson = file.readText()
         return if ( characterJson.isBlank() ) {
             Result.failure(Throwable("Could not find character: $name"))

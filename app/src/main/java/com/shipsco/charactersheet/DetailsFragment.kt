@@ -161,7 +161,7 @@ class DetailsFragment : Fragment() {
                     } else {
                         val json = currentCharacter.toJsonString()
                         val share = Intent(Intent.ACTION_SEND)
-                        share.type = "text/plain"
+                        share.type = "text/json"
                         share.putExtra(Intent.EXTRA_TEXT, json)
                         val shareIntent = Intent.createChooser(share, "Export Character Data")
                         if (shareIntent.resolveActivity(requireActivity().packageManager) != null) {

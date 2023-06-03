@@ -52,7 +52,7 @@ class CharacterSelectFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initMenuOptions()
-
+        expanded = false
         binding.addFab.setOnClickListener {
             if ( expanded ) {
                 binding.campaignFab.visibility = View.INVISIBLE
@@ -126,7 +126,7 @@ class CharacterSelectFragment : Fragment() {
                         val contentUri = getUriForFile(requireContext(), "com.shipsco.charactersheet.fileprovider", file)
                         val share = Intent(Intent.ACTION_SEND)
                         share.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
-                        share.type = "text/plain"
+                        share.type = "text/json"
                         share.putExtra(Intent.EXTRA_STREAM, contentUri)
 
                         val resInfoList: List<ResolveInfo> =
@@ -173,7 +173,6 @@ class CharacterSelectFragment : Fragment() {
         val adapter = CharacterSelectAdapter(characters = characterViewModel.allCharacters.value!!, findNavController())
         recyclerView.adapter = adapter
     }
-
     private fun initMenuOptions() {
         binding.toolbar.setOnMenuItemClickListener { item ->
             when (item.itemId) {
